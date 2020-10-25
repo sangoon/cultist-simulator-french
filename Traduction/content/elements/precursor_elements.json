@@ -1,0 +1,108 @@
+{"elements":
+    [
+       
+		 
+
+				 {
+            id: "previtality",
+            label: "Vitalité",
+            description: "[La vitalité est en plein essor...]",
+		lifetime: 1,
+		icon:vitality,
+		decayTo:"vitality"
+        },
+
+		
+						 {
+            id: "preerudition",
+            label: "Erudition",
+            description: "[L'érudition naît d'un moment de compréhension...]",
+		lifetime: 1,
+		icon:erudition,
+		decayTo:"erudition"
+        },
+		
+						 {
+            id: "prerestlessness",
+            label: "Nervosité",
+            description: "[La nervosité vacille...]",
+		lifetime: 1,
+		icon:restlessness,
+		decayTo:"restlessness"
+        },
+		
+						 {
+            id: "preglimmering",
+            label: "Scintillement",
+            description: "[Un scintillement se forme...]",
+		lifetime: 1,
+		icon:glimmering,
+		decayTo:"glimmering"
+        },
+		
+						 {
+            id: "predread",
+            label: "Peur",
+            description: "[La peur gèle mon esprit...]",
+		lifetime: 1,
+		icon:dread,
+		decayTo:"dread"
+        },
+		
+						 {
+            id: "prefascination",
+            label: "Fascination",
+            description: "[La fascination s'intensifie...]",
+		lifetime: 1,
+		icon:fascination,
+		decayTo:"fascination"
+        },
+		
+		 {
+        id: "pre.fragmentedgeb",
+            label: "Indices: Tranchant",
+            description: "Je commence à comprendre quelque chose de nouveau sur les arts invisibles.",
+			lifetime:1,
+			decayTo:fragmentedgeb,
+			icon:fragmentedgeb
+
+        },
+		 {
+        id: "pre.fragmentforgeb",
+            label: "Indices: Forge",
+            description: "Je commence à comprendre quelque chose de nouveau sur les arts invisibles.",
+			lifetime:1,
+			decayTo:fragmentforgeb,
+			icon:fragmentforgeb
+
+        },
+				 {
+        id: "pre.fragmentgrailb",
+            label: "Indices: Graal",
+            description: "Je commence à comprendre quelque chose de nouveau sur les arts invisibles.",
+			lifetime:1,
+			decayTo:fragmentgrailb,
+			icon:fragmentgrailb
+
+        },
+				 {
+        id: "pre.fragmentheartb",
+            label: "Indices: Coeur",
+            description: "Je commence à comprendre quelque chose de nouveau sur les arts invisibles.",
+			lifetime:1,
+			decayTo:fragmentheartb,
+			icon:fragmentheartb
+
+        },
+				 {
+        id: "pre.fragmentknockb",
+            label: "Indices: Clé",
+            description: "Je commence à comprendre quelque chose de nouveau sur les arts invisibles.",
+			lifetime:1,
+			decayTo:fragmentknockb,
+			icon:fragmentknockb
+
+        },
+		
+]
+};

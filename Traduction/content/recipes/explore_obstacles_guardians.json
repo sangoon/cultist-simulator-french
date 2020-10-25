@@ -1,0 +1,739 @@
+ {"recipes": [
+{
+	id: "explorevaultguardian_serpent_encounter",
+	actionId:"explore",
+	label: "Une jeune Soeur: un Serpent",
+	startdescription: "Le Serpent nous observe de près, balançant sa grande tête. Sans Tranchant ou Clé, nous ne pouvons pas l'affronter.",
+	requirements: {guardian_serpent:1},
+	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultguardian_serpent_highknock",chance:100},
+	{id: "explorevaultguardian_serpent_highedge",chance:100},
+	{id: "explorevaultguardian_serpent_midknock",chance:100},
+	{id: "explorevaultguardian_serpent_midedge",chance:100},
+	{id: "explorevaultguardian_serpent_lowknock",chance:100},
+	{id: "explorevaultguardian_serpent_lowedge",chance:100}	
+	],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultguardian_serpent_failure",chance:100}]
+	},
+	
+	{id:"explorevaultguardian_serpent_highedge",
+	actionId: "explore",
+	requirements:{edge:10},
+	label:"Notre force est sans égale.",
+	startdescription:"Les yeux comme des lampes à gaz; les écailles comme du jade noir. Le Serpent est un ennemi puissant, mais il n'est rien face à nous.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_serpent_success_edge",chance:90},
+	{id:"explorevaultguardian_serpent_failure",chance:100}]	  
+		  },
+		{id:"explorevaultguardian_serpent_midedge",
+	actionId: "explore",
+	requirements:{edge:5},
+	label:"Notre force est considérable.",
+	startdescription:"Les yeux comme des lampes à gaz, les crocs comme des stalactites. Un grand Serpent est un ennemi puissant, mais nous le sommes aussi.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_serpent_success_edge",chance:70},
+	{id:"explorevaultguardian_serpent_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultguardian_serpent_lowedge",
+	actionId: "explore",
+	requirements:{edge:1},
+	label:"Notre force n'est peut-être pas suffisante.",
+	startdescription:"Des yeux comme des lampes à gaz; une bouche dans laquelle on pourrait s'accroupir. Nous pourrions vaincre ce Serpent. Nous pourrions regretter d'avoir essayé.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_serpent_success_edge",chance:30},
+	{id:"explorevaultguardian_serpent_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_serpent_highknock",
+	actionId: "explore",
+	requirements:{knock:10},
+	label:"Nous faisons appel à la Mère des Fourmis, qui naît des blessures",
+	startdescription:"La bouche du Serpent est assez grande pour s'y accroupir. Sa langue est de l'épaisseur des épaules d'un homme. Mais il est presque sûr qu'il respectera la puissance que nous détenons.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_serpent_success_knock",chance:90},
+	{id:"explorevaultguardian_serpent_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_serpent_midknock",
+	actionId: "explore",
+	requirements:{knock:5},
+	label:"Nous faisons appel à la Mère des Fourmis, qui encercle",
+	startdescription:"Le Serpent est assez long pour s'enrouler autour d'un chalet. Ses crocs scintillent comme de la glace. Il respectera probablement la puissance que nous possédons.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_serpent_success_knock",chance:70},
+	{id:"explorevaultguardian_serpent_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_serpent_lowknock",
+	actionId: "explore",
+	requirements:{knock:1},
+	label:"Nous faisons appel à la Mère des Fourmis, qui ouvre",
+	startdescription:"Le Serpent se dresse comme une rivière en crue. Ses yeux fendues débordent de gourmandise. Peut-être le Serpent respectera-t-il le pouvoir que nous possédons.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_serpent_success_knock",chance:30},
+	{id:"explorevaultguardian_serpent_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultguardian_serpent_success_edge",
+	actionId:"explore",
+	label: "Les luttes du Serpent",
+	startdescription: "Le serpent roule et rugit ! Sa mort secoue la terre ! Mais il se meurt. Nous passerons.",
+	description: ".",
+	effects: {guardian_serpent:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+				{
+	id: "explorevaultguardian_serpent_success_knock",
+	actionId:"explore",
+	label: "Le chagrin du Serpent",
+	startdescription: "Il baisse sa grande tête. De l'humidité coule de ses yeux sans paupières. Pleure-t-il ? Que se souvient-il de sa soeur aînée, dont nous invoquons le pouvoir ?",
+	description: ".",
+	effects: {guardian_serpent:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultguardian_serpent_failure",
+	actionId:"explore",
+	label: "La force du Serpent",
+	startdescription: "En arrière. En arrière ! C'est trop pour nous !",
+	description: ".",
+	craftable: false,
+	alternativerecipes:[{id:"explorevault_casualty",chance:70,additional:true, expulsion:{limit:1,filter:{follower:1}}}],
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+	
+	
+
+	
+	{
+	id: "explorevaultguardian_watchers_encounter",
+	actionId:"explore",
+	label: "Guetteurs",
+	startdescription: "Des locaux ayant une rancune ou un devoir ou un contrat de mercenaire. Nous pourrions les tromper avec de la Phalène, les séduire avec du Graal, ou les combattre avec du Tranchant.",
+	requirements: {guardian_watchers:1},
+	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultguardian_watchers_highgrail",chance:100},
+	{id: "explorevaultguardian_watchers_highmoth",chance:100},
+		{id: "explorevaultguardian_watchers_highedge",chance:100},
+	{id: "explorevaultguardian_watchers_midgrail",chance:100},
+		{id: "explorevaultguardian_watchers_midmoth",chance:100},
+	{id: "explorevaultguardian_watchers_midedge",chance:100},
+	{id: "explorevaultguardian_watchers_lowgrail",chance:100},
+		{id: "explorevaultguardian_watchers_lowmoth",chance:100},
+	{id: "explorevaultguardian_watchers_lowedge",chance:100},
+	
+	],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultguardian_watchers_failure",chance:100}]
+	},
+	
+	{id:"explorevaultguardian_watchers_highedge",
+	actionId: "explore",
+	requirements:{edge:10},
+	label:"Notre force est sans égale.",
+	startdescription:"Les Guetteurs vont sûrement regretter de s'être opposés à nous.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_watchers_success_edge",chance:90},
+	{id:"explorevaultguardian_watchers_failure",chance:100}]	  
+		  },
+		{id:"explorevaultguardian_watchers_midedge",
+	actionId: "explore",
+	requirements:{edge:5},
+	label:"Notre force est considérable.",
+	startdescription:"Les Guetteurs ne sont pas prêts à nous affronter. Nous devrions être capables de les faire tomber.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_watchers_success_edge",chance:70},
+	{id:"explorevaultguardian_watchers_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultguardian_watchers_lowedge",
+	actionId: "explore",
+	requirements:{edge:1},
+	label:"Notre force n'est peut-être pas suffisante.",
+		startdescription:"Les Guetteurs sont peut-être trop forts pour nous - mais nous avons encore une chance.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_watchers_success_edge",chance:30},
+	{id:"explorevaultguardian_watchers_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_watchers_highgrail",
+	actionId: "explore",
+	requirements:{grail:10},
+	label:"Contre les Guetteurs: Les séductions du Graal",
+	startdescription:"'Approchez-vous, mes chers. Nous avons quelque chose de spécial pour vous.'",
+		  description:".",
+	linked: [{id:"explorevaultguardian_watchers_success_grail",chance:90},
+	{id:"explorevaultguardian_watchers_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_watchers_midgrail",
+	actionId: "explore",
+	requirements:{grail:5},
+	label:"Contre les Guetteurs: Les tentations du Graal",
+	startdescription:"Nos atouts devraient influencer l'esprit des Guetteurs.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_watchers_success_grail",chance:70},
+	{id:"explorevaultguardian_watchers_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_watchers_lowgrail",
+	actionId: "explore",
+	requirements:{grail:1},
+	label:"Contre les Guetteurs: Les distractions du Graal",
+	startdescription:"Peut-être pouvons-nous détourner les Guetteurs de leur but.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_watchers_success_grail",chance:30},
+	{id:"explorevaultguardian_watchers_failure",chance:100}]	  
+		  },
+		  
+		  		  	{id:"explorevaultguardian_watchers_highmoth",
+	actionId: "explore",
+	requirements:{moth:10},
+	label:"Contre les Guetteurs: Une puissante tromperie",
+	startdescription:"'Regardez de plus près. Encore plus près. Plus près ! Continuez à regarder. Plus près. Maintenant, fermez les yeux...'",
+		  description:".",
+	linked: [{id:"explorevaultguardian_watchers_success_moth",chance:90},
+	{id:"explorevaultguardian_watchers_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_watchers_midmoth",
+	actionId: "explore",
+	requirements:{moth:5},
+	label:"Contre les Guetteurs: Une probable tromperie",
+	startdescription:"'Réveillez-vous ! Réveillez-vous ! Ils sont sur nous ! Par là, vite !'",
+		  description:".",
+	linked: [{id:"explorevaultguardian_watchers_success_moth",chance:70},
+	{id:"explorevaultguardian_watchers_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_watchers_lowmoth",
+	actionId: "explore",
+	requirements:{moth:1},
+	label:"Contre les Guetteurs: Une déception désespérée",
+	startdescription:"'Ils sont allés... par là ?'",
+		  description:".",
+	linked: [{id:"explorevaultguardian_watchers_success_moth",chance:30},
+	{id:"explorevaultguardian_watchers_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultguardian_watchers_success_edge",
+	actionId:"explore",
+	label: "La fin des Guetteurs",
+	startdescription: "Leur sang pompe le vif, puis le sombre. Ils n'auraient pas dû s'opposer à nous. Nous allons de l'avant.",
+	description: ".",
+	effects: {guardian_watchers:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+				{
+	id: "explorevaultguardian_watchers_success_grail",
+	actionId:"explore",
+	label: "La chute des Guetteurs",
+	startdescription: "Leurs inclinations à la malveillance causeront leur fin. Peut-être penseront-ils que cela en vaut la peine. En attendant, nous pouvons passer.",
+	description: ".",
+	effects: {guardian_watchers:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultguardian_watchers_success_moth",
+	actionId:"explore",
+	label: "La confusion des Guetteurs",
+	startdescription: "Leur perplexité est notre chance. Nous passerons en toute discrétion.",
+	description: ".",
+	effects: {guardian_watchers:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultguardian_watchers_failure",
+	actionId:"explore",
+	label: "La victoire des Guetteurs",
+	startdescription: "Ils sont plus rusés et plus nombreux qu'on ne le pensait ! Cela finira dans le sang pour nous -",
+	description: ".",
+	craftable: false,
+	alternativerecipes:[{id:"explorevault_casualty",chance:70,additional:true, expulsion:{limit:1,filter:{follower:1}}}],
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+	{
+	id: "explorevaultguardian_monks_encounter",
+	actionId:"explore",
+	label: "Moines",
+	startdescription: "Ordre de gardiens liés par le serment et la coutume. Ils sont trop solides pour les séductions du Graal - nous devons les vaincre avec du Tranchant ou les éblouir avec de la Phalène.",
+	requirements: {guardian_monks:1},
+	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultguardian_monks_highmoth",chance:100},
+	{id: "explorevaultguardian_monks_highedge",chance:100},
+	{id: "explorevaultguardian_monks_midmoth",chance:100},
+	{id: "explorevaultguardian_monks_midedge",chance:100},
+	{id: "explorevaultguardian_monks_lowmoth",chance:100},
+	{id: "explorevaultguardian_monks_lowedge",chance:100}	
+	],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultguardian_monks_failure",chance:100}]
+	},
+	
+	{id:"explorevaultguardian_monks_highedge",
+	actionId: "explore",
+	requirements:{edge:10},
+	label:"Notre force est tout sauf irrésistible.",
+	startdescription:"Nous aspergerons la terre de sang bénit.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_monks_success_edge",chance:90},
+	{id:"explorevaultguardian_monks_failure",chance:100}]	  
+		  },
+		{id:"explorevaultguardian_monks_midedge",
+	actionId: "explore",
+	requirements:{edge:5},
+	label:"Notre force est considérable.",
+	startdescription:"Nous devrions être suffisamment nombreux face à ces saints fous.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_monks_success_edge",chance:70},
+	{id:"explorevaultguardian_monks_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultguardian_monks_lowedge",
+	actionId: "explore",
+	requirements:{edge:1},
+	label:"Notre force n'est peut-être pas suffisante.",
+	startdescription:"Ce ne sont que des moines. Mais il y a beaucoup, beaucoup de moines. Nous pourrions l'emporter, si nous avons de la chance.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_monks_success_edge",chance:30},
+	{id:"explorevaultguardian_monks_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_monks_highmoth",
+	actionId: "explore",
+	requirements:{moth:10},
+	label:"Les Moines: une puissante tromperie",
+	startdescription:"'Nous avons apporté ici certains textes sacrés, dont la signification n'est apparente qu'au clair de lune - '",
+		  description:".",
+	linked: [{id:"explorevaultguardian_monks_success_moth",chance:90},
+	{id:"explorevaultguardian_monks_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_monks_midmoth",
+	actionId: "explore",
+	requirements:{moth:5},
+	label:"Les Moines: une tromperie probable",
+	startdescription:"'Ce document porte le sceau de la plus haute autorité. Ne vous mettez pas en travers de notre chemin -'",
+		  description:".",
+	linked: [{id:"explorevaultguardian_monks_success_moth",chance:70},
+	{id:"explorevaultguardian_monks_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_monks_lowmoth",
+	actionId: "explore",
+	requirements:{moth:1},
+	label:"Les Moines: une tromperie désespérée",
+	startdescription:"'Nous avons... des reliques. *D'anciennes* reliques.'",
+		  description:".",
+	linked: [{id:"explorevaultguardian_monks_success_moth",chance:30},
+	{id:"explorevaultguardian_monks_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultguardian_monks_success_edge",
+	actionId:"explore",
+	label: "Le silence des Moines",
+	startdescription: "Leurs corps reposent enchevêtrés, tous impossibles à distinguer les uns des autres. Poussez-vous, avancez.",
+	description: ".",
+	effects: {guardian_monks:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+				{
+	id: "explorevaultguardian_monks_success_moth",
+	actionId:"explore",
+	label: "L'illusion des Moines",
+	startdescription: "La foi est une arme à double tranchant. Ces moines ont un grand talent en matière de croyance, et ils ont donc cru à nos mensonges.",
+	description: ".",
+	effects: {guardian_monks:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultguardian_monks_failure",
+	actionId:"explore",
+	label: "La colère des Moines",
+	startdescription: "Ils sont plus forts et plus sages que nous le pensions. Et maintenant, leurs coups ont trouvé une cible - ",
+	description: ".",
+	craftable: false,
+	alternativerecipes:[{id:"explorevault_casualty",chance:70,additional:true, expulsion:{limit:1,filter:{follower:1}}}],
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+	
+
+	
+	{
+	id: "explorevaultguardian_dead_encounter",
+	actionId:"explore",
+	label: "Les morts frénétiques",
+	startdescription: "Les morts coagulent dans l'air autour de nous tel un cadavre rassis. Sans du Tranchant ou de l'Hiver, nous n'avons aucune chance contre eux.",
+	requirements: {guardian_dead:1},
+	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultguardian_dead_highwinter",chance:100},
+	{id: "explorevaultguardian_dead_highedge",chance:100},
+	{id: "explorevaultguardian_dead_midwinter",chance:100},
+	{id: "explorevaultguardian_dead_midedge",chance:100},	
+	{id: "explorevaultguardian_dead_lowwinter",chance:100},
+	{id: "explorevaultguardian_dead_lowedge",chance:100}],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultguardian_dead_failure",chance:100}]
+	},
+	
+	{id:"explorevaultguardian_dead_highedge",
+	actionId: "explore",
+	requirements:{edge:10},
+	label:"Notre force est sans égale.",
+	startdescription:"Les morts sont pâles comme des ombres inversées. Ils se déplacent comme des toiles d'araignée dans la brise. Il est presque certain qu'ils ne peuvent pas se tenir devant nous. Nous les renverrons marmonner dans les ombres du Bois.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_dead_success_edge",chance:90},
+	{id:"explorevaultguardian_dead_failure",chance:100}]	  
+		  },
+		{id:"explorevaultguardian_dead_midedge",
+	actionId: "explore",
+	requirements:{edge:5},
+	label:"Notre force est considérable.",
+	startdescription:"Ces morts, avec leurs yeux avides et pitoyables, sont déjà morts une fois. Leur emprise sur le monde éveillé est faible. Nous devrions être capables de les envoyer dans les ténèbres, mais nous devons faire attention.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_dead_success_edge",chance:70},
+	{id:"explorevaultguardian_dead_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultguardian_dead_lowedge",
+	actionId: "explore",
+	requirements:{edge:1},
+	label:"Notre force n'est peut-être pas suffisante.",
+	startdescription:"Les morts sont aussi lents que le mouvement de l'ombre sur un cadran solaire - lents, mais sans relâche. Ils se souviennent de la douleur et de la peur, mais pas clairement. Nous connaissons trop bien ces deux sensations. Elles sont peut-être trop fortes pour nous.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_dead_success_edge",chance:30},
+	{id:"explorevaultguardian_dead_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_dead_highwinter",
+	actionId: "explore",
+	requirements:{winter:10},
+	label:"Nous faisons appel à la Colombe d'Ivoire, qui connaît le nom de tous les morts",
+	startdescription:"Les morts bordent notre vision comme des rêves effilochés. L'air même qui nous entoure est glacé par l'ombre de l'Hiver. Ils devraient l'accepter.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_dead_success_winter",chance:90},
+	{id:"explorevaultguardian_dead_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_dead_midwinter",
+	actionId: "explore",
+	requirements:{winter:5},
+	label:"Nous appelons la Colombe d'Ivoire, qui ne peut être trompée",
+	startdescription:"Les morts nous regardent de près, sans expression, comme de saintes statues. Mais nous sommes investis de la puissance de l'Hiver. Les morts devraient l'accepter.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_dead_success_winter",chance:70},
+	{id:"explorevaultguardian_dead_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_dead_lowwinter",
+	actionId: "explore",
+	requirements:{winter:1},
+	label:"Nous appelons la Colombe d'Ivoire, à qui rien ne peut plus être enlevé",
+	startdescription:"Les morts frémissent et tremblent dans l'obscurité, mais nous avons été touchés par les Heures de l'Hiver. Peut-être devraient-il l'accepter.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_dead_success_winter",chance:30},
+	{id:"explorevaultguardian_dead_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultguardian_dead_success_edge",
+	actionId:"explore",
+	label: "Les misérables morts",
+	startdescription: "Quand les morts reviennent, ils utilisent ce qu'ils peuvent si leur corps n'est plus là: poussière, rouille, toiles d'araignée, restes et lambeaux. Maintenant que nous les avons brisés, ces lambeaux sont tout ce qui reste.",
+	description: ".",
+	effects: {guardian_dead:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultguardian_dead_success_winter",
+	actionId:"explore",
+	label: "Les morts prudents",
+	startdescription: "Les morts se retirent, leurs visages presque plats et vigilants. Ils ne nous dérangeront pas.",
+	description: ".",
+	effects: {guardian_dead:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultguardian_dead_failure",
+	actionId:"explore",
+	label: "La colère des morts",
+	startdescription: "Les morts ressemblent plus au vent qu'à la chair, mais il ne faut pas sous-estimer le vent. En ce moment même, ils sont un ouragan d'ombre pâle, aux allures de terreur. Repliez-vous. Repliez-vous !",
+	description: ".",
+	craftable: false,
+	alternativerecipes:[{id:"explorevault_casualty",chance:70,additional:true, expulsion:{limit:1,filter:{follower:1}}}],
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+	{
+	id: "explorevaultguardian_soucouyants_encounter",
+	actionId:"explore",
+	label: "Soucouyants dans l'obscurité",
+	startdescription: "L'air de la nuit s'agite avec eux. Baissez-vous. Ils sont beaucoup trop forts pour être combattus, mais nous pouvons peut-être les tromper ou les chasser avec la lumière du Mansus.",
+	requirements: {guardian_soucouyants:1},
+	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultguardian_soucouyants_highmoth",chance:100},
+	{id: "explorevaultguardian_soucouyants_highlantern",chance:100},
+	{id: "explorevaultguardian_soucouyants_midmoth",chance:100},
+	{id: "explorevaultguardian_soucouyants_midlantern",chance:100},	
+	{id: "explorevaultguardian_soucouyants_lowmoth",chance:100},
+	{id: "explorevaultguardian_soucouyants_lowlantern",chance:100}],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultguardian_soucouyants_failure",chance:100}]
+	},
+	
+	{id:"explorevaultguardian_soucouyants_highlantern",
+	actionId: "explore",
+	requirements:{lantern:10},
+	label:"Nous faisons appel au Guetteur, qui illumine",
+	startdescription:"Nous avons très probablement assez de puissance pour les tenir à distance.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_soucouyants_success_lantern",chance:90},
+	{id:"explorevaultguardian_soucouyants_failure",chance:100}]	  
+		  },
+		{id:"explorevaultguardian_soucouyants_midlantern",
+	actionId: "explore",
+	requirements:{lantern:5},
+	label:"Nous faisons appel au Guetteur, qui n'est pas compatissant",
+	startdescription:"Notre puissance devrait être suffisante pour les tenir à distance - mais ils sont prêts à toute défaillance de notre part.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_soucouyants_success_lantern",chance:70},
+	{id:"explorevaultguardian_soucouyants_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultguardian_soucouyants_lowlantern",
+	actionId: "explore",
+	requirements:{lantern:1},
+	label:"Nous faisons appel au Guetteur, qui navigue",
+	startdescription:"Il est possible que l'énergie que nous transportons nous permette de traverser la nuit en toute sécurité. C'est tout à fait possible.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_soucouyants_success_lantern",chance:30},
+	{id:"explorevaultguardian_soucouyants_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_soucouyants_highmoth",
+	actionId: "explore",
+	requirements:{moth:10},
+	label:"Nous faisons appel à la Phalène, qui cherche parmi les arbres du Bois",
+	startdescription:"La Phalène a du pouvoir cette nuit dans cette forêt dense. Nous passerons discrètement et en toute sécurité... à moins que nous ne soyons très malchanceux.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_soucouyants_success_moth",chance:90},
+	{id:"explorevaultguardian_soucouyants_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_soucouyants_midmoth",
+	actionId: "explore",
+	requirements:{moth:5},
+	label:"Nous faisons appel à la Phalène, qui pulse dans le crâne",
+	startdescription:"Nous devrions avoir assez de puissance pour tromper et décourager ces ailes de la nuit assoiffées de sang.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_soucouyants_success_moth",chance:70},
+	{id:"explorevaultguardian_soucouyants_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_soucouyants_lowmoth",
+	actionId: "explore",
+	requirements:{moth:1},
+	label:"Nous faisons appel à la Phalène, qui est tacheté",
+	startdescription:"La Phalène nous donnera une chance dans les ombres tachetées de la forêt - mais seulement une chance.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_soucouyants_success_moth",chance:30},
+	{id:"explorevaultguardian_soucouyants_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultguardian_soucouyants_success_lantern",
+	actionId:"explore",
+	label: "La retraite des Soucouyants",
+	startdescription: "Ils ne s'approcheront pas. Ils lancent des provocations avec les voix des charognes et des enfants, ils font vibrer la cime des arbres, ils lancent des pierres dans l'obscurité. mais ils n'approchent pas. Nous passerons.",
+	description: ".",
+	effects: {guardian_soucouyants:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultguardian_soucouyants_success_moth",
+	actionId:"explore",
+	label: "Les frustrations des Soucouyants",
+	startdescription: "Dépêchez-vous de passer de l'ombre à l'ombre plus profonde. Faces contre terre dans la terre spongieuse. Ils savent que nous sommes ici, mais ils ne savent pas où. Leurs cris s'estompent derrière nous.",
+	description: ".",
+	effects: {guardian_soucouyants:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultguardian_soucouyants_failure",
+	actionId:"explore",
+	label: "La faim des Soucouyants",
+	startdescription: "Ils sont sur nous ! Avec un craquement d'ailes de cuir, et un corps est emporté en criant dans l'obscurité - ",
+	description: ".",
+	craftable: false,
+	alternativerecipes:[{id:"explorevault_casualty",chance:70,additional:true, expulsion:{limit:1,filter:{follower:1}}}],
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+	
+	
+	
+	{
+	id: "explorevaultguardian_long_encounter",
+	actionId:"explore",
+	label: "Le Long",
+	startdescription: "Port Midi a été fondé sur le site d'une source notoire: buvez en, et le monde vous oubliera. Certains parmi les Long s'y sont retirés des affaires du grand monde. Ils ne traitent pas les intrus avec gentillesse, et il serait insensé de les agresser. Mais ils peuvent être sensibles aux amusements de la Phalène, ou aux séductions du Graal.",
+	requirements: {guardian_long:1},
+	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultguardian_long_highmoth",chance:100},
+	{id: "explorevaultguardian_long_highgrail",chance:100},
+	{id: "explorevaultguardian_long_midmoth",chance:100},
+	{id: "explorevaultguardian_long_midgrail",chance:100},	
+	{id: "explorevaultguardian_long_lowmoth",chance:100},
+	{id: "explorevaultguardian_long_lowgrail",chance:100}],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultguardian_long_failure",chance:100}]
+	},
+	
+	{id:"explorevaultguardian_long_highgrail",
+	actionId: "explore",
+	requirements:{grail:10},
+	label:"'Nous sommes ici pour votre plaisir.'",
+	startdescription:"Même les Longs connaissent le désir; peut-être surtout les Longs. Celui-ci se pliera sûrement volontiers à nos attentes.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_long_success_grail",chance:90},
+	{id:"explorevaultguardian_long_failure",chance:100}]	  
+		  },
+		{id:"explorevaultguardian_long_midgrail",
+	actionId: "explore",
+	requirements:{grail:5},
+	label:"'Nous sommes là pour vous divertir.'",
+	startdescription:"Ce Long se réjouit de nos sollicitations, mais elles sont encore suspectes. Nous allons probablement réussir.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_long_success_grail",chance:70},
+	{id:"explorevaultguardian_long_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultguardian_long_lowgrail",
+	actionId: "explore",
+	requirements:{grail:1},
+		label:"'Nous... espérons que nous pourrons vous divertir ?'",
+	startdescription:"Les Long ont l'appétit de tout mortel, mais ils sont blasés par mille expériences. Peut-être pourrions-nous en divertir un suffisamment, si nous avons de la chance.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_long_success_grail",chance:30},
+	{id:"explorevaultguardian_long_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_long_highmoth",
+	actionId: "explore",
+	requirements:{moth:10},
+	label:"'Actualités ! Des nouvelles du vieux pays ! De tous les vieux pays !'",
+	startdescription:"Les Longs ont un besoin urgent de nouveauté. Nous en profiterons, et si tout va bien, nous serons partis avant qu'ils ne le sachent.",
+		  description:".",
+	linked: [{id:"explorevaultguardian_long_success_moth",chance:90},
+	{id:"explorevaultguardian_long_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_long_midmoth",
+	actionId: "explore",
+	requirements:{moth:5},
+	label:"'Très bien: un pari.'",
+	startdescription:"Est-ce que celui-ci joue avec nous ? Il est difficile d'en être sûr. Mais même si c'est un jeu, ils peuvent nous autoriser à partir. Il est probable que tout ira bien. ",
+		  description:".",
+	linked: [{id:"explorevaultguardian_long_success_moth",chance:70},
+	{id:"explorevaultguardian_long_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultguardian_long_lowmoth",
+	actionId: "explore",
+	requirements:{moth:1},
+	label:"'C'est, ah, euh, une histoire drôle, en fait...'",
+	startdescription:"Les yeux de ce Long sont fixes et distants comme la ligne de l'horizon. Leur corps tout entier est immobile comme un lézard. Est-ce qu'ils écoutent au moins ?",
+		  description:".",
+	linked: [{id:"explorevaultguardian_long_success_moth",chance:30},
+	{id:"explorevaultguardian_long_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultguardian_long_success_grail",
+	actionId:"explore",
+	label: "Un après-midi long et doré",
+	startdescription: "Ce Long a-t-il vraiment été la proie des séductions du Graal ? Ou savaient-ils exactement ce qu'ils faisaient ? En tout cas, nous avons gagné suffisamment d'espace et de temps -",
+	description: ".",
+	effects: {guardian_long:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultguardian_long_success_moth",
+	actionId:"explore",
+	label: "La longue tromperie",
+	startdescription: "Les habitants immortels de Port Midi sont dupés, ou amusés, ou pris dans les noeuds d'un projet plus vaste encore. Ils n'interviendront pas, cette fois.",
+	description: ".",
+	effects: {guardian_long:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultguardian_long_failure",
+	actionId:"explore",
+	label: "La longue agonie",
+	startdescription: "Un immortel est courroucé. Il peut choisir d'abattre quelqu'un, ou bien il peut retenir sa colère. C'est très difficile à dire, avec les immortels - ",
+	description: ".",
+	craftable: false,
+	
+	alternativerecipes:[{id:"explorevault_casualty",chance:70,additional:true, expulsion:{limit:1,filter:{follower:1}}}],
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+]
+}
+

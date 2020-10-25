@@ -1,0 +1,17 @@
+{"elements":
+    [
+	{id: "paintingmansus",
+	label: "Une peinture de l'extérieur du Mansus",
+	description: "Les escaliers s'élèvent en arcs-en-ciel gris; les fenêtres attendent.",
+	aspects: {knock:1,lantern:1}
+	},
+	
+
+{id:"overexposure",
+label:"Surexposition",
+description:"Tous les publics sont inconstants.",
+lifetime:1,
+decayTo:funds
+}
+]
+};

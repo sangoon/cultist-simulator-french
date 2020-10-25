@@ -1,0 +1,192 @@
+{
+"recipes": [
+{id: "workapostleforgejob",
+label: "Examiner mes ressources",
+actionId: "work",
+requirements: {legacyapostleforgejob:1},
+effects: {funds:7,legacyapostleforgejob:-1},
+alternativerecipes: [{id:"apostleforgeopentalk",chance:100,additional:true}],
+startdescription: "Notre organisation dispose d'assez de ressources...",
+description: "...pour un certain temps, mais je devrai trouver d'autres moyens de financement.",
+warmup:10,
+craftable: true},
+
+{id: "apostleforgeopentalk",
+label: "Notre cause",
+actionId: "talk",
+requirements:{},
+startdescription:"Je ne suis pas seul.",
+alternativerecipes: [{id:"apostleforgeopenstudy",chance:100,additional:true}],
+description:"Mes alliés ; mon façonneur.",
+effects: {LEVER_LastCult:1,LEVER_LastFollower:1,apostleforge.mentor:1},
+warmup:10,
+craftable: false,
+linked:[{id:"begincultfoundation",chance:100}]
+},
+
+{id: "apostleforgeopenstudy",
+label: "De quoi est-ce que je me rappelle ?",
+actionId: "study",
+startdescription:"On m'a confié des secrets.",
+alternativerecipes: [{id:"apostleforgeopenexplore",chance:100,additional:true}],
+effects: {fragmentforgef:1,reason:1,waywood:1,waywhite:1,waystag_after:1},
+warmup:30,
+craftable: false
+},
+
+
+{id: "apostleforgeopenexplore",
+label: "Un point de départ",
+actionId: "explore",
+startdescription:"Où en étions-nous ?",
+description:"Dans notre lieu de rencontre, je vais examiner les ordres qui m'ont été donnés.",
+alternativerecipes: [{id:"apostleforgeopendream",chance:100,additional:true}],
+effects: {apostleforge.pillar1:1,hq.temporary:1},
+warmup:10,
+craftable: false
+},
+
+
+
+
+{id: "apostleforgeopendream",
+label: "Tonnerre au loin",
+actionId: "dream",
+startdescription:"Que va-t-il se passer ? Qui va venir ?",
+description:"Notre Façonneur souhaite changer l'ordre du monde, et même celui du Mansus. Il y aura une opposition.",
+warmup:60,
+effects:{passion:1},
+craftable: false,
+alternativerecipes:[
+{id:long.spawn.forge,chance:100,additional:true}
+],
+},
+
+ 
+
+
+{id: "workapostlegrailjob",
+label: "Examiner mes ressources",
+actionId: "work",
+requirements: {legacyapostlegrailjob:1},
+effects: {funds:7,legacyapostlegrailjob:-1,apostlegrail.pillar2.dormant:1,apostlegrail.pillarfuel:1},
+alternativerecipes: [{id:"apostlegrailopentalk",chance:100,additional:true}],
+startdescription: "Notre organisation dispose d'assez de ressources...",
+description: "...pour un certain temps, mais je devrai trouver d'autres moyens de financement. Et ma santé est maintenant très mauvaise. Je ne peux qu'espérer que notre Délice me soutiendra.",
+warmup:10,
+craftable: true},
+
+{id: "apostlegrailopentalk",
+label: "Notre cause",
+actionId: "talk",
+requirements:{},
+startdescription:"Je ne suis pas seul.",
+alternativerecipes: [{id:"apostlegrailopenstudy",chance:100,additional:true}],
+description:"Mes alliés ; mon Délice.",
+effects: {LEVER_LastCult:1,LEVER_LastFollower:1,apostlegrail.mentor:1},
+warmup:10,
+craftable: false,
+linked:[{id:"begincultfoundation",chance:100}]
+},
+
+{id: "apostlegrailopenstudy",
+label: "De quoi est-ce que je me rappelle ?",
+actionId: "study",
+startdescription:"On m'a confié des secrets.",
+alternativerecipes: [{id:"apostlegrailopenexplore",chance:100,additional:true}],
+effects: {fragmentgrailf:1,reason:1,waywood:1,waywhite:1,waystag_after:1},
+warmup:30,
+craftable: false
+},
+
+
+{id: "apostlegrailopenexplore",
+label: "Un point de départ",
+actionId: "explore",
+startdescription:"Où en étions-nous ?",
+description:"Dans notre lieu de rencontre, je vais examiner les ordres qui m'ont été donnés.",
+alternativerecipes: [{id:"apostlegrailopendream",chance:100,additional:true}],
+effects: {apostlegrail.pillar1:1,hq.temporary:1},
+warmup:10,
+craftable: false
+},
+
+
+{id: "apostlegrailopendream",
+label: "Lumière au loin",
+actionId: "dream",
+startdescription:"Que va-t-il se passer ? Qui va venir ?",
+description:"Notre Délice souhaite changer l'ordre du monde, et même celui du Mansus. Il y aura une opposition.",
+warmup:60,
+effects:{passion:1},
+craftable: false,
+alternativerecipes:[
+{id:long.spawn.grail,chance:100,additional:true}
+],
+},
+
+
+{id: "workapostlelanternjob",
+label: "Ce que je dois faire",
+actionId: "work",
+requirements: {legacyapostlelanternjob:1},
+effects: {funds:7,legacyapostlelanternjob:-1,apostlelantern.pillar1:1},
+alternativerecipes: [{id:"apostlelanternopentalk",chance:100,additional:true}],
+startdescription: "Je reviens à moi avec un paquet. Est-ce une journée de rêve ?",
+description: "Un paquet, avec des Fonds. Voici mes instructions, dans une mince enveloppe bleu ciel. C'est suffisant. Mes autres souvenirs ne sont pas utiles pour le moment.",
+warmup:10,
+craftable: true},
+
+{id: "apostlelanternopentalk",
+label: "Notre cause",
+actionId: "talk",
+requirements:{},
+startdescription:"Je me souviens de ces noms, même si je ne les ai jamais entendus.",
+alternativerecipes: [{id:"apostlelanternopenstudy",chance:100,additional:true}],
+description:"Mes alliés ; mon Illuminé.",
+effects: {LEVER_LastCult:1,LEVER_LastFollower:1,apostlelantern.mentor:1},
+warmup:10,
+craftable: false,
+linked:[{id:"begincultfoundation",chance:100}]
+},
+
+{id: "apostlelanternopenstudy",
+label: "De quoi est-ce que je me rappelle ?",
+actionId: "study",
+startdescription:"On m'a confié des secrets.",
+alternativerecipes: [{id:"apostlelanternopenexplore",chance:100,additional:true}],
+effects: {fragmentlanternf:1,reason:1,waywood:1,waywhite:1,waystag_after:1},
+warmup:30,
+craftable: false
+},
+
+
+{id: "apostlelanternopenexplore",
+label: "Un point de départ",
+actionId: "explore",
+startdescription:"Où en étions-nous ?",
+description:"C'est l'endroit que j'ai vu, dans la lumière au bord du sommeil.",
+alternativerecipes: [{id:"apostlelanternopendream",chance:100,additional:true}],
+effects: {hq.temporary:1},
+warmup:10,
+craftable: false
+},
+
+
+{id: "apostlelanternopendream",
+label: "Lumière au loin",
+actionId: "dream",
+startdescription:"Que va-t-il se passer ? Qui va venir ?",
+description:"Mes rêves me prévenaient qu'il y aurait une opposition à l'Illuminé. Tous les rêves qui m'ont été envoyés sont vrais.",
+warmup:60,
+effects:{passion:1},
+craftable: false,
+alternativerecipes:[
+{id:long.spawn.lantern,chance:100,additional:true}
+],
+},
+
+
+
+]
+}

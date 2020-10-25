@@ -1,0 +1,526 @@
+ {"recipes": [
+
+	
+	
+	{
+	id: "explorevaultperil_treacherousground_encounter",
+	actionId:"explore",
+	label: "Un terrain glissant",
+	startdescription: "De la boue qui aspire, des crevasses qui se creusent: la terre a faim. Nous avons besoin de la Lanterne pour nous montrer un chemin, ou de la Forge pour en faire un.",
+	requirements: {peril_treacherousground:1},
+	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultperil_treacherousground_highlantern",chance:100},
+	{id: "explorevaultperil_treacherousground_highforge",chance:100},
+	{id: "explorevaultperil_treacherousground_midlantern",chance:100},
+	{id: "explorevaultperil_treacherousground_midforge",chance:100},
+	{id: "explorevaultperil_treacherousground_lowlantern",chance:100},	
+	{id: "explorevaultperil_treacherousground_lowforge",chance:100}],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultperil_treacherousground_failure",chance:100}]
+	},
+	
+	{id:"explorevaultperil_treacherousground_highlantern",
+	actionId: "explore",
+	requirements:{lantern:10},
+	label:"Nous faisons appel au Guetteur, qui navigue",
+	startdescription: "Le Guetteur va nous dégager la vue, de sorte que nous sommes presque certains de pouvoir passer sans problème.",
+		  description:".",
+	linked: [{id:"explorevaultperil_treacherousground_success",chance:90},
+	{id:"explorevaultperil_treacherousground_failure",chance:100}]	  
+		  },
+		{id:"explorevaultperil_treacherousground_midlantern",
+	actionId: "explore",
+	requirements:{lantern:5},
+	label:"Nous faisons appel au Guetteur, qui illumine",
+	startdescription: "Le Guetteur donnera de la force à nos lampes, pour qu'elles nous montrent les périls à éviter. Probablement.",
+		  description:".",
+	linked: [{id:"explorevaultperil_treacherousground_success",chance:70},
+	{id:"explorevaultperil_treacherousground_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultperil_treacherousground_lowlantern",
+	actionId: "explore",
+	requirements:{lantern:1},
+	label:"Nous faisons appel au Guetteur, qui n'est pas compatissant",
+		startdescription: "Le Guetteur ne fait preuve de pitié ni envers nos obstacles ni envers nous. Si nous avons de la chance, nous pourrons peut-être passer.",
+		  description:".",
+	linked: [{id:"explorevaultperil_treacherousground_success",chance:30},
+	{id:"explorevaultperil_treacherousground_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_treacherousground_highforge",
+	actionId: "explore",
+	requirements:{forge:10},
+	label:"Nous faisons appel au Madrugad, qui ne peut pas être déséquilibré",
+	startdescription:"Nous invoquons le Madrugad, une Heure de Forge ainsi que l'Hiver. Nous traçons notre propre chemin. Le succès est presque certain.",
+		  description:".",
+	linked: [{id:"explorevaultperil_treacherousground_success",chance:90},
+	{id:"explorevaultperil_treacherousground_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_treacherousground_midforge",
+	actionId: "explore",
+	requirements:{forge:5},
+	label:"Nous faisons appel au Madrugad, qui est calme et tranquilité",
+	startdescription:"Le Madrugad est une heure de Forge ainsi que d'Hiver. Sa puissance pourrait apaiser la terre instable. Nous nous en sortirons probablement.",
+		  description:".",
+	linked: [{id:"explorevaultperil_treacherousground_success",chance:70},
+	{id:"explorevaultperil_treacherousground_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_treacherousground_lowforge",
+	actionId: "explore",
+	requirements:{forge:1},
+	label:"Nous faisons appel au Madrugad, qui précède le Soleil",
+	startdescription:"Le Madrugad est une heure de Forge ainsi que d'Hiver. La Forge donne de la force, mais désormais le brouillard se lève et se dissipe. Nous pourrions bien passer.",
+		  description:".",
+	linked: [{id:"explorevaultperil_treacherousground_success",chance:30},
+	{id:"explorevaultperil_treacherousground_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultperil_treacherousground_success",
+	actionId:"explore",
+	label: "En sécurité sur le terrain glissant",
+	startdescription: "Nous sommes éclaboussés de boue et éraflés par les épines, mais nous avons réussi.",
+	description: ".",
+	effects: {peril_treacherousground:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultperil_treacherousground_failure",
+	actionId:"explore",
+	label: "La Terre a faim",
+	startdescription: "Une voie prometteuse se révèle être un véritable bourbier. Il faudra faire le tour et réessayer.",
+	description: ".",
+	craftable: false,
+		alternativerecipes:[{id:"explorevault_casualty",chance:70,additional:true, expulsion:{limit:1,filter:{follower:1}}}],
+	linked:	[{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+	
+	
+	{
+	id: "explorevaultperil_forest_encounter",
+	actionId:"explore",
+	label: "Une forêt en péril",
+	startdescription: "L'obscurité sous les arbres est calme, pour l'instant, mais nous ne sommes pas seuls ici. L'aspect de la Phalène nous guidera, ou l'aspect de la Forge nous ouvrira un chemin.",
+	requirements: {peril_forest:1},
+	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultperil_forest_highmoth",chance:100},
+	{id: "explorevaultperil_forest_highforge",chance:100},
+	{id: "explorevaultperil_forest_midmoth",chance:100},
+	{id: "explorevaultperil_forest_midforge",chance:100},
+	{id: "explorevaultperil_forest_lowmoth",chance:100},	
+	{id: "explorevaultperil_forest_lowforge",chance:100}],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultperil_forest_failure",chance:100}]
+	},
+	
+	{id:"explorevaultperil_forest_highmoth",
+	actionId: "explore",
+	requirements:{moth:10},
+	label:"Nous faisons appel à la Phalène, qui cherche parmi les arbres du Bois",
+	startdescription: "Le bois sous le Mansus est encore plus sombre que cet endroit. La Phalène guidera nos pas. Le succès est très probable.",
+		  description:".",
+	linked: [{id:"explorevaultperil_forest_success",chance:90},
+	{id:"explorevaultperil_forest_failure",chance:100}]	  
+		  },
+		{id:"explorevaultperil_forest_midmoth",
+	actionId: "explore",
+	requirements:{moth:5},
+	label:"Nous faisons appel à la Phalène, qui est tacheté",
+	startdescription: "Les ombres se font oublier sur le chemin. Peut-être que le chemin est celui que la Phalène nous a indiqué. C'est probablement le cas. Probablement que nous allons passer.",
+		  description:".",
+	linked: [{id:"explorevaultperil_forest_success",chance:70},
+	{id:"explorevaultperil_forest_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultperil_forest_lowmoth",
+	actionId: "explore",
+	requirements:{moth:1},
+	label:"Nous faisons appel à la Phalène, qui pulse dans le crâne",
+		startdescription: "Nous invoquons la Phalène à nos risques et périls. La forêt bat des ailes, évoquant des yeux imaginaires. Nous pourrions passer.",
+		  description:".",
+	linked: [{id:"explorevaultperil_forest_success",chance:30},
+	{id:"explorevaultperil_forest_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_forest_highforge",
+	actionId: "explore",
+	requirements:{forge:10},
+	label:"L'acier et le feu",
+	startdescription:"La Forge est ingénieuse, la Forge est impitoyable. Nous allons sûrement nous en sortir.",
+		  description:".",
+	linked: [{id:"explorevaultperil_forest_success",chance:90},
+	{id:"explorevaultperil_forest_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_forest_midforge",
+	actionId: "explore",
+	requirements:{forge:5},
+	label:"La Hache et la Lampe",
+	startdescription:"La forêt nous enveloppe, mais nous sommes des âmes pratiques, fortes en Forge. Nous nous en sortirons sans doute.",
+		  description:".",
+	linked: [{id:"explorevaultperil_forest_success",chance:70},
+	{id:"explorevaultperil_forest_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_forest_lowforge",
+	actionId: "explore",
+	requirements:{forge:1},
+	label:"Luttes au crépuscule",
+	startdescription:"Nous invoquons les pouvoirs de la Forge et nous nous frayons un chemin à travers les arbres. C'est difficile. Nous pourrions réussir.",
+		  description:".",
+	linked: [{id:"explorevaultperil_forest_success",chance:30},
+	{id:"explorevaultperil_forest_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultperil_forest_success",
+	actionId:"explore",
+	label: "'Une lumière à travers les arbres...'",
+	startdescription: "Il y a quelque chose devant nous. Nous avons réussi à traverser la forêt.",
+	description: ".",
+	effects: {peril_forest:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultperil_forest_failure",
+	actionId:"explore",
+	label: "Profondément silencieux",
+	startdescription: "Nous avons perdu le chemin. La forêt se dresse contre le ciel crépusculaire. Les bêtes de la forêt sont silencieuses, mais de temps en temps nous voyons leurs yeux.",
+	description: ".",
+	craftable: false,
+	alternativerecipes:[{id:"explorevault_casualty",chance:70,additional:true, expulsion:{limit:1,filter:{follower:1}}}],
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	{
+	id: "explorevaultperil_mountains_encounter",
+	actionId:"explore",
+	label: "Les Hautes passes",
+	startdescription: "Des pics sauvages balafrent le ciel. L'aspect de l'Hiver peut nous préserver du froid, et l'aspect de la Forge peut nous donner un chemin. Si nous n'avons ni l'un ni l'autre, notre expédition échouera.",
+	requirements: {peril_mountains:1},
+	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultperil_mountains_highwinter",chance:100},
+	{id: "explorevaultperil_mountains_highforge",chance:100},
+	{id: "explorevaultperil_mountains_midwinter",chance:100},
+	{id: "explorevaultperil_mountains_midforge",chance:100},
+	{id: "explorevaultperil_mountains_lowwinter",chance:100},	
+	{id: "explorevaultperil_mountains_lowforge",chance:100}],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultperil_mountains_failure",chance:100}]
+	},
+	
+	{id:"explorevaultperil_mountains_highwinter",
+	actionId: "explore",
+	requirements:{winter:10},
+	label:"Nous faisons appel au Madrugad, qui ne peut pas être déséquilibré",
+	startdescription: "L'Heure appelée le Madrugad est chez elle dans le froid. Elle nous empêchera sûrement de tomber.",
+		  description:".",
+	linked: [{id:"explorevaultperil_mountains_success",chance:90},
+	{id:"explorevaultperil_mountains_failure",chance:100}]	  
+		  },
+		{id:"explorevaultperil_mountains_midwinter",
+	actionId: "explore",
+	requirements:{winter:5},
+	label:"Nous faisons appel au Madrugad, qui est calme et tranquilité",
+	startdescription: "Le Madrugad est fort en Hiver. Probablement qu'elle nous protégera des avalanches.",
+		  description:".",
+	linked: [{id:"explorevaultperil_mountains_success",chance:70},
+	{id:"explorevaultperil_mountains_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultperil_mountains_lowwinter",
+	actionId: "explore",
+	requirements:{winter:1},
+	label:"Nous faisons appel au Madrugad, qui précède le Soleil",
+		startdescription: "Les heures qui précèdent l'aube sont sacrées pour l'Heure appelée Madrugad, qui connaît l'Hiver. Si nous nous levons à ce moment-là et l'invoquons, peut-être nous gardera-t-elle en sécurité.",
+		  description:".",
+	linked: [{id:"explorevaultperil_mountains_success",chance:30},
+	{id:"explorevaultperil_mountains_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_mountains_highforge",
+	actionId: "explore",
+	requirements:{forge:10},
+	label:"La route de l'alpiniste",
+	startdescription:"Nos compétences en matière de Forge représentent une grande expertise. Nous sommes presque certains de réussir.",
+		  description:".",
+	linked: [{id:"explorevaultperil_mountains_success",chance:90},
+	{id:"explorevaultperil_mountains_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_mountains_midforge",
+	actionId: "explore",
+	requirements:{forge:5},
+	label:"La route de l'explorateur",
+	startdescription:"Nous sommes des âmes pratiques, fortes en Forge. Nous nous en sortirons sans doute.",
+		  description:".",
+	linked: [{id:"explorevaultperil_mountains_success",chance:70},
+	{id:"explorevaultperil_mountains_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_mountains_lowforge",
+	actionId: "explore",
+	requirements:{forge:1},
+	label:"La route du vagabond",
+	startdescription:"Les Adeptes de la Forge sont compétents et pratiques, mais les montagnes représentent des kilomètres de roches gelées et fendues. Notre route est difficile. Nous pourrions avoir de la chance.",
+		  description:".",
+	linked: [{id:"explorevaultperil_mountains_success",chance:30},
+	{id:"explorevaultperil_mountains_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultperil_mountains_success",
+	actionId:"explore",
+	label: "A travers les Hautes Passes",
+	startdescription: "Gelés et frissonnants, nous avons réussi à traverser les montagnes.",
+	description: ".",
+	effects: {peril_mountains:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultperil_mountains_failure",
+	actionId:"explore",
+	label: "De furieux échos",
+	startdescription: "Les éboulements et les avalanches nous repoussent. Nous allons essayer une autre route, si nous survivons.",
+	description: ".",
+	craftable: false,
+	alternativerecipes:[{id:"explorevault_casualty",chance:70,additional:true, expulsion:{limit:1,filter:{follower:1}}}],
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+	
+	{
+	id: "explorevaultperil_desert_encounter",
+	actionId:"explore",
+	label: "Désolation",
+	startdescription: "Une immense fournaise fauve à peine contenue par ses horizons. La nuit, un désert froid d'étoiles. Nous devons y aller prudemment, avec la Forge pour façonner notre chemin ou le Graal pour nous protéger contre la soif.",
+	requirements: {peril_desert:1},
+	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultperil_desert_highgrail",chance:100},
+	{id: "explorevaultperil_desert_highforge",chance:100},
+	{id: "explorevaultperil_desert_midgrail",chance:100},
+	{id: "explorevaultperil_desert_midforge",chance:100},
+	{id: "explorevaultperil_desert_lowgrail",chance:100},	
+	{id: "explorevaultperil_desert_lowforge",chance:100}],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultperil_desert_failure",chance:100}]
+	},
+	
+	{id:"explorevaultperil_desert_highgrail",
+	actionId: "explore",
+	requirements:{grail:10},
+	label:"Nous faisons appel à la Soeur-et-la-Sorcière, qui sont la perle",
+	startdescription: "La Soeur-et-la-Sorcière devraient nous voir en sécurité dans les endroits secs.",
+		  description:".",
+	linked: [{id:"explorevaultperil_desert_success",chance:90},
+	{id:"explorevaultperil_desert_failure",chance:100}]	  
+		  },
+		{id:"explorevaultperil_desert_midgrail",
+	actionId: "explore",
+	requirements:{grail:5},
+	label:"Nous faisons appel à la Soeur-et-la-Sorcière, qui ne peuvent être touchés",
+	startdescription: "Nous ferons appel à la Soeur-et-la-Sorcière pour nous protéger de la chaleur brûlante du soleil et des miroirs de l'horizon. Cela devrait nous permettre de voir à travers.",
+		  description:".",
+	linked: [{id:"explorevaultperil_desert_success",chance:70},
+	{id:"explorevaultperil_desert_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultperil_desert_lowgrail",
+	actionId: "explore",
+	requirements:{grail:1},
+	label:"Nous faisons appel à la Soeur-et-la-Sorcière, qui ne peuvent être séparés",
+		startdescription: "Nous ferons appel à la Soeur-et-la-Sorcière pour nous maintenir ensemble à travers les tempêtes de poussière de la terre ferme. Cela pourrait être suffisant.",
+		  description:".",
+	linked: [{id:"explorevaultperil_desert_success",chance:30},
+	{id:"explorevaultperil_desert_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_desert_highforge",
+	actionId: "explore",
+	requirements:{forge:10},
+	label:"La route brûlé par le soleil",
+	startdescription:"Nos compétences en matière de Forge devraient nous garder en sécurité et nous conduire à travers les roches brûlantes vers les endroits verts. Nous nous en sortirons sûrement.",
+		  description:".",
+	linked: [{id:"explorevaultperil_desert_success",chance:90},
+	{id:"explorevaultperil_desert_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_desert_midforge",
+	actionId: "explore",
+	requirements:{forge:5},
+	label:"La route sèche",
+	startdescription:"Nous sommes des âmes pratiques, fortes en Forge. Nous devrions être capables de passer des roches brûlantes aux endroits verts.",
+		  description:".",
+	linked: [{id:"explorevaultperil_desert_success",chance:70},
+	{id:"explorevaultperil_desert_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_desert_lowforge",
+	actionId: "explore",
+	requirements:{forge:1},
+	label:"La route sans pitié",
+	startdescription:"Les Adeptes de la Forge sont compétents et pratiques, mais c'est un endroit mal famé. Nous pourrions nous en sortir.",
+		  description:".",
+	linked: [{id:"explorevaultperil_desert_success",chance:30},
+	{id:"explorevaultperil_desert_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultperil_desert_success",
+	actionId:"explore",
+	label: "Le soleil dans toute sa splendeur",
+	startdescription: "Le soleil se couche. Nous nous retournons sur la désolation que nous avons traversée, et sur toutes les couleurs qu'elle prend dans la lumière du soir. La nuit tombe. Les étoiles scintillent. Le vent nous presse le visage avec ses mains froides. En avant.",
+	description: ".",
+	effects: {peril_desert:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultperil_desert_failure",
+	actionId:"explore",
+	label: "Le soleil en colère",
+	startdescription: "Jour après jour, le soleil tend notre peau, assèche notre bouche, inonde notre crâne d'une lumière sauvage. Nous pourrions être perdus. Il est possible que nous soyons perdus.",
+	description: ".",
+	craftable: false,
+	alternativerecipes:[{id:"explorevault_casualty",chance:70,additional:true, expulsion:{limit:1,filter:{follower:1}}}],	
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+	
+	
+	
+	{
+	id: "explorevaultperil_sea_encounter",
+	actionId:"explore",
+	label: "La mer autour des îles du soir",
+	startdescription: "La mer sur laquelle nous naviguons est assaillie par les tempêtes. Les îles que nous recherchons sont nichées dans les recoins d'une histoire non cartographiée. Nous aurons besoin de Coeur ou de la Forge ou des deux.",
+	requirements: {peril_sea:1},
+	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultperil_sea_highheart",chance:100},
+	{id: "explorevaultperil_sea_highforge",chance:100},
+	{id: "explorevaultperil_sea_midheart",chance:100},
+	{id: "explorevaultperil_sea_midforge",chance:100},
+	{id: "explorevaultperil_sea_lowheart",chance:100},	
+	{id: "explorevaultperil_sea_lowforge",chance:100}],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultperil_sea_failure",chance:100}]
+	},
+	
+	{id:"explorevaultperil_sea_highheart",
+	actionId: "explore",
+	requirements:{heart:10},
+	label:"La mer autour des îles du soir, qui ne peuvent être touchés",
+	startdescription:"Les tempêtes se lèvent pour le Thunderskin et s'apaisent pour la Soeur. Les mots justes doivent nous porter en sécurité à travers la mer.",
+		  description:".",
+	linked: [{id:"explorevaultperil_sea_success",chance:90},
+	{id:"explorevaultperil_sea_failure",chance:100}]	  
+		  },
+		{id:"explorevaultperil_sea_midheart",
+	actionId: "explore",
+	requirements:{heart:5},
+	label:"La mer autour des îles du soir, qui ne peuvent être séparés",
+	startdescription:"En cas de tempête, la Soeur-et-la-Sorcière garderont notre équipage et notre navire en un seul morceau. Probablement.",
+		  description:".",
+	linked: [{id:"explorevaultperil_sea_success",chance:70},
+	{id:"explorevaultperil_sea_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultperil_sea_lowheart",
+	actionId: "explore",
+	requirements:{heart:1},
+	label:"La mer autour des îles du soir, qui sont la Perle",
+	startdescription:"La Soeur-et-la-Sorcière ne sont pas de la mer, mais elles marchent à côté d'elle. Peut-être que leur protection sera suffisante.",
+		  description:".",
+	linked: [{id:"explorevaultperil_sea_success",chance:30},
+	{id:"explorevaultperil_sea_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_sea_highforge",
+	actionId: "explore",
+	requirements:{forge:10},
+	label:"L'expérience du marin",
+	startdescription:"Nos compétences en matière de Forge représentent une grande expertise. Nous allons sûrement nous en sortir.",
+		  description:".",
+	linked: [{id:"explorevaultperil_sea_success",chance:90},
+	{id:"explorevaultperil_sea_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_sea_midforge",
+	actionId: "explore",
+	requirements:{forge:5},
+	label:"La force du marin",
+	startdescription:"Nous sommes des âmes pratiques, fortes en Forge. Nous nous en sortirons sans doute.",
+		  description:".",
+	linked: [{id:"explorevaultperil_sea_success",chance:70},
+	{id:"explorevaultperil_sea_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultperil_sea_lowforge",
+	actionId: "explore",
+	requirements:{forge:1},
+	label:"L'espoir du marin",
+	startdescription:"Les Adeptes de la forge sont compétents et pratiques, mais la mer est rusée. Nous aurons du mal à maintenir le cap.",
+		  description:".",
+	linked: [{id:"explorevaultperil_sea_success",chance:30},
+	{id:"explorevaultperil_sea_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultperil_sea_success",
+	actionId:"explore",
+	label: "La sécurité en mer",
+	startdescription: "Eclaboussé par les vagues et la mer, brûlé par le soleil et taché par le sel. Mais ici.",
+	description: ".",
+	effects: {peril_sea:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultperil_sea_failure",
+	actionId:"explore",
+	label: "Labyrinthes de sel et de basalte",
+	startdescription: "Un autre jour battu par les tempêtes. Nous devons être proches. Mais les îles sont un labyrinthe exaspérant, et les endroits que nous cherchons ne figurent sur aucune carte publiée.",
+	description: ".",
+	craftable: false,
+	alternativerecipes:[{id:"explorevault_casualty",chance:70,additional:true, expulsion:{limit:1,filter:{follower:1}}}],	
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+]
+}
+

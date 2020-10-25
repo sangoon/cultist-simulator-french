@@ -1,0 +1,97 @@
+{"decks":
+    [
+	{id: "locationscapital",
+	label:"Lieux cachés dans la Capitale",
+	description:"Des lieux à portée de main.",
+	spec:
+	["vaultcapital1",
+	"vaultcapital2",
+	"vaultcapital3",
+	"vaultcapital4",
+	"vaultcapital5"
+	],
+defaultcard: "vaultcapitaldefault",
+resetonexhaustion:false	
+	},
+		{id: "vaultsshires",
+	label:"Lieux cachés en province",
+	description:"Une occasion de passer une journée à la campagne, peut-être.",
+	spec:
+	["vaultshires1",
+	"vaultshires2",
+	"vaultshires3",
+	"vaultshires4",
+	"vaultshires5",
+	],
+defaultcard: "vaultshiresdefault",
+resetonexhaustion:false	
+	},
+		{id: "vaultscontinent",
+		label:"Lieux cachés sur le continent",
+	description:"Un monde plus vaste se trouve de l'autre côté de l'étroite mer.",
+	spec:
+	["vaultcontinent1",
+	"vaultcontinent2",
+	"vaultcontinent3",
+	"vaultcontinent4",
+	"vaultcontinent5",
+	"vaultcontinent6"
+	],
+defaultcard: "vaultcontinentdefault",
+resetonexhaustion:false	
+	},
+	
+		{id: "vaultslandbeyondforest",
+		label:"Lieux cachés dans les terres par-delà la forêt",
+	description:"Un patchwork de possibilités dans un pays hanté par les montagnes.",
+	spec:
+	["vaultlandbeyondforest1",
+	"vaultlandbeyondforest2",
+	"vaultlandbeyondforest3",
+	"vaultlandbeyondforest4",
+	"vaultlandbeyondforest5"
+	],
+defaultcard: "vaultlandbeyondforestdefault",
+resetonexhaustion:false	
+	},
+	
+		{id: "vaultsrendingmountains",
+		label:"Lieux cachés dans les montagnes en ruine",
+	description:"Des voûtes et des temples éloignés et dangereux.",
+	spec:
+	["vaultrendingmountains1",
+	"vaultrendingmountains2",
+	"vaultrendingmountains3",
+	"vaultrendingmountains4"
+	],
+defaultcard: "vaultrendingmountainsdefault",
+resetonexhaustion:false	
+	},
+	
+			{id: "vaultsloneandlevelsands",
+				label:"Lieux cachés des Dunes solitaires et des Sables uniformes",
+	description:"C'est là que se trouvent les trésors de l'Antiquité, pour ceux qui peuvent les saisir.",
+	spec:
+	["vaultloneandlevelsands1",
+	"vaultloneandlevelsands2",
+	"vaultloneandlevelsands3",
+	"vaultloneandlevelsands4"
+	],
+defaultcard: "vaultloneandlevelsandsdefault",
+resetonexhaustion:false	
+	},
+	
+				{id: "vaultseveningisles",
+					label:"Lieux cachés dans les îles du soir",
+	description:"Îles non cartographiées dans le voisinage de Port Midi.",
+	spec:
+	["vaulteveningisles1",
+	"vaulteveningisles2",
+	"vaulteveningisles3",
+	"vaulteveningisles4"
+	],
+defaultcard: "vaulteveningislesdefault",
+resetonexhaustion:false	
+	},
+	]
+}

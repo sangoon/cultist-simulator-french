@@ -1,0 +1,526 @@
+{"elements":
+    [
+					          {
+        id: "fragmentedge",
+            label: "Un secret du Couteau",
+            aspects:
+            {edge: 2,lore:1,subvertable_lore:1,challenge.practical:1},
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Pointe du même niveau pour passer au niveau suivant. Étudier avec une croyance de l'Hiver du même niveau pour la corrompre, et obtenir une croyance de l'Hiver à la place.",required:{fragmentedge:1,fragmentwinter:1},actionId:"study"}],
+            description: "Lorsque nos ancêtres forgeaient des épées, enseignaient les arts du mouvement martial, prononçaient des malédictions à la veille d'une bataille - toutes ces choses partageaient certains modèles. [Utilisez ceci dans un rite avec un cadavre et le pouvoir de l'hiver, et le cadavre ressuscitera.]",
+			xtriggers:{epiphany:fragmentedgeb}
+        },
+		 {
+        id: "fragmentedgeb",
+            label: "La leçon du Chiliarque",
+            aspects:
+            {edge: 4,lore:1,subvertable_lore:1,challenge.practical:1},
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une de croyance de la Pointe du même niveau pour passer au niveau suivant. Étudier avec une croyance de l'Hiver du même niveau pour la corrompre, et obtenir la croyance de l'Hiver à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentedgeb:1,fragmentwinterb:1,reason:1},actionId:"study"}],
+            description: "C'est l'histoire profonde que des milliers d'hommes ont apprise dans l'Antiquité, du sang et de ses effusions. La raconter à voix haute, c'est entendre le sifflement de l'épée. [Utilisez-le dans un rite avec un cadavre et le pouvoir de l'Hiver, et le cadavre ressuscitera.]",
+			xtriggers:{epiphany:fragmentedgec}
+        },
+				 {
+        id: "fragmentedgec",
+            label: "Une opération du Labhite",
+            aspects:
+            {edge: 6,lore:1,subvertable_lore:1,challenge.practical:1,challenge.grim:1},
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Pointe du même niveau pour passer au niveau suivant. Étudier avec une croyance de l'hiver du même niveau pour la corrompre et obtenir une croyance de l'Hiver à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentedgec:1,fragmentwinterc:1,reason:1},actionId:"study"}],
+            description: "Une série d'exercices mystiques qui exigent à la fois dévouement et terreur. [Utilisez ceci dans un rite avec un cadavre et le pouvoir d'Hiver, et le cadavre ressuscitera.]",
+			xtriggers:{epiphany:fragmentedged}
+        },
+						 {
+        id: "fragmentedged",
+            label: "Les Noms du Colonel",
+            aspects:
+            {edge: 8,lore:1,subvertable_lore:1,challenge.practical:1,challenge.grim:1},
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Pointe du même niveau pour passer au niveau suivant. Étudier avec une croyance de l'hiver du même niveau pour la corrompre et obtenir une croyance de l'Hiver à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentedged:1,fragmentwinterd:1,reason:1},actionId:"study"}],
+description: "Le colonel a été beaucoup de choses dans de nombreux âges. Il est aveugle, il est sourd, il ne peut être blessé, il ne peut être nié. Ses Noms sont astucieux comme seuls les très anciens peuvent l'être.",
+			
+			xtriggers:{epiphany:fragmentedgee}
+        },{
+        id: "fragmentedgee",
+            label: "Les Noms du Lionsmith",
+            aspects:
+            {edge: 10,lore:1,subvertable_lore:1,challenge.practical:1,challenge.grim:1,challenge.knowledge:1},
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Pointe du même niveau pour passer au niveau suivant. Étudier avec une croyance de l'hiver du même niveau pour la corrompre et obtenir une croyance de l'Hiver à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentedgee:1,fragmentwintere:1,reason:1},actionId:"study"}],
+                        description: "Le Lionsmith est jeune selon les critères des Heures, mais vieux selon les critères de la guerre. Ses Noms sont des recrues récentes, et leur récitation a un pouvoir sauvage.",
+			xtriggers:{epiphany:fragmentedgef}
+        },
+		{
+        id: "fragmentedgef",
+            label: "Les alignements de meurtres",
+            aspects:
+            {edge: 12,lore:1,subvertable_lore:1,challenge.practical:1,challenge.grim:1,challenge.knowledge:1},
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec un fragment de croyance de la Pointe du même niveau pour passer au niveau suivant. Étudier avec un fragment de croyance de l'Hiver du même niveau pour la corrompre, et obtenir la croyance de l'Hiver à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentedgef:1,fragmentwinterf:1,reason:1},actionId:"study"}],
+            description: "Ce sont les arts qui garantissent une conclusion.",
+			xtriggers:{epiphany:fragmentedgeg}
+        },
+		   {   id: "fragmentedgeg",
+            label: "Les mystères de la Force",
+            aspects:
+            {edge: 14,lore:1,subvertable_lore:1},
+            description: "Le colonel et le Lionsmith sont des dieux-qui-étaient-Chairs, mais le Loup-Divisé est un dieu-qui-était-sang. La ruse, la force et l'agonie sont les trois racines de la victoire, et voici leur doctrine secrète...",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec Raison pour briser la croyance en fragments de niveau inférieur.",required:{reason:1},actionId:"study"}],			
+			unique:true
+        },
+		          {
+        id: "fragmentforge",
+            label: "Un secret du Forgeron",
+            aspects:
+            {forge: 2,lore:1,subvertable_lore:1,challenge.knowledge:1},
+            description: "Sur les cinq continents, les forgerons ont murmuré les mêmes mots au fer. Des meurtriers ont également été connus pour chuchoter ces mots. Et les adeptes, bien sûr. Ces mots sont prononcés dans le cadre d'un rituel pour inspirer un changement sans merci.",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Forge du même niveau pour passer au niveau suivant. Étudiez avec une croyance de la Pointe du même niveau pour la corrompre, et obtenez une croyance de la Pointe à la place.",required:{fragmentforge:1,fragmentedge:1},actionId:"study"}],
+		xtriggers:{epiphany:fragmentforgeb},
+        },
+				          {
+        id: "fragmentforgeb",
+            label: "Une oraison ardente",
+            aspects:
+            {forge:4,lore:1,subvertable_lore:1,challenge.knowledge:1},
+            description: "Quand nous regardons un feu, que surveillons-nous ? Lorsque nous le trouvons, voici les mots qu'il prononce: un mot qui sanctifie le changement qui survient lorsque la peau brûlée pèle.",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Forge du même niveau pour passer au niveau suivant. Étudiez avec une croyance de la Pointe du même niveau pour la corrompre, et obtenez une croyance de la Pointe à la place. Ou étudier avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentforgeb:1,fragmentedgeb:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragment},xtriggers:{epiphany:fragmentforgec}
+        },
+						          {
+        id: "fragmentforgec",
+            label: "Un chant du changement",
+            aspects:
+            {forge:6,lore:1,subvertable_lore:1,challenge.knowledge:1,challenge.practical:1},
+            description: "Les mots appropriés doivent être employés lorsque le changement arrive. [Utilisez ceci dans un Rite avec une influence de Clé et une flûte en os - ou d'autres ressources de puissance égale - pour invoquer un Caligine.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Forge du même niveau pour passer au niveau suivant. Étudiez avec une croyance de la Pointe du même niveau pour la corrompre, et obtenez une croyance de la Pointe à la place. Ou étudier avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentforgec:1,fragmentedgec:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragment},xtriggers:{epiphany:fragmentforged}
+        },
+		{
+		        id: "fragmentforged",
+            label: "Invocation de Callidate",
+            aspects:
+            {forge:8,lore:1,subvertable_lore:1,challenge.knowledge:1,challenge.practical:1},
+            description: "Les Noms de la Forge ont tous prononcé ces mots. [Utilisez ceci dans un rite avec une influence de Clé et une flûte en os - ou d'autres ressources de puissance égale - pour invoquer un Caligine.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Forge du même niveau pour passer au niveau suivant. Étudiez avec une croyance de la Pointe du même niveau pour la corrompre, et obtenez une croyance de la Pointe à la place. Ou étudier avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentforged:1,fragmentedged:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragment},xtriggers:{epiphany:fragmentforgee}
+        },
+		{	id: "fragmentforgee",
+            label: "Formule Fissive",
+            aspects:
+            {forge:10,lore:1,subvertable_lore:1,challenge.knowledge:1,challenge.practical:1,challenge.illumination:1},
+            description: "Si vous cassez un objet, vous avez des fragments. Cassez ces fragments, et vous avez de la poussière. Cassez la poussière, et ensuite cassez ce qui reste. Ici, c'est le feu. [Utilisez ceci dans un rite avec un Linteau Consacré et un peu de Refulgine - ou d'autres ressources de puissance égale - pour invoquer le Roi Creuset.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Forge du même niveau pour passer au niveau suivant. Étudiez avec une croyance de la Pointe du même niveau pour la corrompre, et obtenez une croyance de la Pointe à la place. Ou étudier avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentforgee:1,fragmentedgee:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragment},xtriggers:{epiphany:fragmentforgef}
+        },
+		{  id: "fragmentforgef",
+            label: "Le fourneau Paean",
+            aspects:
+            {forge:12,lore:1,subvertable_lore:1,challenge.knowledge:1,challenge.practical:1,challenge.illumination:1},
+            description: "C'est l'hymne que la chaleur chante au fer. Si nous l'imitons assez fidèlement, nous nous sécherons les lèvres et craquerons notre langue, mais Ô, les récompenses. [Utilisez ceci dans un rite avec un Linteau Consacré et un peu de Refulgine - ou d'autres ressources de puissance égale - pour invoquer le Roi Creuset.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Forge du même niveau pour passer au niveau suivant. Étudiez avec une croyance de la Pointe du même niveau pour la corrompre, et obtenez une croyance de la Pointe à la place. Ou étudier avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentforgef:1,fragmentedgef:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragment},xtriggers:{epiphany:fragmentforgeg}
+        },
+		{ id: "fragmentforgeg",
+            label: "Les mystères de la fabrication",
+            aspects:
+            {forge:14,lore:1,subvertable_lore:1},
+            description: "La Forge des Jours, le Meniscate et le Madrugad sont des dieux de la Lumière. Le mercure, l'argent et l'or sont les graines de l'Oeuvre, et voici leur doctrine secrète... [Utilisez ceci dans un rite avec un Linteau Consacré et un peu de Refulgine - ou d'autres ressources de puissance égale - pour invoquer le Roi Creuset.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec Raison pour briser la croyance en fragments de niveau inférieur.",required:{reason:1},actionId:"study"}],	
+			unique:true
+        },
+						          {
+        id: "fragmentgrail",
+            label: "Un secret rouge",
+            aspects:
+            {grail: 2,lore:1,subvertable_lore:1,challenge.intuition:1},
+            description: "Certains mots ne sont correctement orthographiés que si l'encre appropriée est utilisée.",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance du Graal du même niveau pour passer au niveau suivant. Étudiez avec une croyance de la Phalène du même niveau pour la corrompre, et obtenez une croyance de la Phalène à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentgrail:1,fragmentmoth:1},actionId:"study"}],xtriggers:{epiphany:fragmentgrailb}
+        },
+		 {
+        id: "fragmentgrailb",
+            label: "Une incantation mégalésienne",
+            aspects:
+            {grail: 4,lore:1,subvertable_lore:1,challenge.intuition:1},
+            description: "La Grande Mère se souvient.",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance du Graal du même niveau pour passer au niveau suivant. Étudiez avec une croyance de la Phalène du même niveau pour la corrompre et obtenir une croyance de la Phalène à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentgrailb:1,fragmentmothb:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentgrailc}
+        },
+				 {
+        id: "fragmentgrailc",
+            label: "Un sacrement délicieux",
+            aspects:            {grail: 6,lore:1,subvertable_lore:1,challenge.intuition:1,challenge.practical:1},
+            description: "Si agréable à l'oreille. On pourrait écouter encore et encore. Ce sont les mots qui rendent le sacrifice agréable. [Utilisez ces mots avec une Teinture Byzantine et l'influence de la Phalène - ou d'autres ressources de puissance égale - pour invoquer un Prophète brut.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance du Graal du même niveau pour passer au niveau suivant. Étudiez avec une croyance de la Phalène du même niveau pour la corrompre et obtenir une croyance de la Phalène à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentgrailc:1,fragmentmothc:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentgraild}
+        },
+			{
+		        id: "fragmentgraild",
+            label: "L'invocation du thiatique",
+            aspects:
+            {grail:8,lore:1,subvertable_lore:1,challenge.intuition:1,challenge.practical:1},
+            description: "Des cris rauques assistent au passage des Noms du Graal. Nous les reproduisons du mieux que nous pouvons, en raison de la puissance des pulsation qu'ils produisent. [Utilisez ces mots avec une Teinture Byzantine et l'influence de la Phalène - ou d'autres ressources de puissance égale - pour invoquer un Prophète brut.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance du Graal du même niveau pour passer au niveau suivant. Étudiez avec une croyance de la Phalène du même niveau pour la corrompre et obtenir une croyance de la Phalène à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentgraild:1,fragmentmothd:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentgraile}
+        },
+		{		        id: "fragmentgraile",
+            label: "Formulae voluptueuse",
+            aspects:
+            {grail:10,lore:1,subvertable_lore:1,challenge.intuition:1,challenge.practical:1,challenge.paradox:1},
+            description: "Il existe des plaisirs assez intenses pour corrompre les lois du monde physique. [Cette formule peut être utilisée dans un rite avec des Sels noirs amers et une Rupture subtile - ou des sources de pouvoir similaires - pour invoquer Ezeem lui-même.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance du Graal du même niveau pour passer au niveau suivant. Étudiez avec une croyance de la Phalène du même niveau pour la corrompre et obtenir une croyance de la Phalène à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentgraile:1,fragmentmothe:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentgrailf}
+        },
+		{  id: "fragmentgrailf",
+            label: "Elaboration anthique",
+            aspects:
+            {grail:12,lore:1,subvertable_lore:1,challenge.intuition:1,challenge.practical:1,challenge.paradox:1},
+            description: "Le Fleuriste ne peut pas vous toucher, il ne peut pas vous trouver, il a toujours ce que vous désirez. Même une élaboration avec ses propriétés est efficace pour attirer l'attention des Heures. [Cette formule peut être utilisée dans un rite avec des Sels noirs amers et une Rupture subtile - ou des sources de pouvoir similaires - pour invoquer Ezeem lui-même.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance du Graal du même niveau pour passer au niveau suivant. Étudiez avec une croyance de la Phalène du même niveau pour la corrompre et obtenir une croyance de la Phalène à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentgrailf:1,fragmentmothf:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentgrailg}
+        },
+			{  id: "fragmentgrailg",
+            label: "Mystères dévorants",
+            aspects:
+            {grail:14,lore:1,subvertable_lore:1},
+            description: "Le Graal a été le premier dieu-qui-était-sang. Le Fleuriste est venu de la Lumière. Le Corbeau-de-plage était de la chair. La faim, l'avidité et le désir sont la matrice de l'appétit, et voici leur doctrine secrète...  [Cette formule peut être utilisée dans un rite avec des Sels noirs amers et une Rupture subtile - ou des sources de pouvoir similaires - pour invoquer Ezeem lui-même.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec Raison pour briser la croyance en fragments de niveau inférieur.",required:{reason:1},actionId:"study"}],	
+			unique:true
+        },
+				          {
+        id: "fragmentheart",
+            label: "Un secret du Tonnerre",
+            aspects:
+            {heart: 2,lore:1,subvertable_lore:1,challenge.intuition:1},
+            description: "Il y a des sentiments communs dans chaque coup de tonnerre. Reconnaissons-les.",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance du Coeur du même niveau pour passer au niveau suivant. Étudiez avec une croyance du Graal du même niveau pour la corrompre, et obtenez une croyance du Graal à la place.",required:{fragmentheart:1,fragmentgrail:1},actionId:"study"}],xtriggers:{epiphany:fragmentheartb}
+        },
+				 {
+        id: "fragmentheartb",
+            label: "Des mots qui marchent",
+            aspects:
+            {heart: 4,lore:1,subvertable_lore:1,challenge.intuition:1},
+            description: "Les syllabes de cette formule sont convaincantes. Je me retrouve à claquer des doigts à son rythme. Ils ne veulent pas s'arrêter.",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance du coeur du même niveau pour passer au niveau suivant. Étudiez avec une croyance du Graal du même niveau pour la corrompre, et obtenez une croyance du Graal à la place. Ou étudiez avec Raison pour décomposer une croyance en fragments de niveau inférieur.",required:{fragmentheartb:1,fragmentgrailb:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentheartc}
+        },
+						 {
+        id: "fragmentheartc",
+            label: "Un chant d'éveil",
+            aspects:
+            {heart: 6,lore:1,subvertable_lore:1,challenge.intuition:1,challenge.practical:1},
+            description: "Qui pourrait entendre cela et rester impassible ? Les endormis ? Les morts ? La terre et le ciel ? [Utilisez ceci dans un rite avec une Teinture Byzantine et une Balle de météorite - ou d'autres ressources de puissance égale - pour invoquer un Percussigant.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance du coeur du même niveau pour passer au niveau suivant. Étudiez avec une croyance du Graal du même niveau pour la corrompre, et obtenez une croyance du Graal à la place. Ou étudiez avec Raison pour décomposer une croyance en fragments de niveau inférieur.",required:{fragmentheartc:1,fragmentgrailc:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentheartd}
+        },
+		{id: "fragmentheartd",
+            label: "Invocation des gémeaux",
+            aspects:
+            {heart:8,lore:1,subvertable_lore:1,challenge.intuition:1,challenge.practical:1},
+            description: "La Soeur-et-la-Sorcière a toujours été invoquée pour se protéger, aux carrefours et au lever de la lune et là où la terre abrite la mer. [Utilisez ceci dans un rite avec une Teinture Byzantine et une Balle de météorite - ou d'autres ressources de puissance égale - pour invoquer un Percussigant.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance du coeur du même niveau pour passer au niveau suivant. Étudiez avec une croyance du Graal du même niveau pour la corrompre, et obtenez une croyance du Graal à la place. Ou étudiez avec Raison pour décomposer une croyance en fragments de niveau inférieur.",required:{fragmentheartd:1,fragmentgraild:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmenthearte}
+        },
+		{ id: "fragmenthearte",
+            label: "Formulae vigilante",
+            aspects:
+            {heart:10,lore:1,subvertable_lore:1,challenge.intuition:1,challenge.practical:1,challenge.obsessive:1},
+            description: "Celui qui regarde ne dort pas, celui qui dort ne regarde pas. <b> Celui qui regarde ne dort pas, celui qui dort ne regarde pas.</b> [Utilisez ceci dans un rite avec une Teinture Byzantine et une Balle de météorite - ou d'autres ressources de puissance égale - pour invoquer un Percussigant.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance du coeur du même niveau pour passer au niveau suivant. Étudiez avec une croyance du Graal du même niveau pour la corrompre, et obtenez une croyance du Graal à la place. Ou étudiez avec Raison pour décomposer une croyance en fragments de niveau inférieur.",required:{fragmenthearte:1,fragmentgraile:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentheartf}
+        },
+		{  id: "fragmentheartf",
+            label: "Le charme du Velours",
+            aspects:
+            {heart:12,lore:1,subvertable_lore:1,challenge.intuition:1,challenge.practical:1,challenge.obsessive:1},
+            description: "Le Velours répond toujours 'Non', mais nous pouvons nous abriter dans ce 'Non' comme des bêtes dans la ramure d'un arbre. [Utilisez ceci dans un rite avec une Teinture Byzantine et une Balle de météorite - ou d'autres ressources de puissance égale - pour invoquer un Percussigant.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance du coeur du même niveau pour passer au niveau suivant. Étudiez avec une croyance du Graal du même niveau pour la corrompre, et obtenez une croyance du Graal à la place. Ou étudiez avec Raison pour décomposer une croyance en fragments de niveau inférieur.",required:{fragmentheartf:1,fragmentgrailf:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentheartg}
+        },
+		{ id: "fragmentheartg",
+            label: "Des mystères incessants",
+            aspects:
+            {heart:14,lore:1,subvertable_lore:1},
+            description: "Le Graal a arraché le Thunderskin de la chair. La Soeur-et-la-Sorcière est née de deux ventres. Le Velours s'est réveillé quand les racines du Bois ont goûté au sang. Le Coeur est le Tambour du Sang, et voici sa doctrine secrète... [Utilisez ceci dans un rite avec une Teinture Byzantine et une Balle de météorite - ou d'autres ressources de puissance égale - pour invoquer un Percussigant.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec Raison pour briser la croyance en fragments de niveau inférieur.",required:{reason:1},actionId:"study"}],	
+			unique:true
+        },
+
+				          {
+        id: "fragmentknock",
+            label: "Un secret du Serrurier",
+            aspects:
+            {knock: 2,lore:1,challenge.knowledge:1},
+            description: "Tôt ou tard, tout Serrurier fait le Rêve. Nous récitons maintenant ses sept phases... [Presque tous les rites d'invocation nécessitent l'influence de la Clé. Cette croyance en fournira.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec n'importe quelle croyance du même niveau (excepté les Histoires Secrètes) pour passer au niveau supérieur.",required:{fragmentedge:1,fragmentforge:1,fragmentgrail:1,fragmentheart:1,fragmentknock:1,fragmentlantern:1,fragmentmoth:1,fragmentwinter:1},actionId:"study"}],xtriggers:{epiphany:fragmentknockb}
+        },
+				 {
+        id: "fragmentknockb",
+            label: "Un rite igüvin",
+            aspects:
+            {knock: 4,lore:1,challenge.knowledge:1},
+            description: "Chaque porte du Mansus exige son sacrifice avant de s'ouvrir. Les rites igüvins prescrivent la manière de faire ce sacrifice. [Presque tous les rites d'invocation nécessitent l'influence de la Clé. Cette croyance en fournira.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec n'importe quelle croyance du même niveau (excepté les Histoires Secrètes) pour passer au niveau supérieur de la croyance de Clé. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentedgeb:1,fragmentforgeb:1,fragmentgrailb:1,fragmentheartb:1,fragmentknockb:1,fragmentlanternb:1,fragmentmothb:1,fragmentwinterb:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentknockc}
+        },
+						          {
+        id: "fragmentknockc",
+            label: "Un consentement de blessures",
+            aspects:
+            {knock: 6,lore:1,challenge.knowledge:1,challenge.grim:1},
+            description: "Pour ouvrir certains chemins, il faut d'abord s'ouvrir soi-même. Cette pratique précise cette ouverture, au nom de la Mère des Fourmis. [Presque tous les rites d'invocation nécessitent l'influence de la Clé. Cette croyance en fournira.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec n'importe quelle croyance du même niveau (sauf les histoires secrètes) pour passer au niveau supérieur de la croyance de Clé. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentedgec:1,fragmentforgec:1,fragmentgrailc:1,fragmentheartc:1,fragmentknockc:1,fragmentlanternc:1,fragmentmothc:1,fragmentwinterc:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentknockd}
+        },
+		{
+		        id: "fragmentknockd",
+            label: "L'invocation du Meniscate",
+            aspects:
+            {knock:8,lore:1,challenge.knowledge:1,challenge.grim:1},
+            description: "Lorsque le visage de la lune a été blessé, ces mots sont apparus. [Presque tous les rites d'invocation nécessitent l'influence de la Clé. Cette croyance en fournira.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec n'importe quelle croyance du même niveau (sauf les histoires secrètes) pour passer au niveau supérieur de la croyance de Clé. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentedged:1,fragmentforged:1,fragmentgraild:1,fragmentheartd:1,fragmentknockd:1,fragmentlanternd:1,fragmentmothd:1,fragmentwinterd:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentknocke}
+        },
+		{		        id: "fragmentknocke",
+            label: "Formulae Ophidian",
+            aspects:
+            {knock:10,lore:1,challenge.knowledge:1,challenge.grim:1,challenge.paradox:1},
+            description: "Les serpents sont les visiteurs qui ne peuvent être refusés. [Presque tous les rites d'invocation nécessitent l'influence de la Clé. Cette croyance en fournira.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec n'importe quelle croyance du même niveau (sauf les histoires secrètes) pour passer au niveau supérieur de la croyance de Clé. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentedgee:1,fragmentforgee:1,fragmentgraile:1,fragmenthearte:1,fragmentknocke:1,fragmentlanterne:1,fragmentmothe:1,fragmentwintere:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentknockf}
+        },
+		{  id: "fragmentknockf",
+            label: "Evocation liminale",
+            aspects:
+            {knock:12,lore:1,challenge.knowledge:1,challenge.grim:1,challenge.paradox:1},
+            description: "Un déesse-qui-était-pierre demeure, et elle surveille tous les seuils. [Presque tous les rites d'invocation nécessitent l'influence de la Clé. Cette croyance en fournira.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec n'importe quelle croyance du même niveau (sauf les histoires secrètes) pour passer au niveau supérieur de la croyance de Clé. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentedgef:1,fragmentforgef:1,fragmentgrailf:1,fragmentheartf:1,fragmentknockf:1,fragmentlanternf:1,fragmentmothf:1,fragmentwinterf:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentknockg}
+        },
+			{id: "fragmentknockg",
+            label: "Les mystères de l'ouverture",
+            aspects:
+            {knock:14,lore:1},
+            description: "La Mère des Fourmis est l'enfant de deux rivières. La Hache Cornue est le dernier dieu-de-la-pierre. Le Meniscate est né dans la Lune de la Lumière. La Blessure, le Seuil et la Révélation sont tous les aspects de la Porte, et voici leur doctrine secrète... [Presque tous les rites d'invocation nécessitent l'influence de la Clé. Cette croyance en fournira.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec Raison pour briser la croyance en fragments de niveau inférieur.",required:{reason:1},actionId:"study"}],	
+			unique:true
+        },
+				          {
+        id: "fragmentlantern",
+            label: "Un secret du Guetteur",
+            aspects:
+            {lantern: 2,lore:1,subvertable_lore:1,challenge.knowledge:1},
+            description: "Il a été exprimé de cette manière: 'Chaque heure a sa couleur, mais la couleur n'existe que là où il y a de la lumière.'",
+			slots:[{id:"with",label:"Avec",description:"Étudier avec une croyance de la Lanterne du même niveau pour passer au niveau suivant. Étudier avec une croyance de la Forge du même niveau pour la corrompre, et obtenir une croyance de la Forge à la place.",required:{fragmentlantern:1,fragmentforge:1},actionId:"study"}],xtriggers:{epiphany:fragmentlanternb}
+        },
+				 {
+        id: "fragmentlanternb",
+            label: "Un aperçu du Mansus",
+            aspects:
+            {lantern: 4,lore:1,subvertable_lore:1,challenge.knowledge:1},
+            description: "Une bribe de poésie, un seul souvenir d'une certaine maison que nous visitons tous au moins deux fois dans notre vie. Pour une première visite au Mansus, ce savoir est presque essentiel.",
+			slots:[{id:"with",label:"Avec",description:"Étudier avec une croyance de la Lanterne du même niveau pour passer au niveau suivant. Étudier avec une croyance de la Forge du même niveau pour la corrompre, et obtenir une croyance de la Forge à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentlanternb:1,fragmentforgeb:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentlanternc}
+        },
+						 {
+        id: "fragmentlanternc",
+            label: "Un mantra sans pitié",
+            aspects:
+            {lantern: 6,lore:1,subvertable_lore:1,challenge.knowledge:1,challenge.illumination:1},
+            description: "'La miséricorde', dit le Gardien, 'ne se trouve que dans l'ombre.'",
+			slots:[{id:"with",label:"Avec",description:"Étudier avec une croyance de la Lanterne du même niveau pour passer au niveau suivant. Étudier avec une croyance de la Forge du même niveau pour la corrompre, et obtenir une croyance de la Forge à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentlanternc:1,fragmentforgec:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentlanternd}
+        },
+		{
+		        id: "fragmentlanternd",
+            label: "L'invocation phanéenne",
+            aspects:
+            {lantern:8,lore:1,subvertable_lore:1,challenge.knowledge:1,challenge.illumination:1},
+            description: "La Porte-dans-l'Oeil navigue ; elle n'est pas miséricordieuse; mais d'abord et toujours, elle illumine. [Utilisez ceci dans un rite avec un outil de la Clé et un Air Palpitant - ou d'autres ressources de puissance égale - pour invoquer un Invers depuis l'envers des miroirs.]",
+			slots:[{id:"with",label:"Avec",description:"Étudier avec une croyance de la Lanterne du même niveau pour passer au niveau suivant. Étudier avec une croyance de la Forge du même niveau pour la corrompre, et obtenir une croyance de la Forge à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentlanternd:1,fragmentforged:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentlanterne}
+        },
+		{		        id: "fragmentlanterne",
+            label: "Formulae Concursate",
+            aspects:
+            {lantern:10,lore:1,subvertable_lore:1,challenge.knowledge:1,challenge.illumination:1,challenge.paradox:1},
+            description: "Le Concursum attend à la Lanterne du Mansus. Il a été appelé la Chambre des Chemins et aussi la Chambre des Fin. Ses complexités dépassent probablement l'entendement humain, mais ces formules sont une première approximation. [Utilisez ceci dans un rite avec un outil de la Clé et un Air Palpitant - ou d'autres ressources de puissance égale - pour invoquer un Invers depuis l'envers des miroirs.]",
+			slots:[{id:"with",label:"Avec",description:"Étudier avec une croyance de la Lanterne du même niveau pour passer au niveau suivant. Étudier avec une croyance de la Forge du même niveau pour la corrompre, et obtenir une croyance de la Forge à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentlanterne:1,fragmentforgee:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentlanternf}
+        },
+		{  id: "fragmentlanternf",
+            label: "Mantra de l'ascension",
+            aspects:
+            {lantern:12,lore:1,subvertable_lore:1,challenge.knowledge:1,challenge.illumination:1,challenge.paradox:1},
+            description: "L'ascension des couteaux est le plus sanglant des tests du Guetteur. Ceux qui la réussissent et qui sont morts entrent au service du Soleil-en-Haillons. Les vivants qui la réussissent sont un peu plus proches de la Gloire. [Utilisez ceci dans un rite avec un outil de la Clé et un Air Palpitant - ou d'autres ressources de puissance égale - pour invoquer un Invers depuis l'envers des miroirs.]",
+			slots:[{id:"with",label:"Avec",description:"Étudier avec une croyance de la Lanterne du même niveau pour passer au niveau suivant. Étudier avec une croyance de la Forge du même niveau pour la corrompre, et obtenir une croyance de la Forge à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentlanternf:1,fragmentforgef:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentlanterng}
+        },
+			{id: "fragmentlanterng",
+            label: "Les mysteres de l'Illumination",
+            aspects:
+            {lantern:14,lore:1,subvertable_lore:1},
+            description: "Le Meniscate, le Madrugad, le Fleuriste et la Forge des Jours sont les dieux de la Lumière. Il y en a un cinquième, mais nous savons maintenant que ce n'est pas le Guetteur. Pourtant, le Guetteur partage une doctrine secrète avec ces cinq dieux, et voici cette doctrine... [Utilisez ceci dans un rite avec une Rupture Subtile et une Curiosité Paradoxale, et quelqu'un viendra. Parlez-en à un Chasseur, et cela pourrait le rendre fou sur place.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec Raison pour briser la croyance en fragments de niveau inférieur.",required:{reason:1},actionId:"study"}],	
+			unique:true
+        },
+		          {
+        id: "fragmentmoth",
+            label: "L'avertissement d'un coiffeur",
+            aspects:
+            {moth: 2,lore:1,subvertable_lore:1,challenge.intuition:1},
+            description: "Un pouvoir du Bois apprécie les mèches rasées du cuir chevelu. Pour attirer l'attention, brûlez-les. Pour l'utiliser, enterrez-les. [Parler de ceci dans un rite avec un cadavre, avec la présence d'une influence de l'Hiver, et le cadavre ressuscitera.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Phalène du même niveau pour passer au niveau suivant. Étudier avec une croyance de la Lanterne du même niveau pour la corrompre, et obtenir une croyance de la Lanterne à la place.",required:{fragmentmoth:1,fragmentlantern:1},actionId:"study"}],xtriggers:{epiphany:fragmentmothb}
+        },
+						 {
+        id: "fragmentmothb",
+            label: "Un murmure du Bois",
+            aspects:
+            {moth: 4,lore:1,subvertable_lore:1,challenge.intuition:1},
+            description: "Restez éveillés et écoutez. Le vent parle dans les branches. La maison crie dans son sommeil. Ce sont les routes que le chaos emprunte. [Parler de ceci dans un rite avec un cadavre, avec la présence d'une influence de l'Hiver, et le cadavre ressuscitera.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Phalène du même niveau pour passer au niveau suivant. Étudier avec une croyance de la Lanterne du même niveau pour la corrompre, et obtenir une croyance de la Lanterne à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentmothb:1,fragmentlanternb:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentmothc}
+        },
+								 {
+        id: "fragmentmothc",
+            label: "La parabole d'un Ecdysiaste",
+            aspects:
+            {moth: 6,lore:1,subvertable_lore:1,challenge.intuition:1,challenge.illumination:1},
+            description: "L'énigme de l'Ecdysiaste est 'Qu'est-ce qui peut être perdu ?' Chaque parabole d'Ecdysiaste est une tentative de réponse à l'énigme. ",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Phalène du même niveau pour passer au niveau suivant. Étudier avec une croyance de la Lanterne du même niveau pour la corrompre, et obtenir une croyance de la Lanterne à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentmothc:1,fragmentlanternc:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentmothd}
+        },
+		{
+		        id: "fragmentmothd",
+            label: "Les remontrances de Moldywarp",
+            aspects:
+            {moth:8,lore:1,subvertable_lore:1,challenge.intuition:1,challenge.illumination:1},
+            description: "Moldywarp garde ses couronnes dans la mousse et ses pieds dans la terre et les arbres bloqués entre ses mâchoires. Moldywarp vous met en garde.",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Phalène du même niveau pour passer au niveau suivant. Étudier avec une croyance de la Lanterne du même niveau pour la corrompre, et obtenir une croyance de la Lanterne à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentmothd:1,fragmentlanternd:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentmothe}
+        },
+		{		        id: "fragmentmothe",
+            label: "Le testament du Mille-pattes",
+            aspects:
+            {moth:10,lore:1,subvertable_lore:1,challenge.intuition:1,challenge.illumination:1,challenge.obsessive:1},
+            description: "Le Mille-pattes est sorti des sables et s'est enfoncé sous les racines. Elle a trouvé un nouveau foyer, mais maintenant elle ne peut plus rentrer chez elle. Elle s'insinue partout ailleurs: dans les trous de serrures, les histoires, les voies de la naissance, de la vue et de l'ouïe. Voici ce qu'elle a à dire.",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Phalène du même niveau pour passer au niveau suivant. Étudier avec une croyance de la Lanterne du même niveau pour la corrompre, et obtenir une croyance de la Lanterne à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentmothe:1,fragmentlanterne:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentmothf}
+        },
+		{  id: "fragmentmothf",
+            label: "Doux thorax né de la cuisse",
+            aspects:
+            {moth:12,lore:1,subvertable_lore:1,challenge.intuition:1,challenge.illumination:1,challenge.obsessive:1},
+            description: "Le roi-phalène couronné de vigne a éclos dans la cuisse du roi-tonnerre qui est mort. Buvez la lymphe de son ventre. Voici les curiosités que vous verrez.",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de la Phalène du même niveau pour passer au niveau suivant. Étudier avec une croyance de la Lanterne du même niveau pour la corrompre, et obtenir une croyance de la Lanterne à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentmothf:1,fragmentlanternf:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentmothg}
+        },
+			{id: "fragmentmothg",
+            label: "Cauchemars-dans-l'If",
+            aspects:
+            {moth:14,lore:1,subvertable_lore:1},
+            description: "Les vraies Heures ne rencontrent pas les dieux de nulle part, mais l'anneau-d'If rencontre le Cauchemar-dans-l'Arbre là où la forêt est luxuriante. Leurs accouplements sont interdits, et les choses interdites ont un pouvoir, et voici l'histoire de leurs accouplements.",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec Raison pour briser la croyance en fragments de niveau inférieur.",required:{reason:1},actionId:"study"}],	
+			unique:true
+        },
+
+				          {
+        id: "fragmentsecrethistories",
+            label: "Un fragment occulte",
+            aspects:
+            {secrethistories: 2,lore:1,challenge.knowledge:1},
+            description: "Des histoires secrètes se cachent sous celles que nous connaissons, comme les notes d'un vin rare. Voici un détail de l'une de ces histoires. [Explorez avec ce fragment de connaissance peut permettre de découvrir des lieux secrets dans la capitale.]",
+			slots:[{id:"with",label:"Avec",description:"Étudier avec une croyance d'Histoire Secrète du même niveau pour passer au niveau suivant.",required:{fragmentsecrethistories:1},actionId:"study"}],xtriggers:{epiphany:fragmentsecrethistoriesb}
+        },
+						          {
+        id: "fragmentsecrethistoriesb",
+            label: "Une vérité furtive",
+            aspects:
+            {secrethistories: 4,lore:1,challenge.knowledge:1},
+            description: "Un détail tiré d'un récit voisin. Ne parlez pas de cette façon, car vous pourriez être entendu. [Explorez avec ce fragment de connaissance peut permettre de découvrir des endroits secrets dans les Shires.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance d'Histoire Secrète du même niveau pour passer au niveau suivant. Ou étudier avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentsecrethistoriesb:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentsecrethistoriesc}
+        },
+								          {
+        id: "fragmentsecrethistoriesc",
+            label: "Une chronique oubliée",
+            aspects:
+            {secrethistories: 6,lore:1,challenge.knowledge:1,challenge.intuition:1},
+            description: "L'histoire d'une ville sans porte, d'une reine qui n'est pas née, d'une guerre qui n'a pas été menée. [Explorez avec ce fragment de connaissance peut permettre de découvrir des endroits secrets sur le continent.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance d'Histoire Secrète du même niveau pour passer au niveau suivant. Ou étudier avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentsecrethistoriesc:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentsecrethistoriesd}
+        },{
+		        id: "fragmentsecrethistoriesd",
+            label: "Une épopée interdite",
+            aspects:
+            {secrethistories:8,lore:1,challenge.knowledge:1,challenge.intuition:1},
+            description: "L'attention des Heures est attirée sur les guerres les plus sanglantes. Ensuite, les Histoires sont tressées comme des cheveux. Explorez avec ce fragment de connaissance peut permettre de découvrir des lieux secrets dans les terres au-delà de la forêt à l'extremité du continent.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance d'Histoire Secrète du même niveau pour passer au niveau suivant. Ou étudier avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentsecrethistoriesd:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentsecrethistoriese}
+        },
+		{		        id: "fragmentsecrethistoriese",
+            label: "Une ambiguïté non résolue",
+            aspects:
+            {secrethistories:10,lore:1,challenge.knowledge:1,challenge.intuition:1,challenge.illumination:1},
+            description: "Dans le Mansus, les Heures se battent les unes contre les autres. Au fur et à mesure que les luttes se résolvent, elles aplanissent l'impossible, exaltent le possible, nouent les tresses effilochées de ce qui a été en un ruban d'or du futur. Tout est résolu. L'histoire devient le passé. Il y a cependant des exceptions. [Explorez avec ce fragment de connaissance peut permettre de découvrir des endroits secrets dans les Montagnes déchiquetées, à trois mille miles de distance, parmi les épaves des plus anciens empires.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance d'Histoire Secrète du même niveau pour passer au niveau suivant. Ou étudier avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentsecrethistoriese:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentsecrethistoriesf}
+        },
+		{  id: "fragmentsecrethistoriesf",
+            label: "La carte de Vagabond",
+            aspects:
+            {secrethistories:12,lore:1,challenge.knowledge:1,challenge.intuition:1,challenge.illumination:1},
+            description: "Le Vagabond est la seule Heure qui ne pourra jamais entrer dans le Mansus, mais elle va <i>partout</i> ailleurs... et, si vous croyez ses vantardises, elle est la seule à connaître toutes les Histoires. Parfois, elle laisse quelqu'un consigner ses voyages. [Explorez avec ce fragment de connaissance et vous découvrirez peut-être des endroits secrets dans les Dunes solitaires et des Sables uniformes, loin d'ici.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance d'Histoire Secrète du même niveau pour passer au niveau suivant. Ou étudier avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentsecrethistoriesf:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentsecrethistoriesg}
+        },
+			{id: "fragmentsecrethistoriesg",
+            label: "L'anecdote de Port Noon",
+            aspects:
+            {secrethistories:14,lore:1},
+            description: "Port Noon est l'endroit où les Long vont pour profiter de la mer et du soleil, pour boire à la source qui les fait oublier, et pour rester en dehors des ennuis. Surtout pour éviter les ennuis. Les histoires que vous pouvez entendre à l'hôtel Ciervo sont comme des vins exquis, dédiés à la mémoire. [Explorez avec ce fragment de connaissance et vous découvrirez peut-être des lieux secrets dans les îles du soir, où se trouve Port Noon, de l'autre côté du grand océan.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec Raison pour briser la croyance en fragments de niveau inférieur.",required:{reason:1},actionId:"study"}],	
+			unique:true
+        },
+				          {
+        id: "fragmentwinter",
+            label: "Le secret d'un sacristain",
+            aspects:
+            {winter: 2,lore:1,subvertable_lore:1,challenge.knowledge:1},
+            description: "Certaines connaissances, dit-on, ne peuvent s'exprimer qu'à travers la qualité particulière d'un silence. Il a été suggéré que l'on ne peut lire ces connaissances qu'avec les yeux fermés, mais seulement par des commentateurs malicieux. [Utilisez ceci dans un rite avec un cadavre et un aspect de la Pointe, et le cadavre ressuscitera.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de l'Hiver du même niveau pour passer au niveau suivant. Étudiez avec une croyance du Coeur du même niveau pour la corrompre, et obtenez de la croyance du Coeur à la place.",required:{fragmentwinter:1,fragmentheart:1},actionId:"study"}],xtriggers:{epiphany:fragmentwinterb}
+        },
+						          {
+        id: "fragmentwinterb",
+            label: "Une cérémonie blanche",
+            aspects:
+            {winter: 4,lore:1,subvertable_lore:1,challenge.knowledge:1},
+            description: "Quand je le parle, mes lèvres ne craquent pas de givre. A chaque fois, c'est surprenant. [Utilisez ceci dans un rite avec une influence de Coeur et une Teinture Byzantine pour invoquer les Morts sans voix.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de l'Hiver du même niveau pour passer au niveau suivant. Étudiez avec une croyance du Coeur du même niveau pour la corrompre, et obtenez de la croyance du Coeur à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentwinterb:1,fragmentheartb:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentwinterc}
+        },
+								          {
+        id: "fragmentwinterc",
+            label: "Une opération du soleil déclinant",
+            aspects:
+            {winter: 6,lore:1,subvertable_lore:1,challenge.knowledge:1,challenge.grim:1},
+            description: "Celui-ci invoque, reconnaît et accueille le passage au silence. [Utilisez ceci dans un rite avec une influence du Coeur et une Teinture Byzantine pour invoquer les Morts sans voix.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de l'Hiver du même niveau pour passer au niveau suivant. Étudiez avec une croyance du Coeur du même niveau pour la corrompre, et obtenez de la croyance du Coeur à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentwinterc:1,fragmentheartc:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentwinterd}
+        },
+		{
+		        id: "fragmentwinterd",
+            label: "Invocation de la colombe d'ivoire",
+            aspects:
+            {winter:8,lore:1,subvertable_lore:1,challenge.knowledge:1,challenge.grim:1},
+            description: "Il existe un pouvoir qui commémore et qui pleure, à qui rien n'est pris, mais qui ne peut être trompé. Vous pourriez vous attendre à pouvoir l'écraser dans votre main, en fragments d'os d'oiseaux. [Utilisez ceci dans un rite avec de la Pâte Martensite et un assistant dédié à la Clé - ou d'autres ressources de puissance égale - pour invoquer une Servante dans le miroir.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de l'Hiver du même niveau pour passer au niveau suivant. Étudiez avec une croyance du Coeur du même niveau pour la corrompre, et obtenez de la croyance du Coeur à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentwinterd:1,fragmentheartd:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentwintere}
+        },
+		{		        id: "fragmentwintere",
+            label: "Récitation des Heures perdues",
+            aspects:
+            {winter:10,lore:1,subvertable_lore:1,challenge.knowledge:1,challenge.grim:1,challenge.obsessive:1},
+            description: "Six sont partis. Cinq sont venus de la Pierre et un de la Lumière. Tous sont allés vers Nulle-part. Leurs souvenirs ont toujours un pouvoir, et maintenant nous l'invoquons. [Utilisez ceci dans un rite avec de la Pâte Martensite et un assistant dédié à la Clé - ou d'autres ressources de puissance égale - pour invoquer une Servante dans le miroir.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de l'Hiver du même niveau pour passer au niveau suivant. Étudiez avec une croyance du Coeur du même niveau pour la corrompre, et obtenez de la croyance du Coeur à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentwintere:1,fragmenthearte:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentwinterf}
+        },
+		{  id: "fragmentwinterf",
+            label: "Les divisions des Noms",
+            aspects:
+            {winter:12,lore:1,subvertable_lore:1,challenge.knowledge:1,challenge.grim:1,challenge.obsessive:1},
+            description: "Lorsque le Soleil-en-Splendeur a été divisé, ses Noms se sont également fracturés. Voici les éclats de leurs noms qui étaient autrefois entiers. [Utilisez ceci dans un rite avec de la Pâte Martensite et un assistant dédié à la Clé - ou d'autres ressources de puissance égale - pour invoquer une Servante dans le miroir.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec une croyance de l'Hiver du même niveau pour passer au niveau suivant. Étudiez avec une croyance du Coeur du même niveau pour la corrompre, et obtenez de la croyance du Coeur à la place. Ou étudiez avec Raison pour décomposer la croyance en fragments de niveau inférieur.",required:{fragmentwinterf:1,fragmentheartf:1,reason:1},actionId:"study"}],xtriggers:{epiphany:fragmentwinterg}
+        },
+			{id: "fragmentwinterg",
+            label: "Mot-loup",
+            aspects:
+            {winter:14,lore:1,subvertable_lore:1},
+            description: "Lorsque la Forge est froide, que la Gloire est sombre et que le Bois est poussière, peut-être que le Loup divisé se reposera, mais seulement jusqu'à ce qu'il puisse se dévorer. Ce mot exprime presque la haine du Divisé. [Parlez de cela à un chasseur, et cela pourrait le rendre fou sur place.]",
+			slots:[{id:"with",label:"Avec",description:"Étudiez avec Raison pour briser la croyance en fragments de niveau inférieur.",required:{reason:1},actionId:"study"}],
+			unique:true
+        },
+
+		{
+        id: "fragmentglory",
+            label: "Un souvenir de la Gloire",
+            aspects:
+            {lantern: 6,forge:6,lore:1},
+            description: "--",
+			comments: "Hello, Seeker. If you're here to decipher enigmas, familiarise yourself with the eidesis in which were presented the Lion, the Boar and the Bull. - AK.",
+			xtriggers:{epiphany:bequestintro},
+			noartneeded:true
+        },
+				{id:"prealzabo",
+label:"Formule: Elixir Zeboim ?",
+description:"J'ai ici un secret - une recette de miel, d'asphodèle, d'ivoire en poudre et d'un champignon tacheté qui ne pousse que là où les morts sont enterrés.",
+aspects:{lore:1},
+slots:[{id:"desire",label:"Tentation",description:"Les vieux souvenirs vont dans la terre, et on ne peut pas les y trouver - mais ils habitent d'abord dans un autre endroit, avant d'aller plus loin.",actionId:"study",required:{remembrancemarks:1}},
+{id:"taste",label:"Goût",description:"Il n'y a pas de retour en arrière.",actionId:"study",required:{remnant:1}},
+{id:"materials",label:"Matériaux",required:{funds:1},actionId:"study"}]
+},
+		{id:"alzabo",
+label:"Formule: Elixir Zeboim",
+description:"Cette formule qui accélère les souvenirs de la chair en décomposition dans le ventre des vivants. Une telle chose ne pourrait pas exister sans le consentement du Fleuriste et de l'Élégie... et avec l'aide d'une Heure en outre.",
+comments: "RIP Gene Wolfe, 1931-2019. 'Some are haunted by ghosts. I am haunted by stories.'",
+aspects:{lore:1},
+slots:[{id:"desire",label:"Désir",description:"Les vieux souvenirs vont dans la terre, et on ne peut pas les y trouver - mais ils habitent d'abord dans un autre endroit, avant d'aller plus loin.",actionId:"study",required:{remembrancemarks:1}},
+{id:"feast",label:"Festin",description:"Lorsque l'élixir est consommé, les enzymes de la digestion deviennent les messagers de la résurrection. Les Morts revivent - ne serait-ce que dans mes souvenirs.",actionId:"study",required:{remnant:1}}]
+},
+
+]
+}

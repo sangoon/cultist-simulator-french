@@ -1,0 +1,105 @@
+ {"recipes":
+ [
+      			{
+        id: "temptationremembrancehintdream",
+        label: "Tentations ?",
+        actionId: "dream",
+        requirements: {temptation.remembrance:1},
+        startdescription: "Il y a des couleurs dans le monde, il y a des couleurs dans le Mansus, et puis il y a des couleurs perdues. Leur absence est le couteau que je ne peux pas libérer. [La tentation du Souvenir a ses dents en vous, et aucune autre tentation ne vous touchera.]",
+        craftable: false,
+		hintonly: true
+    },
+     			{
+        id: "vitalityhintdream",
+        label: "Vitalité",
+        actionId: "dream",
+        requirements: {vitality:1},
+        startdescription: "Cela ne provoque aucun rêve; mais je pourrais l'étudier pour améliorer ma santé.",
+        craftable: false,
+		hintonly: true,
+		
+		comments: "Not currently possible with restrictions on Dream primary slot"
+    },
+	    			{
+        id: "eruditionhintdream",
+        label: "Erudition",
+        actionId: "dream",
+        requirements: {erudition:1},
+        startdescription: "Cela ne provoque pas de rêves; mais je pourrais l'étudier pour augmenter ma Raison.",
+        craftable: false,
+		hintonly: true,
+				comments: "Not currently possible with restrictions on Dream primary slot"
+    },
+	    			{
+        id: "glimmeringhintdream",
+        label: "Scintillement",
+        actionId: "dream",
+        requirements: {glimmering:1},
+        startdescription: "Cela ne provoque aucun rêve, pour l'instant; mais je pourrais l'étudier pour accroître ma passion.",
+        craftable: false,
+		hintonly: true,
+				comments: "Not currently possible with restrictions on Dream primary slot"
+    },
+    			{
+        id: "contentmenthintdream",
+        label: "Contentement",
+        actionId: "dream",
+        requirements: {contentment:1},
+        startdescription: "Le contentement n'est pas la clé des rêves, même si les rêves peuvent parfois me rendre heureux.",
+        craftable: false,
+		hintonly: true,
+				comments: "Not currently possible with restrictions on Dream primary slot"
+    },
+ 			{
+        id: "dedicationtoobsession_power_hint",
+        label: "La prochaine étape",
+        actionId: "dream",
+        requirements: {ascensionpowerb:1},
+        startdescription: "Je suis allé aussi loin que je le pouvais dans le rêve. Je dois continuer à <b>Travailler</b>.",
+        craftable: false,
+		hintonly: true,
+		
+    },
+	
+	 			{
+        id: "dedicationtoobsession_enlightenment_hint",
+        label: "La prochaine étape",
+        actionId: "dream",
+        requirements: {ascensionenlightenmentb:1},
+        startdescription: "Je suis allé aussi loin que je le pouvais dans le rêve. Je dois <b>Travailler</b>.",
+        craftable: false,
+		hintonly: true
+    },
+						{
+        id: "tryreducefascination",
+        label: "A la recherche de la sérénité ?",
+        actionId: "dream",
+        requirements: {fascination: 1},
+        startdescription: "Les portes de la vision sont grandes ouvertes. Un peu d'obscurité adoucira ma lumière. Même la Peur a son utilité.",
+hintonly:true,
+        craftable: false
+    },
+				{
+        id: "tryrecoverreason",
+        label: "Me vider l'esprit ?",
+        actionId: "dream",
+        requirements: {dread: 1},
+        startdescription: "Je me souviens que j'étais différent: mais je ne sais pas encore comment. [La peur peut être calmée avec la bonne ressource.]",
+     hintonly:true,
+        craftable: false
+    },
+			{
+        id: "tryrecoverillhealth",
+        label: "Récupérer ?",
+        actionId: "dream",
+        requirements: {illhealth: 1},
+        startdescription: "Le repos me restaurera - si je dispose des ressources nécessaires.",
+        craftable: false,
+		hintonly: true,
+		comments: "This one's generic."
+    },
+
+	
+	
+]
+}

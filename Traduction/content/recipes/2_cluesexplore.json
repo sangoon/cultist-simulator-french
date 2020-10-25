@@ -1,0 +1,80 @@
+ {"recipes":
+ [
+  
+  					{
+	id: "explore_movehq_hint",
+	label: "Un changement de locaux ?",
+	actionId: "explore",
+	requirements: {hq.potential:1},
+	startdescription: "Nous pourrions déplacer notre base d'opérations ici, si nous le souhaitons.",
+	hintonly:true,
+	craftable: false,
+	},
+  					{
+	id: "explorevault_hint_sending",
+	label: "Un deuxième soi ?",
+	actionId: "explore",
+	requirements: {vault:1,sending:1},
+	startdescription: "Si cette expédition réussit, le Je-ne-sais-plus-qui sera là pour remplir les formulaires. [Si vous réussissez, vous récolterez les récompenses habituelles, et vous progresserez également dans votre ascension du Changement.]",
+	hintonly:true,
+	craftable: false,
+	},
+     					{
+	id: "explorevault_hint_addfunds",
+	label: "Préparation d'une expédition ?",
+	actionId: "explore",
+	requirements: {vault:1,follower:1},
+	startdescription: "Si j'ajoute au moins un Fonds, je peux commencer l'expédition. [Les expéditions ont besoin d'au moins un fonds par obstacle. Les Adeptes vaincront les obstacles. Si vous n'avez plus de Fonds ou d'Adeptes, l'expédition se termine.]",
+	hintonly:true,
+	craftable: false,
+	},
+			{
+	id: "explorevault_hint_addfollower",
+	label: "Préparation d'une expédition ?",
+	actionId: "explore",
+	requirements: {vault:1,funds:1},
+	startdescription: "Si j'ajoute un Adepte, je peux commencer l'expédition. [Les expéditions ont besoin d'au moins un fonds par obstacle. Les Adeptes vaincront les obstacles. Si vous n'avez plus de Fonds ou d'Adeptes, l'expédition se termine.]",
+	hintonly:true,
+	craftable: false,
+	},
+      					{
+	id: "explorevault_hint",
+	label: "Préparation d'une expédition ?",
+	actionId: "explore",
+	requirements: {vault:1},
+	startdescription: "Je pourrais envoyer une expédition ici pour trouver des livres, des trésors, des outils de pouvoir. Mais j'aurai besoin d'Adeptes à envoyer, et de Fonds pour les approvisionner.",
+	hintonly:true,
+	craftable: false,
+	},
+	
+		{
+	id: "exploresulochanacabaret_hint",
+	label: "L'Ancienne Forme et la Nouvelle",
+	actionId: "explore",
+	requirements: {locationcabaret:1,sulochana:1},
+	startdescription: "[Si vous avez l'extension Danseur, vous pouvez utiliser cette combinaison pour trouver un emploi au club Ecdysis, et poursuivre les ascensions du Changement.]",
+	hintonly:true,
+	craftable: false,
+	},
+	
+	{id:"explore.searchgraveyard.hint",
+actionId:"explore",
+requirements:{location.cemetery:1},
+label:"Une exhumation ?",
+startdescription:"Je vais devoir déployer ma propre force, ou celle d'un ami.",
+craftable:false,
+hintonly:true
+},
+
+
+{id:"explore.searchgraveyard.closing.hint",
+actionId:"explore",
+requirements:{location.cemetery.closing:1},
+label:"Une exhumation prudente ?",
+startdescription:"Je vais devoir déployer ma propre force, ou celle d'un ami.",
+craftable:false,
+hintonly:true
+},
+	
+]
+}

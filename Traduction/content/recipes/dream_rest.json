@@ -1,0 +1,215 @@
+{
+"recipes": [
+
+
+	
+	{id:"dream.poison.fascination.longlesson.trap",
+actionId:"dream",
+label:"Un ennemi toujours vigilant",
+startdescription:"Notre ennemi a appris de mes rêves.",
+requirements:{poison.fascination.longlesson:1,fascination:1},
+effects:{long.lesson.dreamwork:1},
+mutations:[{filter:fascination,mutate:poison.fascination.longlesson,level:-1}],
+warmup:10,
+craftable:true
+},
+
+
+			{
+        id: "dreamhealth",
+        label: "Tôt dans la nuit",
+        actionId: "dream",
+        requirements: {health:1},
+		effects: {fleeting:1},
+		alternativerecipes: [{id:"dreamhealthdread",chance:10},
+		{id:"dreamhealthfascination",chance:10},
+		{id:"dreamhealthcontentment",chance:30},
+		{id:"dream_router",chance:30}],
+		startdescription: "Avec un peu de chance, je me réveillerai en pleine forme. [Parfois, cela apportera du Contentement. Souvent, cela ne fera rien. Parfois, cela créera de la Peur ou de la Fascination.]",
+        description: "Quelquefois, j'ai rêvé d'une grande femme avec un manteau couleur sable, qui se tient au pied du lit, souriant en me regardant dormir. Dans ce rêve, elle tourne la tête avec la rapidité d'un oiseau, et ses doigts fléchissent comme des serres. Je ne crois pas avoir rêvé d'elle la nuit dernière. Si je l'avais fait, je n'aurais pas pu dormir aussi profondément.",
+        warmup: 60,
+        craftable: true,
+    },
+	{
+        id: "dreamhealthcontentment",
+        label: "Tôt dans la nuit",
+        actionId: "dream",
+		effects: {contentment:1},
+		description: "Le sommeil est un long océan sombre, mais parfois, lorsque nous atteignons le rivage le plus éloigné, il y a la lumière d'une lampe.",
+        craftable: false,
+    },
+		{
+        id: "dreamhealthdread",
+        label: "Tôt dans la nuit",
+        actionId: "dream",
+		effects: {dread:1},
+		description: "Au pays des deux rivières, à l'époque de Rimush et de Naram-Sin, on racontait l'histoire d'une femme hurlante qui dévorait les enfants d'autres mères. La nuit dernière, il y avait des hurlements dans mes rêves.",
+        craftable: false,
+    },
+			{
+        id: "dreamhealthfascination",
+        label: "Tôt dans la nuit",
+        actionId: "dream",
+		effects: {fascination:1},
+		description: "Imaginez une boîte de miroirs, où chaque miroir contient une lumière plus douce. Imaginez maintenant que dans le septième miroir, il n'y a qu'une aube ordinaire, un lit ordinaire, les débuts ternes d'une journée ordinaire. Imaginez cela, et aspirez à la lumière.",
+        craftable: false,
+    },
+	{
+        id: "recoverhunger",
+        label: "Reprendre des forces",
+        actionId: "dream",
+        requirements: {funds: 1, hunger: 1},
+        effects: {
+			funds:-1,
+        },
+		aspects:{restorehealth:1},
+        startdescription: "J'ai passé un certain temps sans nourriture. Je dois manger avec précaution.",
+        description: "Mes forces reviennent. L'obscurité aux coins de ma vision a disparu.",
+        warmup: 30,
+		craftable:true
+    },
+	{
+        id: "recoverfatigue",
+        label: "Une sieste pour se remettre de la Fatigue",
+        actionId: "dream",
+        requirements: {fatigue: 1},
+		aspects:{restorehealth:1},
+        startdescription: "J'ai juste besoin d'un peu de temps pour récupérer mes forces.",
+        description: "Je suis revigoré.",
+        warmup: 30,
+		craftable:true
+    },
+
+{id:"recover.apostlegrail.pillar2",
+actionId:"dream",
+label:"Le rêve de la fin",
+startdescription:"Je consomme la petite fiole de sang, je m'allonge, je ferme les yeux. Demain, je serai plus fort.",
+description:"Je suis bien remis - plus que cela - je suis somptueux. La sclère de mes yeux, les veines de mes poignets, nagent avec de magnifiques sérums. Quand la Vitulation arrivera, je serai la pièce maîtresse, pour notre Délice, pour prouver leur appétit, pour mettre en scène le Graal.",
+requirements:{apostlegrail.pillarfuel:1,apostlegrail.pillar2.dormant:1},
+effects:{apostlegrail.pillar2.dormant:-1,apostlegrail.pillar2:1,apostlegrail.pillarfuel:-1,fascination:1},
+warmup:10,
+craftable:true},
+
+
+	{
+        id: "recoverillhealthfunds",
+        label: "Santé",
+        actionId: "dream",
+        requirements: {funds: 1, illhealth: 1},
+        effects: {
+			funds:-1,
+        },
+		aspects:{restorehealth:1},
+        startdescription: "Le médicament est sombre et amer comme du goudron. Il serait facile de soupçonner que je suis empoisonné.",
+        description: "La chambre du malade est petite et sent le renfermé. Il est temps de se lever.",
+        warmup: 60,
+		craftable:true
+    },
+		{
+        id: "recoverillhealthfundsvitality",
+        label: "Santé",
+        actionId: "dream",
+        requirements: {vitality: 1, illhealth: 1},
+        effects: {
+			vitality:-1,
+        },
+		aspects:{restorehealth:1},
+        startdescription: "Tout ce dont j'ai besoin maintenant, c'est de temps.",
+        description: "La chambre du malade est petite et sent le renfermé. Il est temps de se lever.",
+        warmup: 60,
+		craftable:true
+    },
+	
+	{
+        id: "reducedread",
+        label: "Se libérer l'esprit",
+        actionId: "dream",
+        requirements: {contentment: 1, dread: 1},
+        effects: {contentment:-1,dread:-1,fleeting:1},
+        startdescription: "Je me souviens que j'étais différent, avant.",
+        description: "Le soleil bouge encore. Le vent marche encore. Mes carnets sont la clé du labyrinthe.",
+        warmup: 60,
+		craftable:true
+    },
+
+	{
+        id: "reducefascination",
+        label: "Sang-froid",
+        actionId: "dream",
+        requirements: {dread: 1, fascination: 1},
+        effects: {
+			fascination:-1,dread:-1,fleeting:1
+        },
+        startdescription: ".",
+        description: "L'air est devenu poisseux. Je suis de nouveau chez moi, dans cette chair grumeleuse. Meilleur, peut-être.",
+        warmup: 60,
+		craftable:true
+    },
+	
+		{
+        id: "reducefascinationfleeting",
+        label: "Sang-froid",
+        actionId: "dream",
+        requirements: {fleeting: 1, fascination: 1},
+        effects: {
+			fleeting:-1,fascination:-1
+        },
+        startdescription: ".",
+        description: "L'air est devenu poisseux. Je suis de nouveau chez moi, dans cette chair grumeleuse. Meilleur, peut-être.",
+        warmup: 60,
+		craftable:true
+    },
+
+	
+	
+				{
+        id: "dreamfunds",
+        label: "Acheter une teinture d'opium",
+        actionId: "dream",
+        requirements: {funds:1},
+		effects: {contentment:1,funds:-1},
+		startdescription: "En période de crise exceptionnelle, il m'arrive de me rendre chez un pharmacien discret, pour acheter une teinture d'opium et faire de beaux rêves. Mais seulement en temps de crise. [C'est une façon coûteuse et risquée de gagner du Contentement. Cela peut provoquer de la Maladie ou du Désespoir.]",
+        description: "Oh, cette paix profonde. Mais je ne devrais pas recommencer.",
+        warmup: 30,
+        craftable: true,
+		alternativerecipes: [
+		{id:"grailinduction",chance:30,additional:true},
+		{id:"despairrisk",chance:10,additional:true},
+		{id:"presickness",chance:10,additional:true}]
+    },
+	
+	{id:"dream.decrepitude",
+actionId:"dream",
+label:"Mesures désespérées",
+startdescription:"Mon âme hante ma chair défaillante comme un bruissement de marécage. Mon coeur ralentit, et un jour il cessera. Peut-être que si je consommais une substance exotique, il pourrait retrouver la force perdue. Mais cela semble peu probable.",
+requirements:{decrepitude:1,ingredient:1},
+warmup:30,
+craftable:true,
+linked:[{id:"dream.decrepitude.ingredientheartf"},
+{id:"dream.decrepitude.failure"}]
+},
+
+
+{id:"dream.decrepitude.ingredientheartf",
+actionId:"dream",
+label:"La décapitation de Januarius",
+startdescription:"A la faible odeur de rouille du sang, mon coeur bondit, douloureux comme un lever de soleil perçant.",
+description:"Saint Janvier a ouvert la porte des ans et la porte des agonies, et par cette double porte, la douleur et l'histoire fuient.",
+requirements:{ingredientheartf:1,decrepitude:1},
+effects:{ingredientheartf:-1,restlessness:1,mystique:1},
+aspects:{tohealth:1},
+warmup:30
+},
+
+
+{id:"dream.decrepitude.failure",
+actionId:"dream",
+label:"Rien que le goût le plus étrange",
+startdescription:"Mon coeur bat la chamade. Je n'ai obtenu aucun avantage - sauf, je suppose, des connaissances durement acquises.",
+effects:{ingredient:-1,erudition:1}
+}
+
+
+
+]
+}

@@ -1,0 +1,23 @@
+{"elements":
+    [
+			  
+	{id: "legacytemplatejob",
+	label: "Inspecteur de Police",
+	description: "J'occupe un poste élevé dans les forces de police de la capitale.",
+	aspects: {job:1},
+	xtriggers: {careeradvancement:legacytemplatejob_matured},
+	noartneeded:true
+},
+{id: "legacytemplatejob_matured",
+	description: "",
+	label: "",
+	aspects: {job:1},
+	comments: "Existe pour permettre le passage à un cycle plus long immédiatement après la première utilisation.",
+	noartneeded:true
+},
+{id: "legacytemplate_plotitem",
+label: "",
+description: "#PREVIOUSCHARACTERNAME#.",
+	noartneeded:true}
+]
+};

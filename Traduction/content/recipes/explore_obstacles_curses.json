@@ -1,0 +1,417 @@
+ {"recipes": [
+{
+	id: "explorevaultcurse_dread_encounter",
+	actionId:"explore",
+	label: "La Malédiction de l'âme desséchée",
+	startdescription: "Les trésors qui nous attendent se trouvent sous la Malédiction de l'âme desséchée. Sans Lanterne ou Coeur, elle peut nous suivre et nous dessécher l'esprit.",
+	requirements: {curse_dread:1},
+	slots:[{id:"Assistance",label:"Assistance",description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultcurse_dread_highheart",chance:100},
+	{id: "explorevaultcurse_dread_highlantern",chance:100},
+	{id: "explorevaultcurse_dread_midheart",chance:100},
+	{id: "explorevaultcurse_dread_midlantern",chance:100},
+	{id: "explorevaultcurse_dread_lowheart",chance:100},	
+	{id: "explorevaultcurse_dread_lowlantern",chance:100}],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultcurse_dread_failure",chance:100}]
+	},
+	
+	{id:"explorevaultcurse_dread_highheart",
+	actionId: "explore",
+	requirements:{heart:10},
+	label:"Nous faisons appel à l'Anneau-d'If, qui est renouvelé",
+	startdescription:"Nous sommes assez forts en Coeur pour être presque entièrement protégés contre la malédiction.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_dread_success",chance:90},
+	{id:"explorevaultcurse_dread_failure",chance:100}]	  
+		  },
+		{id:"explorevaultcurse_dread_midheart",
+	actionId: "explore",
+	requirements:{heart:5},
+	label:"Nous faisons appel à l'Anneau-d'If, qui englobe",
+	startdescription:"Nous avons assez de l'aspect Coeur pour lever la malédiction... probablement.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_dread_success",chance:70},
+	{id:"explorevaultcurse_dread_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultcurse_dread_lowheart",
+	actionId: "explore",
+	requirements:{heart:1},
+	label:"Nous faisons appel à l'Anneau-d'If, qui est succulent",
+	startdescription:"Peut-être que le pouvoir de cette vieille et féconde Heure, l'Anneau-d'If, peut nous protéger de la Malédiction. Peut-être pas.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_dread_success",chance:30},
+	{id:"explorevaultcurse_dread_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultcurse_dread_highlantern",
+	actionId: "explore",
+	requirements:{lantern:10},
+	label:"Nous faisons appel au Colonel, qui ne peut être refusé",
+	startdescription:"Le Colonel est une Heure féroce, mais une puissance qui connaît la Lumière, et il a survécu à pire. Sa puissance nous protégera sûrement.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_dread_success",chance:90},
+	{id:"explorevaultcurse_dread_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultcurse_dread_midlantern",
+	actionId: "explore",
+	requirements:{lantern:5},
+	label:"Nous faisons appel au Colonel, qui a des cicatrices",
+		startdescription:"Le Colonel est une Heure scarifiée, mais une puissance qui connaît la Lumière, et il a survécu à pire. Sa puissance devrait nous protéger.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_dread_success",chance:70},
+	{id:"explorevaultcurse_dread_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultcurse_dread_lowlantern",
+	actionId: "explore",
+	requirements:{lantern:1},
+	label:"Nous faisons appel au Colonel, qui est aveugle",
+	startdescription:"Le Colonel est une Heure qui connaît la Lumière, mais s'en souvient-il ? Sa puissance pourrait encore nous protéger.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_dread_success",chance:30},
+	{id:"explorevaultcurse_dread_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultcurse_dread_success",
+	actionId:"explore",
+	label: "La malédiction se dissipe",
+	startdescription: "Notre pouvoir est plus fort que celui qui existait ici. La malédiction ne nous affectera pas.",
+	description: ".",
+	effects: {curse_dread:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultcurse_dread_failure",
+	actionId:"explore",
+	label: "La malédiction se ressère",
+	startdescription: "Il y a un prix à payer lorsqu'on pénètre dans un endroit comme celui-ci. Un jour prochain, la malédiction se resserrera autour de nous.",
+	description: ".",
+	effects: {curse_dread:-1},
+	alternativerecipes: [{id: "curse_dread_dormant",chance:100,additional:true}],
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+	{
+	id: "explorevaultcurse_visions_encounter",
+	actionId:"explore",
+	label: "La malédiction du Cinquième Oeil",
+	startdescription: "Les trésors à venir sont protégés par la Malédiction du Cinquième Oeil. Sans Hiver ni Coeur, elle peut nous suivre et ouvrir l'oeil de l'âme.",
+	requirements: {curse_visions:1},
+	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultcurse_visions_highheart",chance:100},
+	{id: "explorevaultcurse_visions_highwinter",chance:100},
+	{id: "explorevaultcurse_visions_midheart",chance:100},
+	{id: "explorevaultcurse_visions_midwinter",chance:100},
+	{id: "explorevaultcurse_visions_lowheart",chance:100},	
+	{id: "explorevaultcurse_visions_lowwinter",chance:100}],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultcurse_visions_failure",chance:100}]
+	},
+	
+	{id:"explorevaultcurse_visions_highheart",
+	actionId: "explore",
+	requirements:{heart:10},
+	label:"Nous faisons appel à l'Anneau-d'If, qui est renouvelé",
+	startdescription:"Nous sommes assez forts en Coeur pour être presque entièrement protégés contre la Malédiction.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_visions_success",chance:90},
+	{id:"explorevaultcurse_visions_failure",chance:100}]	  
+		  },
+		{id:"explorevaultcurse_visions_midheart",
+	actionId: "explore",
+	requirements:{heart:5},
+	label:"Nous faisons appel à l'Anneau-d'If, qui englobe",
+	startdescription:"Nous avons assez de l'aspect Coeur pour lever la malédiction... probablement.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_visions_success",chance:70},
+	{id:"explorevaultcurse_visions_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultcurse_visions_lowheart",
+	actionId: "explore",
+	requirements:{heart:1},
+	label:"Nous faisons appel à l'Anneau-d'If, qui est succulent",
+	startdescription:"Peut-être que le pouvoir de cette vieille et féconde Heure, l'Anneau-d'If, peut nous protéger de la Malédiction. Peut-être pas.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_visions_success",chance:30},
+	{id:"explorevaultcurse_visions_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultcurse_visions_highwinter",
+	actionId: "explore",
+	requirements:{winter:10},
+	label:"Nous faisons appel à l'Élégie, à qui on ne peut plus rien enlever",
+	startdescription:"L'Élégie sait ce qui est déjà perdu. Son pouvoir nous protégera presque sûrement.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_visions_success",chance:90},
+	{id:"explorevaultcurse_visions_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultcurse_visions_midwinter",
+	actionId: "explore",
+	requirements:{winter:5},
+	label:"Nous faisons appel à l'Élégie, qui ne peut être trompé",
+	startdescription:"L'Élégie sépare le souvenir du vrai. Son pouvoir devrait nous protéger.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_visions_success",chance:70},
+	{id:"explorevaultcurse_visions_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultcurse_visions_lowwinter",
+	actionId: "explore",
+	requirements:{winter:1},
+	label:"Nous faisons appel à l'Élégie, qui appelle chacun des Morts par son nom",
+	startdescription:"L'ironie et la tristesse de l'Élégie pourraient encore réprimer les visions. Qui sait ?",
+		  description:".",
+	linked: [{id:"explorevaultcurse_visions_success",chance:30},
+	{id:"explorevaultcurse_visions_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultcurse_visions_success",
+	actionId:"explore",
+	label: "La Malédiction se dissipe",
+	startdescription: "Notre pouvoir est plus fort que celui qui existait ici. La malédiction ne nous touchera pas.",
+	description: ".",
+	effects: {curse_visions:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultcurse_visions_failure",
+	actionId:"explore",
+	label: "La malédiction s'abat sur nous",
+	startdescription: "Il y a un prix à payer lorsqu'on pénètre dans un endroit comme celui-ci. Un jour prochain, la malédiction se resserrera autour de nous.",
+	description: ".",
+	effects: {curse_visions:-1},
+	alternativerecipes: [{id: "curse_visions_dormant",chance:100,additional:true}],
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+	
+	
+	{
+	id: "explorevaultcurse_affliction_encounter",
+	actionId:"explore",
+	label: "Le Souffle Rampant",
+	startdescription: "Les trésors qui nous attendent sont protégés par la Malédiction du Souffle Rampant. Sans Graal ni Coeur, elle peut nous suivre et s'installer comme des spores dans nos poumons.",
+	requirements: {curse_affliction:1},
+	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultcurse_affliction_highheart",chance:100},
+	{id: "explorevaultcurse_affliction_highgrail",chance:100},
+	{id: "explorevaultcurse_affliction_midheart",chance:100},
+	{id: "explorevaultcurse_affliction_midgrail",chance:100},
+	{id: "explorevaultcurse_affliction_lowheart",chance:100},	
+	{id: "explorevaultcurse_affliction_lowgrail",chance:100}],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultcurse_affliction_failure",chance:100}]
+	},
+	
+	{id:"explorevaultcurse_affliction_highheart",
+	actionId: "explore",
+	requirements:{heart:10},
+	label:"Le Souffle Rampant",
+	startdescription:"Nous sommes presque sûrement assez forts en Coeur pour être à l'abri de la Malédiction.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_affliction_success",chance:90},
+	{id:"explorevaultcurse_affliction_failure",chance:100}]	  
+		  },
+		{id:"explorevaultcurse_affliction_midheart",
+	actionId: "explore",
+	requirements:{heart:5},
+	label:"Nous faisons appel à l'Anneau-d'If, qui englobe",
+	startdescription:"Nous avons assez de l'aspect Coeur pour lever la malédiction... probablement.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_affliction_success",chance:70},
+	{id:"explorevaultcurse_affliction_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultcurse_affliction_lowheart",
+	actionId: "explore",
+	requirements:{heart:1},
+	label:"Nous faisons appel à l'Anneau-d'If, qui est succulent",
+	startdescription:"Peut-être que le pouvoir de cette vieille et féconde Heure, l'Anneau-d'If, peut nous protéger de la Malédiction. Peut-être pas.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_affliction_success",chance:30},
+	{id:"explorevaultcurse_affliction_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultcurse_affliction_highgrail",
+	actionId: "explore",
+	requirements:{grail:10},
+	label:"Nous faisons appel au Graal Rouge, qui donne la vie",
+	startdescription:"La vigueur du Graal Rouge nous protégera presque sûrement de la Malédiction.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_affliction_success",chance:90},
+	{id:"explorevaultcurse_affliction_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultcurse_affliction_midgrail",
+	actionId: "explore",
+	requirements:{grail:5},
+	label:"Nous appelons le Graal Rouge, qui prend la vie",
+	startdescription:"La faim du Graal Rouge devrait nous protéger de la Malédiction",
+		  description:".",
+	linked: [{id:"explorevaultcurse_affliction_success",chance:70},
+	{id:"explorevaultcurse_affliction_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultcurse_affliction_lowgrail",
+	actionId: "explore",
+	requirements:{grail:1},
+	label:"Nous appelons le Graal Rouge, qui n'est pas rassasié",
+	startdescription:"Le Graal Rouge pourrait nous protéger de la Malédiction. C'est une Heure imprévisible.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_affliction_success",chance:30},
+	{id:"explorevaultcurse_affliction_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultcurse_affliction_success",
+	actionId:"explore",
+	label: "La Malédiction se dissipe",
+	startdescription: "Notre pouvoir est plus fort que celui qui existait ici. La Malédiction ne nous touchera pas.",
+	description: ".",
+	effects: {curse_affliction:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultcurse_affliction_failure",
+	actionId:"explore",
+	label: "La malédiction se ressère",
+	startdescription: "Il y a un prix à payer lorsqu'on pénètre dans un endroit comme celui-ci. Un jour prochain, la Malédiction se resserrera autour de nous.",
+	description: ".",
+	effects: {curse_affliction:-1},
+	alternativerecipes: [{id: "curse_affliction_dormant",chance:100,additional:true}],
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+	
+	
+	
+	{
+	id: "explorevaultcurse_nowhere_encounter",
+	actionId:"explore",
+	label: "La Malédiction venue de Nulle-part",
+	startdescription: "Voici un endroit où la peau du monde a jauni de fièvre. De la lanterne ou de la Phalène pourraient nous protéger. Rien d'autre ne le pourrait. ",
+	requirements: {curse_nowhere:1},
+	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
+	alternativerecipes: [
+	{id: "explorevaultcurse_nowhere_highmoth",chance:100},
+	{id: "explorevaultcurse_nowhere_highlantern",chance:100},
+	{id: "explorevaultcurse_nowhere_midmoth",chance:100},
+	{id: "explorevaultcurse_nowhere_midlantern",chance:100},
+	{id: "explorevaultcurse_nowhere_lowmoth",chance:100},	
+	{id: "explorevaultcurse_nowhere_lowlantern",chance:100}],
+	warmup:30,
+	craftable: false,
+	linked: [{id:"explorevaultcurse_nowhere_failure",chance:100}]
+	},
+	
+	{id:"explorevaultcurse_nowhere_highmoth",
+	actionId: "explore",
+	requirements:{moth:10},
+	label:"Nous faisons appel la Grive Rieuse, qui ne peut être épuisée",
+	startdescription:"Nous sommes presque sûrement assez forts en Phalène pour être à l'abri de la Malédiction.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_nowhere_success",chance:90},
+	{id:"explorevaultcurse_nowhere_failure",chance:100}]	  
+		  },
+		{id:"explorevaultcurse_nowhere_midmoth",
+	actionId: "explore",
+	requirements:{moth:5},
+	label:"Nous faisons appel la Grive Rieuse, qui ne peut pas être retenue",
+	startdescription:"On peut implorer l'Heure appelée la Grive rieuse pour éloigner cette malédiction. Nous serons sûrement en sécurité.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_nowhere_success",chance:70},
+	{id:"explorevaultcurse_nowhere_failure",chance:100}]	  
+		  },
+		  	{id:"explorevaultcurse_nowhere_lowmoth",
+	actionId: "explore",
+	requirements:{moth:1},
+	label:"Nous faisons appel à la Grive Rieuse, qui raconte son histoire à ceux qui veulent et à ceux qui ne veulent pas",
+	startdescription:"La Grive Rieuse est puissante de la Phalène, et n'est pas fiable.  Peut-être nous protégera-t-elle.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_nowhere_success",chance:30},
+	{id:"explorevaultcurse_nowhere_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultcurse_nowhere_highlantern",
+	actionId: "explore",
+	requirements:{lantern:10},
+	label:"Nous faisons appel au Soleil-en-Haillons, qui brûle encore",
+	startdescription:"Le Soleil-en-Haillons donne de la lumière à la Lanterne. Il est presque sûr que cette malédiction se terminera ici.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_nowhere_success",chance:90},
+	{id:"explorevaultcurse_nowhere_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultcurse_nowhere_midlantern",
+	actionId: "explore",
+	requirements:{lantern:5},
+	label:"Nous faisons appel au Soleil-en-Haillons, qui n'est plus ce qu'il était",
+	startdescription:"Le Soleil-en-Haillons, cette force froide et lasse, peut nous prêter la Lanterne. Il mettra fin à cette malédiction... probablement.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_nowhere_success",chance:70},
+	{id:"explorevaultcurse_nowhere_failure",chance:100}]	  
+		  },
+		  
+		  	{id:"explorevaultcurse_nowhere_lowlantern",
+	actionId: "explore",
+	requirements:{lantern:1},
+	label:"Nous faisons appel au Soleil-en-Haillons, qui est lointain",
+	startdescription:"Nous avons besoin de Lanterne pour mettre fin à la Malédiction, mais le Soleil-en-haillons ne peut nous en prêter qu'un peu.",
+		  description:".",
+	linked: [{id:"explorevaultcurse_nowhere_success",chance:30},
+	{id:"explorevaultcurse_nowhere_failure",chance:100}]	  
+		  },
+	
+			{
+	id: "explorevaultcurse_nowhere_success",
+	actionId:"explore",
+	label: "La Malédiction se dissipe",
+	startdescription: "Notre pouvoir est plus fort que celui qui existait ici. La Malédiction ne nous touchera pas.",
+	description: ".",
+	effects: {curse_nowhere:-1},
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+				{
+	id: "explorevaultcurse_nowhere_failure",
+	actionId:"explore",
+	label: "La Malédiction se ressère",
+	startdescription: "Il y a un prix à payer lorsqu'on pénètre dans un endroit comme celui-ci. Un jour prochain, la malédiction se resserrera autour de nous.",
+	description: ".",
+	effects: {curse_nowhere:-1},
+	alternativerecipes: [{id: "curse_nowhere_dormant",chance:100,additional:true}],
+	craftable: false,
+		linked: [{id:"explorevaulttick",chance:100}],
+		warmup:30
+	},
+	
+]
+}
+

@@ -1,0 +1,59 @@
+{
+"recipes": [
+
+
+
+{
+id: "expeditionascensionmothb",
+label:"Nom de la Mère, Nom de la Lune",
+actionId:"explore",
+requirements:{sendingmothb:1},
+warmup:30,
+
+effects:{ascensionlessonmothb:1,sending:-1},
+description: "Téguments, abandonnés: Dans un grenier sec au-dessus des toits gris de Kerisham, surplombant la mer grise, dans les rêves de l'enfant meurtrier, la vieille mère Angoisse rencontra un jour son fils Ahad. Les os de l'enfant meurtrier sont toujours là. Maintenant, le serpent en moi s'accouple si férocement que son moi extérieur se libère.",
+},
+{
+id: "expeditionascensionmothc",
+label:"Le Nom du Lin Noir",
+actionId:"explore",
+requirements:{sendingmothc:1},
+warmup:30,
+
+effects:{ascensionlessonmothc:1,sending:-1},
+description: "Les pas, abandonnés: La jeune vieille Chatte est né dans le lin noir au bord de la rivière. Elle m'apportera la réponse qui est toujours non, et quand mon chaton dansera pour elle, elle mangera le bruit de mes pas.",
+},
+{
+id: "expeditionascensionmothd",
+label:"Le nom du Roi Lily",
+actionId:"explore",
+requirements:{sendingmothd:1},
+warmup:30,
+
+effects:{ascensionlessonmothd:1,sending:-1},
+description: "Nuances, abandonnées: Dans les montagnes, Karpellus, le nom du Fleuriste, attend, écrasant le parfum des fleurs avec le poids de son corps, comme il écrasera les changements du renard en moi, tel le vin des raisins.",
+},
+{
+id: "expeditionascensionmothe",
+label:"Une danse avec le Mille-Pattes",
+actionId:"explore",
+requirements:{sendingmothe:1},
+warmup:30,
+
+effects:{ascensionlessonmothe:1,sending:-1},
+description: "La vue, abandonnée: Le Mille-pattes s'enroule autour du pied de mon aigle en moi quand j'atterris. Les griffes du Mille-Pattes s'enchevêtrent dans mes plumes quand je me lève. La morsure du Mille-Pattes m'arrache le soleil des yeux et les prépare au changement final à venir.",
+},
+{
+id: "expeditionascensionmothf",
+label:"Le nom du Loup",
+actionId:"explore",
+requirements:{sendingmothf:1},
+effects:{ascensionlessonmothf:1,sending:-1},
+warmup:30,
+
+            description: "Les Os, abandonnés: Sur les quais de Port Midi, une main inconnue a coincé un morceau de cinabre tout au bout de la digue. Il s'agit d'un mémorial à Coelle, la jeune fille-fleur, dont le corps a été rejeté là-haut après qu'elle se soit noyée. Elle n'était pas la première et elle ne sera pas la dernière. Mon loup en moi se recroquevillera ici pour dormir, et le loup divisé viendra à moi et me fera vibrer de sa haine.",
+        },
+
+
+]
+}

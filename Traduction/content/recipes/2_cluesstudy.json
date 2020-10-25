@@ -1,0 +1,320 @@
+ {"recipes":
+ [
+
+ 	{
+	id: "studyupgrade_downgrade_lore_hint",
+	label: "Améliorer ma connaissance des arts invisibles ?",
+	actionId: "study",
+	requirements: {lore:1,edge:-1,forge:-1,grail:-1,heart:-1,knock:-1,lantern:-1,moth:-1,secrethistories:-1,winter:-1,alzabo:-1,prealzabo:-1},	
+	startdescription: "Si j'ai deux fragments de croyance de même niveau et de même aspect, je peux les étudier ensemble pour améliorer ma compréhension. Si j'utilise la raison, je peux analyser la croyance en la décomposant en fragments de niveau inférieur. Ou je peux utiliser un autre type de croyance pour la corrompre...",
+		craftable: false,
+		hintonly:true
+	},
+   	{
+	id: "studyupgradelore_hint",
+	label: "Améliorer ma connaissance des arts invisibles ?",
+	actionId: "study",
+	requirements: {lore:1,healthskill:-1,alzabo:-1,prealzabo:-1},	
+	startdescription: "Si j'ai deux fragments de croyance de même niveau et de même aspect, je peux les étudier ensemble pour améliorer ma compréhension. Ou je peux utiliser un autre type de croyance pour la corrompre...",
+		craftable: false,
+		hintonly:true
+	},
+	
+		   	{
+	id: "studyprealzabo_hint",
+	label: "Une expérience audacieuse",
+	actionId: "study",
+	requirements: {prealzabo:1},	
+	startdescription: "Je n'ai besoin que d'acheter quelques ingrédients finaux, et je peux ensuite préparer le mélange. Je dois faire appel à mon courage... et trouver un repas approprié.",
+		craftable: false,
+		hintonly:true
+	},
+	
+	   	{
+	id: "studyalzabo_hint",
+	label: "Le festin de la colombe miellée",
+	actionId: "study",
+	requirements: {alzabo:1},	
+	startdescription: "Je peux consommer des restes, pour préserver un peu de leur savoir de la poussière. Il se peut que je doive encore le faire.",
+		craftable: false,
+		hintonly:true
+	},
+	
+	  
+ {id:"translatelatinhint",
+ label:"Traduire du latin ?",
+ actionId:"study",
+ requirements:{textlatin:1},
+ startdescription:"Mes connaissances en latin sont trop limitées pour lire ceci. Je pourrais peut-être trouver un manuel ou engager un tuteur.",
+ hintonly:true,
+ craftable:false
+ },
+ {id:"translategreekhint",
+ label:"Traduire du grec ?",
+ actionId:"study",
+ requirements:{textgreek:1},
+ startdescription:"Mes compétences en grec sont trop limitées pour lire ceci. Je pourrais peut-être trouver un manuel ou engager un tuteur.",
+ hintonly:true,
+ craftable:false
+ },
+ 
+ {id:"translatearamaichint",
+ label:"Traduire de l'araméen ?",
+ actionId:"study",
+ requirements:{textaramaic:1},
+ startdescription:"Mes compétences en araméen sont trop limitées pour lire ceci. Je pourrais peut-être trouver un manuel ou engager un tuteur.",
+ hintonly:true,
+ craftable:false
+ },
+ 
+  {id:"translatesanskrithint",
+ label:"Traduire du sanskrit ?",
+ actionId:"study",
+ requirements:{textsanskrit:1},
+ startdescription:"Mes compétences en sanskrit sont trop limitées pour lire ceci. Je pourrais peut-être trouver un manuel ou engager un tuteur.",
+ hintonly:true,
+ craftable:false
+ },
+ 
+ 
+   {id:"translatefucinehint",
+ label:"Traduire du Fucine ?",
+ actionId:"study",
+ requirements:{textfucine:1},
+ startdescription:"Je ne connais pas le Fucine; peut-être que personne de vivant ne la connaît. Il y a peut-être une pierre de Rosette quelque part... ou je pourrais trouver un tuteur qui n'est pas vivant, pas exactement.",
+ hintonly:true,
+ craftable:false
+ },
+   {id:"translatephrygianhint",
+ label:"Traduire du phrygien ?",
+ actionId:"study",
+ requirements:{textphrygian:1},
+ startdescription:"Je ne connais pas le Phrygien; peut-être que personne ne le connaît vivant. Il y a peut-être une pierre de Rosette quelque part... ou je pourrais trouver un tuteur qui n'est pas vivant, pas exactement.",
+ hintonly:true,
+ craftable:false
+ },
+ 
+   {id:"translatemandaichint",
+ label:"Traduire du Mandaique profond ",
+ actionId:"study",
+ requirements:{textmandaic:1},
+ startdescription:"Je ne connais pas le Mandaique profond; peut-être que personne de vivant ne le connaît. Il pourrait y avoir une pierre de Rosette quelque part... ou je pourrais trouver un tuteur qui n'est pas vivant, pas exactement.",
+ hintonly:true,
+ craftable:false
+ },
+    {id:"translatevakhint",
+ label:"Traduire du Vak ?",
+ actionId:"study",
+ requirements:{textvak:1},
+ startdescription:"Je ne connais pas le Vak; peut-être que personne de vivant ne le connaît. Il y a peut-être une pierre de Rosette quelque part... ou je pourrais trouver un tuteur qui n'est pas vivant, pas exactement.",
+ hintonly:true,
+ craftable:false
+ },
+
+  			{
+        id: "studyincreasehealthskilld_wronglore",
+        label: "Entraîner le corps: des techniques secrètes ?",
+        actionId: "study",
+        requirements: {skillhealthc:1,vitalityplus:4,lore:1},
+		startdescription: "Rien de ce qui se passe dans ce domaine ne sera utile ici. Je dois choisir autre chose.",
+		hintonly:true,
+        craftable: false,
+    },
+ 
+	{
+        id: "increasehealthfurtherhint",
+        label: "Améliorer ma Santé ?",
+        actionId: "study",
+        requirements: {vitality:2},
+        startdescription: "Plus je gagne en santé, plus j'ai besoin de vitalité. [Utilisez les compétences: Physique pour améliorer encore la santé.]",
+
+        hintonly:true,
+        craftable: false
+    },
+			{
+        id: "increasereasonfurtherhint",
+        label: "Améliorer ma Raison ?",
+        actionId: "study",
+        requirements: {erudition:2},
+        startdescription: "Plus je gagne en Raison, plus j'aurai besoin de l'Erudition. [Utilisez la compétence: Erudition pour augmenter encore la Raison.]",
+
+        hintonly:true,
+        craftable: false
+    },
+	
+		{
+        id: "increasepassionfurtherhint",
+        label: "Améliorer ma Passion ?",
+        actionId: "study",
+        requirements: {glimmering:2},
+        startdescription: "Plus j'aurai de passion, plus j'aurai besoin d'une lumière étincelante. [Utilisez la compétence: l'imagination pour augmenter encore la passion.]",
+
+        hintonly:true,
+        craftable: false
+    },
+				{id:"studyupgradeinfluences.apostlelanternhint",
+	label:"Entretenir l'émerveillement",
+	actionId:"study",
+	requirements:{apostlelantern.pillar3:1},
+	startdescription:"Avec le temps, même la plus grande des séductions va scintiller et grisonner. Je dois l'alimenter avec les couleurs de l'obsession.",
+	hintonly:true,
+	craftable:false
+	},
+	
+			{id:"studyupgradeinfluenceshint2",
+	label:"Renforcer les influences ?",
+	actionId:"study",
+	requirements:{influence:2,lore:-1,healthskill:-1,reasonskill:-1,passionskill:-1},
+	startdescription:"Il pourrait être possible, avec la bonne combinaison d'influences, d'obtenir plus de pouvoir... mais seulement si j'ai la connaissance nécessaire des arts invisibles.",
+	hintonly:true,
+	craftable:false
+	},
+					{
+        id: "increasehealthfurtherhintpluswithskillneedslore",
+        label: "Augmenter mes compétences à quelque chose d'extraordinaire ?",
+        actionId: "study",
+        requirements: {vitalityplus:1,skillhealthc:1},
+        startdescription: "J'aurai besoin de suffisamment de connaissances... et de quelque chose de plus.",
+        hintonly:true,
+        craftable: false
+    },
+				{
+        id: "increasehealthfurtherhintpluswithskill",
+        label: "Améliorer ma Santé ?",
+        actionId: "study",
+        requirements: {vitalityplus:1,healthskill:1},
+        startdescription: "J'aurai besoin de plus de leçons.",
+
+        hintonly:true,
+        craftable: false
+    },
+			{
+        id: "increasehealthfurtherhintplus",
+        label: "Améliorer ma Santé ?",
+        actionId: "study",
+        requirements: {vitalityplus:1},
+        startdescription: "Je vais devoir l'utiliser avec ma compétence Force.",
+
+        hintonly:true,
+        craftable: false
+    },
+		
+	{
+        id: "increasehealthfurtherhint1",
+        label: "Améliorer ma Santé ?",
+        actionId: "study",
+        requirements: {vitality:1},
+        startdescription: "Je vais avoir besoin de plus.",
+
+        hintonly:true,
+        craftable: false
+    },
+	
+	
+						{
+        id: "increasereasonfurtherhintpluswithskillneedslore",
+        label: "Augmenter mes compétences à quelque chose d'extraordinaire ?",
+        actionId: "study",
+        requirements: {eruditionplus:1,skillreasonc:1},
+        startdescription: "J'aurai besoin de suffisamment de connaissances... et de quelque chose de plus.",
+
+        hintonly:true,
+        craftable: false
+    },
+					{
+        id: "increasereasonfurtherhintpluswithskill",
+        label: "Améliorer ma Raison ?",
+        actionId: "study",
+        requirements: {eruditionplus:1,reasonskill:1},
+        startdescription: "J'aurai besoin de plus de connaissances.",
+
+        hintonly:true,
+        craftable: false
+    },
+			{
+        id: "increasereasonfurtherhintplus",
+        label: "Améliorer ma Raison ?",
+        actionId: "study",
+        requirements: {eruditionplus:1},
+        startdescription: "Je devrai l'utiliser avec mes compétences en matière d'érudition.",
+
+        hintonly:true,
+        craftable: false
+    },
+	
+			{
+        id: "increasereasonfurtherhint1",
+        label: "Améliorer ma Raison ?",
+        actionId: "study",
+        requirements: {erudition:1},
+        startdescription: "Il m'en faudra plus d'un.",
+
+        hintonly:true,
+        craftable: false
+    },
+	
+							{
+        id: "increasepassionfurtherhintpluswithskillneedslore",
+        label: "Augmenter mes compétences à quelque chose d'extraordinaire ?",
+        actionId: "study",
+        requirements: {glimmeringplus:1,skillpassionc:1},
+        startdescription: "J'aurai besoin de suffisamment de connaissances... et de quelque chose de plus.",
+
+        hintonly:true,
+        craftable: false
+    },
+	
+					{
+        id: "increasepassionfurtherhintpluswithskill",
+        label: "Améliorer ma Passion ?",
+        actionId: "study",
+        requirements: {glimmeringplus:1,passionskill:1},
+        startdescription: "J'aurai besoin de plus de connaissances.",
+
+        hintonly:true,
+        craftable: false
+    },
+			{
+        id: "increasepassionfurtherhintplus",
+        label: "Améliorer ma Passion ?",
+        actionId: "study",
+        requirements: {glimmeringplus:1},
+        startdescription: "Je vais devoir l'utiliser avec mon talent d'imagination.",
+
+        hintonly:true,
+        craftable: false
+    },
+	
+		{
+        id: "increasepassionfurtherhint1",
+        label: "Améliorer ma Passion ?",
+        actionId: "study",
+        requirements: {glimmering:1},
+        startdescription: "Il m'en faudra plus d'un.",
+
+        hintonly:true,
+        craftable: false
+    },
+	
+	{id:"studyrestlessnesshint",
+	label:"Étudier la Nervosité ?",
+	actionId:"study",
+	requirements:{restlessness:1},
+	startdescription:"Pour étudier, il faut généralement rester assis sans bouger. La Nervosité est rarement l'alliée de l'érudition.",
+	hintonly:true,
+	craftable:false
+	},
+
+	{id:"studyupgradeinfluenceshint1",
+	label:"Renforcer les Influences ?",
+	actionId:"study",
+	requirements:{influence:1},
+	startdescription:"Il pourrait être possible, avec la bonne combinaison d'influences, d'obtenir plus de pouvoir...",
+	hintonly:true,
+	craftable:false
+	},
+	
+
+	
+]
+}

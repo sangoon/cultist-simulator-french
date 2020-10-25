@@ -1,0 +1,59 @@
+{"elements":
+    [
+      		 {
+            id: "owl",
+            label: "La chouette sans chapeau",
+            aspects:{job:1},
+            description: "La Chouette dit que notre dernier personnage était #PREVIOUSCHARACTERNAME#, notre dernier désir était #LAST_DESIRE#, notre dernier meilleur servant était #LAST_FOLLOWER# et notre dernier livre était #LAST_BOOK#.",
+			noartneeded:true
+        },
+				 {
+            id: "wolfatthedoor",
+            label: "LES LOUPS QUI VIVENT DANS LA GRANDE MAISON",
+            aspects:{ability:1,location:1,acquaintance:1},
+			slots: [{id:"Meal1",consumes:true,actionId:"work"}],
+			slots: [{id:"Meal2",consumes:true,actionId:"dream"}],
+			slots: [{id:"Meal3",consumes:true,actionId:"study"}],
+			slots: [{id:"Meal4",consumes:true,actionId:"talk"}],
+			slots: [{id:"Meal5",consumes:true,actionId:"explore"}],
+			icon:violet_p,
+            description: "Le loup accepte tout, puis dévore tout, quoi qu'il arrive.",
+			noartneeded:true
+        },
+		 {
+            id: "wolf",
+      lifetime:1,
+	  decayTo:"wolfatthedoor",
+	  description:"",
+			noartneeded:true
+        },
+				 {
+            id: "lionweb",
+            label: "Le Lion sur la toile",
+			comments:"L'information vit dans le ciel.",
+			icon:valciane_p,
+			noartneeded:true
+        },
+		{
+            id: "boarwords",
+            label: "Le sanglier dans les mots",
+			comments:"Les titres sont criminels.",
+			icon:victor_p,
+			noartneeded:true
+        },
+				{
+            id: "worldbull",
+            label: "Le monde dans le taureau",
+			comments: "Le crime Au début",
+			icon:clifton_p,
+			noartneeded:true
+        },
+						{
+            id: "notaworm",
+            label: "Peut-être un oiseau",
+			comments: "Nous attendons S.T.E.",
+			icon:clovette_p,
+			noartneeded:true
+        },
+]
+};

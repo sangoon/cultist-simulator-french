@@ -1,0 +1,829 @@
+ {"recipes":
+ [		
+ 
+
+  
+ {id:"work.apostleforge.majorvictory.hint5",
+actionId:"work",
+label:"Les dernières pièces du Grand Oeuvre ?",
+startdescription:"Nous avons le Noyau, son essence, la Boussole, la Clé, les Mystères de l'Ouverture. Il ne nous faut plus que la saison de l'incandescence la plus violente de la Forge.",
+requirements:{apostleforge.pillar2:1,apostleforge.pillar3:1,apostleforge.pillar4:1,apostleforge.pillar5:1,fragmentknockg:1},
+effects:{},
+warmup:60,
+craftable:false,
+hintonly:true
+},
+ 
+ 
+ {id:"work.apostleforge.majorvictory.hint4",
+actionId:"work",
+label:"Les dernières pièces du Grand Oeuvre ?",
+startdescription:"Nous avons le Noyau, son essence, la Boussole, la Clé. Même tout cela ne suffira pas. Nous devons préparer la voie à notre Façonneur avec les Mystères de l'Ouverture. ",
+requirements:{apostleforge.pillar2:1,apostleforge.pillar3:1,apostleforge.pillar4:1,apostleforge.pillar5:1},
+effects:{},
+warmup:60,
+craftable:false,
+hintonly:true
+},
+ 
+ 
+  
+ {id:"work.apostleforge.majorvictory.hint3",
+actionId:"work",
+label:"Les dernières pièces du Grand Oeuvre ?",
+startdescription:"Nous avons le Noyau, son essence, la Boussoles. Nous avons toujours besoin de la Clé mordante.",
+requirements:{apostleforge.pillar2:1,apostleforge.pillar3:1,apostleforge.pillar4:1},
+effects:{},
+warmup:60,
+craftable:false,
+hintonly:true
+},
+
+ {id:"work.apostleforge.majorvictory.hint2",
+actionId:"work",
+label:"Les dernières pièces du Grand Oeuvre ?",
+startdescription:"Nous avons le Noyau et son essence. Nous avons besoin de notre Boussole aveuglée, pour trouver la faille dans le monde.",
+requirements:{apostleforge.pillar2:1,apostleforge.pillar3:1},
+effects:{},
+warmup:60,
+craftable:false,
+hintonly:true
+},
+
+ {id:"work.apostleforge.majorvictory.hint1",
+actionId:"work",
+label:"Les dernières pièces du Grand Oeuvre ?",
+startdescription:"Nous avons le Noyau : nous devons avoir de l'or bleu pour l'alimenter.",
+requirements:{apostleforge.pillar2:1},
+effects:{},
+warmup:60,
+craftable:false,
+hintonly:true
+},
+ 
+ {id:"work.apostlelantern.majorvictory.hint5",
+actionId:"work",
+label:"La Porte s'ouvre sur l'extérieur ?",
+startdescription:"Nous avons besoin de la coopération de notre noble invité.",
+requirements:{apostlelantern.pillar3:1,apostlelantern.pillar4:1,ingredientlanternf:1,fragmentmothe:1,toollanternf:1,kleidouchos:1},
+hintonly:true
+},
+
+ {id:"work.apostlelantern.majorvictory.hint4",
+actionId:"work",
+label:"La Porte s'ouvre sur l'extérieur ?",
+startdescription:"La Porte ne s'ouvrira pas vers l'extérieur sans sa clé illicite.",
+requirements:{apostlelantern.pillar3:1,apostlelantern.pillar4:1,ingredientlanternf:1,fragmentmothe:1,toollanternf:1},
+hintonly:true
+},
+
+ {id:"work.apostlelantern.majorvictory.hint3",
+actionId:"work",
+label:"La Porte s'ouvre sur l'extérieur ?",
+startdescription:"Nous aurons besoin d'un verre de Guetteur pour notre Illuminé afin d'assurer la plus grande illumination possible.",
+requirements:{apostlelantern.pillar3:1,apostlelantern.pillar4:1,ingredientlanternf:1,fragmentmothe:1},
+hintonly:true
+},
+ {id:"work.apostlelantern.majorvictory.hint2",
+actionId:"work",
+label:"La Porte s'ouvre sur l'extérieur ?",
+startdescription:"Le Mille-Pattes connaît toujours le chemin. Nous aurons besoin de ses secrets.",
+requirements:{apostlelantern.pillar3:1,apostlelantern.pillar4:1,ingredientlanternf:1},
+hintonly:true
+},
+ {id:"work.apostlelantern.majorvictory.hint1",
+actionId:"work",
+label:"La Porte s'ouvre sur l'extérieur ?",
+startdescription:"L'oeil du Guetteur a été ouvert, non pas de la manière habituelle, mais avec un couteau. Nous aurons besoin de ce qu'il a saigné.",
+requirements:{apostlelantern.pillar3:1,apostlelantern.pillar4:1},
+hintonly:true
+},
+ {id:"work.apostlelantern.majorvictory.hint0",
+actionId:"work",
+label:"La Porte s'ouvre sur l'extérieur ?",
+startdescription:"Certes, la Porte pourrait s'ouvrir sans témoins, mais sans témoins à éclairer, comment pouvons-nous respecter le commandement du Guetteur ? Le Guetteur n'est pas compatissant.",
+requirements:{apostlelantern.pillar3:1},
+hintonly:true
+},
+
+ 
+ 
+ {id:"work.apostlegrail.majorvictory.hint5",
+actionId:"work",
+label:"Les derniers éléments de la Vitulation ?",
+startdescription:"Nos épices particulières doivent être particulièrement préparées. Tout le reste est prêt.",
+requirements:{fragmentheartg:1,influencegrailg:1,apostlegrail.pillar2:1,apostlegrail.pillar3:1,apostlegrail.pillar4:1,toolgrailf:1},
+hintonly:true
+},
+
+{id:"work.apostlegrail.majorvictory.hint4",
+actionId:"work",
+label:"Les derniers éléments de la Vitulation ?",
+startdescription:"Sans les Mystères Incessants, la Vitulation n'atteindra pas l'intensité requise.",
+requirements:{influencegrailg:1,apostlegrail.pillar2:1,apostlegrail.pillar3:1,apostlegrail.pillar4:1,toolgrailf:1},
+hintonly:true
+},
+
+{id:"work.apostlegrail.majorvictory.hint3",
+actionId:"work",
+label:"Les derniers éléments de la Vitulation ?",
+startdescription:"Nous avons besoin de l'influence du Graal la plus puissante possible.",
+requirements:{apostlegrail.pillar2:1,apostlegrail.pillar3:1,apostlegrail.pillar4:1,toolgrailf:1},
+hintonly:true
+},
+
+{id:"work.apostlegrail.majorvictory.hint2",
+actionId:"work",
+label:"Les derniers éléments de la Vitulation ?",
+startdescription:"Aucune Vitulation ne serait une Vitulation sans le Murmure du Calice.",
+requirements:{apostlegrail.pillar2:1,apostlegrail.pillar3:1,apostlegrail.pillar4:1},
+hintonly:true
+},
+{id:"work.apostlegrail.majorvictory.hint1",
+actionId:"work",
+label:"Les derniers éléments de la Vitulation ?",
+startdescription:"Nous ne pouvons pas commencer la Vitulation sans un nombre suffisant d'invités. Notre Délice ne peut être affamé.",
+requirements:{apostlegrail.pillar2:1,apostlegrail.pillar3:1},
+hintonly:true
+},
+{id:"work.apostlegrail.majorvictory.hint0",
+actionId:"work",
+label:"Les derniers éléments de la Vitulation ?",
+startdescription:"Nous ne pouvons pas commencer la Vitulation sans la saveur appropriées, pour moi et pour les autres de l'Hôte.",
+requirements:{apostlegrail.pillar2:1},
+hintonly:true
+},
+ 	{id:"workbenefactorhint",
+	label: "Représentations privées ?",
+	actionId:"work",
+	requirements:{benefactor:1},
+	startdescription:"Pour satisfaire mon bienfaiteur, je devrai exercer mes aptitudes et m'assurer que je suis au mieux de ma forme. Cela a toujours un coût.",
+	craftable:false,
+	hintonly:true
+	},
+ {
+        id: "workfundshint",
+        label: "Argent",
+        actionId: "work",
+        requirements: {funds: 1},
+        startdescription: "Cela ne fait rien; mais peut-être que je pourrais éventuellement trouver un autre moyen d'investir mes Fonds à l'avenir. Si j'ai un avenir.",
+        craftable: false,
+		hintonly: true
+    },
+
+      			{
+        id: "skillhealthhintwork",
+        label: "Santé",
+        actionId: "work",
+        requirements: {healthskill:1,job:-1},
+        startdescription: "Je suis devenu fort, mais je dois encore consacrer ma Santé à une journée de travail.",
+        craftable: false,
+		hintonly: true,
+    },
+     			{
+        id: "vitalityhintwork",
+        label: "Vitalité",
+        actionId: "work",
+        requirements: {vitality:1},
+        startdescription: "Ce n'est pas qu'une question de travail; mais je pourrais Étudier cela pour améliorer ma Santé.",
+        craftable: false,
+		hintonly: true,
+		comments: "Not currently possible with restrictions on work primary slot"
+    },
+	    			{
+        id: "eruditionhintwork",
+        label: "Érudition",
+        actionId: "work",
+        requirements: {erudition:1},
+        startdescription: "Ce n'est pas qu'une question de travail; mais je pourrais Étudier cela pour augmenter ma Raison.",
+        craftable: false,
+		hintonly: true,
+		comments: "Not currently possible with restrictions on work primary slot"
+    },
+	    			{
+        id: "glimmeringhintwork",
+        label: "Scintillement",
+        actionId: "work",
+        requirements: {glimmering:1},
+        startdescription: "Ce n'est pas qu'une question de travail; mais je pourrais Étudier cela pour accroître ma Passion.",
+        craftable: false,
+		hintonly: true,
+		comments: "Not currently possible with restrictions on work primary slot"
+    },
+   			{
+        id: "contentmenthintwork",
+        label: "Contentement",
+        actionId: "work",
+        requirements: {contentment:1},
+        startdescription: "On ne peut pas gagner sa vie en étant heureux. Mais le bonheur peut être une chose à laquelle on peut s'accrocher, quand la nuit se referme autour de moi.",
+        craftable: false,
+		hintonly: true,
+		comments: "Not currently possible with restrictions on work primary slot"
+    },
+	  			{
+        id: "commissionhint_wronglore",
+        label: "Réaliser une mission",
+        actionId: "work",
+        requirements: {commission:1,lore:1},
+        startdescription: "J'ai besoin de la bonne Croyance, et je dois consacrer mes aptitudes à ce travail. [La description de la Commission vous rappellera de quel Croyance vous avez besoin.]",
+        craftable: false,
+		hintonly: true
+    },
+  			{
+        id: "commissionhint",
+        label: "Réaliser une mission ?",
+        actionId: "work",
+        requirements: {commission:1},
+        startdescription: "Si j'utilise Travailler avec le bon fragment de Croyance, je peux créer un manuscrit pour remplir cette mission. Je devrai parler au Mécène de cette Commission lorsqu'elle sera terminée.",
+        craftable: false,
+		hintonly: true
+    },
+   {
+        id: "minorforgevictory_hint_sixth",
+        label: "La septième Marque ?",
+        actionId: "work",
+        requirements: {ritual: 1,
+		powermarks:6},
+        effects: {},
+        startdescription: "La septième Marque est la Conflagration du Coeur. Je suis proche: proche comme la flamme l'est de la bougie. J'aurai besoin de toute la puissance de la Forge que je peux rassembler, au moins jusqu'au trente-sixième degré d'intensité.",
+        hintonly:true
+    },
+			   {
+        id: "minorforgevictory_hint",
+        label: "La septième Marque ?",
+        actionId: "work",
+        requirements: {ritual: 1,
+		powermarks:1},
+        effects: {},
+        startdescription: "La septième Marque est la Conflagration du Coeur. Je dois d'abord atteindre la sixième Marque.",
+        hintonly:true
+    },
+	
+					   {
+        id: "minorgrailvictory_hint_sixth_with_romantic",
+        label: "Un chemin plus rapide vers la septième Marque ?",
+        actionId: "work",
+        requirements: {ritual: 1,
+		sensationmarks:6,
+		romanticinterest:1},
+        effects: {},
+        startdescription: "La septième Marque est la fête de la vraie naissance. Je suis proche: proche comme le sang du Coeur. Il m'en faudra plus... mais le Graal a un jour sacrifié un être cher, et ces sacrifices lui sont précieux. Si je suis prêt à sacrifier un amant, je n'aurai besoin que d'une puissance au vingt-septième degré d'intensité.",
+        hintonly:true
+    },
+	
+					   {
+        id: "minorgrailvictory_hint_sixth",
+        label: "La septième Marque ?",
+        actionId: "work",
+        requirements: {ritual: 1,
+		sensationmarks:6},
+        effects: {},
+        startdescription: "La septième Marque est la fête de la vraie naissance. Je suis proche: proche comme le sang du Coeur. J'aurai besoin de toute la puissance du Graal que je peux rassembler, au moins jusqu'au trente-sixième degré d'intensité.",
+        hintonly:true
+    },
+				   {
+        id: "minorgrailvictory_hint",
+        label: "La septième Marque ?",
+        actionId: "work",
+        requirements: {ritual: 1,
+		sensationmarks:1},
+        effects: {},
+        startdescription: "La septième Marque est la fête de la vraie naissance. Je dois d'abord atteindre la sixième Marque.",
+        hintonly:true
+    },
+					   {
+        id: "minorlanternvictory_hint_sixth",
+        label: "La septième Marque ?",
+        actionId: "work",
+        requirements: {ritual: 1,
+		enlightenmentmarks:6},
+        effects: {},
+        startdescription: "La septième Marque est l'Incursus. Je suis proche: proche comme la lumière au bord de l'ombre. J'aurai besoin de toute la puissance de la Lanterne que je peux rassembler, au moins jusqu'au trente-sixième degré d'intensité.",
+        hintonly:true
+    },
+				   {
+        id: "minorlanternvictory_hint",
+        label: "La septième Marque ?",
+        actionId: "work",
+        requirements: {ritual: 1,
+		enlightenmentmarks:1},
+        effects: {},
+        startdescription: "La septième Marque est l'Incursus. Je dois d'abord atteindre la sixième Marque.",
+        hintonly:true
+    },
+	
+ 
+ 		{
+        id: "hint_summon_spirit_forgee_edge",
+        label: "Invoquer une puissante créature de la Forge des Jours ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,forge:1,lantern:1,desire:-1},
+				extantreqs:{spirit_forgee_edge:-1,spirit_forgee_edge.defunct:-1,spirit_forgee_edge.consumed:-1},
+        startdescription: "J'ai trouvé une conjonction d'aspects fort utile, mais j'ai besoin de plus. Pour invoquer une chose de feu et de Gloire, j'aurai besoin d'un grand pouvoir de Forge, d'un pouvoir important de Clé, et d'un peu de Lanterne.",     
+   hintonly:true,
+        craftable: false
+    },
+	
+						{
+        id: "hint_summon_spirit_forgee_edge_exists",
+        label: "Le Roi Creuset, encore ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,forge:1,lantern:1,desire:-1},
+		extantreqs:{spirit_forgee_edge:1},
+        startdescription: "Est-ce que j'envisage d'invoquer le Roi Creuset ? Le Roi Creuset est déjà dans le monde.",  
+   hintonly:true,
+        craftable: false
+    },
+						{
+        id: "hint_summon_spirit_forgee_edge_dayd",
+        label: "Le Roi Creuset, déjà ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,forge:1,lantern:1,desire:-1},
+		extantreqs:{spirit_forgee_edge.defunct:1},
+        startdescription: "Est-ce que j'envisage d'invoquer le Roi Creuset ? Il alimente toujours ses feux dans le Mansus.",  
+   hintonly:true,
+        craftable: false
+    },
+	
+							{
+        id: "hint_summon_spirit_forgee_edge_nom",
+        label: "Le Creuset du Roi ? Vraiment ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,forge:1,lantern:1,desire:-1},
+		extantreqs:{spirit_forgee_edge.consumed:1},
+        startdescription: "J'ai consommé les restes en cendres du Roi Creuset. Il sera fâché contre moi. Il ne faut pas invoquer un Nom de la Forge qui est en colère contre soi.",  
+   hintonly:true,
+        craftable: false
+    },
+
+
+			{
+        id: "hint_summon_spirit_graile_edge",
+        label: "Invoquer une puissante créature du Graal Rouge ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,grail:1,forge:1,desire:-1},
+		extantreqs:{spirit_graile_edge:-1,spirit_graile_edge.defunct:-1},
+        startdescription: "J'ai trouvé une conjonction d'aspects fort utile, mais j'ai besoin de plus de pouvoir. Pour invoquer une chose de sang et de changement, j'aurai besoin d'un grand pouvoir de Graal, d'un pouvoir important de Clé, et d'un peu de Forge.",  
+   hintonly:true,
+        craftable: false
+    },
+					{
+        id: "hint_summon_spirit_graile_edge_exists",
+        label: "Ezeem, encore ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,grail:1,forge:1,desire:-1},
+		extantreqs:{spirit_graile_edge:1},
+        startdescription: "Est-ce que j'envisage d'invoquer Ezeem ? Ezeem est déjà dans le monde.",  
+   hintonly:true,
+        craftable: false
+    },
+						{
+        id: "hint_summon_spirit_graile_edge_dayd",
+        label: "Ezeem, déjà ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,grail:1,forge:1,desire:-1},
+		extantreqs:{spirit_graile_edge.defunct:1},
+        startdescription: "Est-ce que j'envisage d'invoquer Ezeem ? Ezeem boude encore au Mansus.",  
+   hintonly:true,
+        craftable: false
+    },
+	
+			{
+        id: "hint_summon_spirit_lanterne_secret",
+        label: "Invoquer quelque chose d'inhabituel ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,lantern:1,secrethistories:1,desire:-1},
+				extantreqs:{spirit_lanterne_secret:-1,spirit_lanterne_secret.defunct:-1},
+        startdescription: "J'ai trouvé une conjonction d'aspects fort utile, mais j'ai besoin de plus de pouvoir. Avec suffisamment de Lanterne, un degré significatif de Clé, et un avant-goût des Secrets, je peux peut-être invoquer quelqu'un d'intéressant.",
+   hintonly:true,
+        craftable: false
+    },
+	
+						{
+        id: "hint_summon_spirit_lanterne_secret_exists",
+        label: "La Baldomerian, encore ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,lantern:1,secrethistories:1,desire:-1},
+		extantreqs:{spirit_lanterne_secret:1},
+        startdescription: "Est-ce que j'envisage d'invoquer la Baldomerian ? Elle est déjà dans le monde.",  
+   hintonly:true,
+        craftable: false
+    },
+						{
+        id: "hint_summon_spirit_lanterne_secret_dayd",
+        label: "La Baldomerian, déjà ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,lantern:1,secrethistories:1,desire:-1},
+		extantreqs:{spirit_lanterne_secret.defunct:1},
+        startdescription: "Est-ce que j'envisage d'invoquer la Baldomerian ? Elle repose toujours dans le Mansus.",  
+   hintonly:true,
+        craftable: false
+    },
+		{
+        id: "hint_summon_spirit_forgec_winter",
+        label: "Invoquer une créature de la Forge des Jours ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,forge:1,winter:1,desire:-1},
+        startdescription: "J'ai trouvé une conjonction d'aspects fort utile, mais j'ai besoin de plus de pouvoir. Pour faire apparaître à cette entité enfumée et rusée, j'aurai besoin d'un pouvoir important de Forge, ainsi que d'un peu d'Hiver et de Clé.",
+      hintonly:true,
+        craftable: false
+    },
+				{
+        id: "hint_summon_spirit_grailc_moth",
+        label: "Invoquer une créature du Graal Rouge ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,grail:1,moth:1,desire:-1},
+        startdescription: "J'ai trouvé une conjonction d'aspects fort utile, mais j'ai besoin de plus de pouvoir. Pour faire apparaître à cette entité monstrueuse, bien qu'affectueuse, j'aurai besoin d'une intensité significative de Graal, et d'un peu de Phalène et de Clé.",
+      hintonly:true,
+        craftable: false
+    },
+			{
+        id: "hint_summon_spirit_lanternc_edge",
+        label: "Invoquer une chose de derrière les miroirs ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,lantern:1,edge:1,desire:-1},
+        startdescription: "J'ai trouvé une conjonction d'aspects fort utile, mais j'ai besoin de plus de pouvoir. Pour faire apparaître cette chose subtile, fragile et meurtrière, j'aurai besoin d'une intensité significative de Lanterne, d'un peu de Clé et de Pointe.",   
+      hintonly:true,
+        craftable: false
+    },
+			{
+        id: "hint_summon_spirit_heartc_edge",
+        label: "Invoquer une créature du Thunderskin ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,heart:1,edge:1,desire:-1},
+        startdescription: "J'ai trouvé une conjonction d'aspects fort utile, mais j'ai besoin de plus de pouvoir. Pour faire apparaître cette chose joyeuse, incessante et impitoyable, j'aurai besoin d'une intensité significative de Coeur, et d'un peu de Clé et de Pointe.",
+      hintonly:true,
+        craftable: false
+    },
+			{
+        id: "hint_summon_spirit_winterd_edge",
+        label: "Invoquer une créature du Soleil-en-Haillons ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,winter:1,edge:1,desire:-1},
+		startdescription: "J'ai trouvé une conjonction d'aspects fort utile, mais j'ai besoin de plus de pouvoir. Pour faire apparaître cette chose froide et brillante, j'aurai besoin d'une intensité très importante d'Hiver, et d'un peu de Clé et de Pointe.",
+      hintonly:true,
+        craftable: false
+    },
+		{
+        id: "hint_summon_spirit_winterb_heart",
+        label: "Invoquer un des nombreux Morts ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,winter:1,heart:1,desire:-1},
+        startdescription: "J'ai trouvé une conjonction d'aspects fort utile, mais j'ai besoin de plus de pouvoir. Pour faire apparaître cette chose misérable et sans voix, j'aurai besoin d'Hiver à la quatrième intensité, et d'un peu de Clé et de Coeur.",
+      hintonly:true,
+        craftable: false
+    },
+	
+				 	{
+        id: "hint_renew_spirit_wintera_edge",
+        label: "Faire renaître un ressuscité brisé avec le pouvoir du Cartographe des Cicatrices ?",
+        actionId: "work",
+        requirements: {ritual:1,spirit_wintera_edge:1,desire:-1},
+        startdescription: "Il est plus difficile de maintenir un Ressuscité brisé que d'en élever un. Mais avec suffisamment d'aspect d'Hiver, et suffisamment de Pointe, je pourrais maintenir mon Ressuscité brisé en mouvement. Ou je pourrais l'utiliser pour invoquer un plus grand esprit.",
+  hintonly:true,
+        craftable: false,
+	
+    },
+  	{
+        id: "hint_renew_spirit_wintera_moth",
+        label: "Renouveler un ressuscité bourgeonnant avec le pouvoir de l'Anneau-d'If ?",
+        actionId: "work",
+        requirements: {ritual:1,spirit_wintera_moth:1,desire:-1},
+        startdescription: "Un ressuscité bourgeonnant ne restera pas longtemps confiné. Mais avec suffisamment d'aspect d'Hiver, et suffisamment de Phalène, je pourrais garder mon travail stable un peu plus longtemps. Ou je pourrais l'utiliser pour invoquer un esprit plus grand.",
+   hintonly:true,
+        craftable: false
+    },
+	
+		 	{
+        id: "hint_summon_spirit_wintera_edge",
+        label: "Imprégner un cadavre du pouvoir du Cartographe des Cicatrices ?",
+        actionId: "work",
+        requirements: {ritual:1,winter:1,edge:1,desire:-1},
+        startdescription: "J'ai trouvé une conjonction d'aspects fort utile, mais il me faut plus. Avec un peu d'aspect d'Hiver, un peu de Pointe, et un cadavre, je pourrais créer un serviteur brutal.",
+  hintonly:true,
+        craftable: false,
+	
+    },
+  	{
+        id: "hint_summon_spirit_wintera_moth",
+        label: "Imprégner un cadavre du pouvoir de l'Anneau-d'If ?",
+        actionId: "work",
+        requirements: {ritual:1,winter:1,moth:1,desire:-1},
+        startdescription: "Avec un peu d'aspect d'Hiver, un peu de Phalène, et un cadavre, je pourrais créer un serviteur sournois.",
+   hintonly:true,
+        craftable: false
+    },
+	{id:"work.openscar.hint",
+actionId:"work",
+label:"Une ascension du Seuil ?",
+startdescription:"Une ascension du Seuil nécessite sept cicatrices fermées, et l'aspect Clé à la vingt-quatrième intensité.",
+requirements:{ritual:1,lockscar:1,knock:1},
+effects:{},
+warmup:60,
+craftable:false,
+hintonly:true
+},
+	 			{
+        id: "ritehinthasknockedge",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,edge:1,forge:-1,heart:-1,grail:-1,lantern:-1,moth:-1,secrethistories:-1,winter:-1},
+        startdescription: "Il y a des possibilités ici, si j'ajoute la Lanterne, ou le Coeur, ou l'Hiver.",
+        craftable: false,
+		hintonly: true
+    },
+ 			{
+        id: "ritehinthasknockforge",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,forge:1,edge:-1,heart:-1,grail:-1,lantern:-1,moth:-1,secrethistories:-1,winter:-1},
+        startdescription: "Il y a des possibilités ici. Si j'ajoute l'Hiver, je pourrais contacter une chose enfumée; si j'ajoute la Lanterne, je pourrais contacter une puissance incandescente.",
+        craftable: false,
+		hintonly: true
+    },
+	
+	 			{
+        id: "ritehinthasknockgrail",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,grail:1,edge:-1,forge:-1,heart:-1,lantern:-1,moth:-1,secrethistories:-1,winter:-1},
+        startdescription: "Il y a des possibilités ici. Si j'ajoute la Phalène, je pourrais contacter quelque chose d'informe; si j'ajoute la Forge, je pourrais contacter une puissance séduisante et sauvage.",
+        craftable: false,
+		hintonly: true
+    },
+		 			{
+        id: "ritehinthasknockheart",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,heart:1,edge:-1,forge:-1,grail:-1,lantern:-1,moth:-1,secrethistories:-1,winter:-1},
+        startdescription: "Il y a des possibilités ici. Si j'ajoute la Pointe, je pourrais contacter quelque chose d'irrépressible; si j'ajoute l'Hiver, je pourrais invoquer un des Morts.",
+        craftable: false,
+		hintonly: true
+    },
+		 			{
+        id: "ritehinthasknocklantern",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,lantern:1,edge:-1,forge:-1,heart:-1,grail:-1,moth:-1,secrethistories:-1,winter:-1},
+        startdescription: "Il y a des possibilités ici. Si j'ajoute la Pointe, je pourrais faire sortir quelque chose de derrière les miroirs; si j'ajoute la Forge, je pourrais contacter quelque chose d'incandescent.",
+        craftable: false,
+		hintonly: true
+    },
+		 			{
+        id: "ritehinthasknockmoth",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,moth:1,edge:-1,forge:-1,heart:-1,grail:-1,lantern:-1,secrethistories:-1,winter:-1},
+        startdescription: "Il y a des possibilités ici. Si j'ajoute du Graal, je pourrais contacter quelque chose d'informe.",
+        craftable: false,
+		hintonly: true
+    },
+		 			{
+         id: "ritehinthasknocksecrethistories",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,secrethistories:1,edge:-1,forge:-1,heart:-1,grail:-1,lantern:-1,moth:-1,winter:-1},
+        startdescription: "Il y a des possibilités ici. Si j'ajoute suffisamment de Lanterne, qui sait ce que je pourrais attirer ?",
+        craftable: false,
+		hintonly: true
+    },
+		 			{
+        id: "ritehinthasknockwinter",
+        label: "Hiver",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,winter:1,edge:-1,forge:-1,heart:-1,grail:-1,lantern:-1,moth:-1,secrethistories:-1},
+        startdescription: "Il y a des possibilités ici, si j'ajoute la Pointe, ou le Coeur, ou la Forge.",
+        craftable: false,
+		hintonly: true
+    },
+
+					   {
+        label: "La Gloire de la Raison ?",
+        id: "arcane_lantern_edge_hint",
+		requirements: {ritual: 1,knock:-1,desire:-1,lantern:1,edge:1},
+        actionId: "work",
+		startdescription:"Avec au moins cinq Lanterne et une Pointe, je pourrais utiliser la discipline mystique appelée Gloire de la Raison pour transformer ma Passion en Raison.",
+		craftable:false,
+		hintonly:true
+		},
+				   {
+        label: "La Tourmente de la Passion ?",
+        id: "arcane_moth_edge_hint",
+		requirements: {ritual: 1,knock:-1,desire:-1,moth:1,edge:1},
+        actionId: "work",
+		startdescription:"Avec au moins cinq Phalène et une Pointe, je pourrais utiliser la pratique extatique appelée Tourments de la Passion pour transformer ma Raison en Passion.",
+		craftable:false,
+		hintonly:true
+		},
+								   {
+        label: "La Redemption de la Forge ?",
+        id: "arcane_forge_grail_hint",
+        actionId: "work",
+        requirements: {ritual: 1, knock:-1,desire:-1,forge:1,grail:1},
+				startdescription:"Avec au moins cinq Forge et un Graal, je pourrais utiliser la procédure interdite connue sous le nom de Rédemption de Forge pour ramener la Décrépitude à la Santé.",
+		craftable:false,
+		hintonly:true
+		},
+	
+								   {
+        label: "La Fin est belle ?",
+        id: "arcane_winter_lantern_hint",
+        actionId: "work",
+        requirements: {ritual: 1,knock:-1,desire:-1,winter:1,lantern:1},
+		startdescription:"Avec au moins cinq Hiver et une Lanterne, je pourrais implorer l'Heure de la fin, le Soleil-en-Haillon, de détruire quelqu'un... mais pas quelqu'un en particulier. Seul le Soleil-en-Haillon choisira.",
+				craftable:false,
+		hintonly:true
+		},
+		
+	
+		{
+        id: "ritehinthasedge",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:-1,edge:1,forge:-1,heart:-1,grail:-1,lantern:-1,moth:-1,secrethistories:-1,winter:-1},
+        startdescription: "La Pointe est l'aspect de la bataille et de la lutte. Si j'ajoute la Clé, je pourrais tenter une invocation; si j'ajoute la Lanterne ou la Phalène, je pourrais provoquer un affrontement dans ma propre âme.",
+        craftable: false,
+		hintonly: true
+    },
+ 			{
+        id: "ritehinthasforge",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:-1,forge:1,edge:-1,heart:-1,grail:-1,lantern:-1,moth:-1,secrethistories:-1,winter:-1},
+        startdescription: "La Forge est l'aspect qui transforme et détruit. Si j'ajoute la Clé, je pourrais tenter une invocation; ou si je suis décrépit, et que j'ajoute du Graal, peut-être pourrais-je renouveler mon corps.",
+        craftable: false,
+		hintonly: true
+    },
+	
+	 			{
+        id: "ritehinthasgrail",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:-1,grail:1,edge:-1,forge:-1,heart:-1,lantern:-1,moth:-1,secrethistories:-1,winter:-1},
+        startdescription: "Le Graal est l'aspect de l'appétit, du sang et de la naissance. Si j'ajoute la Clé, je pourrais tenter une invocation; ou si je suis décrépit, et que j'ajoute la Forge, peut-être pourrais-je renouveler mon corps.",
+        craftable: false,
+		hintonly: true
+    },
+		 			{
+        id: "ritehinthasheart",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:-1,heart:1,edge:-1,forge:-1,grail:-1,lantern:-1,moth:-1,secrethistories:-1,winter:-1},
+        startdescription: "Le Coeur est l'aspect de la préservation, mais aussi du mouvement incessant. Si j'ajoute la Clé, je pourrai peut-être tenter une invocation.",
+        craftable: false,
+		hintonly: true
+    },
+				{
+        id: "ritehinthasknock",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:2,edge:-1,forge:-1,heart:-1,grail:-1,lantern:-1,moth:-1,secrethistories:-1,winter:1},
+        startdescription: "Une invocation commence par la Clé, mais elle nécessite généralement deux autres aspects en plus. Si je n'utilise pas la Clé, je pourrais trouver d'autres opérations occultes en plus de l'invocation.",
+        craftable: false,
+		hintonly: true
+    },
+					{
+        id: "ritehinthasmicroknock",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:1,edge:-1,forge:-1,heart:-1,grail:-1,lantern:-1,moth:-1,secrethistories:-1,winter:1},
+        startdescription: "Une invocation commence par la Clé; mais j'aurai besoin d'au moins un peu plus de Clé.",
+        craftable: false,
+		hintonly: true
+    },
+		 			{
+        id: "ritehinthaslantern",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:-1,lantern:1,edge:-1,forge:-1,heart:-1,grail:-1,moth:-1,secrethistories:-1,winter:-1,apostlelantern.pillar4:-1},
+		comments:"extremely specific and probably unnecessary exclusion with the pillar, but it caught one person once",
+        startdescription: "La lanterne est le principe de l'endroit secret parfois appelé la Maison du Soleil, et de la lumière au-dessus de celui-ci. Si j'ajoute la Clé, je pourrai peut-être tenter une invocation. Si j'ajoute la Pointe, je peux essayer de conquérir ma Passion avec la Raison. Si j'ajoute l'Hiver, je peux tenter une folle et belle magie.",
+        craftable: false,
+		hintonly: true
+    },
+		 			{
+        id: "ritehinthasmoth",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:-1,moth:1,edge:-1,forge:-1,heart:-1,grail:-1,lantern:-1,secrethistories:-1,winter:-1},
+        startdescription: "La Phalène est l'aspect sauvage et périlleux du chaos et du désir. Si j'ajoute la Clé, je pourrais peut-être tenter une invocation. Si j'ajoute la Pointe, je peux essayer de noyer ma Raison dans la Passion.",
+        craftable: false,
+		hintonly: true
+    },
+		 			{
+         id: "ritehinthassecrethistories",
+        label: "Invoquer quelque chose ?",
+        actionId: "work",
+        requirements: {ritual:1,knock:-1,secrethistories:1,edge:-1,forge:-1,heart:-1,grail:-1,lantern:-1,moth:-1,winter:-1},
+        startdescription: "Les Histoires Secrètes décrivent les complexités inconnues du monde et ses nombreux passés. Elles ne sont généralement pas utilisées directement dans les arts invisibles, mais si j'ajoute la Clé, qui sait ce qui pourrait être possible ?",
+        craftable: false,
+		hintonly: true
+    },
+		 			{
+        id: "ritehinthaswinter",
+        label: "Hiver",
+        actionId: "work",
+        requirements: {ritual:1,knock:-1,winter:1,edge:-1,forge:-1,heart:-1,grail:-1,lantern:-1,moth:-1,secrethistories:-1},
+        startdescription: "L'Hiver est l'aspect du silence, des fins, et de ces choses qui ne sont pas entièrement mortes. Si j'ajoute la Clé, je pourrais peut-être tenter une invocation. Si j'ajoute la Lanterne, je peux tenter une folle et belle magie.",
+        craftable: false,
+		hintonly: true
+    },
+				
+
+
+
+				
+				
+				
+		{
+        id: "ritehint",
+        label: "Rites",
+        actionId: "work",
+        requirements: {ritual:1,lore:-1,ingredient:-1,influence:-1,follower:-1,tool:-1,desire:-1},
+        startdescription: "Chaque rite peut être utilisé à de nombreuses fins. Pour une invocation, je dois commencer par faire appel à la puissance de la Clé, qui ouvrira le chemin.",
+        craftable: false,
+		hintonly: true
+    },
+		   {
+        id: "ascensionpower_upgradetoobsession_hint",
+        label: "Pas assez, pas encore",
+        actionId: "work",
+        requirements: {ascensionpowerb:1,
+		waystag_after:1,
+		forge:1},
+        startdescription: "Pas encore assez. La Forge des Jours ne sera pas au rendez-vous si je ne mérite pas son attention. J'ai besoin d'une puissance de la Forge d'au moins la sixième intensité.",
+        description: ".",
+   
+        craftable: false,
+		hintonly: true
+    },
+		   {
+        id: "ascensionsensation_upgradetoobsession_hint_m",
+        label: "Pas assez, pas encore",
+        actionId: "work",
+        requirements: {ascensionsensationbm:1,
+		waystag_after:1,
+		grail:1},
+        startdescription: "Pas encore assez. Le Graal Rouge ne sera pas au rendez-vous si je ne mérite pas son attention. J'ai besoin d'un pouvoir du Graal d'au moins la sixième intensité.",
+        description: ".",
+   
+
+		hintonly: true
+    },		   {
+        id: "ascensionsensation_upgradetoobsession_hint_f",
+        label: "Pas assez, pas encore",
+        actionId: "work",
+        requirements: {ascensionsensationbf:1,
+		waystag_after:1,
+		grail:1},
+        startdescription: "Pas encore assez. Le Graal Rouge ne sera pas au rendez-vous si je ne mérite pas son attention. J'ai besoin d'un pouvoir du Graal d'au moins la sixième intensité.",
+        description: ".",
+   
+
+		hintonly: true
+    },
+	
+				   {
+        id: "ascensionenlightenment_upgradetoobsession_hint",
+        label: "Pas assez, pas encore",
+        actionId: "work",
+        requirements: {ascensionenlightenmentb:1,
+		waystag_after:1,
+		lantern:1},
+        startdescription: "Pas encore assez. Le Guetteur ne sera pas au rendez-vous si je ne mérite pas son attention. J'ai besoin de la puissance de la Lanterne d'au moins la sixième intensité.",
+        description: ".",
+   
+        craftable: false,
+		hintonly: true
+    },
+		{id:"work.temptation.remembrance.hint",
+actionId:"work",
+label:"Couleurs perdues ?",
+startdescription:"J'ai faim de ce qui est perdu. Le chemin vers ce but passe par une autre faim. Il y a un secret que je dois étudier.",
+requirements:{temptation.remembrance:1},
+hintonly:true,
+craftable:false},
+
+   {
+     id: "detectivework_plotitem_burning_hint",
+     actionId: "work",
+     label: "Deuxièmes réflexions ?",
+     startdescription: "C'était la bonne décision. Et pourtant... [Il y a peut-être encore assez de temps pour Étudier le dossier avant qu'il ne disparaisse à jamais.]",
+     requirements: {legacydetective_plotitem_burning: 1},
+     hintonly: true,
+     craftable: false
+   },
+	
+
+	{id:"work.generaldesire.hint",
+actionId:"work",
+label:"Un Grand Oeuvre ?",
+startdescription:"L'accomplissement final d'un désir est souvent une conclusion. Il ne suffit pas d'espérer. Je reste sur mes positions ou j'échoue dans mes actions. [Les Désirs sont souvent le moyen de gagner une partie. Le Désir de Sensation ou de Pouvoir ou d'Illumination nécessitera un grand rituel. Mais il y a d'autres Désirs, encore plus rares, surtout dans les extensions Goule, Prêtre et Danseur. ]",
+requirements:{desire:1},
+hintonly:true,
+craftable:false}
+	
+
+	
+]
+}

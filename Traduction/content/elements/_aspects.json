@@ -1,0 +1,1774 @@
+{"elements":
+    [
+
+   {
+            id: "acquaintance",
+            label: "Connaissance",
+			description: "Pas encore un ami, ni encore un ennemi.",
+            isAspect: true
+        },
+		        {
+            id: "independent",
+            label: "Franc-tireur",
+			description: "Un étudiant des arts invisibles, avec son propre agenda.",
+            isAspect: true
+        }, 
+		        {
+            id: "benefactor",
+            label: "Bienfaiteur",
+			description: "Un aficionado de mon travail, avec lequel je me suis rapproché.",
+            isAspect: true
+        }, 				
+        {
+            id: "follower",
+            label: "Adepte",
+			description: "Étudiant, aide, défenseur, champion, dupe, sacrifice... compagnon.",
+            isAspect: true
+        },       {
+            id: "hireling",
+            label: "Embauche",
+			description: "J'ai négocié les services de celui-ci, pendant un certain temps.",
+            isAspect: true
+        },
+		     {
+            id: "disciple",
+            label: "Disciple",
+			description: "Un véritable initié des mystères.",
+            isAspect: true
+        },
+				     {
+            id: "devotee",
+            label: "Devoué",
+			description: "Pour l'instant, la dévotion de celui-ci est totale. Mais bientôt, elle pourrait s'estomper, et alors ils pourraient remettre en question ce qu'ils ont fait.",
+			isAspect:true
+        },
+				     {
+            id: "exalted",
+            label: "Exalté",
+			description: "Celui-ci ne peut pas s'élever plus haut... du moins, pas tant que je dirige.",
+            isAspect: true
+        },
+		        {
+            id: "prisoner",
+            label: "Prisonier",
+			description: "J'ai celui-ci dans la paume de ma main.",
+            isAspect: true
+        },
+		        {
+            id: "hunter",
+            label: "Chasseur",
+			description: "Les lois de la civilisation sont plus jeunes que les lois des heures, mais elles aussi exigent parfois un sacrifice. Celui-ci est un agent de la loi.",
+            isAspect: true
+        },
+				        {
+            id: "patron",
+            label: "Mécène",
+			description: "Une figure emblématique dans les cercles où je me déplace.",
+            isAspect: true
+        },
+						        {
+            id: "approval",
+            label: "Approbation",
+			description: "Quelqu'un me regarde avec une approbation croissante.",
+            isAspect: true
+        },
+						        {
+            id: "tutor",
+            label: "Tuteur",
+			description: "Celui-ci des connaissances de valeur.",
+            isAspect: true
+        },
+				        {
+            id: "annoyance",
+            label: "Contrariété",
+			description: "Voici une épine dans mon pied. Je pourrais encore trouver un moyen de l'enlever.",
+            isAspect: true
+        },
+		{
+		            id: "sending",
+            label: "Envoi",
+			description: "Pas exactement moi, mais pas exactement autre chose.",
+            isAspect: true
+        },
+        {
+            id: "edge",
+            label: "Pointe",
+			description: "Toute conquête arrive par la Pointe. Celui qui y demeure est invisible et ne peut être blessé. l'autre est fort, et devient plus fort. [La Pointe est le principe de la bataille et de la lutte.]",
+            isAspect: true,
+			noartneeded:true
+			},
+        {
+            id: "forge",
+            label: "Forge",
+			description: "'Feu', J'ai lu un jour, 'est l'hiver qui réchauffe et le printemps qui consume.' [Le principe de la Forge transforme et détruit.]",
+            isAspect: true
+        },
+		     
+        {
+            id: "grail",
+            label: "Graal",
+			description: "La faim, la luxure, les eaux de la noyade. [Le principe du Graal honore à la fois la naissance et la fête.]",
+        isAspect: true,
+			induces:[{id:"grailinduction",chance:5}]
+        },
+        {
+            id: "heart",
+            label: "Coeur",
+			description: "Le coeur bat sans relâche pour protéger notre compréhension de Thunderskin. [Le Coeur est le principe qui continue et préserve.]",
+            isAspect: true,
+			induces:[{id:"heartinduction",chance:10}]
+        },
+		        {
+            id: "knock",
+            label: "Clé",
+			description: "La Clé ne permet pas de sceller et d'isoler. Elle nous pousse avec joie hors de la sécurité de l'ignorance. [La Clé est le principe qui ouvre les portes et lève les obstacles.]",
+            isAspect: true
+        },
+			 {
+            id: "lantern",
+            label: "Lanterne",
+			description: "'La vie est une flamme pure, et nous vivons grâce à un Soleil invisible en nous.' - Thomas Browne. [La lanterne est le principe de l'endroit secret parfois appelé la Maison du Soleil, et de la lumière au-dessus.]",
+            isAspect: true,
+			induces:[{id:"lanterninduction",chance:5}]
+        },
+		        {
+        id: "moth",
+        label: "Phalène",
+        isAspect: true,
+		description: "J'ai connu un homme qui a capturé des papillons de nuit dans un bocal. Les nuits comme celle-ci, il les libérait un par un pour qu'ils meurent à la bougie. [La Phalène est le principe sauvage et périlleux du chaos et du désir.]",
+			induces:[{id:"mothinduction",chance:10}]
+    },
+	        {
+            id: "secrethistories",
+            label: "Histoires secrètes",
+			        description: "L'histoire est la cicatrice sur la Peau du Monde. [Les histoires secrètes décrivent les complexités inconnues du monde, et ses nombreux passés.]",
+            isAspect: true
+        },
+
+		        {
+            id: "winter",
+            label: "Hiver",
+			description: "... [L'hiver est le principe du silence, des fins et des choses qui ne sont pas tout à fait mortes.]",
+            isAspect: true
+        },
+								{
+            id: "ability",
+            label: "Aptitude",
+            isAspect: true,
+			description: "Cerveau ou coeur ou main ou oeil. La plupart d'entre nous sont nés avec la plupart d'entre eux."
+        },
+										{
+            id: "scar",
+            label: "Cicatrice",
+            isAspect: true,
+			description: "Le résultat irrévocable d'un acte irrévocable."
+        },
+										{
+            id: "advancement",
+            label: "Avancement",
+            isAspect: true,
+			description: "Un avant-goût de ce qui pourrait être. [Avec suffisamment de ces cartes, vous pouvez développer une aptitude.]"
+        },
+												{
+            id: "potential",
+            label: "Potentiel",
+            isAspect: true,
+			description: "La marque de la grandeur ? [Dans de bonnes circonstances, cet adepte pourrait devenir encore plus puissant.]"
+        },
+						{
+            id: "job",
+            label: "Emploi",
+            isAspect: true,
+			description: "Un arrangement pour échanger sa vie contre de l'argent.",
+			induces:[{id:"needs",chance:100}],
+        },
+								{
+            id: "dance",
+            label: "Danse",
+            isAspect: true,
+			description: "Plus vieux que le langage, plus jeune que la vie.",
+			induces:[{id:"heartinduction",chance:10},{id:"mothglimmeringinduction",chance:10}]
+        },
+					{
+            id: "ecdysijob",
+            label: "Une place au Club Ecdysis",
+            isAspect: true,
+			description: "J'ai gagné une place sur la scène du Club Ecdysis."
+        },
+								{
+            id: "demotion",
+            label: "Rétrogradation",
+            isAspect: true,
+			description: "J'ai passé trop de temps loin de mon travail."
+        },
+		{
+            id: "ritual",
+            label: "Rite",
+            isAspect: true,
+			description: "'Les bonnes choses, de la bonne manière, dans le bon ordre. Que Dieu nous aide tous.' - attribué à Hersault. [Un rite vous permet de combiner des aspects pour effectuer une invocation.]"
+        },
+				{
+            id: "society",
+            label: "Société",
+            isAspect: true,
+			description: "Pour recruter des adeptes, je dois construire quelque chose qu'ils puissent croire."
+        },
+		{id:"rededicable",
+		label:"Incertain",
+		description:"Cette organisation a commencé à remettre en question ses principes. Je pourrais faire pression pour en modifier l'orientation.",
+		isAspect:true
+		},
+		        {
+            id: "ingredient",
+            label: "Ingredient",
+            isAspect: true,
+			description: "Carburant, pommade, pigment, patience : tous sont consommés dans le temps.",
+			induces:[{id:"needs",chance:100}],
+			comments:"Ainsi, tout ce qui génère des fonds déclenchera toujours la minuterie des besoins si elle n'est pas déjà en cours."
+        },
+				        {
+            id: "pigment",
+            label: "Pigment",
+            isAspect: true,
+			description: "Il pourrait être possible d'appliquer cela à la toile."
+        },
+				        {
+            id: "poison",
+            label: "Poison mortel",
+            isAspect: true,
+			description: "En aucun cas, vous ne donner ceci dans une personne que vous voulez garder."
+        },
+				        {
+            id: "influence",
+            label: "Influence",
+            isAspect: true,
+			description: "Un écho, une résonance, un alignement. Quelque chose qui va bientôt s'effacer."
+        },
+        {
+            id: "tool",
+            label: "Outil",
+            isAspect: true,
+			description: "'Une épée ne tue pas, c'est un instrument dans la main du tueur.' - Sénèque le jeune"
+        },
+		        {
+            id: "mirror",
+            label: "Un miroir",
+            isAspect: true,
+			description: "Percez la voile de la lumière, et la lumière saignera."
+        },
+		{
+		id: "riddle",
+		label: "Enigme",
+		isAspect: true,
+		description: "Certaines questions n'ont qu'une seule réponse. D'autres n'ont pas de réponse du tout."
+		},
+		
+		 {
+            id: "reputation",
+            label: "Réputation",
+            isAspect: true,
+			description: "'Beaucoup craignent leur réputation, peu leur conscience.' - Pline"
+        },
+				 {
+            id: "evidencelevel",
+            label: "Niveau de preuve",
+            isAspect: true,
+			description: "Certaines formes de preuve sont plus fortes que d'autres."
+        },
+						 {
+            id: "suspicious",
+            label: "Suspicion",
+            isAspect: true,
+			description: "Un inspecteur peut souhaiter enquêter."
+        },
+						 {
+            id: "healthskill",
+            label: "Force",
+            isAspect: true,
+			description: "Je suis fort de jour comme de nuit. [Cela peut vous permettre d'être plus performant en tant que travailleur manuel ou en tant que danseur.]"
+        },
+								 {
+            id: "murderskill",
+            label: "Dangereux",
+            isAspect: true,
+			description: "La confrontation directe est toujours peu judicieuse. Mais en dernier recours, s'il s'agit d'une lutte, je suis très dangereux."
+        },
+								 {
+            id: "passionskill",
+            label: "Imagination",
+            isAspect: true,
+			description: "Mon crâne est plein de visions. [Cela peut vous permettre de créer des peintures plus ambitieuses.]"
+        },
+										 {
+            id: "reasonskill",
+            label: "Savoirs",
+            isAspect: true,
+			description: "Je suis un pilier de sagesse. [Cela ne vous permet actuellement que d'augmenter encore la Raison.]"
+        },
+		{id: "way",
+		label: "Un chemin de retour à travers le rêve",
+		isAspect: true,
+		description: "Certains souvenirs sont des croquis de rêve. Certains passent même à travers les limites du rêve, jusqu'au Bois et à la Maison qui s'élève au-dessus."
+		},
+			{id: "desire",
+		label: "Désir",
+		isAspect: true,
+		description: "Mon but ultime. Il y aura un prix."
+		},
+		
+					{id: "promise",
+		label: "Promesse",
+		isAspect: true,
+		description: "Un engagement pour une conclusion."
+		},
+								{id: "rivalmarks",
+		label: "L'ascension d'un rival",
+		isAspect: true,
+		description: "Les occasions de monter à la Maison du Soleil sont rares. Si un autre y parvient, je risque de rater ma chance. [Si ce nombre atteint sept, votre rival a une chance de gagner le jeu à votre place à la prochaine Saison des ambitions.]"
+		},
+		
+						{id: "changemarks",
+		label: "Marque du Changement",
+		isAspect: true,
+		description: "Chaque fois que je change, je laisse quelque chose derrière moi."
+		},
+				{id: "powermarks",
+		label: "Marque du Pouvoir",
+		isAspect: true,
+		description: "Je peux rechercher l'immortalité et le pouvoir dans l'Heure appelée la Forge des Jours. Son toucher apporte des appétits particuliers, et laisse des marques."
+		},
+						{id: "sensationmarks",
+		label: "Marque du Plaisir",
+		isAspect: true,
+		description: "Je peux rechercher l'immortalité et le plaisir dans l'Heure appelée le Graal rouge. Sa touche apporte des appétits particuliers, et laisse des marques."
+		},
+						{id: "enlightenmentmarks",
+		label: "Marque de la Lumière",
+		isAspect: true,
+		description: "Je peux rechercher l'immortalité et l'illumination dans l'Heure appelée le Guetteur. Son toucher apporte des appétits particuliers, et laisse des marques."
+		},
+								{id: "remembrancemarks",
+		label: "Les griffes de la mémoire",
+		isAspect: true,
+		description: "Sous le sol, des os. Dans les os, la mémoire. Dans la mémoire, les couleurs.",
+		comments:"Important ! Ceci est utilisé pour déclencher la découverte de restes de cadavres supplémentaires dans le cadre des Expéditions pour la Goule"
+		},
+			{id: "follower_lustenlightenment",
+			isAspect:true,
+			isHidden:true},
+			
+			{id: "follower_lustpower",
+			isAspect:true,
+			isHidden:true},
+			
+			{id: "follower_lustsensation",
+			isAspect:true,
+			isHidden:true},
+			
+			{id: "follower_lustchange",
+			isAspect:true,
+			isHidden:true},
+			
+				{id: "detectivetemptation",
+				comments:"Aspect pour les éléments de complot des détectives",
+			isAspect:true,
+			isHidden:true},
+			
+			
+
+{id:"long.preference.assault",
+isAspect:true,
+isHidden:true
+},
+{id:"long.preference.intrigue",
+isAspect:true,
+isHidden:true
+},
+{id:"long.preference.dreamwork",
+isAspect:true,
+isHidden:true
+},
+{id:"long.preference.winter",
+isAspect:true,
+isHidden:true
+},
+			
+		{id:"ascend",
+		label: "Ascension",
+		isAspect:true,
+		description: "Vers la prochaine marque.",
+		comments: "Recette d'aspect",
+			noartneeded: true
+		},
+		{id:"descend",
+		label: "Déclin",
+		isAspect:true,
+		description: "Si je ne nourris pas mes nouveaux appétits, mes marques vont s'effacer.",
+			noartneeded: true,
+		comments: "Recette d'aspect"},
+		
+				{
+            id: "article",
+            label: "Article",
+            isAspect: true,
+			description: "Un travail original sur un sujet particulier."
+        },
+		{
+            id: "text",
+            label: "Texte",
+            isAspect: true,
+			description: "Les livres sont la mémoire qui ne meurt pas."
+        },
+        {
+            id: "legacyplotitem",
+            label: "Élément d'héritage",
+            isAspect: true,
+            isHidden: true,
+            comments: "Utilisé pour des éléments de l'intrigue qui ne devraient pas être transmis à un autre héritage par LEVER_LastBook, puisqu'ils peuvent interrompre les flux."
+        },
+				{
+            id: "autographed",
+            label: "Autographié",
+            isAspect: true,
+			description: "Marqué par son créateur."
+        },
+		{
+            id: "lore",
+            label: "Croyance",
+            isAspect: true,
+			description: "Connaissance des arts invisibles. Je peux l'utiliser pour attirer des adeptes, pour effectuer des rites, pour ouvrir la voie au Mansus, pour chercher mon ascension... [Les fragments de Croyance peuvent parfois être améliorés avec l'étude, et avec les fragments correspondants.]"
+        },
+        {
+            id: "subvertable_lore",
+            label: "Croyance clandestine",
+            isAspect: true,
+            isHidden: true,
+            noartneeded: true
+        },
+		
+		{
+        id: "memory",
+            label: "Souvenirs",
+			isAspect:true,
+            description: "Nous nous souvenons des morts, jusqu'à ce que nous les oublions."
+        },
+				{
+            id: "language",
+            label: "Une langue",
+            isAspect: true,
+			description: "Ceci est utile pour la traduction de textes."
+        },
+						{
+            id: "tutorlatin",
+            label: "Expert en latin",
+            isAspect: true,
+		description: "Un spécialiste du latin qui pourrait être prêt à vous donner des cours particuliers si vous étudiez avec lui."
+        },
+						{
+            id: "tutorgreek",
+            label: "Expert en grec",
+            isAspect: true,
+		description: "Un spécialiste du grec qui pourrait être prêt à vous donner des cours particuliers si vous étudiez avec lui."
+        },
+								{
+            id: "tutoraramaic",
+            label: "Expert en araméen",
+            isAspect: true,
+			description: "Un spécialiste de l'araméen qui pourrait être prêt à vous donner des cours particuliers si vous étudiez avec lui."
+        },
+								{
+            id: "tutorsanskrit",
+            label: "Expert en sanskrit",
+            isAspect: true,
+			description: "Un spécialiste du sanskrit qui pourrait être prêt à vous donner des cours particuliers si vous étudiez avec lui."
+        },
+										{
+            id: "spirittutorfucine",
+            label: "Langue Fucine",
+            isAspect: true,
+			description: "Cet esprit peut vous apprendre le Fucine, si vous connaissez une langue apparentée."
+        },
+		
+		{
+            id: "spirittutorphrygian",
+            label: "Langue Phrygienne",
+            isAspect: true,
+			description: "Cet esprit peut vous apprendre le phrygien, si vous connaissez une langue apparentée."
+        },
+		
+		{
+            id: "spirittutormandaic",
+            label: "Langue Mandaique",
+            isAspect: true,
+			description: "Cet esprit peut vous apprendre le mandaïque profond, si vous connaissez une langue apparentée."
+        },
+		
+		
+{id:"spiritsicknessprotector",
+label:"Phylaxie",
+description:"Si je lui parle de ma santé, il peut m'offrir une protection contre les maladies.",
+isAspect:true},
+
+{id:"spiriteatspassion",
+label:"La lampe de la perdition",
+description:"Si je lui parle, je pourrais lui offrir ma Passion.",
+isAspect:true},
+
+{id:"spiriteatsreason",
+label:"Le battoir des pensées",
+description:"Si je lui parle, je pourrais lui offrir ma Raison.",
+isAspect:true},
+								        {
+            id: "auctionable",
+            label: "Mise aux enchères",
+			description: "Je pourrais le mettre aux enchères, bien que la valeur aux enchères soit toujours incertaine.",
+            isAspect: true
+        },
+						        {
+            id: "compensationvalue",
+            label: "Valeur de Spintria",
+			description: "Les Spintriae sont la monnaie du monde caché. Certains spintriae ont plus de valeur que d'autres. Mais ne vous attendez pas à recevoir de la monnaie. Ce n'est pas une épicerie.",
+            isAspect: true
+        },
+		        {
+            id: "hq",
+            label: "Quartier général",
+			description: "Pour la conversation et la convocation.",
+        isAspect: true
+},
+		        {
+            id: "hq.potential",
+            label: "Quartier général potentiel",
+			description: ".",
+        isAspect: true,
+		isHidden:true
+},
+		        {
+            id: "movehq",
+            label: "Déménagement dans un nouveau quartier général",
+			description: "Recette d'aspect",
+        isAspect: true,
+		noartneeded:true
+},
+
+{id:"library",
+label:"Bibliothèque",
+description:"Une collection de volumes mineurs, de copies partielles et éphémères qui peuvent aider dans les recherches.",
+isAspect:true
+},
+
+{id:"pit",
+label:"Fosse",
+description:"Un puits de solitude sans lumière où je peux avoir de sombres aperçus.",
+isAspect:true
+},
+
+{id:"secret",
+label:"Secret",
+description:"Cet endroit est facilement négligé. [L'utilisation de ce Quartier Général entraînera la disparition des cartes de réputation.]",
+isAspect:true,
+induces:[{id:"secret.induction",chance:30}]
+},
+{id:"sanctuary",
+label:"Sanctuaire",
+description:"Un espace conçu pour la contemplation et peut-être même la paix.",
+isAspect:true
+},
+
+        {
+            id: "location",
+            label: "Lieu",
+			description: "Les lieux ! Tout doit être quelque part, et ceci est ici.",
+        isAspect: true
+},
+       {
+            id: "vaultcapital",
+            label: "Dans la capitale",
+			description: "Un lieu secret dans la capitale grouillante où je vis.",
+        isAspect: true
+},
+      {
+            id: "vaultshires",
+            label: "En province",
+			description: "Des champs verts et des collines grises.",
+        isAspect: true
+},
+      {
+	     id: "vaultcontinent",
+   label: "Sur le continent",
+			description: "De l'autre côté d'une mer étroite, dans les recoins insoupçonnés de nations rivales.",
+        isAspect: true
+},
+      {
+            id: "vaultlandbeyondforest",
+            label: "Dans les terres par-delà la forêt",
+			description: "Des cols brumeux et des villages isolés, où la peau du monde est fine. ",
+        isAspect: true
+},
+
+     {
+            id: "vaultrendingmountains",
+            label: "Dans les montagnes déchirées",
+			description: "Flanqué de fauves, enneigé, loin de toute aide.",
+        isAspect: true
+},
+
+     {
+            id: "vaultloneandlevelsands",
+            label: "Les deserts solitaires et plats",
+			description: "Dans un endroit sec et lointain, des horizons enchaînés de dunes vous attendent.",
+        isAspect: true
+},
+
+     {
+            id: "vaulteveningisles",
+            label: "Parmi les îles couchantes",
+			description: "Des chaînes d'îles rocheuses lavées par les vagues, vibrantes de vie verte.",
+        isAspect: true
+},
+       {
+            id: "peril",
+            label: "Peril",
+			description: "Un obstacle, un danger, ou une conclusion prématurée.",
+        isAspect: true
+},
+      {
+            id: "curse",
+            label: "Malédiction",
+			description: "Une influence malveillante que vous devez vaincre.",
+        isAspect: true
+},
+      {
+            id: "guardian",
+            label: "Gardien",
+			description: "Une entité chargée de protéger l'entrée.",
+        isAspect: true
+},
+      {
+            id: "seal",
+            label: "Sceau",
+			description: "Vos progrès sont empêchés.",
+        isAspect: true
+},
+      {
+            id: "vault",
+            label: "Chambre forte",
+			description: "Il y a quelque chose de précieux ici.",
+        isAspect: true
+},
+      {
+            id: "challenge.knowledge",
+            label: "Necessite des connaissances",
+			description: "C'est un puzzle avec des pièces manquantes. Je pourrais trouver ces pièces dans les recoins bizarres de l'érudition. [Pour améliorer ou corrompre ce fragment, il vous faudrait de l'Erudition, ou un Quartier Général avec une bibliothèque.]",
+        isAspect: true
+},
+
+
+      {
+            id: "challenge.intuition",
+            label: "Nécessite de l'intuition",
+			description: "Avec le temps et la paix, les réponses viennent parfois à l'improviste. [Pour améliorer ou corrompre ce Fragment, il faudrait des Scintillements, ou un Quartier Général avec un Sanctuaire.]",
+        isAspect: true
+},
+
+      {
+            id: "challenge.grim",
+            label: "Nécessite une sinistre leçon",
+			description: "Je vais apprendre. [Pour améliorer ou corrompre ce Fragment, vous aurez besoin de la Peur (qui pourrait se reproduire), de la compétence Intensité Silencieuse, ou d'un Quartier Général avec un puit.]",
+        isAspect: true
+},
+
+      {
+            id: "challenge.obsessive",
+            label: "Nécessite des recherches obsessionnelles",
+			description: "Ce sujet demande plus d'attention qu'il n'est sûr. [Pour améliorer ou corrompre ce Fragment, il faudrait un Quartier Général avec une Bibliothèque, la compétence Jamais-Plus, ou une Raison. Il y a un très faible risque que votre Raison soit endommagée de façon permanente.]",
+        isAspect: true
+},
+
+      {
+            id: "challenge.paradox",
+            label: "Nécessite une résolution paradoxale",
+			description: "La vérité est un serpent. Les réponses nourrissent ses appétits. [Pour améliorer ou corrompre ce Fragment, il vous faudrait un Quartier Général avec un Sanctuaire, la compétence Open Soul ou une Passion. Il y a un très faible risque que votre Passion soit endommagée de façon permanente.]",
+        isAspect: true
+},
+
+
+      {
+            id: "challenge.illumination",
+            label: "Nécessite un éclairage",
+			description: "L'eau remplit la tasse, la lumière remplit l'esprit. Pour améliorer ou corrompre ce Fragment, il vous faudrait Fascination (qui pourrait se reproduire), un Quartier Général avec une Bibliothèque, ou la compétence Rarefied Mind.]",
+        isAspect: true
+},
+
+      {
+            id: "challenge.practical",
+            label: "Nécessite une expérimentation pratique",
+			description: "La douleur n'est que ce qui arrive maintenant ; la connaissance est ce dont nous nous souviendrons. [Pour améliorer ou corrompre ce Fragment, il faudrait risquer votre Santé ou utiliser un Prisonnier.]",
+        isAspect: true
+},
+
+
+
+
+        {
+            id: "summoned",
+            label: "Convoqué",
+			description: "Celui-ci n'est pas de ce monde.",
+            isAspect: true
+        },
+		    {
+            id: "illhealth",
+            label: "Maladie",
+			description: "Je peux peut-être me reposer et récupérer.",
+            isAspect: true
+        },
+		
+		 {
+            id: "inducesdespair",
+            label: "Induit le désespoir",
+			description: "Cela peut causer du Désespoir.",
+            isAspect: true
+        },
+						 {
+            id: "inducesvisions",
+            label: "Induit des visions",
+			description: "Je peux voir des choses.",
+            isAspect: true
+        },
+				 {
+            id: "commissiongiven",
+            label: "Demande de la commission",
+			description: "Une tâche qui requiert votre attention.",
+            isAspect: true,
+			comments: "Recipe aspect",
+			noartneeded: true
+        },
+						 {
+            id: "commissionfulfilled",
+            label: "La Commission est satisfaite",
+			description: "Vous avez terminé une tâche.",
+            isAspect: true,
+			comments: "Recipe aspect",
+			noartneeded: true
+        },
+		 {
+            id: "recruiting",
+            label: "Recrutement",
+			description: "Pour voir la lumière, on ne peut pas être aveugle ; mais parfois, c'est la lumière qui nous aveugle.",
+            isAspect: true,
+			comments: "Recipe aspect",
+			noartneeded: true
+        },
+		{
+            id: "hiring",
+            label: "Embauche",
+			description: "Prolonger la période de service d'un employé.",
+            isAspect: true,
+			comments: "Recette d'aspect. Utiliser pour réembaucher des mercenaires.",
+			noartneeded: true
+        },
+		{
+            id: "refiring",
+            label: "Renouvellement",
+			description: "Prolonger la période de service .",
+            isAspect: true,
+			comments: "Recipe aspect. Use to refire devotees.",
+			noartneeded: true
+        },
+		{
+            id: "promotiontodisciple",
+            label: "Promotion",
+			description: "Il est temps de prêter des serments plus profonds.",
+            isAspect: true,
+			comments: "Recipe aspect",
+			noartneeded: true
+        },
+					 {
+            id: "promotionto_d_edge",
+            label: "Exaltation de la Pointe",
+			description: "Ce sont là les véritables mystères de notre vénération.",
+            isAspect: true,
+			comments: "Recipe aspect",
+			noartneeded: true
+        },
+			 {
+            id: "promotionto_d_forge",
+            label: "Exaltation de la Forge",
+			description: "Ce sont là les véritables mystères de notre vénération.",
+            isAspect: true,
+			comments: "Recipe aspect",
+			noartneeded: true
+        },
+					 {
+            id: "promotionto_d_grail",
+            label: "Exaltation du Graal",
+			description: "Ce sont là les véritables mystères de notre vénération.",
+            isAspect: true,
+			comments: "Recipe aspect",
+			noartneeded: true
+        },
+					 {
+            id: "promotionto_d_heart",
+            label: "Exaltation du Coeur",
+			description: "Ce sont là les véritables mystères de notre vénération.",
+            isAspect: true,
+			comments: "Recipe aspect",
+			noartneeded: true
+        },
+					 {
+            id: "promotionto_d_knock",
+            label: "Exaltation de la Clé",
+			description: "Ce sont là les véritables mystères de notre vénération.",
+            isAspect: true,
+			comments: "Recipe aspect",
+			noartneeded: true
+        },
+					 {
+            id: "promotionto_d_lantern",
+            label: "Exaltation de la Lanterne",
+			description: "Ce sont là les véritables mystères de notre vénération.",
+            isAspect: true,
+			comments: "Recipe aspect",
+			noartneeded: true
+        },
+					 {
+            id: "promotionto_d_moth",
+            label: "Exaltation de la Phalène",
+			description: "Ce sont là les véritables mystères de notre vénération.",
+            isAspect: true,
+			comments: "Recipe aspect",
+			noartneeded: true
+        },
+					 {
+            id: "promotionto_d_winter",
+            label: "Exaltation de l'Hiver",
+			description: "Ce sont là les véritables mystères de notre vénération.",
+            isAspect: true,
+			comments: "Recipe aspect",
+			noartneeded: true
+        },
+							 {
+            id: "rival_promotion",
+            label: "Promotion: Rival",
+            isAspect: true,
+			comments: "Recipe aspect",
+			noartneeded: true
+        },
+					 {
+            id: "fatiguing",
+            label: "Un engagement est pris",
+			description: "Quelque chose s'est produit.",
+            isAspect: true,
+			comments: "Recette d'aspect; se concentre sur les statistiques de fatigue ou sur la conversion d'éléments investis dans une situation en une forme qui ne déclenchera pas une recette qui en besoin de plus (par exemple, la Raison dans la Recherche, les Fonds dans les enchères)..",
+			noartneeded: true
+        },
+							 {
+            id: "exhaustlocation",
+            label: "Lieu fouillé",
+			description: "Un lieu a été fouillé et ne sera pas réouvert à moins d'être explicitement renouvelé.",
+            isAspect: true,
+			noartneeded: true
+        },
+			 {
+            id: "restore",
+            label: "Rien ne s'est produit",
+			description: "Tout est comme avant",
+            isAspect: true,
+			comments: "Recipe aspect; runs when an situation fails to convert situation control elements back to their originals.",
+			noartneeded: true
+        },
+					 {
+            id: "decline",
+            label: "Déclin",
+			description: "Quelque chose se termine",
+            isAspect: true,
+			comments: "Recipe aspect; Utile pour modifier la loyauté de quelqu'un de manière positive.",
+			noartneeded: true
+        },
+				{
+            id: "avowal",
+            label: "Confession",
+			description: "Un changement positif en matière de loyauté",
+            isAspect: true,
+			comments: "Recette d'aspect; Utile pour changer la loyauté de quelqu'un de manière positive",
+			noartneeded: true
+        },
+		{
+            id: "rejection",
+            label: "Rejet",
+			description: "Un changement en matière de loyauté",
+            isAspect: true,
+			comments: "Recette d'aspect; Utile pour modifier la loyauté de quelqu'un",
+			noartneeded: true
+        },
+		{id:"scarability",
+		label:"Capacité de cicatrisation",
+		description:"Convertit de façon permanente une aptitude (active ou épuisée) en sa version cicatricielle",
+		isAspect:true,
+		noartneeded:true},
+		
+				 {
+            id: "restorehealth",
+            label: "Restaurer la Santé",
+			description: "La Santé reviendra.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+		
+						 {
+            id: "damagehealth",
+            label: "Dommages à la Santé",
+			description: "La Santé sera blessée.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+							 {
+            id: "fallsick",
+            label: "Maladie d'automne",
+			description: "La santé va devenir une affliction ; cela pourrait potentiellement affecter les personnes",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+								 {
+            id: "destroyhealth",
+            label: "Détruire la Santé",
+			description: "La Santé sera détruite.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+								 {
+            id: "damagereason",
+            label: "Blesse la Raison",
+			description: "La Raison deviendra de la Peur.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+										 {
+            id: "toreason",
+            label: "Pour la Raison",
+			description: "...deviendra Raison.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+					 {
+            id: "topassion",
+            label: "Pour la Passion",
+			description: "...deviendra Passion.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+							 {
+            id: "tohealth",
+            label: "Pour la Santé",
+			description: "...deviendra Santé.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+										 {
+            id: "dreadful",
+            label: "Affreux",
+			description: "Risque de générer de la Peur.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true,			
+			induces:[{id:"dreadinduction",chance:30}]
+        },
+												 {
+            id: "fascinating",
+            label: "Fascinant",
+			description: "Risque de générer de la Fascination.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true,			
+			induces:[{id:"fascinationinduction",chance:30}]
+        },
+										 {
+            id: "damagepassion",
+            label: "Blessure de Passion",
+			description: "La Passion va devenir une fascination.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+		
+						 {
+            id: "killmortal",
+            label: "Tuer un mortel",
+			description: "Les Mortels seront remplacés par des cadavres",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        
+		},
+		{
+		    id: "longded",
+            label: "Tuer Long",
+			description: "Long sera remplacé par ses récompenses",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+								 {
+            id: "killsummoned",
+            label: "Appel au meutre",
+			description: "Les invocations seront remplacées par un aperçu des influences ou des bloqueurs d'invocations",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+        {
+            id: "killmanifesting",
+            label: "Appel manifeste au meurtre",
+            description: "Les invocations seront remplacées par un aperçu des influences ou des bloqueurs d'invocations",
+            isAspect: true,
+            comments: "Recette d'aspect",
+            noartneeded: true
+        },
+								 {
+            id: "dissolution",
+            label: "Dissolution",
+			description: "Ce qui est à l'extérieur, à l'intérieur ; ce qui est à l'intérieur, à l'extérieur. Dissout quelque chose pour exercer une Influence.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+		
+							 {
+            id: "raiseshattered",
+            label: "Transformer par exemple un cadavre en Ressuscité abimé",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+									 {
+            id: "raiseburgeoning",
+            label: "Transformer par exemple un cadavre en ressuscité",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+									 {
+            id: "renewshattered",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+									 {
+            id: "renewburgeoning",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+								 {
+            id: "rebellion",
+            label: "Rébellion",
+			description: "Les Adeptes deviendront des rivaux",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+								 {
+            id: "endannoyance",
+            label: "Mettre fin à la gêne",
+			description: "Les désagréments comme les patrons difficiles seront éliminés.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+										 {
+            id: "careeradvancement",
+            label: "Avancement de carrière",
+			description: "Une promotion ou une augmentation des compétences",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+								 {
+            id: "derangemortal",
+            label: "Folie des Mortels",
+			description: "Les Mortels seront remplacés par des fous",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },								 {
+            id: "capturehunter",
+            label: "Capturer un Chasseur",
+			description: "Les Chasseurs seront emprisonnés.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+				 {
+            id: "killhunter",
+            label: "Tuer un chasseur",
+			description: "Les Chasseurs vont devenir des cadavres.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+									 {
+            id: "capturefollower",
+            label: "Capturer un Adepte",
+			description: "Les Adeptes seront emprisonnés.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded: true
+        },
+		
+				 {
+            id: "restorepassion",
+            label: "Restaurer la passion",
+			description: "La Passion sera explicitée.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded:true
+        },
+						 {
+            id: "plead",
+            label: "Plaidoyer",
+			description: "On peut faire preuve de clémence.",
+            isAspect: true,
+			comments: "Recette d'aspect",
+			noartneeded:true
+        },
+								 {
+            id: "employment",
+            label: "Emploi",
+			description: "J'ai fait une journée de travail.",
+            isAspect: true,
+			comments: "Recette d'aspect. Rafraîchit les chronos et les statistiques sur la fatigue",
+			noartneeded:true
+        },
+										 {
+            id: "scandalous",
+            label: "Scandaleux",
+			description: "Je ne serai pas facilement oublié.",
+            isAspect: true,
+			comments: "Recette d'aspect. Rafraîchit les chronos de réputation.",
+			noartneeded:true
+        },
+										 {
+            id: "epiphany",
+            label: "Epiphanie",
+			description: "Ma compréhension s'est améliorée.",
+            isAspect: true,
+			comments: "Recette d'aspect. Améliore les Croyances.",
+			noartneeded:true
+        },
+												 {
+            id: "upgradeinfluence",
+            label: "Renforcer l'Influence",
+			description: "J'ai trouvé un alignement.",
+            isAspect: true,
+			comments: "Recette d'aspect. Améliore l'Influence.",
+			noartneeded:true
+        },
+	
+{id:"glorify",
+label:"Un mouvement vers la Gloire",
+description:"Convertit la Peur en Fascination, et les autres éléments potentiels en équivalents plus Glorieux.",
+isAspect:true,noartneeded:true
+},									 {
+            id: "depiphany",
+            label: "Déploiement",
+			description: "Je comprends les choses plus simplement maintenant.",
+            isAspect: true,
+			comments: "Recette d'aspect. Downgrades and splits lore.",
+			noartneeded:true
+        },
+										 {
+            id: "investigatingsuccess",
+            label: "Succès de l'enquête",
+			description: "Amélioration des preuves.",
+            isAspect: true,
+			comments: "Recette d'aspect.",
+			noartneeded:true
+        },
+												 {
+            id: "investigatingsetback",
+            label: "Recul de l'enquête",
+			description: "Dégradation des preuves.",
+            isAspect: true,
+			comments: "Recette d'aspect.",
+			noartneeded:true
+        },
+						 {
+            id: "crackmirror",
+            label: "Miroirs fissurés",
+			description: "Les miroirs vont se fissurer.",
+            isAspect: true,
+			comments: "Recette d'aspect.",
+			noartneeded:true
+        },
+		{
+            id: "mortal",
+            label: "Mortel",
+			description: "'La longue habitude de vivre nous rend indisposés à mourir.' - Thomas Browne",
+            isAspect: true
+        },
+		{
+            id: "commission",
+            label: "Commission",
+			description: "Une opportunité de profit. Je dois remplir ce formulaire et le retourner à un mécène.",
+            isAspect: true
+        },
+		{id: "benign",
+		label: "La bonne fortune à l'état pur",
+		description: "Quelle chance j'ai eue.",
+		isAspect: true
+		},
+				{id: "malign",
+		label: "Une laideur",
+		description: "Quelque chose d'indésirable.",
+		isAspect: true
+		},
+		{id:"season",
+		label:"Saison",
+		description: "Quelque chose de remarquable va se produire, bientôt",
+		isAspect: true,
+		comments:"identifie les tirages de cartes pour les événements saisonniers du Temps" 
+		},
+		{id: "devourer",
+		label: "Dévoreur",
+		description: "Si cela se produit, vous risquez de vous faire agresser ou de consommer vos adeptes.",
+		isAspect: true
+		},
+	{id: "deceiver",
+		label: "Menteur",
+		description: "Si cela se produit, cela risque de vous pousser, vous ou vos partisans, à la folie.",
+		isAspect: true
+		},
+		{id:"mystic",
+		label:"Mysticisme",
+		description:"Ces Chasseurs survivent généralement aux attaques des créatures du Mansus, même si ces attaques seraient autrement imparables.",
+		isAspect:true},
+		{id:"brilliant",
+		label:"Brillant",
+		description:"Les Brillants Chasseurs trouvent un sens dans le moindre détail. Ils peuvent convertir la notoriété directement en preuves accablantes.",
+		noartneeded:true,
+		isAspect:true},
+		
+		{id:"erratic",
+		label:"Erratique",
+		description:"Ces Chasseurs ne parviennent pas souvent à créer des preuves avec la notoriété. Inversement, ils créent parfois des preuves même s'ils ne trouvent pas de notoriété.",
+		isAspect:true},
+		
+		{id:"meticulous",
+		label:"Méticuleux",
+		description:"Ces Chasseurs réussissent toujours à créer des preuves avec de la notoriété.",
+		isAspect:true},
+		
+		{id:"tenacious",
+		label:"Tenace",
+		description:"Ces Chasseurs survivront peut-être à une assaut physique sur trois, même si l'attaque serait autrement impossible à arrêter.",
+		isAspect:true},
+				{id:"wary",
+		label:"Méfiant",
+		description:"Celle-ci est devenue prudente. Ils ne me rencontreront plus en personne.",
+		isAspect:true},
+				{id:"grim",
+		label:"Sinistre",
+		description:"Les Chasseurs Sinistres ne peuvent pas être influencés par l'attrait de la Gloire... mais leur propre désespoir peut les détruire.",
+		isAspect:true},
+						{id:"idealist",
+		label:"Idéaliste",
+		description:"Les idéalistes ne peuvent être démoralisés - même si parfois leurs idéaux peuvent être retournés contre eux.",
+		isAspect:true},
+
+			{id: "venerationedge",
+		label: "Vénération de la Pointe",
+		description: "Cette organisation vénère le principe appelé Pointe, que nous invoquons au nom du Colonel et du Lionsmith... entre autres.",
+		isAspect: true
+		},
+					{id: "venerationforge",
+		label: "Vénération de la Forge",
+		description: "Cette organisation vénère le principe appelé Forge, que nous invoquons au nom de la Forge des Jours elle-même et du Madrugad... entre autres.",
+		isAspect: true
+		},
+					{id: "venerationgrail",
+		label: "Vénération du Graal",
+		description: "Cette organisation vénère le principe appelé Graal, que nous invoquons au nom du Graal rouge lui-même et de la Sorcière-et-la-Soeur... entre autres.",
+		isAspect: true
+		},
+					{id: "venerationheart",
+		label: "Vénération du Coeur",
+		description: "Cette organisation vénère le principe appelé Coeur, que nous invoquons au nom de Thunderskin et du Velours... entre autres.",
+		isAspect: true
+		},
+					{id: "venerationknock",
+		label: "Vénération de la Clé",
+		description: "Cette organisation vénère le principe appelé Clé, que nous appelons au nom de la Mère des fourmis et du Meniscate... entre autres.",
+		isAspect: true
+		},
+					{id: "venerationlantern",
+		label: "Vénération de la Lanterne",
+		description: "Cette organisation vénère le principe appelé Lanterne, que nous appelons au nom de la Porte dans l'Oeil et du Fleuriste... entre autres.",
+		isAspect: true
+		},
+							{id: "venerationmoth",
+		label: "Vénération de la Phalène",
+		description: "Cette organisation vénère le principe appelé Phalène, que nous invoquons au nom de la Phalène elle-même et de la Sorcière-et-la-Soeur... entre autres.",
+		isAspect: true
+		},
+					{id: "venerationwinter",
+		label: "Vénération de l'Hiver",
+		description: "Cette organisation vénère le principe appelé Hiver, que nous invoquons au nom du Soleil-en-Guenilles et de la Hache à Cornes... entre autres.",
+		isAspect: true
+		},
+				{
+		id: "textlatin",
+		label: "Ecrit en latin",
+		description: "Une langue morte : morte comme un diamant. [Certains livres doivent être traduits avant de pouvoir être lus.]",
+		isAspect:true
+		},
+					{
+		id: "textfucine",
+		label: "Ecrit en Fucine",
+		description: "Un peuple vivait à l'est du lac perdu Fucino. Horace a averti que le pays des sorcières était le leur. C'était leur langue, appelée par certains 'la langue sèche' et par d'autres 'la langue des sorcières'. [Certains livres doivent être traduits avant de pouvoir être lus.]",
+		isAspect:true
+		},
+				{
+		id: "textgreek",
+		label: "Ecrit en Grec",
+		description: "Une langue pour les philosophes, les théologiens et les héros. [Certains livres doivent être traduits avant d'être lus.]",
+		isAspect:true
+		},
+					{
+		id: "textphrygian",
+		label: "Ecrit en Phrygien",
+		description: "Les Phrygiens vénéraient la Grande Mère, que nous appelons le Graal. C'est dans leur pays que naquit la Sororité du Noeud, et c'est dans cette langue qu'elle implora Thunderskin lors de son ascension. [Certains livres doivent être traduits avant de pouvoir être lus.]",
+		isAspect:true
+		},
+						{
+		id: "textaramaic",
+		label: "Ecrit en Aramaique",
+		description: "La langue d'Aram, et tous ses nombreux enfants depuis trois mille ans et plus. [Certains livres doivent être traduits avant de pouvoir être lus.]",
+		isAspect:true
+		},
+							{
+		id: "textmandaic",
+		label: "Ecrit en Mandaique profond",
+		description: "Le scénario le plus secret des rites les plus intimes des sectes profondes du désert profond. La langue natale, dit-on, de la Mère des Fourmis elle-même. [Certains livres doivent être traduits avant de pouvoir être lus.]",
+		isAspect:true
+		},
+									{
+		id: "textsanskrit",
+		label: "Ecrit en Sanskrit",
+		description: "La langue sacrée du sous-continent. La porte de quatre mille ans de poésie, de cérémonie et de mystère s'ouvre maintenant devant vous, si vous pouvez vous débattre dans les circonvolutions de lotus de son vocabulaire. [Certains livres doivent être traduits avant de pouvoir être lus.]",
+		isAspect:true
+		},
+									{
+		id: "textvak",
+		label: "Ecrit en Vak",
+		description: "Avant que les dieux ne naissent du sang, avant que le singe ne se tienne debout, c'était la langue entendue dans la Maison du Soleil [Certains livres doivent être traduits avant de pouvoir être lus.]",
+		isAspect:true
+		},
+				        {
+            id: "follower_honoured",
+            label: "Honoré",
+			description: "J'ai honoré cet adepte en lui offrant un cadeau.",
+        isAspect: true
+},
+				        {
+            id: "romanticinterest",
+            label: "Intéressé",
+			description: "C'est une personne qui a développé un intérêt romantique pour moi.",
+        isAspect: true
+},
+				{id: "long_wound",
+		label:"Blessure",
+		description:"Est-il possible pour Long de mourir ? Mettons-le à l'épreuve.",
+		isAspect:true,
+		icon:"long_wound"
+		},
+				{id: "follower_wound",
+		label:"Blessure",
+		description:"Celui-ci a souffert à mon service. [Les Adeptes blessés ne comptent pas comme Adeptes et ne peuvent pas être utilisés comme agents ou assistants. Ils peuvent mourir pendant la saison des maladies. Utilisez <b>Parler</b> pour les soigner.]",
+		isAspect:true
+		},
+		{id: "follower_scar_edge",
+		label:"Cicatrice : Expérience brutale",
+		description:"FAUST : Je pense que l'enfer est une fable. MEPHISTOPHELES : Ay, pense encore, jusqu'à ce que l'expérience te fasse changer d'avis. [Trois Cicatrices du même type vont tuer un Mortel.]",
+		isAspect:true
+		},
+		
+				{id: "follower_scar_knock",
+		label:"Cicatrice : Fistule à moitié cicatrisée",
+		description:"Toutes les portes ne sont pas des blessures, mais toutes les blessures sont des portes. [Trois Cicatrices du même type tueront un Mortel.]",
+		isAspect:true
+		},
+				{id: "follower_scar_winter",
+		label:"Cicatrice : Vieille blessure",
+		description:"Approchez-vous du soleil couchant et observez les premières étoiles de la nuit. [Trois Cicatrices du même type tueront un Mortel.]",
+		isAspect:true
+		},
+						{id: "corpse_scar",
+		label:"Vieille blessure",
+		description:"C'était quelqu'un qui connaissait la douleur.",
+		isAspect:true
+		},
+								{id: "resentment",
+		label:"Rancune",
+		description:"Trop de griefs peuvent compromettre la loyauté.",
+		comments: "Trois rancunes dans la saison des ambitions feront de quelqu'un un fauteur de troubles",
+		isAspect:true
+		},
+									{id: "boredom",
+		label:"Ennui",
+		description:"L'intérêt de mon bienfaiteur finira par s'affaiblir.",
+		isAspect:true
+		},
+											{id: "besotment",
+		label:"Partenaire",
+		description:"Mon bienfaiteur me regarde avec tendresse.",
+		isAspect:true
+		},
+		{id: "benefactor_proposal",
+	label: "Une proposition d'un bienfaiteur",
+	description: "Dans un moment de passion, mon bienfaiteur a proposé le mariage. Si je saisis l'occasion et que j'accepte, cela transformera ma vie... et fermera d'autres portes pour toujours. [Parlez au bienfaiteur avant que son enthousiasme ne s'estompe.]",
+	isAspect:true
+},
+											{id: "desiremoth_track",
+		label:"Ancienne forme",
+		description:"Je commence à connaître une danse qui a débuté dans les forêts humides du premier continent.",
+		isAspect:true
+		},
+													{id: "desireheart_track",
+		label:"Nouvelle forme",
+		description:"Je commence à connaître une danse qui a commencé sous les pins des montagnes de la terre désolée.",
+		isAspect:true
+		},
+															{id: "potentialbenefactorm",
+		label:"Les hommes à l'entrée des artistes",
+		description:"Un homme de pouvoir assiste parfois aux représentations. Il est connu pour présenter ses respects aux membres du choeur après le spectacle.",
+		isAspect:true
+		},
+		
+																	{id: "potentialbenefactorf",
+		label:"La dame dans la boîte",
+		description:"Une dame fortunée assiste parfois aux représentations. Elle est connue pour son vif intérêt pour les membres du choeur.",
+		isAspect:true
+		},
+																			{id: "potentialecdysiast",
+		label:"Un observateur attentif",
+		description:"Parfois, elle s'assoit au deuxième rang, à la recherche de nouveaux talents pour son établissement particulier. Les personnes qu'elle emploie sont rarement vues en ville.",
+		isAspect:true
+		},
+		{id:"snarelevel",
+		label:"Efficacité du piège",
+		description:"Certains pièges sont faciles à déjouer. Certains sont des toiles d'acier.",
+		isAspect:true},
+		
+		
+		{id:"apostleforge.pillar4.dormant",
+label:"La boussole sacrée",
+description:"Notre Créateur a choisi celle-ci pour être une boussole vers la brèche dans le monde - le point faible de l'endroit qui ne change pas. Quand ils le trouveront, ils abandonneront leurs yeux et vivront pour leur but.",
+isAspect:true},
+		
+{id:"apostleforge.pillar4",
+label:"Vos yeux ont vu",
+description:"Celui-ci est aveugle à tout sauf au défaut du monde que nous recherchons. Il y en a un à Vienne, mais il y en a un autre beaucoup plus proche de chez nous, dans le lieu dont le nom a toujours été le même, Caer Ys. Ils peuvent nous y conduire, avec le Noyau de l'Aube, pour réaliser notre Grand Oeuvre.",
+isAspect:true},
+
+{id:"mentor",
+label:"Mentor",
+description:"Notre souverain secret, qui commande notre loyauté, qui s'élèvera encore plus haut grâce à nos oeuvres.",
+isAspect:true},
+
+{id:"intention.assault",
+label:"Intention",
+description:"Notre ennemi immortel a un plan.",
+isAspect:true,
+isHidden:true},
+{id:"intention.intrigue",
+label:"Intention",
+description:"Notre ennemi immortel a un plan.",
+isAspect:true,
+isHidden:true},
+{id:"intention.dreams",
+label:"Intention",
+description:"Notre ennemi immortel a un plan.",
+isAspect:true,
+isHidden:true},
+{id:"intention.downtime",
+label:"Intention",
+description:"Notre ennemi immortel a un plan.",
+isAspect:true,
+isHidden:true},
+
+
+{id:"strategy.revealed",
+label:"Strategie Révélée",
+description:"Cette stratégie a été exposée.",
+isAspect:true,
+isHidden:true},
+
+{id:"revealstrategy",
+label:"Révéler la stratégie",
+description:"Révèle une stratégie cachée",
+isAspect:true,
+noartneeded:true},
+
+
+{id:"revealidentity",
+label:"Révéler l'identité",
+description:"Révèle un ennemi inconnu",
+isAspect:true,
+noartneeded:true},
+
+{id:"long.lesson",
+label:"Une leçon apprise",
+description:"Notre ennemi observe et apprend.",
+isAspect:true,
+isHidden:true},
+
+{id:"long.might",
+label:"Pourrait",
+description:"Avec le temps, ce Long va se constituer des alliés et des ressources dans la ville, améliorant ainsi leur capacité à nous attaquer. [Si jamais il atteint 10, le Long envisagera de vous attaquer directement.]",
+isAspect:true
+},
+
+{id:"long.connections",
+label:"Connexions",
+description:"Avec le temps, ce Long va construire son réseau dans la ville, améliorant ainsi sa capacité à intriguer contre nous. [Si jamais il atteint 10, le Long envisagera de vous attaquer directement.]",
+isAspect:true
+},
+
+
+{id:"long.dreamwork",
+label:"La dimension de la lumière des étoiles",
+description:"Avec le temps, ce Long apprendra la forme de nos rêves, améliorant leur capacité à nous frapper à travers le Mansus. [Si jamais il atteint 10, le Long envisagera de vous attaquer directement.]",
+isAspect:true
+},
+
+{id:"long.enemy",
+label:"Un ennemi immortel",
+description:"Beaucoup de Long servent les heures. Ils s'opposent farouchement à la montée de nouveaux Noms, qui pourraient, juste peut-être, devenir un jour des Heures usurpatrices. Certains Long détestent les Heures. Leur opposition aux nouveaux Noms est encore plus féroce.",
+isAspect:true,
+isHidden:true
+},
+
+
+{id:"greatwork",
+label:"Un élément du Grand Oeuvre",
+description:"Lorsque l'Oeuvre sera terminée, notre fondateur, notre inspiration, s'élèvera encore plus haut.",
+isAspect:true
+},
+
+{id:"greatwork.sabotaged",
+label:"Saboté !",
+description:"Le Grand Oeuvre est en danger. [Utilisez un adepte de la Forge et un Spintria d'argent pour réparer cela.]",
+isAspect:true
+},
+
+{id:"sabotage",
+label:"Sabotage !",
+description:"Transformation d'un élément du Grand Oeuvre en une version instable qui doit être corrigée.",
+isAspect:true,
+noartneeded:true
+},
+{id:"sabotage.repair",
+label:"Sabotage réparé !",
+isAspect:true,
+noartneeded:true
+},
+
+
+{id:"grailflavour",
+label:"Le plus doux",
+description:"Fraises, cannelle, fleur d'oranger.",
+isAspect:true
+},
+{id:"heartflavour",
+label:"Le salé",
+description:"Cuivre, myrrhe, rouille.",
+isAspect:true
+},
+{id:"mothflavour",
+label:"Le doux",
+description:"Figues, noix, malt.",
+isAspect:true
+},
+
+{id:"vitulationupgrade",
+label:"Amélioration des invités",
+description:"Les invités se rassemblent !",
+isAspect:true,
+noartneeded:true
+},
+{id:"cloudwitnessesupgrade",
+label:"Amélioration du réseau de témoins",
+description:"Les témoins se rassemblent !",
+isAspect:true,
+noartneeded:true
+},
+
+{id:"renew.apostlelantern.pillar3",
+label:"Renouveler l'attrait",
+isAspect:true,
+noartneeded:true
+},
+
+{id:"poison.notoriety",
+label:"Exposé",
+description: "Les secrets de cet adepte ont été révélés au public. Chaque fois qu'ils sont actifs, la presse peut s'y intéresser.",
+isAspect:true,
+icon:"reputation",
+induces:[{id:"poison.notoriety.induction",chance:30}]
+},
+
+
+{id:"poison.passion.dread",
+label:"Passion empoisonnée",
+description: "Mes émotions ont été contaminées par la crainte. [Utiliser cette carte n'importe où créera probablement de la Peur.]",
+isAspect:true,
+induces:[{id:"poison.passion.dread.induction",chance:70}]
+},
+{id:"poison.reason.fascination",
+label:"La splendide infection",
+description: "Je suis tourmenté par des rêves récurrents de feu de bougie. [Utiliser cette carte n'importe où créera probablement de la Fascination.]",
+isAspect:true,
+induces:[{id:"poison.reason.fascination.induction",chance:70}]
+},
+
+{id:"poison.health.dread",
+label:"La chair défaillante",
+description: "Je suis assujetti à une douleur qui ne partira jamais. [Utiliser cette carte n'importe où créera probablement de la Peur.]",
+isAspect:true,
+induces:[{id:"poison.health.dread.induction",chance:70}]
+},
+
+{id:"poison.fascination.longlesson",
+label:"Les yeux dans mon souvenir",
+description: "The Long m'a envoyé un doux rêve. Je ne dois pas y penser. [Si vous rêvez de cette carte ou l'utilisez dans un rituel, le Long apprendra de vous, augmentant son pouvoir dans vos rêves.]",
+isAspect:true
+},
+
+{id:"poison.dread.longlesson",
+label:"Les dents dans mon coeur",
+description: "The Long a fait des rêves qui m'accablent. Il serait plus sûr de les bannir, mais plus sage de ne pas y penser. [Si vous rêvez de cette carte ou l'utilisez dans un rituel, le Long apprendra de vous, augmentant son pouvoir dans vos rêves.]",
+isAspect:true
+},
+
+{id:"poison.way.long",
+label:"La voie est surveillée",
+description: "The Long a mis un garde sur cette voie. Si je le passe, il en apprendra davantage sur moi pendant mon sommeil.",
+isAspect:true
+},
+
+			     {
+        id: "lockscar",
+            label: "Fermeture de la cicatrice",
+            description: "Peut-être qu'un serpent m'a embrassé, peut-être qu'un couteau m'a enivré, peut-être que j'ai fait un rêve trop aigu. [Dans un rite avec une intensité suffisante de coups, cette cicatrice pourrait s'ouvrir.]",
+		isAspect:true
+			},
+						     {
+        id: "openedlockscar",
+            label: "Ouvrir une cicatrice fermée",
+            description: "[Cette cicatrice est ouverte.]",
+		isAspect:true
+			},
+									     {
+        id: "unlockscar",
+            label: "Cette cicatrice va s'ouvrir",
+            description: "recette d'aspect.",
+		isAspect:true,
+		noartneeded:true
+			},
+       
+       
+{id:"ghoul.hunger",
+label:"La bouche du cimetière",
+description:"Maintenant que j'ai goûté les fruits du cimetière, la faim vient souvent me troubler. Ma bouche s'imprègne des odeurs de pourriture, et mon ventre grogne comme un chien. [Réduisez cela en vous nourrissant des restes. Ne lui permettez jamais d'atteindre sept, la partie pourrait se terminer, et pas agréablement.]",
+isAspect:true
+},
+
+
+{id:"colours.furious",
+label:"Les couleurs à sept spirales",
+description:"Sur un lit de dunes, sous un soleil bas et rouge, un monstre se débat tandis que des gardiens se pressent sur ses flancs. Il est flasque et énorme, de la couleur du soufre sale. Les tentacules acérés se battent comme des chatons. Il se déchire gaiement sur sa propre chair, et le sang qui coule est doré. Il s'effondre dans un cataclysme de chair enchevêtrée, écrasant un noyaux de serviteurs, et les autres crient et acclament.",
+isAspect:true},
+
+{id:"colours.luxurious",
+label:"Les couleurs de la marée",
+description:"Aurolé de bleu nuit, dans la brume du Mansus nage un palais couronnée de corail de corail. Sur son bord avant, elle absorbe les petits Noms, les enrobant de ses minéraux et de ses jus, et sur son bord arrière, elle en expulse certains, polis comme des bijoux. Les autres vont nourrir son coeur épineux de la marée.",
+isAspect:true},
+
+{id:"colours.liminal",
+label:"Les couleurs du double seuil",
+description:"Quand je me souviens de la Hache à cornes, je me rappelle l'odeur de l'aubépine. Je me souviens d'un ciel de crépuscule violet, avec de l'or rouge. Je me souviens que ses bords dégoulinaient là où elle avait travaillé dernièrement.",
+isAspect:true},
+
+{id:"colours.horizon",
+label:"Les couleurs de l'horizon",
+description:"Un or blanc pâle décoloré que l'on voit dans certaines parties du ciel, lorsque la brume se dissipe mais que l'on peut confondre le soleil avec la lune. Nous retenons notre souffle et le regardons s'éclaircir, jusqu'à ce que chaque couleur se sépare de la suivante comme un alphabet moderne. L'oeuf éclot." ,
+isAspect:true},
+
+{id:"colours.splendid",
+label:"Les couleurs qui étaient",
+description:"Le rose de l'aurore rivalise avec le bleu électrique. Il n'y a ni nuit ni matin, mais seulement les heures de midi prévues et qui s'attardent. Chacun de nous ouvre son coeur à l'aiguille dorée du ciel. Toutes les couleurs magnifiées sous la splendeur du Soleil.",
+isAspect:true},
+
+{id:"colours.endless",
+label:"Les couleurs qui tournent",
+description:"À chaque tour, ses cils battent et se tortillent et son corps devient translucide et pourpre. C'est peut-être laid, mais c'est beau comme le retrait du sang des labyrinthes de verre. Elle ne cesse pas et toutes ses involutions sont infinies. La Roue.",
+isAspect:true},
+
+{id:"colours.wildering",
+label:"Les couleurs qui ne sont pas noires",
+description:"Le Bois avant son obscurcissement, ses fruits vert poison, ses racines cornalines. Les yeux du papillon de nuit sont gais de faim. Il est en train de chasser.",
+isAspect:true},
+
+{id:"colours.golden",
+label:"Les couleurs de l'ancien feu",
+description:"Ce n'est qu'une pierre, bien qu'elle soit polie et aiguisée jusqu'à une pointe de minuit, mais regardez de plus près. Chacune de ses facettes montre un seul point de lumière. Il peut s'agir d'une flamme de lumière. Il se peut que chacune soit une Etoile différente..",
+isAspect:true},
+
+{id:"colours.honeyed",
+label:"Les couleurs qui seront",
+description:"Nos ailes déployées et brillantes, nos écailles éclatantes comme de l'obsidienne, nos yeux facettés comme des bijoux, nos griffes d'une noirceur irréprochable.",
+isAspect:true},
+
+
+{id:"ascension.remembrance.offering",
+label:"Le prix de l'élégie",
+description:"L'Élégie est l'Heure à laquelle on ne peut plus rien prendre, et l'Heure qui appelle chacun des morts par son nom. Une fois de temps en temps, pour un prix très élevé, il appellera un des Morts de nulle part, afin qu'ils puissent continuer, seuls, indemnes, jusqu'à la venue de leur dernier hiver.",
+isAspect:true
+},
+
+
+
+{id:"remnant",
+label:"Reste",
+description:"Une fois qu'un autre a porté cette chair.",
+isAspect:true
+},
+
+{id:"manifesting",
+label:"Manifestation",
+description:"L'esprit entre dans le monde. C'est plus simple qu'une naissance, mais pas aussi simple que de passer par une porte.",
+isAspect:true
+},
+
+{id:"stale",
+label:"Acharnement",
+description:"J'ai commencé à me répéter. [Plus cela augmente, plus l'impact sur votre travail est important. La production d'un travail de très haute qualité réduira progressivement la répétition.]",
+isAspect:true,
+icon:boredom
+},
+
+{id:"project",
+label:"Projet",
+description:"Agenda des projets de recherche",
+isHidden:true,
+isAspect:true},
+]
+}

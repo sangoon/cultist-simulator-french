@@ -1,0 +1,139 @@
+ {"recipes": [
+	{
+        id: "heartinduction",
+        label: "L'évolution du Coeur",
+        actionId: "heartinduction",
+        effects: {previtality:1},
+		startdescription: "Chaque fois que le principe du Coeur est impliqué, je peux gagner de la Vitalité.",
+        description: "Mon propre cœur bat plus fort, aujourd'hui.",
+        warmup: 30,
+        craftable: false
+    },
+		{
+        id: "lanterninduction",
+        label: "Une Lumière dans le Crâne",
+        actionId: "lanterninduction",
+        effects: {preerudition:1},
+		startdescription: "Chaque fois que le principe de la Lanterne éclaire de sa lumière, je peux me rappeler d'autres bribes de connaissance.",
+        description: "Des faits poussiéreux sont apparus clairement dans mon cerveau. Pour l'instant, au moins.",
+        warmup: 30,
+        craftable: false
+    },
+		{
+        id: "mothinduction",
+        label: "De vieilles Choses malheureuses et lointaines",
+        actionId: "mothinduction",
+        effects: {prerestlessness:1},
+		startdescription: "La Phalène trouve la lumière dans l'obscurité, et moi aussi.",
+        description: "Une nostalgie à moitié oubliée m'a touché.",
+        warmup: 30,
+        craftable: false
+    },
+			{
+        id: "mothglimmeringinduction",
+        label: "L'Obscurité, la Lumière",
+        actionId: "mothinduction",
+        effects: {preglimmering:1},
+		startdescription: "La Phalène trouve la lumière dans l'obscurité, et moi aussi.",
+        description: "Que pourrais-je être si je ne pouvais pas être cela ?",
+        warmup: 30,
+        craftable: false
+    },
+			{
+        id: "grailinduction",
+        label: "L'envers du désir",
+        actionId: "grailinduction",
+        effects: {preglimmering:1},
+		startdescription: "Y a-t-il quelque chose à apprendre de la satisfaction du désir ?",
+        description: "C'est une sorte d'illumination.",
+        warmup: 30,
+        craftable: false
+    },
+				{
+        id: "dreadinduction",
+        label: "Terreurs nocturnes",
+        actionId: "dreadinduction",
+        effects: {predread:1},
+		startdescription: "Je me réveille dans la nuit. Mes paumes, mon visage, sont perlés de sueur.",
+        description: "Lentement, mes poings serrés se détendent. Je me rendormirai. Mais quelque chose va rester, comme des toiles d'araignée dans le coin de la pièce.",
+        warmup: 30,
+        craftable: false
+    },
+					{
+        id: "dreadinduction_ifdread",
+        label: "Terreurs nocturnes",
+        actionId: "dreadinduction",
+		requirements:{dread:1},
+        effects: {predread:1},
+		comments:"Only triggers if there's already Dread in whatever called this.",
+		startdescription: "Je me réveille dans la nuit. Mes paumes, mon visage, sont perlés de sueur.",
+        description: "Lentement, mes poings serrés se détendent. Je me rendormirai. Mais quelque chose va rester, comme des toiles d'araignée dans le coin de la pièce.",
+        warmup: 30,
+        craftable: false
+    },
+	
+					{
+        id: "fascinationinduction",
+        label: "Nouvelles couleurs",
+        actionId: "fascinationinduction",
+        effects: {prefascination:1},
+		startdescription: "J'ai commencé à remarquer des couleurs dans le monde pour lesquelles je n'ai pas de nom.",
+        description: "Je vois des choses que je ne devrais pas voir. Je sais que c'est dangereux. Mais il est difficile de ne pas s'en languir.",
+        warmup: 30,
+        craftable: false
+    },
+						{
+        id: "fascinationinduction_iffascination",
+        label: "Nouvelles couleurs",
+        actionId: "fascinationinduction",
+		requirements: {fascination:1},
+        effects: {prefascination:1},
+		startdescription: "J'ai commencé à remarquer des couleurs dans le monde pour lesquelles je n'ai pas de nom.",
+        description: "Je vois des choses que je ne devrais pas voir. Je sais que c'est dangereux. Mais il est difficile de ne pas s'en languir.",
+        warmup: 30,
+        craftable: false
+    },
+
+
+{id:"poison.notoriety.induction",
+actionId:"poison.notoriety.induction",
+label:"Le regard du public",
+startdescription:"J'ai fait appel à un Adepte trop connu. Le Bureau de la répression pourrait en entendre parler.",
+effects:{notoriety:1},
+warmup:30},
+
+{id:"poison.passion.dread.induction",
+actionId:"poison.passion.dread.induction",
+label:"La Couleur rampante",
+startdescription:"Mes passions sont empoisonnées. Chaque bouffée d'émotion apporte en réponse une sensation de grisaille.",
+effects:{dread:1},
+warmup:30
+},
+{id:"poison.reason.fascination.induction",
+actionId:"poison.reason.fascination.induction",
+label:"La lumière implacable",
+startdescription:"Une bougie, lorsqu'elle est allumée, apporte de la lumière. Quand mes pensées s'enflamment, que se passe-t-il alors ?",
+effects:{fascination:1},
+warmup:30
+},
+{id:"poison.health.dread.induction",
+actionId:"poison.health.dread.induction",
+label:"L'hospitalité de l'Agonie",
+startdescription:"J'ai invité un vieil ami à se réfugier dans mes muscles pour un jour de plus.",
+effects:{dread:1},
+warmup:30
+},
+
+
+{id:"secret.induction",
+actionId:"unsuspicion",
+label:"Les avantages du droit à la vie privée",
+startdescription:"Nous avons pris soin de situer notre Quartier Général à un endroit éloigné...",
+description:"...Il sera peut-être plus difficile pour le Bureau de la répression de suivre les pistes jusqu'à notre porte. Il sera peut-être aussi plus difficile de maintenir une réputation.",
+slots:[{id:"reputation",label:"Réputation",required:{reputation:1},greedy:true}],
+warmup:180,
+effects:{reputation:-1}
+}
+
+]
+}

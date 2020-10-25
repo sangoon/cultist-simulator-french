@@ -1,0 +1,236 @@
+{"recipes": [
+	{id: "drawseason",
+	actionId: "time",
+	deckeffect:{"seasonevents":1},
+	warmup:0,
+	 linked:[{id:"needs",chance:100}]
+	},
+
+   {id: "needs",
+        label: "Le temps passe",
+        actionId: "time",
+        requirements: {},
+        alternativerecipes:
+		[{id: "forlornbloodsickness", chance:70, additional: true},
+		{id: "sickness", chance:100, additional: true},
+		{id: "pleasantday", chance:100, additional: true},
+		{id: "suspicion", chance:100, additional: true},
+		{id: "ambition", chance:100,additional:true},
+		{id: "despairrisklink", chance:100,additional:true},
+		{id: "visionsrisklink", chance:100,additional:true},
+		 {id: "starvation", chance:100, additional: true},
+		 {id: "rosenext", chance:100, additional: true},
+		 ],
+        startdescription: "Le temps, comme l'ombre du cadran solaire, passe. Je dois avoir des fonds pour vivre, sinon je tomberai malade.",
+        description: ".",
+        warmup: 60,
+		slots: [{id:"Expenses",
+				label:"Dépenses",
+				required: {funds: 1},
+				greedy: true,
+				noanim:true,
+				description: "Les commerçants auront leur dû. Je dois le payer ou mourir de faim."
+				}],
+        linked:[{id:"discardseason",chance:100}],
+		signalimportantloop:true
+    },
+	{id: "discardseason",
+	actionId: "time",
+	effects: {season:-1,funds:-999},
+	warmup:0,
+	 linked:[{id:"drawseason",chance:100}]
+	},
+	{id:"presickness",
+	label:"Le prix du bonheur",
+	actionId: "illhealth",
+	comments:"conduit à une véritable maladie due à l'abus d'opium, ce qui nécessite une saison entière",
+	startdescription:"Ma respiration a été difficile, mes pensées confuses. Peut-être n'aurais-je pas dû me laisser aller aussi librement à ce remède contre la douleur.",
+	effects:{seasonsickness:1},
+	linked:[{id:"sickness"}],
+	warmup:15
+	},
+	
+	
+   {id: "sickness",
+	label: "Maladie",
+	actionId: "illhealth",
+	startdescription:"Je suis tombé malade !",
+	description: "Cette maladie a porté atteinte à ma santé. J'aurai besoin de me reposer avant de me rétablir complètement. [Traitez votre maladie avec des Fonds ou de la Vitalité.]",
+	requirements: {seasonsickness:1},
+	extantreqs: {apostlegrail.pillar2.dormant:-1},
+	comments:"Nous ne voulons pas doubler la maladie normale et la maladie du Graal",
+			slots: [{id:"Affliction",
+				label:"Santé",
+				required: {health: 1,follower_wound:1,fatigue:1},
+                forbidden: {summoned: 1, corpse: 1, notoriety: 1},
+				greedy: true
+	}],
+	aspects:{fallsick:1},
+	alternativerecipes:
+		[
+		{id: "deathofthewoundedfollower",chance:100},
+		{id:"signalupcomingsicknessdeath",chance:100},
+		],
+
+
+	warmup: 60,
+	effects:{seasonsickness:-1}
+    },
+	
+{id:"signalupcomingsicknessdeath",
+actionId:"sickness",
+label:"Maladie",
+requirements:{health:-1,fatigue:-1},
+startdescription: "Je suis tombé malade ! [Si une maladie ne peut pas consumer de la Santé, elle vous tuera... sauf si vous bénéficiez d'une protection spéciale.]",
+comments: "nous avons besoin de cela ici pour pouvoir avoir un avertissement s'il n'y a pas de santé ; ensuite nous relions à la tentative de sursis pour avoir un nouveau créneau.",
+signalEndingFlavour:Melancholy,
+linked:
+[{id: "sickness.nohealthavailable.tryforstayofexecution",chance:100}],
+},
+	
+{id:"sickness.nohealthavailable.tryforstayofexecution",
+actionId:"illhealth",
+label:"Péril mortel",
+				slots: [{id:"sicknessprotection",
+					label:"Protection",
+					required: {sicknessprotection:1},
+					greedy: true
+		}],
+startdescription:"La maladie mettra un terme à mon existence, à moins que je n'aie pris des dispositions extraordinaires pour protéger ma santé...",
+requirements:{health:-1,fatigue:-1},
+warmup:10,
+signalEndingFlavour:Melancholy,
+ending:deathofthebody,
+
+alt:[
+{id:"protectedagainstsickness",
+actionId:"sickness",
+label:"Pas cette fois",
+requirements:{sicknessprotection:1},
+startdescription:"La chair a ses limites, et voilà qu'elle pourrait me lâcher : mais une marque de Protection a été apposée sur moi, et elle ne me lâchera pas aujourd'hui. [Un Sursis vous permet d'échapper aux ravages de la maladie.]",
+effects:{sicknessprotection:-1,influenceheart:1}
+},
+{id: "mareendingsickness",chance:100,
+actionId:"sickness",
+label:"J'aperçois la Faucheuse dans mes rêves",
+startdescription:"ELLE VIENT",
+description:"--",
+extantreqs:{lockscar:3,health:-1},
+signalEndingFlavour:Melancholy,
+ending:minormarevictory,
+craftable:false
+},
+]
+},
+	
+	
+	{id: "forlornbloodsickness",
+        label: "Maladie",
+        actionId: "illhealth",
+        extantreqs: {apostlegrail.pillar2.dormant:1},
+				slots: [{id:"Affliction",
+					label:"Affliction",
+					required: {health: 1,fatigue:1,apostlegrail.pillar2:1},
+					greedy: true
+		}],
+		aspects:{fallsick:1},
+		alternativerecipes:
+		[
+		{id:"savorousbloodrespite",chance:100},
+		{id: "forlornblooddeathofthebody",chance:100}],
+        startdescription: "La maladie a pris le dessus. Pour survivre, je dois goûter le sang de notre Délice, et bientôt. [Si cette maladie ne peut consommer de la Santé, ou le Sang Délicieux, elle vous tuera.]",
+        description: "Je diminue et je deviens pâle. La fatigue étrangle ma gorge. Je dois m'assurer que ma mort a un sens.",
+        warmup: 60
+    },
+
+{id:"savorousbloodrespite",
+actionId:"illhealth",
+label:"Un répit",
+requirements:{apostlegrail.pillar2:1},
+startdescription:"Le sang de notre Délice me réchauffe. Il fait naître des fleurs rouges sur mes joues, il déverse du vin dans mon cœur, il fait tinter mes cordes au rythme que le Graal a enseigné à Thunderskin. Je vivrai un peu plus longtemps, je l'ai décidé.",
+warmup:10},
+	
+	{id:"deathofthewoundedfollower",
+		actionId: "time",
+	label:"Mon adepte est en train de mourir !",
+	requirements:{follower_wound:1},
+	startdescription: "Ces blessures sont mortelles. Il n'y a rien à faire.",
+	description: "Peut-être que son esprit se promène dans la maison. Peut-être est-il perdu dans le Bois, pour s'enfoncer toujours plus bas. Leurs dépouilles mortelles pareilles à des coquilles vides.",
+	aspects:{killmortal:1},
+effects:{seasonsickness:-1}
+	},
+	{id:"rosenext",
+label:"Rencontres et interludes",
+actionId:"rose",
+requirements:{seasonardours:1},
+slots: [{id:"Who?",label:"Qui ?",description:"De la main à la main et de l'oeil à l'oeil.",required:{romanticinterest:1},forbidden:{notoriety:1}, greedy:true}],
+startdescription: "Si j'ai un ami en particulier, c'est le moment de renouer avec lui.",
+description:".",
+linked:[{id:"L_roseend",chance:100},
+{id:"L_checkjealousy",chance:30},
+{id:"L_roserouter",chance:100}],
+warmup:5
+},
+		   {
+        id: "pleasantday",
+        label: "Une journée agréable",
+        actionId: "pleasantday",
+        requirements: {seasonserenities:1},
+        effects: {
+		contentment: 1,
+        },
+		comments:"actuellement inutilisé",
+        startdescription: "Ce matin, ma démarche est pleine de vigueur. Je ne sais pas pourquoi.",
+        description: "Certains jours sont meilleurs que d'autres. Parfois, le ciel n'est rien d'autre qu'un rideau sale. Parfois, la rivière coule claire.",
+        warmup: 30,
+        craftable: false
+    },
+			   {
+        id: "despairrisklink",
+        label: "Risque de désespoir",
+        actionId: "despair",
+        requirements: {seasondespair:1},
+        warmup: 0,
+        craftable: false,
+		linked:[{id:"despairrisk",chance:100}]
+    },
+				   {
+        id: "visionsrisklink",
+        label: "Risques de visions",
+        actionId: "visions",
+        requirements: {seasonvisions:1},
+        warmup: 0,
+        craftable: false,
+		linked:[{id:"visionsrisk",chance:100}]
+    },
+	   {
+        id: "starvation",
+        label: "Famine",
+        actionId: "illhealth",
+        requirements: {funds: -1},
+        effects: {
+            health: -1,
+            hunger: 1
+        },
+		alternativerecipes:
+		[{id:"mareendingstarvation",
+		actionId:"illhealth",
+		label:"J'aperçois la Faucheuse dans mes rêves",
+		startdescription:"ELLE VIENT",
+		description:"--",
+		extantreqs:{lockscar:3,health:-1},
+		signalEndingFlavour:Melancholy,
+		ending:minormarevictory,
+		craftable:false
+		},
+		{id: "deathofthebody",chance:100}],
+        startdescription: ".",
+        description: "Sans argent, je vais bientôt mourir de faim. [Si une maladie ne peut pas consommer de la Santé, elle vous tuera.]",
+        warmup: 60,
+		slots: [{id:"starvation",label:"Starvation",required: {health: 1},
+					greedy: true
+		}]
+    },
+	
+]
+}

@@ -1,0 +1,40 @@
+{
+"recipes": [
+
+
+	{
+        id: "dreampleasantmemory",
+        label: "Garder un agréable souvenir",
+        actionId: "dream",
+		requirements:{memorypleasant:1},
+		effects: {memorypleasant:-1,contentment:1,fleeting:1},
+startdescription: "La douce tranquillité d'une compréhension commune ? Un moment dans la lumière de l'hiver ?",
+		description: "Cela pourrait m'aider.",
+        craftable: true,
+		warmup:10
+    },
+		{
+        id: "dreampassionatememory",
+        label: "Un souvenir passionné",
+        actionId: "dream",
+		requirements:{memorypassionate:1},
+		effects: {memorypassionate:-1,restlessness:1,contentment:1,vitality:1},
+startdescription: "Halètements partagés, membres emmêlés ? Chaleur dans la pénombre secrète ?",
+		description: "Cela pourrait me distraire.",
+        craftable: true,
+		warmup:10
+    },
+	
+		{
+        id: "dreambittersweetmemory",
+        label: "Un souvenir doux-amer",
+        actionId: "dream",
+		requirements:{memorybittersweet:1},
+		effects: {memorybittersweet:-1,dread:1,contentment:1,glimmering:1},
+startdescription: "Un arrangement que l'on n'ose pas parler évoquer ? Une querelle, et ses conséquences ?",
+		description: "Cela pourrait me faire hésiter.",
+        craftable: true,
+		warmup:10
+    },
+]
+}

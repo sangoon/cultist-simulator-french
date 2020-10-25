@@ -1,0 +1,251 @@
+{"elements":
+    [
+	{id: "project_upgrade_edge",
+	label: "Améliorer ma compréhension des mystères de la Pointe",
+	description: "J'espère améliorer ma compréhension des mystères de la Pointe.",
+	aspects:{project:1},
+	lifetime:1
+	},
+		{id: "project_subvert_edgetowinter",
+	label: "Transformer de la Pointe en Hiver",
+	description: "Je reconnais la victoire de la patience sur la force, en faisant évoluer mes connaissances de la Pointe en connaissances de l'Hiver.",
+	aspects:{project:1},
+	lifetime:1
+	},
+
+
+		{id: "project_upgrade_forge",
+	label: "Améliorer ma compréhension des mystères de la Forge",
+	description: "J'espère améliorer ma compréhension des mystères de la Forge.",
+	aspects:{project:1},
+	lifetime:1
+	},
+		{id: "project_subvert_forgetoedge",
+	label: "Transformer de la Forge en Pointe",
+	description: "Je suis en train de faire évoluer ma connaissance de la Forge en connaissance de la Pointe.",
+	aspects:{project:1},
+	lifetime:1
+	},
+
+
+
+			{id: "project_upgrade_grail",
+	label: "Améliorer ma compréhension du mystères du Graal",
+	description: "J'espère améliorer ma compréhension des mystères du Graal.",
+	aspects:{project:1},
+	lifetime:1
+	},
+		{id: "project_subvert_grailtomoth",
+	label: "Transformer du Graal en Phalène",
+	description: "Je suis en train de faire évoluer ma connaissance du Graal en connaissance de la Phalène.",
+	aspects:{project:1},
+	lifetime:1
+	},
+
+
+
+			{id: "project_upgrade_heart",
+	label: "Améliorer ma compréhension des mystères du Coeur",
+	description: "J'espère améliorer ma compréhension des mystères du Coeur.",
+	aspects:{project:1},
+	lifetime:1
+	},
+		{id: "project_subvert_hearttograil",
+		label: "Transformer du Coeur en Graal",
+	description: "Je suis en train de faire évoluer ma connaissance du Coeur en connaissance du Graal.",
+	aspects:{project:1},
+	lifetime:1
+	},
+
+
+			{id: "project_upgrade_subvert_knock",
+	label: "Améliorer ma compréhension des mystères de la Clé",
+	description: "J'espère améliorer ma compréhension des mystères de la Clé.",
+	aspects:{project:1},
+	lifetime:1
+	},
+
+
+
+			{id: "project_upgrade_lantern",
+	label: "Améliorer ma compréhension des mystères de la Lanterne",
+	description: "J'espère améliorer ma compréhension des mystères de la Lanterne.",
+	aspects:{project:1},
+	lifetime:1
+	},
+		{id: "project_subvert_lanterntoforge",
+		label: "Transformer de la Lanterne en Forge",
+	description: "Je suis en train de faire évoluer ma connaissance de la Lanterne en connaissance de la Forge.",
+	aspects:{project:1},
+	lifetime:1
+	},
+
+
+
+
+			{id: "project_upgrade_moth",
+	label: "Améliorer ma compréhension des mystères de la Phalène",
+	description: "J'espère améliorer ma compréhension des mystères de la Phalène.",
+	aspects:{project:1},
+	lifetime:1
+	},
+		{id: "project_subvert_mothtolantern",
+	label: "Transformer de la Phalène en Lanterne",
+	description: "Je suis en train de faire évoluer ma connaissance de la Phalène en connaissance de la Lanterne",
+	aspects:{project:1},
+	lifetime:1
+	},
+
+
+
+
+				{id: "project_upgrade_secrethistories",
+	label: "Améliorer ma compréhension des mystères des Histoires Secrètes",
+	description: "J'espère améliorer ma connaissance des Histoires Secrètes.",
+	aspects:{project:1},
+	lifetime:1
+	},
+
+
+
+				{id: "project_upgrade_winter",
+	label: "Améliorer ma compréhension des mystères de l'Hiver",
+	description: "J'espère améliorer ma connaissance de l'Hiver.",
+	aspects:{project:1},
+	lifetime:1
+	},
+		{id: "project_subvert_wintertoheart",
+	label: "Transformer de l'Hiver en Coeur",
+	description: "Je suis en train de faire évoluer ma connaissance de l'Hiver en connaissance du Coeur",
+	aspects:{project:1},
+	lifetime:1
+	},
+
+
+	{id: "project_influence_upgrade_edge",
+	icon:"project_upgrade_edge",
+	label: "Augmenter l'influence de la Pointe",
+	description: "J'espère accroître l'influence de cette Pointe.",
+	aspects:{project:1},icon:"project_upgrade_edge",
+	lifetime:1
+	},
+		{id: "project_influence_subvert_edgetowinter",
+		icon:"project_subvert_edgetowinter",
+	label: "Transformer de la Pointe en Hiver",
+	description: "Je reconnais la victoire de la patience sur la force, en faisant évoluer mes connaissances de la Pointe en connaissances de l'Hiver.",
+	aspects:{project:1},icon:"project_subvert_edgetowinter",
+	lifetime:1
+	},
+
+
+		{id: "project_influence_upgrade_forge",
+	label: "Augmenter l'influence de la Forge",
+	description: "J'espère accroître l'influence de cette Forge.",
+	aspects:{project:1},icon:"project_upgrade_forge",
+	lifetime:1
+	},
+		{id: "project_influence_subvert_forgetoedge",
+		icon:"project_subvert_forgetoedge",
+	label: "Transformer de la Forge en Pointe",
+	description: "Je suis en train de faire évoluer ma connaissance de la Forge en connaissance de la Pointe.",
+	aspects:{project:1},icon:"project_subvert_forgetoedge",
+	lifetime:1
+	},
+
+
+
+			{id: "project_influence_upgrade_grail",
+			icon:"project_upgrade_grail",
+	label: "Augmenter l'influence du Graal",
+	description: "J'espère accroître l'influence de ce Graal.",
+	aspects:{project:1},icon:"project_upgrade_grail",
+	lifetime:1
+	},
+		{id: "project_influence_subvert_grailtomoth",
+		icon:"project_subvert_grailtomoth",
+	label: "Transformer de l'influence du Graal en influence de la Phalène",
+	description: "Je suis en train de transformer l'influence du Graal en influence de la Phalène.",
+	aspects:{project:1},icon:"project_subvert_grailtomoth",
+	lifetime:1
+	},
+
+
+
+			{id: "project_influence_upgrade_heart",
+			icon:"project_upgrade_heart",
+	label: "Augmenter l'influence du Coeur",
+	description: "J'espère accroître l'influence de ce Coeur.",
+	aspects:{project:1},icon:"project_upgrade_heart",
+	lifetime:1
+	},
+		{id: "project_influence_subvert_hearttograil",
+		icon:"project_subvert_hearttograil",
+		label: "Transformer de l'influence du Coeur en influence du Graal",
+	description: "Je suis en train de transformer l'influence du Coeur en influence du Graal.",
+	aspects:{project:1},icon:"project_subvert_hearttograil",
+	lifetime:1
+	},
+
+
+			{id: "project_influence_upgrade_subvert_knock",
+			icon:"project_upgrade_subvert_knock",
+	label: "Augmenter l'influence de la Clé",
+	description: "J'approfondis ma compréhension de l'influence de la Clé.",
+	aspects:{project:1},icon:"project_upgrade_subvert_knock",
+	lifetime:1
+	},
+
+
+
+			{id: "project_influence_upgrade_lantern",
+			icon:"project_upgrade_lantern",
+	label: "Augmenter l'influence de la Lanterne",
+	description: "J'espère accroître l'influence de cette Lanterne.",
+	aspects:{project:1},icon:"project_upgrade_lantern",
+	lifetime:1
+	},
+		{id: "project_influence_subvert_lanterntoforge",
+		icon:"project_subvert_lanterntoforge",
+		label: "Transformer de l'influence de la Lanterne en influence de la Forge",
+	description: "Je suis en train de transformer l'influence de la Lanterne en influence de la Forge.",
+	aspects:{project:1},icon:"project_subvert_lanterntoforge",
+	lifetime:1
+	},
+
+
+
+
+			{id: "project_influence_upgrade_moth",
+			icon:"project_upgrade_moth",
+	label: "Augmenter l'influence de la Phalène",
+	description: "J'espère accroître l'influence de cette Phalène.",
+	aspects:{project:1},icon:"project_upgrade_moth",
+	lifetime:1
+	},
+		{id: "project_influence_subvert_mothtolantern",
+		icon:"project_subvert_mothtolantern",
+	label: "Transformer de l'influence de la Phalène en influence de la Lanterne",
+	description: "Je suis en train de transformer l'influence de la Phalène en influence de la Lanterne",
+	aspects:{project:1},icon:"project_upgrade_moth",
+	lifetime:1
+	},
+
+
+
+
+				{id: "project_influence_upgrade_winter",
+				icon:"project_upgrade_winter",
+	label: "Augmenter l'influence de l'hiver",
+	description: "J'espère accroître l'influence de cet Hiver.",
+	aspects:{project:1},icon:"project_upgrade_winter",
+	lifetime:1
+	},
+		{id: "project_influence_subvert_wintertoheart",
+		icon:"project_subvert_wintertoheart",
+	label: "Transformer de l'influence de l'hiver en influence du Coeur",
+	description: "Je suis en train de transformer l'influence de l'Hiver en influence du Coeur",
+	aspects:{project:1},icon:"project_subvert_wintertoheart",
+	lifetime:1
+	},
+]
+};

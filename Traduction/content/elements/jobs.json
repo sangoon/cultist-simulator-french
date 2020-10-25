@@ -1,0 +1,236 @@
+{elements:[
+		     {
+        id: "gloverandgloverjuniorjob",
+            label: "Poste débutant chez Glover & Glover",
+            aspects:{job:1},
+            description: "Mon intelligence devrait être mieux utilisée ! Mais le salaire est meilleur que le travail d'un ouvrier. [Si vous ne vous présentez pas régulièrement à ce travail, vous risquez d'être rétrogradé.]",
+			xtriggers: {careeradvancement:gloverandglover_difficultbossa_job,employment:gloverandgloverjuniorjob},
+			lifetime:90,
+			decayTo:"gloverandgloverjuniorjob_demotion",
+        },
+				     {
+        id: "gloverandgloverjuniorjob_nodifficultbossa",
+            label: "Poste débutant chez Glover & Glover",
+            aspects:{job:1},
+            description: "Mon intelligence devrait être mieux utilisée ! Mais le salaire est meilleur que le travail d'un ouvrier. [Si vous ne vous présentez pas régulièrement à ce travail, vous risquez d'être rétrogradé.]",
+			xtriggers: {careeradvancement:gloverandgloverjob,employment:gloverandgloverjuniorjob_nodifficultbossa},
+			lifetime:90,
+			decayTo:"gloverandgloverjuniorjob_nodifficultbossa_demotion"
+        },
+		
+		
+								{
+		        id: "gloverandglover_difficultbossa_job",
+            label: "Poste chez Glover et Glover",
+			
+            aspects:
+            {annoyance:1,job:1},
+            description: "Un poste dans les archives sous la direction de M. Alden. Je gagne un peu plus ; je reste un peu plus tard. M. Alden me surveille toujours de près. [Si vous n'occupez pas ce poste régulièrement, vous risquez d'être rétrogradé.]",
+xtriggers: {endannoyance:gloverandglover_difficultbossa_gone_job,careeradvancement:gloverandgloverseniorjob,employment:gloverandglover_difficultbossa_job},
+			lifetime:59,
+			decayTo:"gloverandgloverjuniorjob_demotion"
+        },
+						     {
+        id: "gloverandglover_difficultbossa_gone_job",
+            label: "Poste chez Glover et Glover",
+            aspects:{job:1},
+            description: "L'homme appelé Alden est parti. Je trouverai peut-être les choses plus faciles quand je retournerai au travail.",
+			comments:"un emploi intérimaire qui passe immédiatement à un poste standard."
+        },
+				     {
+        id: "gloverandgloverjob",
+            label: "Poste chez Glover et Glover",
+            aspects:{job:1},
+			slots: [{id:"Diligence",
+					label:"Diligence",
+					actionId:"work",
+					required: {reason: 1},
+					description: "Un effort supplémentaire. Cela pourrait aider, si je suis très chanceux."
+					}],
+            description: "Je gagne un peu plus, je reste un peu plus tard. L'envie brille dans l'œil du jeune commis qui occupe mon ancien bureau. [Si vous ne vous présentez pas régulièrement à ce travail, vous risquez d'être rétrogradé.]",
+			xtriggers: {careeradvancement:gloverandgloverseniorjob,employment:gloverandgloverjob},
+			lifetime:90,
+			decayTo:"gloverandgloverjuniorjob_nodifficultbossa_demotion"
+        },
+						     {
+        id: "gloverandgloverjob_youngerglovergone",
+            label: "Poste chez Glover et Glover",
+            aspects:{job:1},
+			slots: [{id:"Diligence",
+					label:"Diligence",
+					actionId:"work",
+					required: {reason: 1},
+					description: "Un effort supplémentaire. Cela pourrait aider, si je suis très chanceux."
+					}],
+            description: "Je gagne un peu plus, je reste un peu plus tard. L'envie brille dans l'œil du jeune commis qui occupe mon ancien bureau. [Si vous ne vous présentez pas régulièrement à ce travail, vous risquez d'être rétrogradé.]",
+			xtriggers: {careeradvancement:gloverandgloverseniorjob_youngerglovergone,employment:gloverandgloverjob_youngerglovergone},
+			lifetime:90,
+			decayTo:"gloverandgloverjob_youngerglovergone_demotion"
+        },
+		{
+        id: "gloverandgloverseniorjob",
+            label: "Poste de direction chez Glover & Glover",
+            aspects:{annoyance:1,job:1},
+			slots: [
+					{id:"Devotion",
+					label:"Dévouement",
+					required: {reason: 1},
+					actionId:"work",
+					description: "Ma position est exigeante. Je dois concentrer mon esprit."
+					}],
+            description: "Je suppose que, théoriquement, je pourrais m'élever plus haut, si quelqu'un mourait. [Si vous ne vous présentez pas régulièrement à ce travail, vous risquez d'être rétrogradé.]",
+			xtriggers: {endannoyance:gloverandgloverseniorjob_youngerglovergone,employment:gloverandgloverseniorjob},
+			lifetime:60,
+			decayTo:"gloverandgloverjob_demotion"
+        },
+				{
+        id: "gloverandgloverseniorjob_youngerglovergone",
+            label: "Poste de direction chez Glover & Glover",
+			aspects:{job:1},
+			slots: [
+					{id:"Devotion",
+					label:"Dévouement",
+					required: {reason: 1},
+					actionId:"work",
+					description: "Ma position est exigeante. Je dois concentrer mon esprit."
+					}],
+            description: "Avec le départ du jeune Glover, je pourrais m'élever encore plus haut. [Si vous ne vous présentez pas régulièrement à ce travail, vous risquez d'être rétrogradé.]",
+			xtriggers: {careeradvancement:gloverandglovertopjob,employment:gloverandgloverseniorjob_youngerglovergone},
+			lifetime:90,
+			decayTo:"gloverandgloverjob_youngerglovergone_demotion"
+        },
+		{
+        id: "gloverandglovertopjob",
+		aspects:{job:1},
+            label: "Siège au conseil d'administration de Glover & Glover",
+            description: "La disparition du jeune Glover a laissé un siège vide au conseil d'administration. Je l'occupe maintenant. [Si vous n'occupez pas ce poste régulièrement, vous risquez d'être rétrogradé.]",
+			lifetime:100,
+			decayTo:"gloverandglovertopjob_tainted_demotion",
+			xtriggers:{employment:gloverandglovertopjob}
+        },
+				{
+        id: "gloverandglovertopjob_tainted",
+		aspects:{job:1},
+            label: "Siège au conseil d'administration de Glover & Glover",
+            description: "Des rumeurs sur mes intérêts ésotériques sont parvenues aux oreilles de l'aîné Glover. Cela a rendu ma position incertaine. [Si vous n'occupez pas ce poste régulièrement, vous risquez d'être rétrogradé.]",
+			lifetime:100,
+			decayTo:"gloverandglovertopjob_tainted_demotion",
+			xtriggers:{employment:gloverandglovertopjob_tainted}
+        },
+{
+        id: "gloverandgloverjuniorjob_demotion",
+		aspects:{job:1,demotion:1},
+            label: "Une difficulté au travail : Rétrogradation à un poste subalterne",
+			slots:[{id:"passion",label:"Persuasion",required:{passion:1},actionId:"work"}],
+            description: "Mon absence du bureau a été remarquée. J'ai été rétrogradé, et je devrai argumenter de manière convaincante pour conserver mon emploi.",
+			xtriggers:{plead:gloverandgloverjuniorjob}
+        },
+						{
+        id: "gloverandgloverjuniorjob_nodifficultbossa_demotion",
+		aspects:{job:1,demotion:1},
+            label: "Une difficulté au travail : Rétrogradation à un poste subalterne",
+			slots:[{id:"passion",label:"Persuasion",required:{passion:1},actionId:"work"}],
+            description: "Mon absence du bureau a été remarquée. J'ai été rétrogradé, et je devrai argumenter de manière convaincante pour conserver mon emploi.",
+			xtriggers:{plead:gloverandgloverjuniorjob_nodifficultbossa}
+        },
+						{
+        id: "gloverandgloverjob_demotion",
+		aspects:{job:1,demotion:1},
+            label: "Une difficulté au travail : Rétrogradation",
+			slots:[{id:"passion",label:"Persuasion",required:{passion:1},actionId:"work"}],
+            description: "Mon absence du bureau a été remarquée. J'ai été rétrogradé, et je devrai argumenter de manière convaincante pour conserver mon emploi.",
+			xtriggers:{plead:gloverandgloverjob}
+        },
+								{
+        id: "gloverandgloverjob_youngerglovergone_demotion",
+		aspects:{job:1,demotion:1},
+            label: "Une difficulté au travail : Rétrogradation",
+			slots:[{id:"passion",label:"Persuasion",required:{passion:1},actionId:"work"}],
+            description: "Mon absence du bureau a été remarquée. J'ai été rétrogradé, et je devrai argumenter de manière convaincante pour conserver mon emploi.",
+			xtriggers:{plead:gloverandgloverjob_youngerglovergone}
+        },
+								{
+        id: "gloverandglovertopjob_tainted_demotion",
+		aspects:{job:1,demotion:1},
+            label: "Une difficulté au travail : Un risque de rétrogradation",
+			slots:[{id:"passion",label:"Persuasion",required:{passion:1},actionId:"work"}],
+            description: "Une grande latitude est accordée à une personne dans ma position, mais mon absence a été remarquée. Je vais devoir charmer l'aîné Glover.",
+			xtriggers:{plead:gloverandglovertopjob_tainted}
+        },
+		
+			{id: "institutephysicianjob",
+			aspects:{job:1},
+	description: "De longues heures, mais un bon salaire.",
+	label: "Un poste à l'Institut"
+},
+
+			{id: "investmentsjobc",
+			aspects:{job:1},
+	label: "Un généreux revenu personnel",
+	description: "Je suis bien pourvu.",
+	aspects: {benign:1},
+		xtriggers: {decline: investmentsjobb},
+	noartneeded:true
+	
+},
+			{id: "investmentsjobb",
+	label: "Un substantiel revenu personnel",
+		description: "Un revenu suffisant pour vivre dans confortablement.",
+	aspects: {benign:1},
+	xtriggers: {decline: investmentsjoba},
+	noartneeded:true
+	
+},
+			{id: "investmentsjoba",
+			aspects:{job:1},
+	label: "Un modeste revenu personnel",
+	description: "Mes investissements sont plus que suffisants pour vivre.", 
+	aspects: {benign:1},
+	xtriggers: {decline: jumble},
+	noartneeded:true
+	
+},
+
+
+		{id: "ghouljob.first",
+		aspects:{job:1},
+	label: "Une routine spiritualiste convaincante",
+	description: "Parfois, lorsque je suis particulièrement efficace, le premier rang s'évanouit.",
+	slots:[{id:"memory",label:"Information",actionId:"work",required:{memory:1}}],
+	xtriggers:{demotion:ghouljob}
+	
+},
+
+
+		{id: "ghouljob",
+		aspects:{job:1},
+	label: "Une renommée comme médium",
+	description: "Parfois, je parle avec des voix que même moi je n'attends pas.",
+	slots:[{id:"memory",label:"Information",actionId:"work",required:{memory:1}}]
+	
+},
+
+		{id: "auctioneerjob",
+		aspects:{job:1},
+	label: "Un poste à la maison de vente aux enchères Oriflamme",
+	description: "",
+	noartneeded:true
+	
+},
+	
+		{id: "priestjob",
+		aspects:{job:1},
+	slots:[{id:"ability",label:"Aptitude",required:{passion:1,reason:1,health:1},actionId:"work"},
+{id:"doctrine",label:"Doctrine",required:{lore:1},actionId:"work"},
+{id:"fervour",label:"Ferveur",required:{fervour:1},actionId:"work"},
+],
+	label: "Une nomination dans une paroisse tranquille",
+	description: "Tant que je n'attire pas l'attention de l'évêque par la déréliction ou le scandale, je peux gagner ma vie ici.",
+	
+},
+
+
+
+
+
+]};

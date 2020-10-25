@@ -1,0 +1,534 @@
+ {"recipes": [
+
+					
+{id:"studyresearch.entrypoint",
+actionId:"study",
+label:"Dans la nuit",
+startdescription:"La sagesse est un pays, et voici ses cartes. [Résoudre tous les défis sur ces deux fragments de croyance pour mener à bien un travail de recherche. Vous pouvez revenir à une tâche plus tard, si vous échouez.]",
+description:".",
+requirements:{lore:2},
+effects:{},
+warmup:30,
+craftable:false,
+linked:[{id:"studyresearch.attemptsolve",chance:100}]
+},
+
+{id:"studyresearch.attemptsolve",
+actionId:"study",
+label:"Dans la nuit",
+startdescription:"La sagesse est un pays, et ce sont ses cartes. [Résoudre tous les défis sur ces deux fragments de croyance pour mener à bien un travail de recherche. Vous pouvez revenir à une tâche plus tard, si vous échouez.]",
+linked:[{id:"studyresearch.nochallengesremaining"},
+{id:"studyresearch.attemptsolve.challenge.knowledge"},
+{id:"studyresearch.attemptsolve.challenge.intuition"},
+{id:"studyresearch.attemptsolve.challenge.grim"},
+{id:"studyresearch.attemptsolve.challenge.obsessive"},
+{id:"studyresearch.attemptsolve.challenge.paradox"},
+{id:"studyresearch.attemptsolve.challenge.illumination"},
+{id:"studyresearch.attemptsolve.challenge.practical"}]
+},
+
+
+
+
+{id:"studyresearch.attemptsolve.challenge.knowledge",
+actionId:"study",
+label:"Un défi: Connaissances",
+requirements:{challenge.knowledge:1},
+startdescription:"C'est un puzzle avec des pièces manquantes. Je pourrais trouver ces pièces dans les recoins bizarres du savoir. [Fournissez de l'Erudition, ou utilisez une Bibliothèque.]",
+slots:[{id:"solvechallenge",label:"Solution", required:{erudition:1,library:1}}],
+warmup:30,
+craftable:false,
+linked:[{id:"studyresearch.failed.challenge.knowledge"},
+{id:"studyresearch.solved.challenge.knowledge"}]
+},
+
+{id:"studyresearch.failed.challenge.knowledge",
+actionId:"study",
+label:"Interruption !",
+startdescription:"Mes recherches ont été bloquées, pour l'instant.",
+requirements:{erudition:-1,library:-1},
+warmup:30
+},
+
+{id:"studyresearch.solved.challenge.knowledge",
+actionId:"study",
+label:"Aha - !",
+startdescription:" - Voilà, c'est fait. C'est tout ? [Vous avez résolu un défi de Connaissance.]",
+mutations: [{filter:lore,mutateAspectId:challenge.knowledge,level:-1}],
+warmup:30,
+effects:{erudition:-1},
+linked:[{id:"studyresearch.attemptsolve",chance:100}]
+},
+
+
+
+
+{id:"studyresearch.attemptsolve.challenge.intuition",
+actionId:"study",
+label:"Un défi: Intuition",
+requirements:{challenge.intuition:1},
+startdescription:"C'est un puzzle avec des pièces manquantes. Je pourrais trouver ces pièces dans les recoins bizarres du savoir. [Fournissez du Scintillement, ou utilisez un Sanctuaire.]",
+slots:[{id:"solvechallenge",label:"Solution", required:{glimmering:1,sanctuary:1}}],
+warmup:30,
+craftable:false,
+linked:[{id:"studyresearch.failed.challenge.intuition"},
+{id:"studyresearch.solved.challenge.intuition"}]
+},
+
+{id:"studyresearch.failed.challenge.intuition",
+actionId:"study",
+label:"Interruption !",
+startdescription:"Mes recherches ont été bloquées, pour l'instant.",
+requirements:{glimmering:-1,sanctuary:-1},
+warmup:30
+},
+
+{id:"studyresearch.solved.challenge.intuition",
+actionId:"study",
+label:"Aha - !",
+startdescription:" - Voilà, c'est fait. C'est tout ? [Vous avez résolu un défi d'Intuition.]",
+mutations: [{filter:lore,mutateAspectId:challenge.intuition,level:-1}],
+warmup:30,
+effects:{glimmering:-1},
+linked:[{id:"studyresearch.attemptsolve",chance:100}]
+},
+
+
+
+
+
+{id:"studyresearch.attemptsolve.challenge.grim",
+actionId:"study",
+label:"Un défi: De sinistres leçons",
+requirements:{challenge.grim:1},
+startdescription:"C'est un puzzle avec des pièces manquantes. Je pourrais trouver ces pièces dans les recoins bizarres du savoir. [Fournissez de la Peur, utilisez une Fosse, ou utilisez la compétence Intensité Silencieuse. Cela pourrait générer de la Peur.]",
+slots:[{id:"solvechallenge",label:"Solution", required:{dread:1,pit:1,skillreasond_concentration:1}}],
+warmup:30,
+craftable:false,
+linked:[{id:"studyresearch.failed.challenge.grim"},
+{id:"studyresearch.solved.challenge.grim"}]
+},
+
+{id:"studyresearch.failed.challenge.grim",
+actionId:"study",
+label:"Interruption !",
+startdescription:"Mes recherches ont été bloquées, pour l'instant.",
+requirements:{dread:-1,pit:-1,skillreasond_concentration:-1},
+warmup:30
+},
+
+{id:"studyresearch.solved.challenge.grim",
+actionId:"study",
+label:"Aha - !",
+startdescription:" - Voilà, c'est fait. C'est tout ? [Vous avez résolu un sinistre défi.]",
+mutations: [{filter:lore,mutateAspectId:challenge.grim,level:-1}],
+warmup:30,
+alt:[{id:"dreadinduction_ifdread",chance:70,additional:true}],
+linked:[{id:"studyresearch.attemptsolve",chance:100}]
+},
+
+
+
+
+
+
+{id:"studyresearch.attemptsolve.challenge.obsessive",
+actionId:"study",
+label:"Un défi: Recherche obsessionnelle",
+requirements:{challenge.obsessive:1},
+startdescription:"C'est un puzzle avec des pièces manquantes. Je pourrais trouver ces pièces dans les recoins bizarres du savoir. [Abandonnez la Raison, qui peut parfois être endommagée de façon permanente; ou utilisez une Bibliothèque; ou utilisez la compétence Jamais-Plus.]",
+slots:[{id:"solvechallenge",label:"Solution",required:{reason:1,library:1,skillpassiond_unreason:1}}],
+warmup:30,
+craftable:false,
+linked:[{id:"studyresearch.failed.challenge.obsessive"},
+{id:"studyresearch.solved.challenge.obsessive"}]
+},
+
+{id:"studyresearch.failed.challenge.obsessive",
+actionId:"study",
+label:"Interruption !",
+startdescription:"Mes recherches ont été bloquées, pour l'instant.",
+requirements:{reason:-1,library:-1,skillpassiond_unreason:-1},
+warmup:30
+},
+
+{id:"studyresearch.solved.challenge.obsessive",
+actionId:"study",
+label:"Aha - !",
+startdescription:" - Voilà, c'est fait. C'est tout ? [Vous avez résolu un défi obsessionnel.]",
+aspects:{fatiguing:1},
+mutations: [{filter:lore,mutateAspectId:challenge.obsessive,level:-1}],
+warmup:30,
+linked:[{id:"studyresearch.damagereason",chance:10},
+{id:"studyresearch.attemptsolve",chance:100}]
+},
+
+
+{id:"studyresearch.damagereason",
+actionId:"study",
+label:"Le fardeau de l'obsession",
+startdescription:"J'ai aiguisé mes pensées comme une lame. Maintenant, la pointe de cette lame s'est brisée. [La Raison a été endommagée de façon permanente.]",
+requirements:{concentration:1},
+aspects:{damagereason:1},
+warmup:30,
+linked:[{id:"studyresearch.attemptsolve",chance:100}]
+},
+
+
+
+
+{id:"studyresearch.attemptsolve.challenge.paradox",
+actionId:"study",
+label:"Un défi: Résolution paradoxale",
+requirements:{challenge.paradox:1},
+startdescription:"C'est un puzzle avec des pièces manquantes. Je pourrais trouver ces pièces dans les recoins bizarres du savoir. [Abandonnez la Passion, qui peut parfois être endommagée; utilisez un Sanctuaire; ou utilisez une compétence Ame Ouverte.]",
+slots:[{id:"solvechallenge",label:"Solution", required:{passion:1,sanctuary:1,skillpassiond_folly:1}}],
+warmup:30,
+craftable:false,
+linked:[{id:"studyresearch.failed.challenge.paradox"},
+{id:"studyresearch.solved.challenge.paradox"}]
+},
+
+{id:"studyresearch.failed.challenge.paradox",
+actionId:"study",
+label:"Interruption !",
+startdescription:"Mes recherches ont été bloquées, pour l'instant.",
+requirements:{passion:-1,sanctuary:-1,skillpassiond_folly:-1},
+warmup:30
+},
+
+{id:"studyresearch.solved.challenge.paradox",
+actionId:"study",
+label:"Aha - !",
+startdescription:" - Voilà, c'est fait. C'est tout ? [Vous avez résolu un défi paradoxal.]",
+aspects:{fatiguing:1},
+mutations: [{filter:lore,mutateAspectId:challenge.paradox,level:-1}],
+warmup:30,
+linked:[{id:"studyresearch.damagepassion",chance:10},
+{id:"studyresearch.attemptsolve",chance:100}]
+},
+
+{id:"studyresearch.damagepassion",
+actionId:"study",
+label:"Le Coeur du labyrinthe",
+startdescription:"J'ai suivi mes passions à travers le labyrinthe, et me voilà au coeur de celui-ci. Le coeur du labyrinthe est un endroit noir et creux, carbonisé comme du bois. [La Passion a été endommagée de façon permanente.]",
+requirements:{passionexhausted:1},
+aspects:{damagepassion:1},
+warmup:30,
+linked:[{id:"studyresearch.attemptsolve",chance:100}]
+},
+
+
+
+{id:"studyresearch.attemptsolve.challenge.illumination",
+actionId:"study",
+label:"Un défi: Illumination",
+requirements:{challenge.illumination:1},
+startdescription:"C'est un puzzle avec des pièces manquantes. Je pourrais trouver ces pièces dans les recoins bizarres du savoir. [Fournissez de la Fascination, qui peut se reproduire, utiliser une Bibliothèque ou employer une compétence Esprit Rare.]",
+slots:[{id:"solvechallenge",label:"Solution", required:{fascination:1,library:1,skillreasond_illumination:1}}],
+warmup:30,
+craftable:false,
+linked:[{id:"studyresearch.failed.challenge.illumination"},
+{id:"studyresearch.solved.challenge.illumination"}]
+},
+
+{id:"studyresearch.failed.challenge.illumination",
+actionId:"study",
+label:"Interruption !",
+startdescription:"Mes recherches ont été bloquées, pour l'instant.",
+requirements:{fascination:-1,library:-1,skillreasond_illumination:-1},
+warmup:30
+},
+
+{id:"studyresearch.solved.challenge.illumination",
+actionId:"study",
+label:"Aha - !",
+startdescription:" - Voilà, c'est fait. C'est tout ? [Vous avez résolu un défi de l'Illumination.]",
+mutations: [{filter:lore,mutateAspectId:challenge.illumination,level:-1}],
+warmup:30,
+alt:[{id:"fascinationinduction_iffascination",chance:70,additional:true}],
+linked:[{id:"studyresearch.attemptsolve",chance:100}]
+},
+
+
+
+
+
+{id:"studyresearch.attemptsolve.challenge.practical",
+actionId:"study",
+label:"Un défi: Expérimentation pratique",
+requirements:{challenge.practical:1},
+startdescription:"C'est un puzzle avec des pièces manquantes. Je pourrais trouver ces pièces dans les recoins bizarres du savoir. [Risquez votre Santé, ou utilisez un prisonnier.]",
+slots:[{id:"solvechallenge",label:"Solution", required:{health:1,prisoner:1}}],
+warmup:30,
+craftable:false,
+linked:[{id:"studyresearch.failed.challenge.practical"},
+{id:"studyresearch.solved.challenge.practical"}]
+},
+
+{id:"studyresearch.failed.challenge.practical",
+actionId:"study",
+label:"Interruption !",
+startdescription:"Mes recherches ont été bloquées, pour l'instant.",
+requirements:{health:-1,prisoner:-1},
+warmup:30
+},
+
+{id:"studyresearch.solved.challenge.practical",
+actionId:"study",
+label:"Aha - !",
+startdescription:" - Voilà, c'est fait. C'est tout ? [Vous avez résolu un défi Pratique.]",
+aspects:{fatiguing:1},
+mutations: [{filter:lore,mutateAspectId:challenge.practical,level:-1}],
+warmup:30,
+linked:[{id:"studyresearch.damagehealth",chance:30},
+{id:"studyresearch.attemptsolve",chance:100}]
+},
+
+
+{id:"studyresearch.damagehealth",
+actionId:"study",
+label:"Les dommages",
+startdescription:"La douleur est un professeur, disent-ils, surtout si elle n'est pas douloureuse. [La Santé a été blessée.]",
+requirements:{fatigue:1},
+aspects:{damagehealth:1},
+warmup:30,
+linked:[{id:"studyresearch.attemptsolve",chance:100}]
+},
+
+
+
+
+
+
+
+
+
+{id:"studyresearch.nochallengesremaining",
+actionId:"study",
+label:"Apercevoir la lumière",
+startdescription:"Maintenant - maintenant je comprends !",
+description:"",
+warmup:30,
+requirements:{challenge.knowledge:-1,challenge.intuition:-1,challenge.grim:-1,challenge.obsessive:-1,challenge.paradox:-1,challenge.illumination:-1,challenge.practical:-1},
+mutations:[{filter:lore,mutateAspectId:challenge.knowledge,level:0},
+{filter:lore,mutateAspectId:challenge.intuition,level:0},
+{filter:lore,mutateAspectId:challenge.grim,level:0},
+{filter:lore,mutateAspectId:challenge.obsessive,level:0},
+{filter:lore,mutateAspectId:challenge.paradox,level:0},
+{filter:lore,mutateAspectId:challenge.illumination,level:0},
+{filter:lore,mutateAspectId:challenge.practical,level:0}],
+linked: [
+
+		{id:"studyproject_upgrade_edge",chance:100},
+		{id:"studyproject_upgrade_forge",chance:100},
+		{id:"studyproject_upgrade_grail",chance:100},
+		{id:"studyproject_upgrade_heart",chance:100},
+		{id:"studyproject_upgrade_lantern",chance:100},
+		{id:"studyproject_upgrade_moth",chance:100},
+		{id:"studyproject_upgrade_secrethistories",chance:100},
+		{id:"studyproject_upgrade_winter",chance:100},
+
+		{id:"studyproject_subvert_edgetowinter",chance:100},
+		{id:"studyproject_subvert_forgetoedge",chance:100},
+		{id:"studyproject_subvert_grailtomoth",chance:100},
+		{id:"studyproject_subvert_hearttograil",chance:100},
+		{id:"studyproject_subvert_lanterntoforge",chance:100},
+		{id:"studyproject_subvert_mothtolantern",chance:100},
+		{id:"studyproject_subvert_wintertoheart",chance:100},
+
+		{id:"studyproject_upgrade_subvert_knock",chance:100},
+
+	]
+},
+
+
+					{
+	id: "studyresearchtick",
+	comments: "L'exigence de 2 croyances signifie qu'elle n'est disponible que lorsque quelqu'un a associé deux fragments de croyance avec une recette antérieure. Cela permet d'accroître les possibilités de compréhension.",
+	label: "Une recherche prometteuse",
+	actionId: "study",
+	requirements:{lore:2},
+	startdescription: "Ce projet a des possibilités. Lorsque les besoins en matière de recherche apparaissent, je dois les remplir pour avoir une Compréhension. Si j'obtiens trois Compréhension, je réussirai; sinon, je risque d'échouer.",
+	description: ".",
+	warmup:30,
+	linked:[
+	{id: "studyresearchearlyconclusion",chance:100},
+	{id: "studyresearchneedsreason",chance:50},
+	{id: "studyresearchneedserudition",chance:50},
+	{id: "studyresearchneedsglimmering",chance:100}]
+	},
+			{
+	id: "studyresearchneedsreason",
+	label: "L'ombre de la confusion",
+	actionId: "study",
+	requirements: {},
+	effects: {},
+	slots:[{id:"Reason",required: {reason:1}, greedy:true}],
+	alternativerecipes: [
+	{id: "studyresearchreasonsuccess",chance:100}],
+	startdescription: "La confusion brouille le chemin. Je dois utiliser davantage ma Raison.",
+	description: "Je dois utiliser ma Raison pour aider mes recherches.",
+	warmup:30,
+	craftable: false,
+		linked: [{id:"studyresearchconclusion",chance:100}]
+	},
+				{
+	id: "studyresearchreasonsuccess",
+	label: "La lumière de l'intellect !",
+	actionId: "study",
+	requirements: {reason:1},
+	effects: {insight:1},
+	craftable: false,
+	startdescription: "La tâche occupe une place de plus en plus importante dans mon esprit. Mais mes efforts portent leurs fruits. [Compréhension acquise.].",
+	linked: [{id:"studyresearchtick",chance:100}],
+	aspects: {fatiguing:1}
+	},
+		{
+	id: "studyresearchneedserudition",
+	label: "Les pièces du puzzle",
+	actionId: "study",
+	requirements: {},
+	effects: {},
+	slots:[{id:"Erudition",required: {erudition:1},consumes:true,greedy:true}],
+	alternativerecipes: [
+	{id: "studyresearcheruditionsuccess",chance:100}],
+	startdescription: "Mes recherches ont besoin d'Erudition.",
+	description: "Mes recherches ont besoin d'Erudition.",
+	warmup:30,
+	craftable: false,
+		linked: [{id:"studyresearchconclusion",chance:100}]
+	},
+				{
+	id: "studyresearcheruditionsuccess",
+	label: "Les pièces s'emboîtent !",
+	actionId: "study",
+	requirements: {erudition:1},
+	effects: {insight:1},
+	craftable: false,
+	startdescription: "La Connaissance engendre la Connaissance. [Compréhension acquise.]",
+	linked: [{id:"studyresearchtick",chance:100}]
+	},
+		{
+	id: "studyresearchneedsglimmering",
+	label: "Les portes de l'intuition",
+	actionId: "study",
+	requirements: {},
+	effects: {},
+	slots:[{id:"Glimmering",required: {glimmering:1},consumes:true,greedy:true}],
+	alternativerecipes: [
+	{id: "studyresearchglimmeringsuccess",chance:100}],
+	startdescription: "Mes recherches ont besoin de Scintillement.",
+	description: ".",
+	warmup:30,
+	craftable: false,
+	linked: [{id:"studyresearchconclusion",chance:100}]
+	},
+			{
+	id: "studyresearchglimmeringsuccess",
+	label: "Les portes de l'intuition sont ouvertes !",
+	actionId: "study",
+	requirements: {glimmering:1},
+	effects: {insight:1},
+	startdescription: "Parfois, les intuitions se trouvent dans des endroits inattendus. [Compréhension acquise.]",
+	craftable: false,
+	linked: [{id:"studyresearchtick",chance:100}]
+	},
+	{id: "studyresearchearlyconclusion",
+	actionId: "study",
+	comments: "this is a passthrough / router for if Insight reaches 3,which routes directly to the conclusion",
+	requirements: {insight: 3},
+	alternativerecipes: [{id: "studyresearchconclusion",chance:100}]
+	},
+	{id: "studyresearchconclusion",
+	actionId: "study",
+	comments: "this is a passthrough / router which the player sees if they don't satisfy a research requirement.",
+	alternativerecipes: [
+	{id: "studyresearchmaxinsight",chance:100},
+	{id: "studyresearchmoderateinsight",chance:100},
+	{id: "studyresearchminimalinsight",chance:100},
+	{id: "studyresearchconsolation",chance:100},
+	]
+	},
+
+						{
+	id: "studyresearchmaxinsight",
+	label: "Recherche terminée, compréhension maximale",
+		alternativerecipes: [
+	{id: "studyresearchsuccess",chance:100}],
+	actionId: "study",
+	requirements: {insight:3},
+	effects: {},
+	startdescription: "COMMENCER studyresearchmaxinsight",
+	description: "COMPLETER studyresearchmaxinsight",
+	warmup:0,
+	comments: "Il ne s'agit pour l'instant que d'un passage, notamment par souci de cohérence.",
+	},
+					{
+	id: "studyresearchmoderateinsight",
+	label: "Recherche terminée, une compréhension des connaissances",
+		alternativerecipes: [
+	{id: "studyresearchsuccess",chance:70},
+	{id: "studyresearchconsolation",chance:100}],
+	actionId: "study",
+	requirements: {insight:2},
+	effects: {},
+	startdescription: "COMMENCER studyresearchsomeinsight",
+	description: "COMPLETER studyresearchsomeinsight",
+	warmup:0
+	},
+						{
+	id: "studyresearchminimalinsight",
+	label: "Recherche complète, compréhension minimale",
+	actionId: "study",
+	requirements: {insight:1},
+			alternativerecipes: [
+	{id: "studyresearchsuccess",chance:30},
+	{id: "studyresearchconsolation",chance:100}],
+	requirements: {},
+	effects: {},
+	startdescription: "COMMENCER studyresearchnoinsight",
+	description: "COMPLETER studyresearchnoinsight",
+	warmup:0,
+	},
+							{
+	id: "studyresearchsuccess",
+	label: "Succès !",
+	actionId: "study",
+	requirements: {},
+	aspects: {restore:1},
+	effects: {insight:-100},
+	startdescription: ".",
+	description: "J'ai appris quelque chose de nouveau.",
+	warmup:0,
+	craftable: false,
+	linked: [
+
+
+
+		{id:"studyproject_upgrade_edge",chance:100},
+		{id:"studyproject_upgrade_forge",chance:100},
+		{id:"studyproject_upgrade_grail",chance:100},
+		{id:"studyproject_upgrade_heart",chance:100},
+		{id:"studyproject_upgrade_lantern",chance:100},
+		{id:"studyproject_upgrade_moth",chance:100},
+		{id:"studyproject_upgrade_secrethistories",chance:100},
+		{id:"studyproject_upgrade_winter",chance:100},
+
+		{id:"studyproject_subvert_edgetowinter",chance:100},
+		{id:"studyproject_subvert_forgetoedge",chance:100},
+		{id:"studyproject_subvert_grailtomoth",chance:100},
+		{id:"studyproject_subvert_hearttograil",chance:100},
+		{id:"studyproject_subvert_lanterntoforge",chance:100},
+		{id:"studyproject_subvert_mothtolantern",chance:100},
+		{id:"studyproject_subvert_wintertoheart",chance:100},
+
+		{id:"studyproject_upgrade_subvert_knock",chance:100},
+
+
+
+	]
+	},
+	
+]
+}
