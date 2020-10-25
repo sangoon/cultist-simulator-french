@@ -1,683 +1,1210 @@
-{"elements":
-    [
-	          {
-        id: "dehoris1latin",
-            unique:true, label: "De Horis (Livre 1)",
-            aspects:{text:1,auctionable:1,textlatin:1},
-            description: "En latin. Une réimpression du XIXe siècle (par l'infatigable Nathaniel Darcy-Evers) d'une traduction latine du XIVe siècle d'un ouvrage du IVe siècle.",
-			xtriggers: {scholarlatin: dehoris1}
-        },
-			          {
-        id: "dehoris2latin",
-            unique:true, label: "De Horis (Livre 2)",
-            aspects:
-            {text:1,auctionable:1,textlatin:1},
-            description: "En latin. Une réimpression du XIXe siècle (par l'infatigable Nathaniel Darcy-Evers) d'une traduction latine du XIVe siècle d'un ouvrage du IVe siècle.",
-			xtriggers: {scholarlatin: dehoris2}
-        },
-
-		{id:"debellismurorumlatin",
-		unique:true, label:"De Bellis Murorum",
-		aspects: {text:1,auctionable:1,textlatin:1},
-		description:"En latin. Un poème épique du XVIIIe siècle du pseudonyme 'Solipsistos'.",
-		xtriggers: {scholarlatin:debellismurorum}},
-		
-		{id:"onwhatiscontainedbysilvergreek",
-		unique:true, label:"Sur ce que renferme l'argent",
-		aspects: {text:1,auctionable:1,textgreek:1},
-		description:"Un bestiaire par 'Poemander'. en Grèc.",
-			xtriggers: {scholargreek: onwhatiscontainedbysilver}},
-		{id:"truecompleteasclepiangreek",
-		unique:true, label:"Un compte rendu fidèle et complet des mystères asclépiens des Origines de la Maison",
-		aspects: {text:1,auctionable:1,textgreek:1},
-		description:"Reproduit par l'illustre 'Rylee Grese' à partir - prétendument - d'un texte beaucoup plus ancien. En grec.",
-			xtriggers: {scholargreek: truecompleteasclepian}},
-
-				 {
-        id: "orchidtransfigurations1latin",
-            unique:true, label: "Les Transfigurations de l'Orchidée, Vol 1",
-            aspects:
-            {text:1,auctionable:1,textlatin:1},
-            description: "Un rêve de fièvre alchimique du XVIe siècle, attribué à Robert Fludd, fréquemment interdit pour l'attrait troublant de ses illustrations. Il s'agit de l'original latin.",
-			xtriggers: {scholarlatin: orchidtransfigurations1}
-        },
-		 {       id: "orchidtransfigurations2latin",
-            unique:true, label: "Les Transfigurations de l'Orchidée, Vol 2",
-            aspects:
-            {text:1,auctionable:1,textlatin:1},
-            description: "Un rêve de fièvre alchimique du XVIe siècle, attribué à Robert Fludd, fréquemment interdit pour l'attrait troublant de ses illustrations. Il s'agit de l'original latin.",
-			xtriggers: {scholarlatin: orchidtransfigurations2}
-        },
-		 {       id: "orchidtransfigurations3latin",
-            unique:true, label: "Les Transfigurations de l'Orchidée, Vol 3",
-            aspects:
-            {text:1,auctionable:1,textlatin:1},
-            description: "Un rêve de fièvre alchimique du XVIe siècle, attribué à Robert Fludd, fréquemment interdit pour l'attrait troublant de ses illustrations. Il s'agit de l'original latin.",
-			xtriggers: {scholarlatin: orchidtransfigurations3}
-        },
-						 {
-        id: "geminiadfucine",
-            unique:true, label: "Les Gémeaux",
-            aspects:
-            {knock: 2,tool:1,text:1,auctionable:1,textfucine:1},
-			xtriggers: {scholarfucine: geminiad},
-            description: "Un manuscrit fragile, enluminé de formes jumelées d'une triste et lumineuse beauté, et de toutes les phases de la lune. Il est peut-être aussi vieux que le VIIe siècle, mais la langue - Fucine - est beaucoup plus ancienne. Le corail qui orne sa couverture et les pages sont assez pointus pour trancher une gorge."
-        },
-
-							 {
-        id: "textbookfucinelatin",
-            unique:true, label: "Le journal chiffré d'Alessandro LaCroce",
-            aspects:
-            {text:1,auctionable:1,textlatin:1},
-            description: "Le prince Alessandro LaCroce a passé des années à étudier en secret les tablettes découvertes dans les marais de Fucine, dans le centre de l'Italie. Son travail vous permettra de lire les textes de Fucine... mais il est écrit selon un cryptogramme latin. Vous devrez d'abord le déchiffrer.",
-			xtriggers: {scholarlatin: textbookfucine}
-        },	
-		
-									 {
-        id: "textbookphrygiangreek",
-            unique:true, label: "Les inscriptions de Velshorn",
-            aspects:
-            {text:1,auctionable:1,textgreek:1},
-            description: "Des centaines de vers identiques dans la poésie grecque et phrygienne, copiés d'un mur. Similaire - ou identique - aux inscriptions que Cal Velshorn a découvertes dans Halicarnasse. [Si vous parlez grec, vous pouvez l'utiliser comme clé de la poésie phrygienne.]",
-			xtriggers: {scholargreek: textbookphrygian}
-        },	
-											 {
-        id: "textbookmandaicaramaic",
-            unique:true, label: "La pierre d'août",
-            aspects:
-            {text:1,auctionable:1,textaramaic:1},
-            description: "Un énorme bol, grand comme un gong, sculpté dans du basalte noir, avec des incantations correspondantes en araméen et en mandéen. [Si vous parlez l'araméen, vous pouvez l'utiliser comme clé du mandaïque.]",
-			xtriggers: {scholararamaic: textbookmandaic}
-        },	
-		
-											 {
-        id: "textbookvaksanskrit",
-            unique:true, label: "Une sculpture énigmatique",
-            aspects:
-            {text:1,auctionable:1,textsanskrit:1},
-            description: "Une sculpture en ivoire élaborée d'une complexité impossible. Autour et à travers ses surfaces, des inscriptions en sanskrit s'enroulent en spirale contre des lignes de Vak correspondantes. Si vous parlez sanskrit, vous pouvez l'utiliser pour apprendre le vak, la première langue du monde.]",
-			xtriggers: {scholarsanskrit: textbookvak}
-        },	
-		
-		
-								 {
-        id: "irreproachabletraditionssocietynobleendeavourlatin",
-            unique:true, label: "Les traditions irréprochables...",
-            aspects:
-            {text:1,auctionable:2,textlatin:1},
-            description: "Les traditions irréprochables de la Société de la Haute Oeuvre. En latin.",
-			xtriggers: {scholarlatin: irreproachabletraditionssocietynobleendeavour}
-        },						 {
-        id: "roseofnurielgreek",
-            unique:true, label: "La Rose de Nuriel",
-            aspects:
-            {text:1,auctionable:2,textgreek:1},
-            description: "Marqué du triple signe de l'ordre contemplatif des arcanes connu sous le nom de Sororité du Noeud. En grec.",
-			xtriggers: {scholargreek: roseofnuriel}
-        },						 {
-        id: "roseofhypatiagreek",
-            unique:true, label: "La Rose d'Hypatia",
-            aspects:
-            {text:1,auctionable:2,textgreek:1},
-            description: "Marqué du triple signe de l'ordre contemplatif des arcanes connu sous le nom de Sororité du Noeud. En grec.",
-			xtriggers: {scholargreek:roseofhypatia }
-        },						 {
-        id: "roseofwazneigreek",
-            unique:true, label: "La Rose de Waznei",
-            aspects:
-            {text:1,auctionable:2,textgreek:1},
-            description: "Marqué du signe triple de l'arcane de l'ordre contemplatif connu sous le nom de Sororité du Noeud... mais un quatrième feuillet a été ajoutée, défigurant le signe. En grec.",
-			xtriggers: {scholargreek:roseofwaznei }
-        },						 {
-        id: "sunsetpassageslatin",
-            unique:true, label: "Chemins du crépuscule",
-            aspects:
-            {text:1,auctionable:2,textlatin:1},
-            description: "Un texte sacré de l'Eglise du Soleil Inconquis, qui dans de nombreuses histoires a été poussé dans la clandestinité. En latin.",
-			xtriggers: {scholarlatin: sunsetpassages}
-        },						 {
-        id: "gospelzacchaeusgreek",
-            unique:true, label: "L'Évangile de Zacchaeus",
-            aspects:
-            {text:1,auctionable:2,textgreek:1},
-            description: "Un ancien texte chrétien perdu ? C'est en grec.",
-			xtriggers: {scholargreek:gospelzacchaeus }
-        },						 {
-        id: "matthiasamethystlossaramaic",
-            unique:true, label: "Sur Matthias et l'Imago d'Améthyste : Perte",
-            aspects:
-            {text:1,auctionable:2,textaramaic:1},
-            description: "Les diagrammes et les illustrations, même à travers les siècles, sont élégants, hypnotiques, parfois érotiques. En Araméen.",
-			xtriggers: {scholararamaic: matthiasamethystloss}
-        },						 {
-        id: "matthiasamethysttransformationaramaic",
-            unique:true, label: "Sur Matthias et l'Imago d'Améthyste : Transformation",
-            aspects:
-            {text:1,auctionable:2,textaramaic:1},
-            description: "Les diagrammes et les illustrations, même à travers les siècles, sont élégants, hypnotiques, parfois érotiques. En Araméen.",
-			xtriggers: {scholararamaic:matthiasamethysttransformation }
-        },						 {
-        id: "matthiasamethystpursuitaramaic",
-            unique:true, label: "Sur Matthias et l'Imago d'Améthyste : Poursuite",
-            aspects:
-            {text:1,auctionable:2,textaramaic:1},
-            description: "Les diagrammes et les illustrations, même à travers les siècles, sont élégants, hypnotiques, parfois érotiques. En Araméen.",
-			xtriggers: {scholararamaic: matthiasamethystpursuit}
-        },						 {
-        id: "franklinbancroftdiarieslatin",
-            unique:true, label: "Lord Franklin Bancroft: Carnets, 1750-1790",
-            aspects:
-            {text:1,auctionable:2,textlatin:1},
-            description: "Le célèbre journal d'un homme notoire, écrit en latin, sans doute par souci de sécurité.",
-			xtriggers: {scholarlatin: franklinbancroftdiaries}
-        },						 {
-        id: "indignitiesobliviatelatin",
-            unique:true, label: "Les indignités perpétrées par la fraternité fallacieuse des Oubliés",
-            aspects:
-            {text:1,auctionable:2,textlatin:1},
-            description: "Ce livre est aussi célèbre pour la fureur presque incohérente de son ton que pour les connaissances qu'il contient. En latin.",
-			xtriggers: {scholarlatin:indignitiesobliviate }
-        },						 {
-        id: "furioustantrasanskrit",
-            unique:true, label: "Le Tantra féroce",
-            aspects:
-            {text:1,auctionable:2,textsanskrit:1},
-            description: "Tel que transcrit plus tard par le médium et pyrotechnicien Jacob Oliver Topp-Mugglestone. La tradition veut qu'il l'ait trouvé dans l'écorce d'un chêne brûlé par la foudre.",
-			xtriggers: {scholarsanskrit: furioustantra}
-        },						 {
-        id: "devouredtantrasanskrit",
-            unique:true, label: "Le Tantra dévoré",
-            aspects:
-            {text:1,auctionable:2,textsanskrit:1},
-            description: "Le prêtre-diplomate Stanislav John Schaller l'a transcrit de la bibliothèque de Red Long, mais son manuscrit reste dans une collection privée à Kerisham.",
-			xtriggers: {scholarsanskrit: devouredtantra}
-        },						 {
-        id: "ceaselesstantrasanskrit",
-            unique:true, label: "Le Tantra inlassable",
-            aspects:
-            {text:1,auctionable:2,textsanskrit:1},
-            description: "Le chorégraphe d'avant-garde Nicholas Keirle aurait incorporé ce tantra dans ses ballets menaçants.",
-			xtriggers: {scholarsanskrit:ceaselesstantra }
-        },						 {
-        id: "knownunknowntantrasanskrit",
-            unique:true, label: "Le Tantra connu et inconnu",
-            aspects:
-            {text:1,auctionable:2,textsanskrit:1},
-            description: "Carlos Garcia Sauri, le mystique extatique des Pyrénées, était connu pour réciter cela en trois langues, bien qu'il n'ait jamais visité le sous-continent.",
-			xtriggers: {scholarsanskrit:knownunknowntantra }
-        },						 {
-        id: "encirclingtantrasanskrit",
-            unique:true, label: "Le Tantra qui encercle",
-            aspects:
-            {text:1,auctionable:2,textsanskrit:1},
-            description: "L'explorateur et entrepreneur T. Everett Duplantis a un jour tenté de piller le temple où se trouvait ce texte. Son sort est consigné dans une annexe.",
-			xtriggers: {scholarsanskrit: encirclingtantra}
-        },						 {
-        id: "shavenlocktantrasanskrit",
-            unique:true, label: "Le Tantra de la mèche rasée",
-            aspects:
-            {text:1,auctionable:2,textsanskrit:1},
-            description: "Aussi connu sous le nom de 'Celui qui s'est rasé les cheveux'. Selon l'histoire, c'est la croyance que même les Vanaras, qui ont changé de forme, ont rejetée.",
-			xtriggers: {scholarsanskrit: shavenlocktantra}
-        },						 {
-        id: "tantrawormssanskrit",
-            unique:true, label: "Le Tantra des Vers",
-            aspects:
-            {text:1,auctionable:2,textsanskrit:1},
-            description: "L'entomologiste Juliana Zawistowski a fini par insister sur le fait que ce texte a été écrit par des insectes habitant une peau humaine. Elle n'a jamais présenté de preuves à l'appui de sa thèse.",
-			xtriggers: {scholarsanskrit: tantraworms}
-        },
-		{
-        id: "bookofcentipedegreek",
-            unique:true, label: "Le livre du Mille-Pattes",
-            aspects:
-            {text:1,auctionable:2,textgreek:1},
-            description: "Au milieu des années 1860, une 'Madame Yi' a présenté un divertissement basé, selon elle, sur ce livre.",
-			xtriggers: {scholargreek: bookofcentipede}
-        },
-		{
-        id: "accountkanishkspidersdooraramaic",
-            unique:true, label: "Le compte de Kanishk à la Porte de l'Araignée",
-            aspects:
-            {text:1,auctionable:2,textaramaic:1},
-            description: "Lok Kahuli, la victime et l'amant de Kanishk, a écrit ce récit, peut-être à titre posthume.",
-			xtriggers: {scholararamaic: accountkanishkspidersdoor}
-        },      
-		{
-        id: "vinzantinscriptionsphrygian",
-            unique:true, label: "Les inscriptions de Vinzant",
-            aspects:
-            {text:1,auctionable:2,textphrygian:1},
-            description: "Everett Vinzant a retranscrit ces incriptions phrygiennes depuis une falaise d'Anatolie, où il a survécu à un éclair. Il est mort sept ans plus tard, jour pour jour. Ses os, selon la légende, étaient chauds au toucher.",
-			xtriggers: {scholarphrygian: vinzantinscriptions}
-        },
-		{
-        id: "larquebinecodexphrygian",
-            unique:true, label: "Le Codex Larquebin",
-            aspects:
-            {text:1,auctionable:2,textphrygian:1},
-            description: "Christoph Larquebus a affirmé avoir acheté deux exemplaires manuscrits du Codex, dans la langue phrygienne prétendument éteinte, à une famille de sorcières sur les rives de la mer de Marmara. Un troisième exemplaire a été 'donné à la mer'.",
-			xtriggers: {scholarphrygian: larquebinecodex}
-        },
-		{
-        id: "againstsisterhoodknotgreek",
-            unique:true, label: "Contre la sororité du Noeud et...",
-            aspects:
-            {text:1,auctionable:2,textgreek:1},
-            description: "'Contre la Sororité du Noeud et la folie de leurs coutumes dépravées'. Hieronymus Pseudo-Hypnerotomachus a écrit ce discours furieux sur l'influence sinistre de la communauté des Soeurs sur sa propre Eglise du Soleil Inconquis.",
-			xtriggers: {scholargreek: againstsisterhoodknot}
-        },
-		{
-        id: "morphycodexaramaic",
-            unique:true, label: "Le Codex de Morphy",
-            aspects:
-            {text:1,auctionable:2,textaramaic:1},
-            description: "Un texte de la Sororité du Noeud, déterré par Evan Morphy.",
-			xtriggers: {scholararamaic: morphycodex}
-        },
-		{
-        id: "leoninetantrasanskrit",
-            unique:true, label: "Le Tantra Léonin",
-            aspects:
-            {text:1,auctionable:2,textsanskrit:1},
-            description: "Dans la traduction la plus célèbre du Tantra Léonin, Ashley Phillips est citée comme traductrice, mais son existence est explicitement niée dans le prologue. Cette confusion est caractéristique des livres qui mentionnent les Grands Princes encapuchonnés.",
-			xtriggers: {scholarsanskrit: leoninetantra}
-        },
-		{
-        id: "incandescenttantrasanskrit",
-            unique:true, label: "Le Tantra incandescent",
-            aspects:
-            {text:1,auctionable:2,textsanskrit:1},
-            description: "Michael Blockley, l'excentrique magnat du fer, aimait à citer ce tantra. Blockley est mort dans l'incendie d'une usine.",
-			xtriggers: {scholarsanskrit: incandescenttantra}
-        },
-		{
-        id: "thirstingtantrasanskrit",
-            unique:true, label: "Le Tantra assoiffé",
-            aspects:
-            {text:1,auctionable:2,textsanskrit:1},
-            description: "C.G. Burial, le militant de la tempérance, en a publié des éléments dans un pamphlet, qui a dû être retiré et détruit après qu'il soit devenu trop populaire.",
-			xtriggers: {scholarsanskrit: thirstingtantra}
-        },
-		{
-        id: "flayedtantrasanskrit",
-            unique:true, label: "Le Tantra écorché",
-            aspects:
-            {text:1,auctionable:2,textsanskrit:1},
-            description: "Ce Tantra est consigné comme étant parlé par un individu énigmatique identifié comme 'Peel', avec beaucoup des qualités du naga mythologique. Le Tantra écorché a joué un rôle notable dans la pamphlétisation paranoïaque d'Alexander Sparrow.",
-			xtriggers: {scholarsanskrit: flayedtantra}
-        },
-		{
-        id: "watchfultantrasanskrit",
-            unique:true, label: "Le Tantra vigilant",
-            aspects:
-            {text:1,auctionable:2,textsanskrit:1},
-            description: "Elle est connue pour son implication dans la mort de Dafyd Jones et de Meredith Blaine, deux physiciens de la première heure qui prétendaient chacun posséder l'unique exemplaire et qui se sont finalement battus en duel à son sujet en 1840.",
-			xtriggers: {scholarsanskrit: watchfultantra}
-        },
-		{
-        id: "twinserpenttantrasanskrit",
-            unique:true, label: "Le Tantra des serpents jumeaux",
-            aspects:
-            {text:1,auctionable:2,textsanskrit:1},
-            description: "Un tantra enveloppé d'une obscurité particulière.",
-			xtriggers: {scholarsanskrit: twinserpenttantra}
-        },
-		{
-        id: "firecircletantrasanskrit",
-            unique:true, label: "Le Tantra du cercle de feu",
-            aspects:
-            {text:1,auctionable:2,textsanskrit:1},
-            description: "La seule copie connue de ce document en Europe occidentale a été volée à la British Library en 1892. Un certain Harvey Hattington a avoué le crime et a prétendu l'avoir mangé, avec du beurre et de l'ail, dans un moment de caprice ingénieux.",
-			xtriggers: {scholarsanskrit: firecircletantra}
-        },
-		{
-        id: "asthesunhiscoursearamaic",
-            unique:true, label: "Le soleil, sa course",
-            aspects:
-            {text:1,auctionable:2,textaramaic:1},
-            description: "Joël du Pont, un soldat à la retraite et parfois gardien de péage, a écrit ce poème épique sur la décision fameusement inexplicable d'Alexandre d'Issus de se retirer de la guerre avec les Achéménides, et son retour ultérieur en Macédoine.",
-			xtriggers: {scholararamaic: asthesunhiscourse}
-        },
-		{
-        id: "concursumdiariesphrygian",
-            unique:true, label: "Les Chroniques du Concursum",
-            aspects:
-            {text:1,auctionable:2,textphrygian:1},
-            description: "Les journaux intimes de l'explorateur et meurtrier Lars Westergren. Il les a traduits en phrygien, pour des raisons de confidentialité.",
-			xtriggers: {scholarphrygian: concursumdiaries}
-        },
-		{
-        id: "ironbookfucine",
-            unique:true, label: "Le Livre de fer",
-            aspects:
-            {text:1,auctionable:2,textfucine:1},
-            description: "Un manuel de l'Ordo Limiae, un ordre de quasi-immortels qui maintenait une enclave secrète à la source du fleuve Limia, dans la province romaine d'Hispanie Gallaecia.",
-			xtriggers: {scholarfucine: ironbook}
-        },
-		{
-        id: "silverbookfucine",
-            unique:true, label: "Le Livre d'argent",
-            aspects:
-            {text:1,auctionable:2,textfucine:1},
-            description: "Un manuel de l'Ordo Limiae, un ordre de quasi-immortels qui maintenait une enclave secrète à la source du fleuve Limia, dans la province romaine d'Hispanie Gallaecia.",
-			xtriggers: {scholarfucine: silverbook}
-        },
-		{
-        id: "ivorybookfucine",
-            unique:true, label: "Le Livre d'ivoire",
-            aspects:
-            {text:1,auctionable:2,textfucine:1},
-            description: "Un manuel de l'Ordo Limiae, un ordre de quasi-immortels qui maintenait une enclave secrète à la source du fleuve Limia, dans la province romaine d'Hispanie Gallaecia.",
-			xtriggers: {scholarfucine: ivorybook}
-        },
-		{
-        id: "worlddoesnotweeparamaic",
-            unique:true, label: "Le Monde ne pleure pas",
-            aspects:
-            {text:1,auctionable:2,textaramaic:1},
-            description: "Joshua 'Brown' a trouvé ceci dans un puits à Hamath. On raconte qu'il a été abandonné par Alexandre lors de sa retraite d'Issus.",
-			xtriggers: {scholararamaic: worlddoesnotweep}
-        },
-		{
-        id: "deedsofthescarredcaptaingreek",
-            unique:true, label: "Les Exploits du capitaine balafré",
-            aspects:
-            {text:1,auctionable:2,textgreek:1},
-            description: "Assemblage minutieux par le soldat de fortune et ancien expéditeur de fonds, Pavel Shulga, pendant ses années en Grèce.",
-			xtriggers: {scholargreek: deedsofthescarredcaptain}
-        },
-		{
-        id: "bookofdissolutionmandaic",
-            unique:true, label: "Le Livre de la Dissolution",
-            aspects:
-            {text:1,auctionable:2,textmandaic:1},
-            description: "Alexander Probst, suivant le travail fondateur de Hosty Moor, a récupéré une copie de ce travail dans un temple de montagne en Perse. D'autres copies font surface de temps en temps, généralement fixées sur la roche.",
-			xtriggers: {scholarmandaic: bookofdissolution}
-        },
-		{
-        id: "catalogueofunchartedpleasuresphrygian",
-            unique:true, label: "Un catalogue de plaisirs inexplorés",
-            aspects:
-            {text:1,auctionable:2,textphrygian:1},
-            description: "'Le gentilhomme noir' est le seul, et plutôt grandiose, auteur identifié de cette oeuvre souvent copiée.",
-			xtriggers: {scholarphrygian: catalogueofunchartedpleasures}
-        },
-		{
-        id: "thosewhodonotsleepfucine",
-            unique:true, label: "Ceux qui ne dorment pas",
-            aspects:
-            {text:1,auctionable:2,textfucine:1},
-            description: "Un texte de Fucine attribué au mystique Brodnax.",
-			xtriggers: {scholarfucine: thosewhodonotsleep}
-        },
-		{
-        id: "theskythesoularamaic",
-            unique:true, label: "Le ciel, l'âme",
-            aspects:
-            {text:1,auctionable:2,textaramaic:1},
-            description: "Le grand travail de Kalle, poète ascétique écrivant à la cour des Rois sans ombre.",
-			xtriggers: {scholararamaic: theskythesoul}
-        },
-		{
-        id: "onthematterandthedeedsofserpentsvak",
-            unique:true, label: "Sur les affaires et les agissements des serpents",
-            aspects:
-            {text:1,auctionable:2,textvak:1},
-            description: "Il s'agit probablement des 'Prophéties du Naga', traduites en anglais et illustrées par 'William Midnight' à Paris dans les années 1880, mais il présente un certain nombre de divergences par rapport à ce texte. Il semble assez récent par rapport aux textes du Vak.",
-			xtriggers: {scholarvak: onthematterandthedeedsofserpents}
-        },
-		{
-        id: "serenityofblackwoodgreek",
-            unique:true, label: "La sérénité de la Forêt-Noire",
-            aspects:
-            {text:1,auctionable:2,textgreek:1},
-            description: "Une histoire allégorique de la Maison du Léthé, dont il est ici question, a été inspirée par le Mille-Pattes. 'Sereno Blackwood' est un pseudonyme occulte jusqu'à aujourd'hui.",
-			xtriggers: {scholargreek: serenityofblackwood}
-        },
-		{
-        id: "bookofthronesphrygian",
-            unique:true, label: "Le Livre des Trônes",
-            aspects:
-            {text:1,auctionable:2,textphrygian:1},
-            description: "Une légende de l'Empire sans ombre, transcrite par Alexander Peterhans à partir des annales d'un sanctuaire secret en Anatolie.",
-			xtriggers: {scholarphrygian: bookofthrones}
-        },{
-        id: "secondglorymandaic",
-            unique:true, label: "Une seconde Gloire",
-            aspects:
-            {text:1,auctionable:2,textmandaic:1},
-            description: "Un ouvrage de Juceh, le prêtre et le savant ermite.",
-			xtriggers: {scholarmandaic: secondglory}
-        },
-		{
-        id: "bookoftruebloodlatin",
-            unique:true, label: "Le livre du Vrai Sang",
-            aspects:
-            {text:1,auctionable:2,textlatin:1},
-            description: "Une oeuvre de Cassius le Thoman.",
-			xtriggers: {scholarlatin: bookoftrueblood}
-        },
-		{
-        id: "burningwomanphrygian",
-            unique:true, label: "La Femme qui brûle",
-            aspects:
-            {text:1,auctionable:2,textphrygian:1},
-            description: "Une transcription en phrygien de la pièce de Menander le Victor, peut-être le dramaturge du même nom, avec commentaires.",
-			xtriggers: {scholarphrygian: burningwoman}
-        },
-		{
-        id: "twentysixenticementsseventormentsfucine",
-            unique:true, label: "Vingt-six incitations, sept tourments",
-            aspects:
-            {text:1,auctionable:2,textfucine:1},
-            description: "Le peintre Niels Frederik Malskaer, a notoirement tenté une série de peintures basées sur les Tourments. Au Cinquième Supplice, les exigences de la peinture étaient devenues si terribles qu'il est mort d'une hémorragie. Les diagrammes de ce texte sont heureusement moins détaillés.",
-			xtriggers: {scholarfucine: twentysixenticementsseventorments}
-        },
-		
-		{
-        id: "historyofshadowlesskingsaramaic",
-            unique:true, label: "Une histoire vraie et précise des Rois sans ombre",
-            aspects:
-            {text:1,auctionable:2,textaramaic:1},
-            description: "Isaac de l'histoire de l'Empire sans ombre de Karth.",
-			xtriggers: {scholararamaic: historyofshadowlesskings}
-        },
-
-				{
-        id: "highmysterieschurchsolarfucine",
-            unique:true, label: "Les Grands Mystères de la Chambre...",
-            aspects:
-            {text:1,auctionable:2,textfucine:1},
-            description: "'Les Grands Mystères de la Chambre Intérieure de notre Eglise Solaire'. Les rites secrets de l'Eglise du Soleil Inconquis, qui a détenu le pouvoir dans au moins deux Histoires.",
-			xtriggers: {scholarfucine: highmysterieschurchsolar }
-        },
-
-				{
-        id: "medusaslamentgreek",
-            unique:true, label: "La complainte de Méduse",
-            aspects:
-            {text:1,auctionable:2,textgreek:1},
-                       description: "A la mort de l'Heure appelée Sept Spirales, 'le Père de la Mère'.",
-			xtriggers: {scholargreek: medusaslament}
-        },
-
-				{
-        id: "bookofmasksphrygian",
-            unique:true, label: "Le Livre des Masques",
-            aspects:
-            {text:1,auctionable:2,textphrygian:1},
-            description: "L'oeuvre d'Athéna Vana sur l'Heure scélérate appelée le Vagabond.",
-			xtriggers: {scholarphrygian: bookofmasks}
-        },
-
-				{
-        id: "inthemountainsasupontheplainvak",
-            unique:true, label: "Dans les montagnes comme dans la plaine...",
-            aspects:
-            {text:1,auctionable:2,textvak:1},
-            description: "'Dans les montagnes comme dans la plaine, il peut ne pas y avoir de chemin là où aucun n'est passé.' Une oeuvre de Ninegala de Lagash.",
-			xtriggers: {scholarvak: inthemountainsasupontheplain}
-        },
-
-				{
-        id: "memoryofgodsfucine",
-            unique:true, label: "En mémoire des Dieux",
-            aspects:
-            {text:1,auctionable:2,textfucine:1},
-            description:  "Une oeuvre de 'l'enfant de Barrow', un adepte gaulois anonyme qui a rejoint une organisation connue sous le nom d'Ordo Limiae.",
-			xtriggers: {scholarfucine: memoryofgods}
-        },
-
-				{
-        id: "sevenfoldslayingsevencoiledfucine",
-            unique:true, label: "Le septuple massacre des sept Spirales",
-            aspects:
-            {text:1,auctionable:2,textfucine:1},
-            description: "Un récit de la destruction d'une Heure primordiale, un dieu-qui-fut-pierre.",
-			xtriggers: {scholarfucine: sevenfoldslayingsevencoiled}
-        },
-
-				{
-        id: "bighufffucine",
-            unique:true, label: "Mes Actions, mes Pouvoirs, mes Réalisations...",
-            aspects:
-            {text:1,auctionable:2,textfucine:1},
-            description: "'Mes actions, mes pouvoirs, mes réalisations et les injustices commises à mon égard'",
-			xtriggers: {scholarfucine: bighuff}
-        },
-
-				{
-        id: "dreamconspiracyskiesphrygian",
-            unique:true, label: "Le rêve de la conspiration du Ciel inférieur",
-            aspects:
-            {text:1,auctionable:2,textphrygian:1},
-            description: "Passage au crible de l'oracle disgracié Damaon Azenaten.",
-			xtriggers: {scholarphrygian: dreamconspiracyskies}
-        },
-
-				{
-        id: "bookwhitecatphrygian",
-            unique:true, label: "Le Livre du Chat Blanc",
-            aspects:
-            {text:1,auctionable:2,textphrygian:1},
-            description: "Histoires apportées à Pénélope de Gordion par un chat blanc aveugle.",
-			xtriggers: {scholarphrygian: bookwhitecat}
-        },
-
-				{
-        id: "focusambermandaic",
-            unique:true, label: "Le sujet de l'Ambre",
-            aspects:
-            {text:1,auctionable:2,textmandaic:1},
-            description: "Le travail de pénitence d'Omar, le Brasier.",
-			xtriggers: {scholarmandaic: focusamber}
-        },
-
-				{
-        id: "songscarapacecrossmandaic",
-            unique:true, label: "Les chants de la Croix de Carapace",
-            aspects:
-            {text:1,auctionable:2,textmandaic:1},
-            description: "Les oeuvres souvent perdues de Micah Xi.",
-			xtriggers: {scholarmandaic: songscarapacecross}
-        },
-						{
-        id: "originsofhoursvak",
-            unique:true, label: "Les Origines des Heures",
-            aspects:
-            {text:1,auctionable:2,textvak:1},
-            description: "Une oeuvre Vak qui peut contenir des rumeurs sur les différentes origines des dieux secrets.",
-			xtriggers: {scholarvak: originsofhours}
-        },
-						{
-        id: "wherehasshegonevak",
-            unique:true, label: "Où est-elle allée ?",
-            aspects:
-            {text:1,auctionable:2,textvak:1},
-            description: "Une discussion en Vak sur les voyages du Vagabond.",
-			xtriggers: {scholarvak: wherehasshegone}
-        },
-						{
-        id: "bookextinguishedheartmandaic",
-            unique:true, label: "Le Livre du Coeur éteint",
-            aspects:
-            {text:1,auctionable:2,textmandaic:1},
-            description: "Un livre de prophétie mélancolique.",
-			xtriggers: {scholarmandaic: bookextinguishedheart}
-        },
-						{
-        id: "howendwillbeginvak",
-            unique:true, label: "Comment la Fin va commencer",
-            aspects:
-            {text:1,auctionable:2,textvak:1},
-            description: "Un livre de sombres prophéties.",
-			xtriggers: {scholarvak: howendwillbegin}
-        },
-						{
-        id: "manneralchemistsparedvak",
-            unique:true, label: "La manière dont l'Alchimiste a été épargné",
-            aspects:
-            {text:1,auctionable:2,textvak:1},
-            description: "Un texte quasi-alchimique, en Vak.",
-			xtriggers: {scholarvak: manneralchemistspared}
-        },
-						{
-        id: "fivecreationsvak",
-            unique:true, label: "Cinq créations",
-            aspects:
-            {text:1,auctionable:2,textvak:1},
-            description: "Le chercheur itinérant Shohei a débattu de cinq origines possibles pour l'humanité avec une figure encapuchonnée depuis qu'elle prétend être le Corbeau-de-Plage. Shohei a plus tard affirmé que tous ces récits s'étaient révélés faux, mais le débat a néanmoins été consigné.",
-			xtriggers: {scholarvak: fivecreations}
-        },
-						{
-        id: "commandspreservationallexistsmandaic",
-            unique:true, label: "Commandements pour la préservation...",
-            aspects:
-            {text:1,auctionable:2,textmandaic:1},
-            description: "'Commandements pour la préservation de tout ce qui existe'. Black Elie, Matriarche damascène de la confrérie du Noeud, a été emprisonné par l'empereur Didius Julianus. Elle aurait ordonné que ces doctrines secrètes soient consignées par écrit pour éviter leur perte. Malheureusement, selon l'histoire, Didius Julianus aurait ordonné que l'oeuvre soit enterrée avec elle dans une sépulture anonyme.",
-			xtriggers: {scholarmandaic: commandspreservationallexists}
-        },
-						{
-        id: "timedivisionmandaic",
-            unique:true, label: "Le Temps de la Division",
-            aspects:
-            {text:1,auctionable:2,textmandaic:1},
-            description: "Dans laquelle Amira Zahra prophétise les événements connus plus tard sous le nom d'Intercalate, lorsque l'Heure appelée Soleil-en-Splendeur sera divisée.",
-			xtriggers: {scholarmandaic: timedivision}
-        },
-						{
-        id: "manualdeparturevak",
-            unique:true, label: "Un Manuel pour le départ",
-            aspects:
-            {text:1,auctionable:2,textvak:1},
-            description: "L'auteur, qui s'identifie comme le Jekadu, prétend être l'un des grands princes encapuchonnés du pays du fleuve.",
-			xtriggers: {scholarvak: manualdeparture}
-        },
-						{
-        id: "birdsongphrygian",
-            unique:true, label: "Inaam, Kapigiginlupir, Garkie, Cryppys",
-            aspects:
-            {text:1,auctionable:2,textphrygian:1},
-            description: "Dans lequel quatre personnages énigmatiques racontent les histoires qu'ils ont entendues au fil des ans au Perchoir, l'endroit secret où se réunissent les Heures aviformes.",
-			xtriggers: {scholarphrygian: birdsong}
-        },
-						{
-        id: "voyagesfofucine",
-            unique:true, label: "Les voyages de Ferninshun d'Oreol",
-            aspects:
-            {text:1,auctionable:2,textfucine:1},
-            description: "Les voyages impossibles d'un capitaine de mer de la fin de l'ère phénicienne. Supprimé tout au long de l'histoire : on dit que ceux qui l'ont lu ont disparu.",
-			xtriggers: {scholarfucine: voyagesfo }
-        },
-						{
-        id: "scarskyfucine",
-            unique:true, label: "La cicatrice dans le ciel",
-            aspects:
-            {text:1,auctionable:2,textfucine:1},
-            description: "Nyn a écrit ceci, et en est venu à le regretter.",
-			xtriggers: {scholarfucine: scarsky }
-        },
-
-]
-};
+{
+  "elements": [
+    {
+      "id": "dehoris1latin",
+      "unique": true,
+      "label": "De Horis (Livre 1)",
+      "aspects": {
+        "text": 1,
+        "auctionable": 1,
+        "textlatin": 1
+      },
+      "description": "En latin. Une réimpression du XIXe siècle (par l'infatigable Nathaniel Darcy-Evers) d'une traduction latine du XIVe siècle d'un ouvrage du IVe siècle.",
+      "xtriggers": {
+        "scholarlatin": "dehoris1"
+      }
+    },
+    {
+      "id": "dehoris2latin",
+      "unique": true,
+      "label": "De Horis (Livre 2)",
+      "aspects": {
+        "text": 1,
+        "auctionable": 1,
+        "textlatin": 1
+      },
+      "description": "En latin. Une réimpression du XIXe siècle (par l'infatigable Nathaniel Darcy-Evers) d'une traduction latine du XIVe siècle d'un ouvrage du IVe siècle.",
+      "xtriggers": {
+        "scholarlatin": "dehoris2"
+      }
+    },
+    {
+      "id": "debellismurorumlatin",
+      "unique": true,
+      "label": "De Bellis Murorum",
+      "aspects": {
+        "text": 1,
+        "auctionable": 1,
+        "textlatin": 1
+      },
+      "description": "En latin. Un poème épique du XVIIIe siècle du pseudonyme 'Solipsistos'.",
+      "xtriggers": {
+        "scholarlatin": "debellismurorum"
+      }
+    },
+    {
+      "id": "onwhatiscontainedbysilvergreek",
+      "unique": true,
+      "label": "Sur ce que renferme l'argent",
+      "aspects": {
+        "text": 1,
+        "auctionable": 1,
+        "textgreek": 1
+      },
+      "description": "Un bestiaire par 'Poemander'. en Grèc.",
+      "xtriggers": {
+        "scholargreek": "onwhatiscontainedbysilver"
+      }
+    },
+    {
+      "id": "truecompleteasclepiangreek",
+      "unique": true,
+      "label": "Un compte rendu fidèle et complet des mystères asclépiens des Origines de la Maison",
+      "aspects": {
+        "text": 1,
+        "auctionable": 1,
+        "textgreek": 1
+      },
+      "description": "Reproduit par l'illustre 'Rylee Grese' à partir - prétendument - d'un texte beaucoup plus ancien. En grec.",
+      "xtriggers": {
+        "scholargreek": "truecompleteasclepian"
+      }
+    },
+    {
+      "id": "orchidtransfigurations1latin",
+      "unique": true,
+      "label": "Les Transfigurations de l'Orchidée, Vol 1",
+      "aspects": {
+        "text": 1,
+        "auctionable": 1,
+        "textlatin": 1
+      },
+      "description": "Un rêve de fièvre alchimique du XVIe siècle, attribué à Robert Fludd, fréquemment interdit pour l'attrait troublant de ses illustrations. Il s'agit de l'original latin.",
+      "xtriggers": {
+        "scholarlatin": "orchidtransfigurations1"
+      }
+    },
+    {
+      "id": "orchidtransfigurations2latin",
+      "unique": true,
+      "label": "Les Transfigurations de l'Orchidée, Vol 2",
+      "aspects": {
+        "text": 1,
+        "auctionable": 1,
+        "textlatin": 1
+      },
+      "description": "Un rêve de fièvre alchimique du XVIe siècle, attribué à Robert Fludd, fréquemment interdit pour l'attrait troublant de ses illustrations. Il s'agit de l'original latin.",
+      "xtriggers": {
+        "scholarlatin": "orchidtransfigurations2"
+      }
+    },
+    {
+      "id": "orchidtransfigurations3latin",
+      "unique": true,
+      "label": "Les Transfigurations de l'Orchidée, Vol 3",
+      "aspects": {
+        "text": 1,
+        "auctionable": 1,
+        "textlatin": 1
+      },
+      "description": "Un rêve de fièvre alchimique du XVIe siècle, attribué à Robert Fludd, fréquemment interdit pour l'attrait troublant de ses illustrations. Il s'agit de l'original latin.",
+      "xtriggers": {
+        "scholarlatin": "orchidtransfigurations3"
+      }
+    },
+    {
+      "id": "geminiadfucine",
+      "unique": true,
+      "label": "Les Gémeaux",
+      "aspects": {
+        "knock": 2,
+        "tool": 1,
+        "text": 1,
+        "auctionable": 1,
+        "textfucine": 1
+      },
+      "xtriggers": {
+        "scholarfucine": "geminiad"
+      },
+      "description": "Un manuscrit fragile, enluminé de formes jumelées d'une triste et lumineuse beauté, et de toutes les phases de la lune. Il est peut-être aussi vieux que le VIIe siècle, mais la langue - Fucine - est beaucoup plus ancienne. Le corail qui orne sa couverture et les pages sont assez pointus pour trancher une gorge."
+    },
+    {
+      "id": "textbookfucinelatin",
+      "unique": true,
+      "label": "Le journal chiffré d'Alessandro LaCroce",
+      "aspects": {
+        "text": 1,
+        "auctionable": 1,
+        "textlatin": 1
+      },
+      "description": "Le prince Alessandro LaCroce a passé des années à étudier en secret les tablettes découvertes dans les marais de Fucine, dans le centre de l'Italie. Son travail vous permettra de lire les textes de Fucine... mais il est écrit selon un cryptogramme latin. Vous devrez d'abord le déchiffrer.",
+      "xtriggers": {
+        "scholarlatin": "textbookfucine"
+      }
+    },
+    {
+      "id": "textbookphrygiangreek",
+      "unique": true,
+      "label": "Les inscriptions de Velshorn",
+      "aspects": {
+        "text": 1,
+        "auctionable": 1,
+        "textgreek": 1
+      },
+      "description": "Des centaines de vers identiques dans la poésie grecque et phrygienne, copiés d'un mur. Similaire - ou identique - aux inscriptions que Cal Velshorn a découvertes dans Halicarnasse. [Si vous parlez grec, vous pouvez l'utiliser comme clé de la poésie phrygienne.]",
+      "xtriggers": {
+        "scholargreek": "textbookphrygian"
+      }
+    },
+    {
+      "id": "textbookmandaicaramaic",
+      "unique": true,
+      "label": "La pierre d'août",
+      "aspects": {
+        "text": 1,
+        "auctionable": 1,
+        "textaramaic": 1
+      },
+      "description": "Un énorme bol, grand comme un gong, sculpté dans du basalte noir, avec des incantations correspondantes en araméen et en mandéen. [Si vous parlez l'araméen, vous pouvez l'utiliser comme clé du mandaïque.]",
+      "xtriggers": {
+        "scholararamaic": "textbookmandaic"
+      }
+    },
+    {
+      "id": "textbookvaksanskrit",
+      "unique": true,
+      "label": "Une sculpture énigmatique",
+      "aspects": {
+        "text": 1,
+        "auctionable": 1,
+        "textsanskrit": 1
+      },
+      "description": "Une sculpture en ivoire élaborée d'une complexité impossible. Autour et à travers ses surfaces, des inscriptions en sanskrit s'enroulent en spirale contre des lignes de Vak correspondantes. Si vous parlez sanskrit, vous pouvez l'utiliser pour apprendre le vak, la première langue du monde.]",
+      "xtriggers": {
+        "scholarsanskrit": "textbookvak"
+      }
+    },
+    {
+      "id": "irreproachabletraditionssocietynobleendeavourlatin",
+      "unique": true,
+      "label": "Les traditions irréprochables...",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textlatin": 1
+      },
+      "description": "Les traditions irréprochables de la Société de la Haute Oeuvre. En latin.",
+      "xtriggers": {
+        "scholarlatin": "irreproachabletraditionssocietynobleendeavour"
+      }
+    },
+    {
+      "id": "roseofnurielgreek",
+      "unique": true,
+      "label": "La Rose de Nuriel",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textgreek": 1
+      },
+      "description": "Marqué du triple signe de l'ordre contemplatif des arcanes connu sous le nom de Sororité du Noeud. En grec.",
+      "xtriggers": {
+        "scholargreek": "roseofnuriel"
+      }
+    },
+    {
+      "id": "roseofhypatiagreek",
+      "unique": true,
+      "label": "La Rose d'Hypatia",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textgreek": 1
+      },
+      "description": "Marqué du triple signe de l'ordre contemplatif des arcanes connu sous le nom de Sororité du Noeud. En grec.",
+      "xtriggers": {
+        "scholargreek": "roseofhypatia"
+      }
+    },
+    {
+      "id": "roseofwazneigreek",
+      "unique": true,
+      "label": "La Rose de Waznei",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textgreek": 1
+      },
+      "description": "Marqué du signe triple de l'arcane de l'ordre contemplatif connu sous le nom de Sororité du Noeud... mais un quatrième feuillet a été ajoutée, défigurant le signe. En grec.",
+      "xtriggers": {
+        "scholargreek": "roseofwaznei"
+      }
+    },
+    {
+      "id": "sunsetpassageslatin",
+      "unique": true,
+      "label": "Chemins du crépuscule",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textlatin": 1
+      },
+      "description": "Un texte sacré de l'Eglise du Soleil Inconquis, qui dans de nombreuses histoires a été poussé dans la clandestinité. En latin.",
+      "xtriggers": {
+        "scholarlatin": "sunsetpassages"
+      }
+    },
+    {
+      "id": "gospelzacchaeusgreek",
+      "unique": true,
+      "label": "L'Évangile de Zacchaeus",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textgreek": 1
+      },
+      "description": "Un ancien texte chrétien perdu ? C'est en grec.",
+      "xtriggers": {
+        "scholargreek": "gospelzacchaeus"
+      }
+    },
+    {
+      "id": "matthiasamethystlossaramaic",
+      "unique": true,
+      "label": "Sur Matthias et l'Imago d'Améthyste : Perte",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textaramaic": 1
+      },
+      "description": "Les diagrammes et les illustrations, même à travers les siècles, sont élégants, hypnotiques, parfois érotiques. En Araméen.",
+      "xtriggers": {
+        "scholararamaic": "matthiasamethystloss"
+      }
+    },
+    {
+      "id": "matthiasamethysttransformationaramaic",
+      "unique": true,
+      "label": "Sur Matthias et l'Imago d'Améthyste : Transformation",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textaramaic": 1
+      },
+      "description": "Les diagrammes et les illustrations, même à travers les siècles, sont élégants, hypnotiques, parfois érotiques. En Araméen.",
+      "xtriggers": {
+        "scholararamaic": "matthiasamethysttransformation"
+      }
+    },
+    {
+      "id": "matthiasamethystpursuitaramaic",
+      "unique": true,
+      "label": "Sur Matthias et l'Imago d'Améthyste : Poursuite",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textaramaic": 1
+      },
+      "description": "Les diagrammes et les illustrations, même à travers les siècles, sont élégants, hypnotiques, parfois érotiques. En Araméen.",
+      "xtriggers": {
+        "scholararamaic": "matthiasamethystpursuit"
+      }
+    },
+    {
+      "id": "franklinbancroftdiarieslatin",
+      "unique": true,
+      "label": "Lord Franklin Bancroft: Carnets, 1750-1790",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textlatin": 1
+      },
+      "description": "Le célèbre journal d'un homme notoire, écrit en latin, sans doute par souci de sécurité.",
+      "xtriggers": {
+        "scholarlatin": "franklinbancroftdiaries"
+      }
+    },
+    {
+      "id": "indignitiesobliviatelatin",
+      "unique": true,
+      "label": "Les indignités perpétrées par la fraternité fallacieuse des Oubliés",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textlatin": 1
+      },
+      "description": "Ce livre est aussi célèbre pour la fureur presque incohérente de son ton que pour les connaissances qu'il contient. En latin.",
+      "xtriggers": {
+        "scholarlatin": "indignitiesobliviate"
+      }
+    },
+    {
+      "id": "furioustantrasanskrit",
+      "unique": true,
+      "label": "Le Tantra féroce",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textsanskrit": 1
+      },
+      "description": "Tel que transcrit plus tard par le médium et pyrotechnicien Jacob Oliver Topp-Mugglestone. La tradition veut qu'il l'ait trouvé dans l'écorce d'un chêne brûlé par la foudre.",
+      "xtriggers": {
+        "scholarsanskrit": "furioustantra"
+      }
+    },
+    {
+      "id": "devouredtantrasanskrit",
+      "unique": true,
+      "label": "Le Tantra dévoré",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textsanskrit": 1
+      },
+      "description": "Le prêtre-diplomate Stanislav John Schaller l'a transcrit de la bibliothèque de Red Long, mais son manuscrit reste dans une collection privée à Kerisham.",
+      "xtriggers": {
+        "scholarsanskrit": "devouredtantra"
+      }
+    },
+    {
+      "id": "ceaselesstantrasanskrit",
+      "unique": true,
+      "label": "Le Tantra inlassable",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textsanskrit": 1
+      },
+      "description": "Le chorégraphe d'avant-garde Nicholas Keirle aurait incorporé ce tantra dans ses ballets menaçants.",
+      "xtriggers": {
+        "scholarsanskrit": "ceaselesstantra"
+      }
+    },
+    {
+      "id": "knownunknowntantrasanskrit",
+      "unique": true,
+      "label": "Le Tantra connu et inconnu",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textsanskrit": 1
+      },
+      "description": "Carlos Garcia Sauri, le mystique extatique des Pyrénées, était connu pour réciter cela en trois langues, bien qu'il n'ait jamais visité le sous-continent.",
+      "xtriggers": {
+        "scholarsanskrit": "knownunknowntantra"
+      }
+    },
+    {
+      "id": "encirclingtantrasanskrit",
+      "unique": true,
+      "label": "Le Tantra qui encercle",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textsanskrit": 1
+      },
+      "description": "L'explorateur et entrepreneur T. Everett Duplantis a un jour tenté de piller le temple où se trouvait ce texte. Son sort est consigné dans une annexe.",
+      "xtriggers": {
+        "scholarsanskrit": "encirclingtantra"
+      }
+    },
+    {
+      "id": "shavenlocktantrasanskrit",
+      "unique": true,
+      "label": "Le Tantra de la mèche rasée",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textsanskrit": 1
+      },
+      "description": "Aussi connu sous le nom de 'Celui qui s'est rasé les cheveux'. Selon l'histoire, c'est la croyance que même les Vanaras, qui ont changé de forme, ont rejetée.",
+      "xtriggers": {
+        "scholarsanskrit": "shavenlocktantra"
+      }
+    },
+    {
+      "id": "tantrawormssanskrit",
+      "unique": true,
+      "label": "Le Tantra des Vers",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textsanskrit": 1
+      },
+      "description": "L'entomologiste Juliana Zawistowski a fini par insister sur le fait que ce texte a été écrit par des insectes habitant une peau humaine. Elle n'a jamais présenté de preuves à l'appui de sa thèse.",
+      "xtriggers": {
+        "scholarsanskrit": "tantraworms"
+      }
+    },
+    {
+      "id": "bookofcentipedegreek",
+      "unique": true,
+      "label": "Le livre du Mille-Pattes",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textgreek": 1
+      },
+      "description": "Au milieu des années 1860, une 'Madame Yi' a présenté un divertissement basé, selon elle, sur ce livre.",
+      "xtriggers": {
+        "scholargreek": "bookofcentipede"
+      }
+    },
+    {
+      "id": "accountkanishkspidersdooraramaic",
+      "unique": true,
+      "label": "Le compte de Kanishk à la Porte de l'Araignée",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textaramaic": 1
+      },
+      "description": "Lok Kahuli, la victime et l'amant de Kanishk, a écrit ce récit, peut-être à titre posthume.",
+      "xtriggers": {
+        "scholararamaic": "accountkanishkspidersdoor"
+      }
+    },
+    {
+      "id": "vinzantinscriptionsphrygian",
+      "unique": true,
+      "label": "Les inscriptions de Vinzant",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textphrygian": 1
+      },
+      "description": "Everett Vinzant a retranscrit ces incriptions phrygiennes depuis une falaise d'Anatolie, où il a survécu à un éclair. Il est mort sept ans plus tard, jour pour jour. Ses os, selon la légende, étaient chauds au toucher.",
+      "xtriggers": {
+        "scholarphrygian": "vinzantinscriptions"
+      }
+    },
+    {
+      "id": "larquebinecodexphrygian",
+      "unique": true,
+      "label": "Le Codex Larquebin",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textphrygian": 1
+      },
+      "description": "Christoph Larquebus a affirmé avoir acheté deux exemplaires manuscrits du Codex, dans la langue phrygienne prétendument éteinte, à une famille de sorcières sur les rives de la mer de Marmara. Un troisième exemplaire a été 'donné à la mer'.",
+      "xtriggers": {
+        "scholarphrygian": "larquebinecodex"
+      }
+    },
+    {
+      "id": "againstsisterhoodknotgreek",
+      "unique": true,
+      "label": "Contre la sororité du Noeud et...",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textgreek": 1
+      },
+      "description": "'Contre la Sororité du Noeud et la folie de leurs coutumes dépravées'. Hieronymus Pseudo-Hypnerotomachus a écrit ce discours furieux sur l'influence sinistre de la communauté des Soeurs sur sa propre Eglise du Soleil Inconquis.",
+      "xtriggers": {
+        "scholargreek": "againstsisterhoodknot"
+      }
+    },
+    {
+      "id": "morphycodexaramaic",
+      "unique": true,
+      "label": "Le Codex de Morphy",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textaramaic": 1
+      },
+      "description": "Un texte de la Sororité du Noeud, déterré par Evan Morphy.",
+      "xtriggers": {
+        "scholararamaic": "morphycodex"
+      }
+    },
+    {
+      "id": "leoninetantrasanskrit",
+      "unique": true,
+      "label": "Le Tantra Léonin",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textsanskrit": 1
+      },
+      "description": "Dans la traduction la plus célèbre du Tantra Léonin, Ashley Phillips est citée comme traductrice, mais son existence est explicitement niée dans le prologue. Cette confusion est caractéristique des livres qui mentionnent les Grands Princes encapuchonnés.",
+      "xtriggers": {
+        "scholarsanskrit": "leoninetantra"
+      }
+    },
+    {
+      "id": "incandescenttantrasanskrit",
+      "unique": true,
+      "label": "Le Tantra incandescent",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textsanskrit": 1
+      },
+      "description": "Michael Blockley, l'excentrique magnat du fer, aimait à citer ce tantra. Blockley est mort dans l'incendie d'une usine.",
+      "xtriggers": {
+        "scholarsanskrit": "incandescenttantra"
+      }
+    },
+    {
+      "id": "thirstingtantrasanskrit",
+      "unique": true,
+      "label": "Le Tantra assoiffé",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textsanskrit": 1
+      },
+      "description": "C.G. Burial, le militant de la tempérance, en a publié des éléments dans un pamphlet, qui a dû être retiré et détruit après qu'il soit devenu trop populaire.",
+      "xtriggers": {
+        "scholarsanskrit": "thirstingtantra"
+      }
+    },
+    {
+      "id": "flayedtantrasanskrit",
+      "unique": true,
+      "label": "Le Tantra écorché",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textsanskrit": 1
+      },
+      "description": "Ce Tantra est consigné comme étant parlé par un individu énigmatique identifié comme 'Peel', avec beaucoup des qualités du naga mythologique. Le Tantra écorché a joué un rôle notable dans la pamphlétisation paranoïaque d'Alexander Sparrow.",
+      "xtriggers": {
+        "scholarsanskrit": "flayedtantra"
+      }
+    },
+    {
+      "id": "watchfultantrasanskrit",
+      "unique": true,
+      "label": "Le Tantra vigilant",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textsanskrit": 1
+      },
+      "description": "Elle est connue pour son implication dans la mort de Dafyd Jones et de Meredith Blaine, deux physiciens de la première heure qui prétendaient chacun posséder l'unique exemplaire et qui se sont finalement battus en duel à son sujet en 1840.",
+      "xtriggers": {
+        "scholarsanskrit": "watchfultantra"
+      }
+    },
+    {
+      "id": "twinserpenttantrasanskrit",
+      "unique": true,
+      "label": "Le Tantra des serpents jumeaux",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textsanskrit": 1
+      },
+      "description": "Un tantra enveloppé d'une obscurité particulière.",
+      "xtriggers": {
+        "scholarsanskrit": "twinserpenttantra"
+      }
+    },
+    {
+      "id": "firecircletantrasanskrit",
+      "unique": true,
+      "label": "Le Tantra du cercle de feu",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textsanskrit": 1
+      },
+      "description": "La seule copie connue de ce document en Europe occidentale a été volée à la British Library en 1892. Un certain Harvey Hattington a avoué le crime et a prétendu l'avoir mangé, avec du beurre et de l'ail, dans un moment de caprice ingénieux.",
+      "xtriggers": {
+        "scholarsanskrit": "firecircletantra"
+      }
+    },
+    {
+      "id": "asthesunhiscoursearamaic",
+      "unique": true,
+      "label": "Le soleil, sa course",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textaramaic": 1
+      },
+      "description": "Joël du Pont, un soldat à la retraite et parfois gardien de péage, a écrit ce poème épique sur la décision fameusement inexplicable d'Alexandre d'Issus de se retirer de la guerre avec les Achéménides, et son retour ultérieur en Macédoine.",
+      "xtriggers": {
+        "scholararamaic": "asthesunhiscourse"
+      }
+    },
+    {
+      "id": "concursumdiariesphrygian",
+      "unique": true,
+      "label": "Les Chroniques du Concursum",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textphrygian": 1
+      },
+      "description": "Les journaux intimes de l'explorateur et meurtrier Lars Westergren. Il les a traduits en phrygien, pour des raisons de confidentialité.",
+      "xtriggers": {
+        "scholarphrygian": "concursumdiaries"
+      }
+    },
+    {
+      "id": "ironbookfucine",
+      "unique": true,
+      "label": "Le Livre de fer",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textfucine": 1
+      },
+      "description": "Un manuel de l'Ordo Limiae, un ordre de quasi-immortels qui maintenait une enclave secrète à la source du fleuve Limia, dans la province romaine d'Hispanie Gallaecia.",
+      "xtriggers": {
+        "scholarfucine": "ironbook"
+      }
+    },
+    {
+      "id": "silverbookfucine",
+      "unique": true,
+      "label": "Le Livre d'argent",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textfucine": 1
+      },
+      "description": "Un manuel de l'Ordo Limiae, un ordre de quasi-immortels qui maintenait une enclave secrète à la source du fleuve Limia, dans la province romaine d'Hispanie Gallaecia.",
+      "xtriggers": {
+        "scholarfucine": "silverbook"
+      }
+    },
+    {
+      "id": "ivorybookfucine",
+      "unique": true,
+      "label": "Le Livre d'ivoire",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textfucine": 1
+      },
+      "description": "Un manuel de l'Ordo Limiae, un ordre de quasi-immortels qui maintenait une enclave secrète à la source du fleuve Limia, dans la province romaine d'Hispanie Gallaecia.",
+      "xtriggers": {
+        "scholarfucine": "ivorybook"
+      }
+    },
+    {
+      "id": "worlddoesnotweeparamaic",
+      "unique": true,
+      "label": "Le Monde ne pleure pas",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textaramaic": 1
+      },
+      "description": "Joshua 'Brown' a trouvé ceci dans un puits à Hamath. On raconte qu'il a été abandonné par Alexandre lors de sa retraite d'Issus.",
+      "xtriggers": {
+        "scholararamaic": "worlddoesnotweep"
+      }
+    },
+    {
+      "id": "deedsofthescarredcaptaingreek",
+      "unique": true,
+      "label": "Les Exploits du capitaine balafré",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textgreek": 1
+      },
+      "description": "Assemblage minutieux par le soldat de fortune et ancien expéditeur de fonds, Pavel Shulga, pendant ses années en Grèce.",
+      "xtriggers": {
+        "scholargreek": "deedsofthescarredcaptain"
+      }
+    },
+    {
+      "id": "bookofdissolutionmandaic",
+      "unique": true,
+      "label": "Le Livre de la Dissolution",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textmandaic": 1
+      },
+      "description": "Alexander Probst, suivant le travail fondateur de Hosty Moor, a récupéré une copie de ce travail dans un temple de montagne en Perse. D'autres copies font surface de temps en temps, généralement fixées sur la roche.",
+      "xtriggers": {
+        "scholarmandaic": "bookofdissolution"
+      }
+    },
+    {
+      "id": "catalogueofunchartedpleasuresphrygian",
+      "unique": true,
+      "label": "Un catalogue de plaisirs inexplorés",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textphrygian": 1
+      },
+      "description": "'Le gentilhomme noir' est le seul, et plutôt grandiose, auteur identifié de cette oeuvre souvent copiée.",
+      "xtriggers": {
+        "scholarphrygian": "catalogueofunchartedpleasures"
+      }
+    },
+    {
+      "id": "thosewhodonotsleepfucine",
+      "unique": true,
+      "label": "Ceux qui ne dorment pas",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textfucine": 1
+      },
+      "description": "Un texte de Fucine attribué au mystique Brodnax.",
+      "xtriggers": {
+        "scholarfucine": "thosewhodonotsleep"
+      }
+    },
+    {
+      "id": "theskythesoularamaic",
+      "unique": true,
+      "label": "Le ciel, l'âme",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textaramaic": 1
+      },
+      "description": "Le grand travail de Kalle, poète ascétique écrivant à la cour des Rois sans ombre.",
+      "xtriggers": {
+        "scholararamaic": "theskythesoul"
+      }
+    },
+    {
+      "id": "onthematterandthedeedsofserpentsvak",
+      "unique": true,
+      "label": "Sur les affaires et les agissements des serpents",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textvak": 1
+      },
+      "description": "Il s'agit probablement des 'Prophéties du Naga', traduites en anglais et illustrées par 'William Midnight' à Paris dans les années 1880, mais il présente un certain nombre de divergences par rapport à ce texte. Il semble assez récent par rapport aux textes du Vak.",
+      "xtriggers": {
+        "scholarvak": "onthematterandthedeedsofserpents"
+      }
+    },
+    {
+      "id": "serenityofblackwoodgreek",
+      "unique": true,
+      "label": "La sérénité de la Forêt-Noire",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textgreek": 1
+      },
+      "description": "Une histoire allégorique de la Maison du Léthé, dont il est ici question, a été inspirée par le Mille-Pattes. 'Sereno Blackwood' est un pseudonyme occulte jusqu'à aujourd'hui.",
+      "xtriggers": {
+        "scholargreek": "serenityofblackwood"
+      }
+    },
+    {
+      "id": "bookofthronesphrygian",
+      "unique": true,
+      "label": "Le Livre des Trônes",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textphrygian": 1
+      },
+      "description": "Une légende de l'Empire sans ombre, transcrite par Alexander Peterhans à partir des annales d'un sanctuaire secret en Anatolie.",
+      "xtriggers": {
+        "scholarphrygian": "bookofthrones"
+      }
+    },
+    {
+      "id": "secondglorymandaic",
+      "unique": true,
+      "label": "Une seconde Gloire",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textmandaic": 1
+      },
+      "description": "Un ouvrage de Juceh, le prêtre et le savant ermite.",
+      "xtriggers": {
+        "scholarmandaic": "secondglory"
+      }
+    },
+    {
+      "id": "bookoftruebloodlatin",
+      "unique": true,
+      "label": "Le livre du Vrai Sang",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textlatin": 1
+      },
+      "description": "Une oeuvre de Cassius le Thoman.",
+      "xtriggers": {
+        "scholarlatin": "bookoftrueblood"
+      }
+    },
+    {
+      "id": "burningwomanphrygian",
+      "unique": true,
+      "label": "La Femme qui brûle",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textphrygian": 1
+      },
+      "description": "Une transcription en phrygien de la pièce de Menander le Victor, peut-être le dramaturge du même nom, avec commentaires.",
+      "xtriggers": {
+        "scholarphrygian": "burningwoman"
+      }
+    },
+    {
+      "id": "twentysixenticementsseventormentsfucine",
+      "unique": true,
+      "label": "Vingt-six incitations, sept tourments",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textfucine": 1
+      },
+      "description": "Le peintre Niels Frederik Malskaer, a notoirement tenté une série de peintures basées sur les Tourments. Au Cinquième Supplice, les exigences de la peinture étaient devenues si terribles qu'il est mort d'une hémorragie. Les diagrammes de ce texte sont heureusement moins détaillés.",
+      "xtriggers": {
+        "scholarfucine": "twentysixenticementsseventorments"
+      }
+    },
+    {
+      "id": "historyofshadowlesskingsaramaic",
+      "unique": true,
+      "label": "Une histoire vraie et précise des Rois sans ombre",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textaramaic": 1
+      },
+      "description": "Isaac de l'histoire de l'Empire sans ombre de Karth.",
+      "xtriggers": {
+        "scholararamaic": "historyofshadowlesskings"
+      }
+    },
+    {
+      "id": "highmysterieschurchsolarfucine",
+      "unique": true,
+      "label": "Les Grands Mystères de la Chambre...",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textfucine": 1
+      },
+      "description": "'Les Grands Mystères de la Chambre Intérieure de notre Eglise Solaire'. Les rites secrets de l'Eglise du Soleil Inconquis, qui a détenu le pouvoir dans au moins deux Histoires.",
+      "xtriggers": {
+        "scholarfucine": "highmysterieschurchsolar"
+      }
+    },
+    {
+      "id": "medusaslamentgreek",
+      "unique": true,
+      "label": "La complainte de Méduse",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textgreek": 1
+      },
+      "description": "A la mort de l'Heure appelée Sept Spirales, 'le Père de la Mère'.",
+      "xtriggers": {
+        "scholargreek": "medusaslament"
+      }
+    },
+    {
+      "id": "bookofmasksphrygian",
+      "unique": true,
+      "label": "Le Livre des Masques",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textphrygian": 1
+      },
+      "description": "L'oeuvre d'Athéna Vana sur l'Heure scélérate appelée le Vagabond.",
+      "xtriggers": {
+        "scholarphrygian": "bookofmasks"
+      }
+    },
+    {
+      "id": "inthemountainsasupontheplainvak",
+      "unique": true,
+      "label": "Dans les montagnes comme dans la plaine...",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textvak": 1
+      },
+      "description": "'Dans les montagnes comme dans la plaine, il peut ne pas y avoir de chemin là où aucun n'est passé.' Une oeuvre de Ninegala de Lagash.",
+      "xtriggers": {
+        "scholarvak": "inthemountainsasupontheplain"
+      }
+    },
+    {
+      "id": "memoryofgodsfucine",
+      "unique": true,
+      "label": "En mémoire des Dieux",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textfucine": 1
+      },
+      "description": "Une oeuvre de 'l'enfant de Barrow', un adepte gaulois anonyme qui a rejoint une organisation connue sous le nom d'Ordo Limiae.",
+      "xtriggers": {
+        "scholarfucine": "memoryofgods"
+      }
+    },
+    {
+      "id": "sevenfoldslayingsevencoiledfucine",
+      "unique": true,
+      "label": "Le septuple massacre des sept Spirales",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textfucine": 1
+      },
+      "description": "Un récit de la destruction d'une Heure primordiale, un dieu-qui-fut-pierre.",
+      "xtriggers": {
+        "scholarfucine": "sevenfoldslayingsevencoiled"
+      }
+    },
+    {
+      "id": "bighufffucine",
+      "unique": true,
+      "label": "Mes Actions, mes Pouvoirs, mes Réalisations...",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textfucine": 1
+      },
+      "description": "'Mes actions, mes pouvoirs, mes réalisations et les injustices commises à mon égard'",
+      "xtriggers": {
+        "scholarfucine": "bighuff"
+      }
+    },
+    {
+      "id": "dreamconspiracyskiesphrygian",
+      "unique": true,
+      "label": "Le rêve de la conspiration du Ciel inférieur",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textphrygian": 1
+      },
+      "description": "Passage au crible de l'oracle disgracié Damaon Azenaten.",
+      "xtriggers": {
+        "scholarphrygian": "dreamconspiracyskies"
+      }
+    },
+    {
+      "id": "bookwhitecatphrygian",
+      "unique": true,
+      "label": "Le Livre du Chat Blanc",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textphrygian": 1
+      },
+      "description": "Histoires apportées à Pénélope de Gordion par un chat blanc aveugle.",
+      "xtriggers": {
+        "scholarphrygian": "bookwhitecat"
+      }
+    },
+    {
+      "id": "focusambermandaic",
+      "unique": true,
+      "label": "Le sujet de l'Ambre",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textmandaic": 1
+      },
+      "description": "Le travail de pénitence d'Omar, le Brasier.",
+      "xtriggers": {
+        "scholarmandaic": "focusamber"
+      }
+    },
+    {
+      "id": "songscarapacecrossmandaic",
+      "unique": true,
+      "label": "Les chants de la Croix de Carapace",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textmandaic": 1
+      },
+      "description": "Les oeuvres souvent perdues de Micah Xi.",
+      "xtriggers": {
+        "scholarmandaic": "songscarapacecross"
+      }
+    },
+    {
+      "id": "originsofhoursvak",
+      "unique": true,
+      "label": "Les Origines des Heures",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textvak": 1
+      },
+      "description": "Une oeuvre Vak qui peut contenir des rumeurs sur les différentes origines des dieux secrets.",
+      "xtriggers": {
+        "scholarvak": "originsofhours"
+      }
+    },
+    {
+      "id": "wherehasshegonevak",
+      "unique": true,
+      "label": "Où est-elle allée ?",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textvak": 1
+      },
+      "description": "Une discussion en Vak sur les voyages du Vagabond.",
+      "xtriggers": {
+        "scholarvak": "wherehasshegone"
+      }
+    },
+    {
+      "id": "bookextinguishedheartmandaic",
+      "unique": true,
+      "label": "Le Livre du Coeur éteint",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textmandaic": 1
+      },
+      "description": "Un livre de prophétie mélancolique.",
+      "xtriggers": {
+        "scholarmandaic": "bookextinguishedheart"
+      }
+    },
+    {
+      "id": "howendwillbeginvak",
+      "unique": true,
+      "label": "Comment la Fin va commencer",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textvak": 1
+      },
+      "description": "Un livre de sombres prophéties.",
+      "xtriggers": {
+        "scholarvak": "howendwillbegin"
+      }
+    },
+    {
+      "id": "manneralchemistsparedvak",
+      "unique": true,
+      "label": "La manière dont l'Alchimiste a été épargné",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textvak": 1
+      },
+      "description": "Un texte quasi-alchimique, en Vak.",
+      "xtriggers": {
+        "scholarvak": "manneralchemistspared"
+      }
+    },
+    {
+      "id": "fivecreationsvak",
+      "unique": true,
+      "label": "Cinq créations",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textvak": 1
+      },
+      "description": "Le chercheur itinérant Shohei a débattu de cinq origines possibles pour l'humanité avec une figure encapuchonnée depuis qu'elle prétend être le Corbeau-de-Plage. Shohei a plus tard affirmé que tous ces récits s'étaient révélés faux, mais le débat a néanmoins été consigné.",
+      "xtriggers": {
+        "scholarvak": "fivecreations"
+      }
+    },
+    {
+      "id": "commandspreservationallexistsmandaic",
+      "unique": true,
+      "label": "Commandements pour la préservation...",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textmandaic": 1
+      },
+      "description": "'Commandements pour la préservation de tout ce qui existe'. Black Elie, Matriarche damascène de la confrérie du Noeud, a été emprisonné par l'empereur Didius Julianus. Elle aurait ordonné que ces doctrines secrètes soient consignées par écrit pour éviter leur perte. Malheureusement, selon l'histoire, Didius Julianus aurait ordonné que l'oeuvre soit enterrée avec elle dans une sépulture anonyme.",
+      "xtriggers": {
+        "scholarmandaic": "commandspreservationallexists"
+      }
+    },
+    {
+      "id": "timedivisionmandaic",
+      "unique": true,
+      "label": "Le Temps de la Division",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textmandaic": 1
+      },
+      "description": "Dans laquelle Amira Zahra prophétise les événements connus plus tard sous le nom d'Intercalate, lorsque l'Heure appelée Soleil-en-Splendeur sera divisée.",
+      "xtriggers": {
+        "scholarmandaic": "timedivision"
+      }
+    },
+    {
+      "id": "manualdeparturevak",
+      "unique": true,
+      "label": "Un Manuel pour le départ",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textvak": 1
+      },
+      "description": "L'auteur, qui s'identifie comme le Jekadu, prétend être l'un des grands princes encapuchonnés du pays du fleuve.",
+      "xtriggers": {
+        "scholarvak": "manualdeparture"
+      }
+    },
+    {
+      "id": "birdsongphrygian",
+      "unique": true,
+      "label": "Inaam, Kapigiginlupir, Garkie, Cryppys",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textphrygian": 1
+      },
+      "description": "Dans lequel quatre personnages énigmatiques racontent les histoires qu'ils ont entendues au fil des ans au Perchoir, l'endroit secret où se réunissent les Heures aviformes.",
+      "xtriggers": {
+        "scholarphrygian": "birdsong"
+      }
+    },
+    {
+      "id": "voyagesfofucine",
+      "unique": true,
+      "label": "Les voyages de Ferninshun d'Oreol",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textfucine": 1
+      },
+      "description": "Les voyages impossibles d'un capitaine de mer de la fin de l'ère phénicienne. Supprimé tout au long de l'histoire : on dit que ceux qui l'ont lu ont disparu.",
+      "xtriggers": {
+        "scholarfucine": "voyagesfo"
+      }
+    },
+    {
+      "id": "scarskyfucine",
+      "unique": true,
+      "label": "La cicatrice dans le ciel",
+      "aspects": {
+        "text": 1,
+        "auctionable": 2,
+        "textfucine": 1
+      },
+      "description": "Nyn a écrit ceci, et en est venu à le regretter.",
+      "xtriggers": {
+        "scholarfucine": "scarsky"
+      }
+    }
+  ]
+}

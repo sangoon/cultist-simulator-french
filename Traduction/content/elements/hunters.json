@@ -1,101 +1,199 @@
-{"elements":
-    [
-		 {
-        id: "investigator1",
-            label: "Inspecteur Wakefield",
-            aspects:
-            {hunter:1,mortal:1,meticulous:1,grim:1},
-            description: "Zachary Wakefield : un inspecteur de police mélancolique, mais sans remords. Il a récemment été détaché au Bureau de la répression.",
-unique:true,
-xtriggers: {killmortal:corpse,killhunter:corpse,derangemortal:zachary_r_c,capturehunter:investigator1prisoner,dissolution:influencewintere}
-        },
-						 {
-        id: "investigator2",
-            label: "Spencer Hobson",
-            aspects:
-            {hunter:1,mortal:1,mystic:1,erratic:1},
-            description: "Hobson a été journaliste, détective privé et, assez brièvement, prêtre. Maintenant, il est agent du Bureau de la répression.",
-unique:true,
-xtriggers: {killmortal:corpse,killhunter:corpse,derangemortal:spencer_r_c,capturehunter:investigator2prisoner,dissolution:influenceknocke}
-        },
-				 {
-        id: "investigator3",
-            label: "Connie Lee",
-            aspects:
-            {hunter:1,mortal:1,tenacious:1,mystic:1},
-            description: "L'héritière, suffragette et aventurière. Elle a récemment mis ses enthousiasmes chimériques et sa fortune considérable au service du Bureau de la répression.",
-unique:true,
-xtriggers: {killmortal:corpse,killhunter:corpse,derangemortal:connie_r_c,capturehunter:investigator3prisoner,dissolution:influenceedgee}
-        },
-		
-						 {
-        id: "investigator4",
-            label: "Docteur Natalia Dragon",
-            aspects:
-            {hunter:1,mortal:1,idealist:1,meticulous:1},
-            description: "Le monde universitaire se moquait d'elle pour ses études des chroniques alternatives, et cela ne faisait que la rendre plus déterminée. Aujourd'hui, elle travaille au Bureau de la répression.",
-unique:true,
-xtriggers: {killmortal:corpse,killhunter:corpse,derangemortal:natalia_r_c,capturehunter:investigator4prisoner,dissolution:influencelanterne}
-        },
-				 {
-        id: "defaulthunter",
-            label: "Détective fatigué",
-            aspects:
-            {hunter:1,mortal:1},
-            description: "Ce monsieur préférerait de loin qu'on le laisse seul avec sa pipe et son London News illustré, mais non, <i>apparemment</i> il faut traquer comme un chien enragé les abominations conjurés, et <i>apparemment</i> personne d'autre n'en a le temps.",
-xtriggers: {killmortal:corpse,killhunter:corpse,derangemortal:douglas_r,capturehunter:defaulthunterprisoner,dissolution:influenceforgec}
-        },
-		
-				 {
-        id: "investigator1prisoner",
-            label: "Inspecteur Wakefield : Capturé !",
-            aspects:
-            {mortal:1,prisoner:1,lantern:3,grail:3,heart:3,winter:4},
-            description: "Zachary Wakefield : un inspecteur de police mélancolique, mais sans remords. Soyons sûrs qu'il mourra en captivité.",
-unique:true,
-xtriggers: {killmortal:corpse,derangemortal:zachary_r_c,dissolution:influencewintere},
-lifetime:600,decayTo:"corpse"
-        },
-								 {
-        id: "investigator2prisoner",
-            label: "Spencer Hobson: Capturé !",
-            aspects:
-            {prisoner:1,mortal:1,lantern:3,grail:3,heart:3,knock:3},
-              description: "Hobson a été journaliste, détective privé et, assez brièvement, prêtre. Soyons sûrs qu'il mourra en captivité.",
-unique:true,
-xtriggers: {killmortal:corpse,derangemortal:spencer_r_c,dissolution:influenceknocke},
-lifetime:600,decayTo:"corpse"
-        },
-		
-						 {
-        id: "investigator3prisoner",
-            label: "Connie Lee: Capturée !",
-            aspects:
-            {prisoner:1,mortal:1,lantern:3,grail:3,heart:3,edge:3},
-            description: "L'héritière, suffragette et aventurière. Soyons sûrs qu'elle mourra en captivité.",
-unique:true,
-xtriggers: {killmortal:corpse,derangemortal:connie_r_c,dissolution:influenceedgee},
-lifetime:600,decayTo:"corpse"
-        },
-		
-						 {
-        id: "investigator4prisoner",
-            label: "Docteur Natalia Dragon: Capturée !",
-            aspects:
-            {prisoner:1,mortal:1,lantern:5,grail:3,heart:3},
-            description: "Le monde universitaire se moquait d'elle pour ses études des chroniques  alternatives, ce qui ne faisait que la rendre plus déterminée.  Soyons sûrs qu'elle mourra en captivité.",
-unique:true,
-xtriggers: {killmortal:corpse,derangemortal:natalia_r_c,dissolution:influencelanterne},
-lifetime:600,decayTo:"corpse"
-        },
-				 {
-        id: "defaulthunterprisoner",
-            label: "Un détective fatigué est capturé !",
-            aspects:
-            {mortal:1,prisoner:1,lantern:5,grail:3,heart:3},
-            description: "Ce monsieur préfèrerait de loin rester seul avec sa pipe et son London News illustré, mais il est à présent enfermé dans un misérable trou dans le sol.",
-xtriggers: {killmortal:corpse,derangemortal:douglas_r,capturehunter:defaulthunterprisoner,dissolution:influenceforgec},
-lifetime:600,decayTo:"corpse"
-        }
-]
-};
+{
+  "elements": [
+    {
+      "id": "investigator1",
+      "label": "Inspecteur Wakefield",
+      "aspects": {
+        "hunter": 1,
+        "mortal": 1,
+        "meticulous": 1,
+        "grim": 1
+      },
+      "description": "Zachary Wakefield : un inspecteur de police mélancolique, mais sans remords. Il a récemment été détaché au Bureau de la répression.",
+      "unique": true,
+      "xtriggers": {
+        "killmortal": "corpse",
+        "killhunter": "corpse",
+        "derangemortal": "zachary_r_c",
+        "capturehunter": "investigator1prisoner",
+        "dissolution": "influencewintere"
+      }
+    },
+    {
+      "id": "investigator2",
+      "label": "Spencer Hobson",
+      "aspects": {
+        "hunter": 1,
+        "mortal": 1,
+        "mystic": 1,
+        "erratic": 1
+      },
+      "description": "Hobson a été journaliste, détective privé et, assez brièvement, prêtre. Maintenant, il est agent du Bureau de la répression.",
+      "unique": true,
+      "xtriggers": {
+        "killmortal": "corpse",
+        "killhunter": "corpse",
+        "derangemortal": "spencer_r_c",
+        "capturehunter": "investigator2prisoner",
+        "dissolution": "influenceknocke"
+      }
+    },
+    {
+      "id": "investigator3",
+      "label": "Connie Lee",
+      "aspects": {
+        "hunter": 1,
+        "mortal": 1,
+        "tenacious": 1,
+        "mystic": 1
+      },
+      "description": "L'héritière, suffragette et aventurière. Elle a récemment mis ses enthousiasmes chimériques et sa fortune considérable au service du Bureau de la répression.",
+      "unique": true,
+      "xtriggers": {
+        "killmortal": "corpse",
+        "killhunter": "corpse",
+        "derangemortal": "connie_r_c",
+        "capturehunter": "investigator3prisoner",
+        "dissolution": "influenceedgee"
+      }
+    },
+    {
+      "id": "investigator4",
+      "label": "Docteur Natalia Dragon",
+      "aspects": {
+        "hunter": 1,
+        "mortal": 1,
+        "idealist": 1,
+        "meticulous": 1
+      },
+      "description": "Le monde universitaire se moquait d'elle pour ses études des chroniques alternatives, et cela ne faisait que la rendre plus déterminée. Aujourd'hui, elle travaille au Bureau de la répression.",
+      "unique": true,
+      "xtriggers": {
+        "killmortal": "corpse",
+        "killhunter": "corpse",
+        "derangemortal": "natalia_r_c",
+        "capturehunter": "investigator4prisoner",
+        "dissolution": "influencelanterne"
+      }
+    },
+    {
+      "id": "defaulthunter",
+      "label": "Détective fatigué",
+      "aspects": {
+        "hunter": 1,
+        "mortal": 1
+      },
+      "description": "Ce monsieur préférerait de loin qu'on le laisse seul avec sa pipe et son London News illustré, mais non, <i>apparemment</i> il faut traquer comme un chien enragé les abominations conjurés, et <i>apparemment</i> personne d'autre n'en a le temps.",
+      "xtriggers": {
+        "killmortal": "corpse",
+        "killhunter": "corpse",
+        "derangemortal": "douglas_r",
+        "capturehunter": "defaulthunterprisoner",
+        "dissolution": "influenceforgec"
+      }
+    },
+    {
+      "id": "investigator1prisoner",
+      "label": "Inspecteur Wakefield : Capturé !",
+      "aspects": {
+        "mortal": 1,
+        "prisoner": 1,
+        "lantern": 3,
+        "grail": 3,
+        "heart": 3,
+        "winter": 4
+      },
+      "description": "Zachary Wakefield : un inspecteur de police mélancolique, mais sans remords. Soyons sûrs qu'il mourra en captivité.",
+      "unique": true,
+      "xtriggers": {
+        "killmortal": "corpse",
+        "derangemortal": "zachary_r_c",
+        "dissolution": "influencewintere"
+      },
+      "lifetime": 600,
+      "decayTo": "corpse"
+    },
+    {
+      "id": "investigator2prisoner",
+      "label": "Spencer Hobson: Capturé !",
+      "aspects": {
+        "prisoner": 1,
+        "mortal": 1,
+        "lantern": 3,
+        "grail": 3,
+        "heart": 3,
+        "knock": 3
+      },
+      "description": "Hobson a été journaliste, détective privé et, assez brièvement, prêtre. Soyons sûrs qu'il mourra en captivité.",
+      "unique": true,
+      "xtriggers": {
+        "killmortal": "corpse",
+        "derangemortal": "spencer_r_c",
+        "dissolution": "influenceknocke"
+      },
+      "lifetime": 600,
+      "decayTo": "corpse"
+    },
+    {
+      "id": "investigator3prisoner",
+      "label": "Connie Lee: Capturée !",
+      "aspects": {
+        "prisoner": 1,
+        "mortal": 1,
+        "lantern": 3,
+        "grail": 3,
+        "heart": 3,
+        "edge": 3
+      },
+      "description": "L'héritière, suffragette et aventurière. Soyons sûrs qu'elle mourra en captivité.",
+      "unique": true,
+      "xtriggers": {
+        "killmortal": "corpse",
+        "derangemortal": "connie_r_c",
+        "dissolution": "influenceedgee"
+      },
+      "lifetime": 600,
+      "decayTo": "corpse"
+    },
+    {
+      "id": "investigator4prisoner",
+      "label": "Docteur Natalia Dragon: Capturée !",
+      "aspects": {
+        "prisoner": 1,
+        "mortal": 1,
+        "lantern": 5,
+        "grail": 3,
+        "heart": 3
+      },
+      "description": "Le monde universitaire se moquait d'elle pour ses études des chroniques  alternatives, ce qui ne faisait que la rendre plus déterminée.  Soyons sûrs qu'elle mourra en captivité.",
+      "unique": true,
+      "xtriggers": {
+        "killmortal": "corpse",
+        "derangemortal": "natalia_r_c",
+        "dissolution": "influencelanterne"
+      },
+      "lifetime": 600,
+      "decayTo": "corpse"
+    },
+    {
+      "id": "defaulthunterprisoner",
+      "label": "Un détective fatigué est capturé !",
+      "aspects": {
+        "mortal": 1,
+        "prisoner": 1,
+        "lantern": 5,
+        "grail": 3,
+        "heart": 3
+      },
+      "description": "Ce monsieur préfèrerait de loin rester seul avec sa pipe et son London News illustré, mais il est à présent enfermé dans un misérable trou dans le sol.",
+      "xtriggers": {
+        "killmortal": "corpse",
+        "derangemortal": "douglas_r",
+        "capturehunter": "defaulthunterprisoner",
+        "dissolution": "influenceforgec"
+      },
+      "lifetime": 600,
+      "decayTo": "corpse"
+    }
+  ]
+}

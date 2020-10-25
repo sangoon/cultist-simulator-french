@@ -1,23 +1,40 @@
-{"elements":
-    [
-			     {
-        id: "bequestintro",
-            label: "Un legs",
-            aspects:
-            {legacyplotitem:1},
-            description: "Un paquet de papiers provenant de l'exécuteur testamentaire de mon correspondant. Je dois l'ÉTUDIER, en utilisant soit la Passion soit la Raison.",
-						slots:[{id:"Approach", label:"Approche", actionId:"study",required: {reason: 1, passion: 1},
-						description: "Suis-je une personne passionnée ou raisonnable ?"}]
-        },
-	{id: "introjob",
-	label: "Emplois subalternes",
-	description: "Une position précaire de brancardier. Misérable, mais c'est tout ce que vous pouvez trouver pour l'instant.",
-	aspects: {job:1}
-	},
-{id: "contactintro",
-aspects:{legacyplotitem:1},
-label: "Notes sur un éventuel collaborateur",
-description: "Mon correspondant avait enregistré ses observations sur moi. Il pensait que j'avais un 'potentiel'. Il a également enregistré ses observations sur quelqu'un d'autre. Avec du temps et de l'étude, je pourrai peut-être trouver cette personne.",
+{
+  "elements": [
+    {
+      "id": "bequestintro",
+      "label": "Un legs",
+      "aspects": {
+        "legacyplotitem": 1
+      },
+      "description": "Un paquet de papiers provenant de l'exécuteur testamentaire de mon correspondant. Je dois l'ÉTUDIER, en utilisant soit la Passion soit la Raison.",
+      "slots": [
+        {
+          "id": "Approach",
+          "label": "Approche",
+          "actionId": "study",
+          "required": {
+            "reason": 1,
+            "passion": 1
+          },
+          "description": "Suis-je une personne passionnée ou raisonnable ?"
+        }
+      ]
+    },
+    {
+      "id": "introjob",
+      "label": "Emplois subalternes",
+      "description": "Une position précaire de brancardier. Misérable, mais c'est tout ce que vous pouvez trouver pour l'instant.",
+      "aspects": {
+        "job": 1
+      }
+    },
+    {
+      "id": "contactintro",
+      "aspects": {
+        "legacyplotitem": 1
+      },
+      "label": "Notes sur un éventuel collaborateur",
+      "description": "Mon correspondant avait enregistré ses observations sur moi. Il pensait que j'avais un 'potentiel'. Il a également enregistré ses observations sur quelqu'un d'autre. Avec du temps et de l'étude, je pourrai peut-être trouver cette personne."
+    }
+  ]
 }
-]
-};
