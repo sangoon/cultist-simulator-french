@@ -1,111 +1,177 @@
 {
-"recipes": [
-{id: "workbytjobstart",
-label: "Une journée en or de travail occasionnel",
-actionId: "work",
-requirements: {legacybytjob:1},
-effects: {funds:3,legacybytjob:-1,legacybytjobmatured:1},
-alternativerecipes: [
-{id:bytopenexplore,chance:100,additional:true}],
-startdescription: "Il est possible que je fasse quelque chose aujourd'hui.",
-description: "Tout se passe à merveille. Bien que la santé de papa ne s'améliore pas. [<b>Exploration</b> debloquée.]",
-warmup:10,
-craftable: true	},
-{id: "workbytjob",
-label: "Une journée en or de travail occasionnel",
-actionId: "work",
-requirements: {legacybytjobmatured:1},
-effects: {funds: 3},
-alternativerecipes: [
-{id:workbytjobend,chance:30}],
-startdescription: "Il est possible que je fasse quelque chose aujourd'hui.",
-description: "Tout se passe à merveille. Bien que la santé de papa ne s'améliore pas encore.",
-warmup:30,
-craftable: true	},
-
-{id: "workbytjobend",
-label: "Un nuage à l'horizon",
-actionId: "work",
-startdescription: "Papa m'a convoqué ! Je dois courir à son chevet. Toutes les affaires familiales sont suspendues, pour l'instant.",
-craftable: false,
-effects:{legacybytjobmatured:-1,funds:2},
-alternativerecipes: [
-{id:"workbytjobepilogue",chance:100,additional:true}]
-},
-
-{id: "workbytjobepilogue",
-label: "Des nouvelles épouvantables",
-actionId: "legacyeventbad",
-alternativerecipes: [
-{id:"bytopenstudy",chance:100,additional:true}],
-effects: {health: 2, funds: 20},
-startdescription: "Papa est mort ! Personne ne me dira exactement comment. Mais le patrimoine est sous sequestre. Mon argent de poche est bloqué pendant la succession et ainsi de suite. On ne peut qu'espérer que cela sera réglé avant que les factures ne soient dues. ",
-description: "Les affaires du testament ont été réglées... mais les affaires de papa ont été rongées par les dettes comme le bois par les vers. Personne ne semble savoir exactement à quoi il a dépensé l'argent. Mais le notaire m'envoie des papiers, apparemment.",
-warmup:60,
-craftable: false},
-
-{id: "bytopenexplore",
-label: "Un monde de possibilités !",
-actionId: "explore",
-startdescription:"Certaines sortes de déchirures m'introduisent dans certains endroits.",
-description: "Si jamais j'ai du mal à décider comment dépenser mon argent, les bonnes personnes de ces endroits peuvent certainement m'aider !",
-warmup:10,
-effects: {locationauctionhouse:1,locationcabaret:1},
-craftable: false
-},
-
-{id: "bytopenstudy",
-label: "Documents déroutants",
-actionId: "study",
-startdescription:"Je vais recevoir des papiers trouvés parmi les affaires de papa, qui pourraient peut-être nous éclairer sur l'endroit exact où est passé tout l'argent.",
-alternativerecipes: [
-{id:"bytopendream",chance:100,additional:true}
-],
-description: "J'ai reçu les documents. Pauvre papa. Page après page, des gribouillis désespérés sur une maison invisible, les couleurs du sommeil et les dieux cachées derrière le monde... mais savez-vous que plus je lis, plus cela a du sens... enfin, pas 'du sens'. Cela n'a pas de sens. Mais ça tient la route. Et voici le journal de papa.",
-effects: {legacydiarylastcharacter:1,LEVER_LastBook: 1},
-warmup:30,
-craftable: false
-},
-
-
-{id: "bytstudydiary",
-label: "L'étude d'un journal intime troublant",
-actionId: "study",
-requirements: {legacydiarylastcharacter:1},
-
-alternativerecipes: [
-{id:"bytopentalk",chance:100,additional:true}
-],
-effects: {legacydiarylastcharacter:-1,reason:1,fragmentgrail:1},
-startdescription:"Le journal de papa. C'est un catalogue d'obsessions. Mais peut-être que cela donnera une sorte de sens aux événements récents ?",
-description: "Le nom de #PREVIOUSCHARACTERNAME# apparaît encore et encore dans ces pages. Cela évoquait 'un lieu d'impossibilité', une 'source d'avenir'... 'un qui a coupé l'oeil'. Et, sur la dernière page, il y a une adresse de correspondance, et un nom.",
-warmup:10,
-craftable: true
-},
-{id: "bytopendream",
-label: "La maison sans murs",
-actionId: "dream",
-alternativerecipes:[
-{id:despairrisk,chance:100,additional:true}
-],
-startdescription:"Les rêves commencent. Papa en parle, et il dit que son père avant lui avait été si troublé. Quelque chose dans notre sang ; une mélancolie mordante qui tue l'âme.",
-description: "Je rêve d'une lumière qui se ratatine, d'un soleil qui croque la neige mais ne la fait pas fondre. Quand je me réveille, ma chambre est toujours froide.",
-warmup:30,
-effects: {passion:1,influencewinter:1},
-craftable: false
-},
-
-
-{id: "bytopentalk",
-label: "Entrer en contact avec un étranger",
-actionId: "talk",
-startdescription:"J'ai contacté la personne dont le nom figure dans ce document troublant. Je n'ai guère de raisons de croire qu'il pourra m'éclairer sur la nature de ce qui s'est passé auparavant. Mais peut-être peut-il m'aider pour ce qui est à venir.",
-description: "Ma nouvelle connaissance parle avec autorité de Papa. Il savait qu'il était mourant. Il avait espéré goûter à des plaisirs inconnus avant sa fin - des plaisirs refusés dans une société digne de ce nom. Ma nouvelle connaissance me suggère de finir ce qu'il a commencé - que si je le fais, je pourrais me sauver du désespoir qui hante ma famille.",
-effects: {poppyready:1,ascensionsensationa:1},
-warmup:60,
-craftable: false
-},
-
-
-]
+  "recipes": [
+    {
+      "id": "workbytjobstart",
+      "label": "Une journée en or de travail occasionnel",
+      "actionId": "work",
+      "requirements": {
+        "legacybytjob": 1
+      },
+      "effects": {
+        "funds": 3,
+        "legacybytjob": -1,
+        "legacybytjobmatured": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "bytopenexplore",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "startdescription": "Il est possible que je fasse quelque chose aujourd'hui.",
+      "description": "Tout se passe à merveille. Bien que la santé de papa ne s'améliore pas. [<b>Exploration</b> debloquée.]",
+      "warmup": 10,
+      "craftable": true
+    },
+    {
+      "id": "workbytjob",
+      "label": "Une journée en or de travail occasionnel",
+      "actionId": "work",
+      "requirements": {
+        "legacybytjobmatured": 1
+      },
+      "effects": {
+        "funds": 3
+      },
+      "alternativerecipes": [
+        {
+          "id": "workbytjobend",
+          "chance": 30
+        }
+      ],
+      "startdescription": "Il est possible que je fasse quelque chose aujourd'hui.",
+      "description": "Tout se passe à merveille. Bien que la santé de papa ne s'améliore pas encore.",
+      "warmup": 30,
+      "craftable": true
+    },
+    {
+      "id": "workbytjobend",
+      "label": "Un nuage à l'horizon",
+      "actionId": "work",
+      "startdescription": "Papa m'a convoqué ! Je dois courir à son chevet. Toutes les affaires familiales sont suspendues, pour l'instant.",
+      "craftable": false,
+      "effects": {
+        "legacybytjobmatured": -1,
+        "funds": 2
+      },
+      "alternativerecipes": [
+        {
+          "id": "workbytjobepilogue",
+          "chance": 100,
+          "additional": true
+        }
+      ]
+    },
+    {
+      "id": "workbytjobepilogue",
+      "label": "Des nouvelles épouvantables",
+      "actionId": "legacyeventbad",
+      "alternativerecipes": [
+        {
+          "id": "bytopenstudy",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "effects": {
+        "health": 2,
+        "funds": 20
+      },
+      "startdescription": "Papa est mort ! Personne ne me dira exactement comment. Mais le patrimoine est sous sequestre. Mon argent de poche est bloqué pendant la succession et ainsi de suite. On ne peut qu'espérer que cela sera réglé avant que les factures ne soient dues. ",
+      "description": "Les affaires du testament ont été réglées... mais les affaires de papa ont été rongées par les dettes comme le bois par les vers. Personne ne semble savoir exactement à quoi il a dépensé l'argent. Mais le notaire m'envoie des papiers, apparemment.",
+      "warmup": 60,
+      "craftable": false
+    },
+    {
+      "id": "bytopenexplore",
+      "label": "Un monde de possibilités !",
+      "actionId": "explore",
+      "startdescription": "Certaines sortes de déchirures m'introduisent dans certains endroits.",
+      "description": "Si jamais j'ai du mal à décider comment dépenser mon argent, les bonnes personnes de ces endroits peuvent certainement m'aider !",
+      "warmup": 10,
+      "effects": {
+        "locationauctionhouse": 1,
+        "locationcabaret": 1
+      },
+      "craftable": false
+    },
+    {
+      "id": "bytopenstudy",
+      "label": "Documents déroutants",
+      "actionId": "study",
+      "startdescription": "Je vais recevoir des papiers trouvés parmi les affaires de papa, qui pourraient peut-être nous éclairer sur l'endroit exact où est passé tout l'argent.",
+      "alternativerecipes": [
+        {
+          "id": "bytopendream",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "description": "J'ai reçu les documents. Pauvre papa. Page après page, des gribouillis désespérés sur une maison invisible, les couleurs du sommeil et les dieux cachées derrière le monde... mais savez-vous que plus je lis, plus cela a du sens... enfin, pas 'du sens'. Cela n'a pas de sens. Mais ça tient la route. Et voici le journal de papa.",
+      "effects": {
+        "legacydiarylastcharacter": 1,
+        "LEVER_LastBook": 1
+      },
+      "warmup": 30,
+      "craftable": false
+    },
+    {
+      "id": "bytstudydiary",
+      "label": "L'étude d'un journal intime troublant",
+      "actionId": "study",
+      "requirements": {
+        "legacydiarylastcharacter": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "bytopentalk",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "effects": {
+        "legacydiarylastcharacter": -1,
+        "reason": 1,
+        "fragmentgrail": 1
+      },
+      "startdescription": "Le journal de papa. C'est un catalogue d'obsessions. Mais peut-être que cela donnera une sorte de sens aux événements récents ?",
+      "description": "Le nom de #PREVIOUSCHARACTERNAME# apparaît encore et encore dans ces pages. Cela évoquait 'un lieu d'impossibilité', une 'source d'avenir'... 'un qui a coupé l'oeil'. Et, sur la dernière page, il y a une adresse de correspondance, et un nom.",
+      "warmup": 10,
+      "craftable": true
+    },
+    {
+      "id": "bytopendream",
+      "label": "La maison sans murs",
+      "actionId": "dream",
+      "alternativerecipes": [
+        {
+          "id": "despairrisk",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "startdescription": "Les rêves commencent. Papa en parle, et il dit que son père avant lui avait été si troublé. Quelque chose dans notre sang ; une mélancolie mordante qui tue l'âme.",
+      "description": "Je rêve d'une lumière qui se ratatine, d'un soleil qui croque la neige mais ne la fait pas fondre. Quand je me réveille, ma chambre est toujours froide.",
+      "warmup": 30,
+      "effects": {
+        "passion": 1,
+        "influencewinter": 1
+      },
+      "craftable": false
+    },
+    {
+      "id": "bytopentalk",
+      "label": "Entrer en contact avec un étranger",
+      "actionId": "talk",
+      "startdescription": "J'ai contacté la personne dont le nom figure dans ce document troublant. Je n'ai guère de raisons de croire qu'il pourra m'éclairer sur la nature de ce qui s'est passé auparavant. Mais peut-être peut-il m'aider pour ce qui est à venir.",
+      "description": "Ma nouvelle connaissance parle avec autorité de Papa. Il savait qu'il était mourant. Il avait espéré goûter à des plaisirs inconnus avant sa fin - des plaisirs refusés dans une société digne de ce nom. Ma nouvelle connaissance me suggère de finir ce qu'il a commencé - que si je le fais, je pourrais me sauver du désespoir qui hante ma famille.",
+      "effects": {
+        "poppyready": 1,
+        "ascensionsensationa": 1
+      },
+      "warmup": 60,
+      "craftable": false
+    }
+  ]
 }

@@ -1,284 +1,587 @@
- {"recipes": [
-	{
-        id: "scheme_murderhunter",
-        label: "Un complot visant à assassiner un Chasseur est en cours",
-        actionId: "scheme",
-    requirements:{schememurder:1},
-   effects:{},
-   startdescription:"Un Rival a l'intention de tuer un Chasseur. Cela peut être à mon avantage... mais cela peut aussi attirer l'attention.",
-        warmup: 60,
-        craftable: false,
-		linked:[{id:"scheme_murderhunter_grab",chance:100}]
-    },
-	
-		{
-        id: "scheme_murderhunter_grab",
-        label: "Un complot visant à assassiner un Chasseur est en cours",
-        actionId: "scheme",
-		slots:[{id:"victim",label:"Victime",greedy:true,required:{hunter:1}}],
-    
-   effects:{},
-        warmup: 60,
-        craftable: false,
-		linked:[{id:"scheme_murderhunter_success",chance:30},
-		{id:"scheme_murderhunter_failure",chance:100},
-		{id:"scheme_murderhunter_nohunterfound",chance:100}]
-    },
-	
-	{
-        id: "scheme_murderhunter_success",
-        label: "Quelqu'un a assassiné un chasseur !",
-        actionId: "scheme",
-		requirements:{hunter:1},
-    aspects:{killhunter:1},
-	   effects:{notoriety:1},
-   startdescription:"Cela peut me donner un peu de répit - mais cela pourrait à terme conduire le Bureau de la répression à ma porte.",
-        warmup:5,
-        craftable: false
-    },
-	
-		
-	{
-        id: "scheme_murderhunter_failure",
-        label: "Quelqu'un n'a pas réussi à assassiner un chasseur !",
-        actionId: "scheme",
-    requirements:{hunter:1},
-   effects:{notoriety:1},
-   startdescription:"Cela pourrait à terme conduire le Bureau de la répression à ma porte.",
-        warmup: 5,
-        craftable: false
-    },
-	
-		{
-        id: "scheme_murderhunter_nohunterfound",
-        label: "Un complot visant à assassiner un chasseur a pris fin sans conséquences.",
-        actionId: "scheme",
-    
-   effects:{},
-   startdescription:"C'était peut-être mieux ainsi.",
-        warmup: 60,
-        craftable: false
-    },
-	
-					{
-        id: "scheme_expedition_debug",
-        label: "FORCE EXP START",
-        actionId: "scheme",
-    	slots:[{id:"target",label:"Acteurr",required:{independent:1}}],
-
-        warmup: 30,
-        craftable: false,
-		linked: [{chance:100,id:"scheme_expedition_grab"}]
-    },
-	
-				{
-        id: "scheme_expedition_grab",
-        label: "Un Rival envisage une expédition...",
-        actionId: "scheme",
-		requirements:{schemeexpedition:1},
-    	slots:[{id:"target",label:"Cible",greedy:true,required:{vault:1}}],
-   effects:{},
-   startdescription:"Mon Rival cherche des outils et des croyances pour sa propre ascension.",
-        warmup: 60,
-        craftable: false,
-		linked: [{id:"scheme_expedition_prep",chance:100}]
-    },
-	
-					{
-        id: "scheme_expedition_prep",
-        label: "Une occasion d'utiliser un piège",
-        actionId: "scheme",
-    slots:[{id:"snare",label:"Embuscade",required:{snare:1}}],
-requirements:{vault:1},
-   startdescription:"Si je prépare un piège, je peux essayer de tendre une embuscade à mon Rival, de vaincre son expédition et même de le blesser...",
-        warmup: 60,
-        craftable: false,
-		linked:[{chance:100,id:"scheme_expedition_snare_great"},
-		{chance:100,id:"scheme_expedition_snare_good"},
-		{chance:100,id:"scheme_expedition_snare_poor"},
-		{chance:100,id:"scheme_expedition_snare_rubbish"},
-		{chance:70,id:"scheme_expedition_success"},
-		{chance:100,id:"scheme_expedition_failure"}],
-    },
-	{id:"scheme_expedition_snare_great",
-	actionId:"scheme",
-	requirements:{snarelevel:4},
-	linked:[{id:"scheme_expedition_snare_success",chance:90},
-	{id:"scheme_expedition_snare_failure",chance:100}]
-	},
-		{id:"scheme_expedition_snare_good",
-	actionId:"scheme",
-	requirements:{snarelevel:3},
-	linked:[{id:"scheme_expedition_snare_success",chance:70},
-	{id:"scheme_expedition_snare_failure",chance:100}]
-	},
-		{id:"scheme_expedition_snare_poor",
-	actionId:"scheme",
-	requirements:{snarelevel:2},
-	linked:[{id:"scheme_expedition_snare_success",chance:30},
-	{id:"scheme_expedition_snare_failure",chance:100}]
-	},
-		{id:"scheme_expedition_snare_rubbish",
-	actionId:"scheme",
-	requirements:{snarelevel:1},
-	linked:[{id:"scheme_expedition_snare_success",chance:10},
-	{id:"scheme_expedition_snare_failure",chance:100}]
-	},
-	
-	{
-        id: "scheme_expedition_snare_success",
-        label: "Notre piège a fonctionné !",
-        actionId: "scheme",
-		   			effects:{snare:-1},
-   startdescription:"Mon Rival est tombé dans notre piège ! Ils vont essayer de battre en retraite pour panser leurs blessures.",
-      mutations:[{filterOnAspectId:independent,mutateAspectId:resentment,mutationLevel:1,additive:true}],	
-        warmup: 5,
-        craftable: false,
-		linked:[{id:"independent_scar",chance:100}]
-    },
-
 {
-        id: "scheme_expedition_snare_failure",
-        label: "Notre piège n'a pas fonctionné !",
-        actionId: "scheme",
-
-   startdescription:"Mon Rival a échappé à notre piège...",
-   mutations:[{filterOnAspectId:independent,mutateAspectId:resentment,mutationLevel:1,additive:true}],
-   			effects:{snare:-1},
-        warmup: 5,
-        craftable: false,
-		linked:[{id:"scheme_expedition_success",chance:70},
-		{id:"scheme_expedition_failure",chance:100},]
+  "recipes": [
+    {
+      "id": "scheme_murderhunter",
+      "label": "Un complot visant à assassiner un Chasseur est en cours",
+      "actionId": "scheme",
+      "requirements": {
+        "schememurder": 1
+      },
+      "effects": {},
+      "startdescription": "Un Rival a l'intention de tuer un Chasseur. Cela peut être à mon avantage... mais cela peut aussi attirer l'attention.",
+      "warmup": 60,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "scheme_murderhunter_grab",
+          "chance": 100
+        }
+      ]
     },
-	
-					{
-        id: "scheme_expedition_success",
-        label: "Mon Rival a saccagé cet endroit...",
-        actionId: "scheme",
-    requirements:{vault:1},
-   effects:{vault:-1},
-   startdescription:"Quoi qu'il ait cherché ici, il l'a trouvé.",
-        warmup: 5,
-        craftable: false,
-		alt:[{id:"expedition.corpse.find.vaultcapital5.ransackedbyrival",additional:true},
-		{id:"expedition.corpse.find.vaultloneandlevelsands2.ransackedbyrival",additional:true},
-		{id:"expedition.corpse.find.vaultrendingmountainsdefault.ransackedbyrival",additional:true},
-		{id:"expedition.corpse.find.vaultshires4.ransackedbyrival",additional:true},
-		{id:"expedition.corpse.find.vaultcapital5.ransackedbyrival",additional:true},
-		{id:"expedition.corpse.find.vaultshires3.ransackedbyrival",additional:true}],
-		linked:[{id:"scheme_promotion",chance:100}]
+    {
+      "id": "scheme_murderhunter_grab",
+      "label": "Un complot visant à assassiner un Chasseur est en cours",
+      "actionId": "scheme",
+      "slots": [
+        {
+          "id": "victim",
+          "label": "Victime",
+          "greedy": true,
+          "required": {
+            "hunter": 1
+          }
+        }
+      ],
+      "effects": {},
+      "warmup": 60,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "scheme_murderhunter_success",
+          "chance": 30
+        },
+        {
+          "id": "scheme_murderhunter_failure",
+          "chance": 100
+        },
+        {
+          "id": "scheme_murderhunter_nohunterfound",
+          "chance": 100
+        }
+      ]
     },
-	
-						{
-        id: "scheme_expedition_failure",
-        label: "Mon Rival a échoué dans son expédition.",
-        actionId: "scheme",
-      requirements:{vault:1},
-   effects:{},
-   startdescription:"Quoi qu'il ait cherché ici, il ne l'a pas trouvé. Il a abandonné son expédition... pour l'instant.",
-        warmup: 5,
-        craftable: false
+    {
+      "id": "scheme_murderhunter_success",
+      "label": "Quelqu'un a assassiné un chasseur !",
+      "actionId": "scheme",
+      "requirements": {
+        "hunter": 1
+      },
+      "aspects": {
+        "killhunter": 1
+      },
+      "effects": {
+        "notoriety": 1
+      },
+      "startdescription": "Cela peut me donner un peu de répit - mais cela pourrait à terme conduire le Bureau de la répression à ma porte.",
+      "warmup": 5,
+      "craftable": false
     },
-	{
-        id: "scheme_activities",
-        label: "Un Rival travaille dans l'ombre.",
-        actionId: "scheme",
-    requirements:{schemeactivities:1},
-   effects:{mystique:1},
-   startdescription:"Il est toujours caché. Que fait-il exactement ? (La plupart du temps, cela se terminera de manière peu concluante, mais il arrive qu'un Rival parvienne à accroître son pouvoir en secret. Essayez de le faire sortir de sa cachette en laissant une Expédition ouverte.]",
-   description:"Mon Rival a commis une sorte de méfait. Le Bureau de répression peut en prendre note.",
-   alternativerecipes:[{id:"scheme_calm",chance:10},
-   {id:"scheme_promotion",chance:11}],
-        warmup: 60,
-        craftable: false
+    {
+      "id": "scheme_murderhunter_failure",
+      "label": "Quelqu'un n'a pas réussi à assassiner un chasseur !",
+      "actionId": "scheme",
+      "requirements": {
+        "hunter": 1
+      },
+      "effects": {
+        "notoriety": 1
+      },
+      "startdescription": "Cela pourrait à terme conduire le Bureau de la répression à ma porte.",
+      "warmup": 5,
+      "craftable": false
     },
-					{
-        id: "scheme_calm",
-        label: "L'humeur de mon Rival s'est adoucie.",
-        actionId: "scheme",
-   effects:{influenceheartc:1},
-   description:"Mon Rival observe les règles de la courtoisie professionnelle: J'ai reçu une lettre rédigée en termes prudents, bien qu'elle n'aborde rien de conséquent... pourrait-il y avoir un jour une occasion pour nous d'unir nos pouvoirs ? [Parfois, le ressentiment d'un Rival peut diminuer.]",
-         mutations:[{filterOnAspectId:independent,mutateAspectId:resentment,mutationLevel:-1,additive:true}],
-        warmup: 60,
-        craftable: false
+    {
+      "id": "scheme_murderhunter_nohunterfound",
+      "label": "Un complot visant à assassiner un chasseur a pris fin sans conséquences.",
+      "actionId": "scheme",
+      "effects": {},
+      "startdescription": "C'était peut-être mieux ainsi.",
+      "warmup": 60,
+      "craftable": false
     },
-		
-				{
-        id: "scheme_promotion",
-        label: "Mon Rival a avancé dans sa quête.",
-        actionId: "scheme",
-    alternativerecipes:[{chance:100,id:"scheme_promotion_ascension"}],
-   effects:{mystique:1},
-   aspects:{rival_promotion:1},
-   description:"Mon Rival a acquis plus de croyances, plus de trésors, plus de relations... et à son tour, il est devenu autre chose.",
-        warmup: 60,
-        craftable: false
+    {
+      "id": "scheme_expedition_debug",
+      "label": "FORCE EXP START",
+      "actionId": "scheme",
+      "slots": [
+        {
+          "id": "target",
+          "label": "Acteurr",
+          "required": {
+            "independent": 1
+          }
+        }
+      ],
+      "warmup": 30,
+      "craftable": false,
+      "linked": [
+        {
+          "chance": 100,
+          "id": "scheme_expedition_grab"
+        }
+      ]
     },
-	
-					{
-        id: "scheme_promotion_ascension",
-        label: "Mon Rival s'efforce de passer la Porte des Tricuspides, et de s'élever à un niveau supérieur.",
-        actionId: "scheme",
-    requirements:{exalted:1},
-   effects:{mystique:1},
-   startdescription:"Un pas de plus vers son objectif. Un degré de plus dans la grande machinerie de la Maison du Soleil. [Attention: si l'Ascension de votre Rival atteint 7, il gagnera le jeu à votre place.]",
-   mutations:[{filterOnAspectId:independent,mutateAspectId:rivalmarks,mutationLevel:1,additive:true}],
-        warmup: 60,
-        craftable: false
+    {
+      "id": "scheme_expedition_grab",
+      "label": "Un Rival envisage une expédition...",
+      "actionId": "scheme",
+      "requirements": {
+        "schemeexpedition": 1
+      },
+      "slots": [
+        {
+          "id": "target",
+          "label": "Cible",
+          "greedy": true,
+          "required": {
+            "vault": 1
+          }
+        }
+      ],
+      "effects": {},
+      "startdescription": "Mon Rival cherche des outils et des croyances pour sa propre ascension.",
+      "warmup": 60,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "scheme_expedition_prep",
+          "chance": 100
+        }
+      ]
     },
-	
-	
-	{id:"independent_scar",
-label:"Un Rival a été blessé",
-startdescription:"Mon Rival a subi un revers de fortune. Il a été marqué par sa défaite; il sera en colère contre moi. [Trois Blessures du même type tueront n'importe quel mortel.]",
-actionId:"scheme",
-linked:[{id:"independent_givescar_edge",chance:30},
-{id:"independent_givescar_knock",chance:50},
-{id:"independent_givescar_winter",chance:100}]
-},
-{id:"independent_givescar_edge",
-actionId:"scheme",
-label:"Un revers pour un Rival",
-mutations:[{filterOnAspectId:mortal,mutateAspectId:follower_scar_edge,mutationLevel:1,additive:true},
-{filterOnAspectId:mortal,mutateAspectId:edge,mutationLevel:2,additive:true}],
-linked:[{id:"independent_deathscar_edge",chance:100}]
-},
-
-{id:"independent_givescar_knock",
-label:"Un revers pour un Rival",
-actionId:"scheme",
-mutations:[{filterOnAspectId:mortal,mutateAspectId:follower_scar_knock,mutationLevel:1,additive:true},
-{filterOnAspectId:mortal,mutateAspectId:knock,mutationLevel:2,additive:true}],
-linked:[{id:"independent_deathscar_knock",chance:100}]
-},
-{id:"independent_givescar_winter",
-actionId:"scheme",
-label:"Un revers pour un Rival",
-mutations:[{filterOnAspectId:mortal,mutateAspectId:follower_scar_winter,mutationLevel:1,additive:true},
-{filterOnAspectId:mortal,mutateAspectId:winter,mutationLevel:2,additive:true}],
-linked:[{id:"independent_deathscar_winter",chance:100}]
-},
-{id:"independent_deathscar_edge",
-actionId:"scheme",
-label:"La mort: une défaite",
-requirements:{follower_scar_edge:3},
-description:"Celui-ci a fait preuve de courage et d'endurance. Au final, cela n'a pas suffi. [Votre Rival a reçu trois Cicatrices de la Pointe et est mort.]",
-aspects:{killmortal:1}
-},
-{id:"independent_deathscar_knock",
-actionId:"scheme",
-label:"La mort: une ouverture",
-requirements:{follower_scar_knock:3},
-description:"Pour fonctionner efficacement, il faut garder son intérieur à l'intérieur, et décourager ce qui est à l'extérieur de rentrer à l'intérieur. Lorsqu'une quantité suffisante de ce qui est à l'intérieur passe à l'extérieur, on n'est plus une entité viable. [Votre Rival a acquis trois Cicatrices de la Clé et est mort.]",
-aspects:{killmortal:1}
-},
-{id:"independent_deathscar_winter",
-actionId:"scheme",
-label:"La mort: une fin",
-requirements:{follower_scar_winter:3},
-description:"La neige tombe doucement. Le coucher de soleil est une tache de lumière. [Votre Rival a acquis trois cicatrices d'Hiver, et est mort.]",
-aspects:{killmortal:1}
-},
-
-]
+    {
+      "id": "scheme_expedition_prep",
+      "label": "Une occasion d'utiliser un piège",
+      "actionId": "scheme",
+      "slots": [
+        {
+          "id": "snare",
+          "label": "Embuscade",
+          "required": {
+            "snare": 1
+          }
+        }
+      ],
+      "requirements": {
+        "vault": 1
+      },
+      "startdescription": "Si je prépare un piège, je peux essayer de tendre une embuscade à mon Rival, de vaincre son expédition et même de le blesser...",
+      "warmup": 60,
+      "craftable": false,
+      "linked": [
+        {
+          "chance": 100,
+          "id": "scheme_expedition_snare_great"
+        },
+        {
+          "chance": 100,
+          "id": "scheme_expedition_snare_good"
+        },
+        {
+          "chance": 100,
+          "id": "scheme_expedition_snare_poor"
+        },
+        {
+          "chance": 100,
+          "id": "scheme_expedition_snare_rubbish"
+        },
+        {
+          "chance": 70,
+          "id": "scheme_expedition_success"
+        },
+        {
+          "chance": 100,
+          "id": "scheme_expedition_failure"
+        }
+      ]
+    },
+    {
+      "id": "scheme_expedition_snare_great",
+      "actionId": "scheme",
+      "requirements": {
+        "snarelevel": 4
+      },
+      "linked": [
+        {
+          "id": "scheme_expedition_snare_success",
+          "chance": 90
+        },
+        {
+          "id": "scheme_expedition_snare_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "scheme_expedition_snare_good",
+      "actionId": "scheme",
+      "requirements": {
+        "snarelevel": 3
+      },
+      "linked": [
+        {
+          "id": "scheme_expedition_snare_success",
+          "chance": 70
+        },
+        {
+          "id": "scheme_expedition_snare_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "scheme_expedition_snare_poor",
+      "actionId": "scheme",
+      "requirements": {
+        "snarelevel": 2
+      },
+      "linked": [
+        {
+          "id": "scheme_expedition_snare_success",
+          "chance": 30
+        },
+        {
+          "id": "scheme_expedition_snare_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "scheme_expedition_snare_rubbish",
+      "actionId": "scheme",
+      "requirements": {
+        "snarelevel": 1
+      },
+      "linked": [
+        {
+          "id": "scheme_expedition_snare_success",
+          "chance": 10
+        },
+        {
+          "id": "scheme_expedition_snare_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "scheme_expedition_snare_success",
+      "label": "Notre piège a fonctionné !",
+      "actionId": "scheme",
+      "effects": {
+        "snare": -1
+      },
+      "startdescription": "Mon Rival est tombé dans notre piège ! Ils vont essayer de battre en retraite pour panser leurs blessures.",
+      "mutations": [
+        {
+          "filterOnAspectId": "independent",
+          "mutateAspectId": "resentment",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 5,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "independent_scar",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "scheme_expedition_snare_failure",
+      "label": "Notre piège n'a pas fonctionné !",
+      "actionId": "scheme",
+      "startdescription": "Mon Rival a échappé à notre piège...",
+      "mutations": [
+        {
+          "filterOnAspectId": "independent",
+          "mutateAspectId": "resentment",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "effects": {
+        "snare": -1
+      },
+      "warmup": 5,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "scheme_expedition_success",
+          "chance": 70
+        },
+        {
+          "id": "scheme_expedition_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "scheme_expedition_success",
+      "label": "Mon Rival a saccagé cet endroit...",
+      "actionId": "scheme",
+      "requirements": {
+        "vault": 1
+      },
+      "effects": {
+        "vault": -1
+      },
+      "startdescription": "Quoi qu'il ait cherché ici, il l'a trouvé.",
+      "warmup": 5,
+      "craftable": false,
+      "alt": [
+        {
+          "id": "expedition.corpse.find.vaultcapital5.ransackedbyrival",
+          "additional": true
+        },
+        {
+          "id": "expedition.corpse.find.vaultloneandlevelsands2.ransackedbyrival",
+          "additional": true
+        },
+        {
+          "id": "expedition.corpse.find.vaultrendingmountainsdefault.ransackedbyrival",
+          "additional": true
+        },
+        {
+          "id": "expedition.corpse.find.vaultshires4.ransackedbyrival",
+          "additional": true
+        },
+        {
+          "id": "expedition.corpse.find.vaultcapital5.ransackedbyrival",
+          "additional": true
+        },
+        {
+          "id": "expedition.corpse.find.vaultshires3.ransackedbyrival",
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "scheme_promotion",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "scheme_expedition_failure",
+      "label": "Mon Rival a échoué dans son expédition.",
+      "actionId": "scheme",
+      "requirements": {
+        "vault": 1
+      },
+      "effects": {},
+      "startdescription": "Quoi qu'il ait cherché ici, il ne l'a pas trouvé. Il a abandonné son expédition... pour l'instant.",
+      "warmup": 5,
+      "craftable": false
+    },
+    {
+      "id": "scheme_activities",
+      "label": "Un Rival travaille dans l'ombre.",
+      "actionId": "scheme",
+      "requirements": {
+        "schemeactivities": 1
+      },
+      "effects": {
+        "mystique": 1
+      },
+      "startdescription": "Il est toujours caché. Que fait-il exactement ? (La plupart du temps, cela se terminera de manière peu concluante, mais il arrive qu'un Rival parvienne à accroître son pouvoir en secret. Essayez de le faire sortir de sa cachette en laissant une Expédition ouverte.]",
+      "description": "Mon Rival a commis une sorte de méfait. Le Bureau de répression peut en prendre note.",
+      "alternativerecipes": [
+        {
+          "id": "scheme_calm",
+          "chance": 10
+        },
+        {
+          "id": "scheme_promotion",
+          "chance": 11
+        }
+      ],
+      "warmup": 60,
+      "craftable": false
+    },
+    {
+      "id": "scheme_calm",
+      "label": "L'humeur de mon Rival s'est adoucie.",
+      "actionId": "scheme",
+      "effects": {
+        "influenceheartc": 1
+      },
+      "description": "Mon Rival observe les règles de la courtoisie professionnelle: J'ai reçu une lettre rédigée en termes prudents, bien qu'elle n'aborde rien de conséquent... pourrait-il y avoir un jour une occasion pour nous d'unir nos pouvoirs ? [Parfois, le ressentiment d'un Rival peut diminuer.]",
+      "mutations": [
+        {
+          "filterOnAspectId": "independent",
+          "mutateAspectId": "resentment",
+          "mutationLevel": -1,
+          "additive": true
+        }
+      ],
+      "warmup": 60,
+      "craftable": false
+    },
+    {
+      "id": "scheme_promotion",
+      "label": "Mon Rival a avancé dans sa quête.",
+      "actionId": "scheme",
+      "alternativerecipes": [
+        {
+          "chance": 100,
+          "id": "scheme_promotion_ascension"
+        }
+      ],
+      "effects": {
+        "mystique": 1
+      },
+      "aspects": {
+        "rival_promotion": 1
+      },
+      "description": "Mon Rival a acquis plus de croyances, plus de trésors, plus de relations... et à son tour, il est devenu autre chose.",
+      "warmup": 60,
+      "craftable": false
+    },
+    {
+      "id": "scheme_promotion_ascension",
+      "label": "Mon Rival s'efforce de passer la Porte des Tricuspides, et de s'élever à un niveau supérieur.",
+      "actionId": "scheme",
+      "requirements": {
+        "exalted": 1
+      },
+      "effects": {
+        "mystique": 1
+      },
+      "startdescription": "Un pas de plus vers son objectif. Un degré de plus dans la grande machinerie de la Maison du Soleil. [Attention: si l'Ascension de votre Rival atteint 7, il gagnera le jeu à votre place.]",
+      "mutations": [
+        {
+          "filterOnAspectId": "independent",
+          "mutateAspectId": "rivalmarks",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 60,
+      "craftable": false
+    },
+    {
+      "id": "independent_scar",
+      "label": "Un Rival a été blessé",
+      "startdescription": "Mon Rival a subi un revers de fortune. Il a été marqué par sa défaite; il sera en colère contre moi. [Trois Blessures du même type tueront n'importe quel mortel.]",
+      "actionId": "scheme",
+      "linked": [
+        {
+          "id": "independent_givescar_edge",
+          "chance": 30
+        },
+        {
+          "id": "independent_givescar_knock",
+          "chance": 50
+        },
+        {
+          "id": "independent_givescar_winter",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "independent_givescar_edge",
+      "actionId": "scheme",
+      "label": "Un revers pour un Rival",
+      "mutations": [
+        {
+          "filterOnAspectId": "mortal",
+          "mutateAspectId": "follower_scar_edge",
+          "mutationLevel": 1,
+          "additive": true
+        },
+        {
+          "filterOnAspectId": "mortal",
+          "mutateAspectId": "edge",
+          "mutationLevel": 2,
+          "additive": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "independent_deathscar_edge",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "independent_givescar_knock",
+      "label": "Un revers pour un Rival",
+      "actionId": "scheme",
+      "mutations": [
+        {
+          "filterOnAspectId": "mortal",
+          "mutateAspectId": "follower_scar_knock",
+          "mutationLevel": 1,
+          "additive": true
+        },
+        {
+          "filterOnAspectId": "mortal",
+          "mutateAspectId": "knock",
+          "mutationLevel": 2,
+          "additive": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "independent_deathscar_knock",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "independent_givescar_winter",
+      "actionId": "scheme",
+      "label": "Un revers pour un Rival",
+      "mutations": [
+        {
+          "filterOnAspectId": "mortal",
+          "mutateAspectId": "follower_scar_winter",
+          "mutationLevel": 1,
+          "additive": true
+        },
+        {
+          "filterOnAspectId": "mortal",
+          "mutateAspectId": "winter",
+          "mutationLevel": 2,
+          "additive": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "independent_deathscar_winter",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "independent_deathscar_edge",
+      "actionId": "scheme",
+      "label": "La mort: une défaite",
+      "requirements": {
+        "follower_scar_edge": 3
+      },
+      "description": "Celui-ci a fait preuve de courage et d'endurance. Au final, cela n'a pas suffi. [Votre Rival a reçu trois Cicatrices de la Pointe et est mort.]",
+      "aspects": {
+        "killmortal": 1
+      }
+    },
+    {
+      "id": "independent_deathscar_knock",
+      "actionId": "scheme",
+      "label": "La mort: une ouverture",
+      "requirements": {
+        "follower_scar_knock": 3
+      },
+      "description": "Pour fonctionner efficacement, il faut garder son intérieur à l'intérieur, et décourager ce qui est à l'extérieur de rentrer à l'intérieur. Lorsqu'une quantité suffisante de ce qui est à l'intérieur passe à l'extérieur, on n'est plus une entité viable. [Votre Rival a acquis trois Cicatrices de la Clé et est mort.]",
+      "aspects": {
+        "killmortal": 1
+      }
+    },
+    {
+      "id": "independent_deathscar_winter",
+      "actionId": "scheme",
+      "label": "La mort: une fin",
+      "requirements": {
+        "follower_scar_winter": 3
+      },
+      "description": "La neige tombe doucement. Le coucher de soleil est une tache de lumière. [Votre Rival a acquis trois cicatrices d'Hiver, et est mort.]",
+      "aspects": {
+        "killmortal": 1
+      }
+    }
+  ]
 }

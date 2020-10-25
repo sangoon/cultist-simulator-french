@@ -1,1134 +1,2103 @@
 {
-"recipes": [
-
-
-
-
-{
-id: "ascensionpower_upgradetoobsession",
-label: "La Clé brûlante",
-actionId: "work",
-requirements: {ascensionpowerb:1,
-waystag_after:1,
-forge:6},
-effects: {ascensionpowerb:-1,ascensionpowerc:1},
-startdescription: "Ce rite est la Clé qui permettra à la Forge des Jours d'entrer en moi. Je serai changé à jamais.",
-description: "Le Rite est complet. Les Marques de la Forge sont sur moi. La première marque est ce que j'ai dit, et la seconde est ce que j'ai fait. Si j'inspecte mon corps, je trouverai la troisième. Je suis ébloui par de nouveaux besoins.",
-warmup: 60,
-craftable: true,
-burnimage: "flammarion"
-},
-
-{
-comments: "male and female flavour; //TODO implement more elegantly",
-id: "ascensionsensation_upgradetoobsessionm",
-label: "La Clé des soupirs",
-actionId: "work",
-requirements: {ascensionsensationbm:1,
-waystag_after:1,
-grail:6},
-effects: {ascensionsensationbm:-1,ascensionsensationc:1},
-startdescription: "Ce Rite est la Clé qui permettra au Graal rouge d'entrer en moi. Je serai changé à jamais.",
-description: "Le Rite est complet. Les Marques du Graal sont sur moi. La première marque est ce que j'ai dit, et la seconde est ce que j'ai fait. Si j'inspecte mon corps, je trouverai la troisième. Je frissonne de nouveaux appétits.",
-warmup: 60,
-craftable: true,
-burnimage: "flammarion"
-},
-{
-comments: "male and female flavour; //TODO implement more elegantly",
-id: "ascensionsensation_upgradetoobsessionf",
-label: "La Clé des soupirs",
-actionId: "work",
-requirements: {ascensionsensationbf:1,
-waystag_after:1,
-grail:6},
-effects: {ascensionsensationbf:-1,ascensionsensationc:1},
-startdescription: "Ce Rite est la Clé qui permettra au Graal rouge d'entrer en moi. Je serai changé à jamais.",
-description: "Ce Rite est la Clé qui permettra au Graal rouge d'entrer en moi. Je serai changé à jamais.",
-warmup: 60,
-craftable: true,
-burnimage: "flammarion"
-},
-{
-id: "ascensionsensation_switchpolarity_mtof",
-label: "Préférences",
-actionId: "dream",
-requirements: {ascensionsensationbm:1},
-effects: {ascensionsensationbm:-1,ascensionsensationbf:1},
-startdescription: "Je suis allé aussi loin que je le pouvais dans le rêve. Je dois effectuer le <b>Travail</b>. Mais peut-être, quand je songe à mes désirs, que ce ne sont pas vraiment les hommes qui me viennent à l'esprit...",
-description: "Les goûts se modifient, les désirs changent, les pensées se plient à d'autres formes.",
-warmup: 3,
-craftable: true
-},
-{
-id: "ascensionsensation_switchpolarity_ftom",
-label: "Préférencess",
-actionId: "dream",
-requirements: {ascensionsensationbf:1},
-effects: {ascensionsensationbf:-1,ascensionsensationbm:1},
-startdescription: "Je suis allé aussi loin que je le pouvais dans le rêve. Je dois effectuer le <b>Travail</b>. Mais peut-être, quand je songe à mes désirs, que ce ne sont pas vraiment les femmes qui me viennent à l'esprit...",
-description: "Les goûts se modifient, les désirs changent, les pensées se plient à d'autres formes.",
-warmup: 3,
-craftable: true
-},
-
-
-{
-id: "ascensionenlightenment_upgradetoobsession",
-label: "La Clé de l'Aveuglement",
-actionId: "work",
-requirements: {ascensionenlightenmentb:1,
-waystag_after:1,
-lantern:6},
-effects: {ascensionenlightenmentb:-1,ascensionenlightenmentc:1},
-startdescription: "Ce rite est la Clé qui permettra au regard du Guetteur d'entrer en moi. Je serai changé à jamais.",
-description: "Le Rite est complet. Les Marques du Gardien sont sur moi. La première Marque est ce que j'ai dit, et la seconde est ce que j'ai fait. Si j'inspecte mon corps, je trouverai la troisième. Ma faim a été affinée, maintenant.",
-warmup: 60,
-craftable: true,
-burnimage: "flammarion"
-},
-{
-id: "majorforgevictory",
-label: "L'AUBE SE LÈVE",
-actionId: "work",
-requirements: {ritual: 1,
-ascensionpowerf:1,
-forge:50},
-effects: {},
-startdescription: "[Ce texte est disponible à l'arrivée des héritages avancés.]",
-description: "N'oubliez pas que le texte de fin sera chargé.",
-warmup: 60,
-craftable: false
-},
-{id:"minorforgevictory_trigger",
-actionId:"work",
-label: "La Conflagration du Coeur",
-startdescription: "J'ai été dans la flamme tant de fois. Les plaques de ma chair se déchirent les unes des autres. J'invoque maintenant la chaleur de la Forge, qui va m'arracher ce que j'étais. Je mourrai en passant la Porte des Tricuspides, mais la mort n'est pas la fin. Je serai immortel : un Long, favori de la Forge. [Tout Adepte utilisé dans le rituel sera consumé. Si vous vous souciez de ceux que vous pourriez laisser derrière vous, faites attention.]",
-requirements: {ritual: 1,
-ascensionpowerf:1,
-forge:36},
-craftable:true,
-comments:"Nettoyer avant la pré-recette ; éliminer tout élément étranger qui pourrait perturber les déclencheurs finaux",
-warmup:1,
-effects:{follower:-3,summoned:-3,passion:-3},
-linked:[{id:"minorforgevictory_overture",chance:100}]
-},
-
-
-{
-id: "minorforgevictory_overture",
-label: "La Conflagration du Coeur",
-actionId: "work",
-
-description: "Je suis en train de devenir un nom de feu. N'oubliez pas que le texte de fin sera chargé.",
-warmup: 60,
-slots:[{id:"beloved",label:"Bien-aimé",required:{romanticinterest:1},forbidden:{corpse:1,notoriety:1}, greedy:true}],
-signalEndingFlavour: Grand,
-linked:[{chance:100,id:"belovedfarewell"},
-{chance:100,id:"minorforgevictorywithrisen"},
-{chance:100,id:"minorforgevictory"}]
-},	
-
-{
-id: "minorforgevictory",
-label: "La Conflagration du Coeur",
-requirements:{ascensionpowerf:1},
-ending: "minorforgevictory",
-actionId: "work",
-},
-{
-id: "minorforgevictorywithrisen",
-requirements:{summoned:1,ascensionpowerf:1},
-label: "La Conflagration du Coeur",
-ending: "minorforgevictorywithrisen",
-actionId: "work",
-},
-
-{
-id: "majorgrailvictory",
-label: "LA FÊTE EST IMMINENTE",
-actionId: "work",
-requirements: {ritual: 1,
-ascensionsensationf:1,
-grail:50},
-effects: {},
-startdescription: "[Ce texte est disponible à l'arrivée des héritages avancés.]",
-description: "La fête commence. N'oubliez pas que le texte de fin sera chargé.",
-warmup: 60,
-craftable: false
-},
-{
-id: "minorgrailvictory_withromanticsacrifice",
-label: "La Fête du Souvenir du Coeur",
-actionId: "work",
-requirements: {ritual: 1,
-ascensionsensationf:1,
-romanticinterest:1,
-grail:27},
-startdescription: "Je suis gonflé de la vie des autres. Les coutures de mon corps commencent à se rompre. J'invoque maintenant le Graal Rouge, qui est la Mère des Montagnes, qui Consomme, qui est la Source. Il y a ici quelqu'un qui m'a aimé et que j'ai peut-être aimé, comme le Graal Rouge a peut-être aimé Thunderskin avant sa fin. Avec ce sacrifice, l'invocation est à la fois plus facile et plus terrible. En Son nom, je me donnerai naissance à moi-même. La Porte des Tricuspides s'ouvre. Je serai immortel : un Long, un favori du Graal, et l'on se souviendra de celui qui m'a aimé aussi longtemps que j'aurai enduré.",
-description: ".",
-warmup: 60,
-craftable: true,
-signalEndingFlavour: Grand,
-ending:"minorgrailvictory"
-},
-{id:"minorgrailvictory_trigger",
-actionId:"work",
-label: "La Fête de la Vraie Naissance",
-startdescription: "Je suis gonflé de la vie des autres. Les coutures de mon corps commencent à se rompre. J'invoque maintenant le Graal Rouge, qui est la Mère des Montagnes, qui Consomme, qui est la Source. En Son nom, je vais me donner naissance. La Porte des Tricuspides s'ouvre. Je serai immortel : un Long, un favori du Graal. [Tout Adepte utilisé dans le rituel sera consumé. Si vous vous souciez de ceux que vous pourriez laisser derrière vous, faites attention.]",
-requirements: {ritual: 1,
-ascensionsensationf:1,
-grail:36},
-craftable:true,
-comments:"Cleanup pre-recipe; remove any extraneous elements that might confuse final triggers",
-warmup:1,
-effects:{follower:-3,summoned:-3,passion:-3},
-linked:[{id:"minorgrailvictory_overture",chance:100}]		
-
-},
-
-{
-id: "minorgrailvictory_overture",
-label: "La Fête de la Vraie Naissance",
-actionId: "work",        
-description: ".",
-warmup: 60,
-signalEndingFlavour: Grand,
-slots:[{id:"beloved",label:"Bien-aimé",required:{romanticinterest:1},forbidden:{corpse:1,notoriety:1}, greedy:true}],
-linked:[{chance:100,id:"minorgrailvictorywithrisen"},
-{chance:100,id:"belovedfarewell"},		
-{chance:100,id:"minorgrailvictory"}]
-},
-{
-id: "minorgrailvictory",
-label: "La Fête de la Vraie Naissance",
-requirements:{ascensionsensationf:1},
-ending: "minorgrailvictory",
-actionId: "work",
-},
-
-{
-id: "minorgrailvictorywithrisen",
-requirements:{summoned:1,ascensionsensationf:1},
-label: "La Fête de la Vraie Naissance",
-ending: "minorgrailvictorywithrisen",
-actionId: "work",
-},
-
-
-{
-id: "majorlanternvictory",
-label: "LA LANTERNE",
-actionId: "work",
-requirements: {ritual: 1,
-ascensionenlightenmentf:1,
-lantern:50},
-effects: {},
-startdescription: "[Ce texte est disponible à l'arrivée des héritages avancés.]",
-description: "j'approche de la Gloire. N'oubliez pas que le texte de fin sera chargé.",
-warmup: 60,
-craftable: false
-},
-
-{id:"belovedfarewell",
-label:"Le choix du Seuil",
-actionId:"work",
-requirements:{romanticinterest:1,summoned:-1},
-startdescription:"L'adieu final. Ils resteront, et je monterai.",
-slots: [{id:"decision",label:"Décision",description:"[Ajoutez de la Passion pour vous détourner de votre Ascension... et vivre comme un mortel avec votre bien-aimé. Ne rien faire pour continuer.]",required:{passion:1}}],
-alternativerecipes:[{id:"auclairvictory",chance:100},
-{id:"catvictory",chance:100},
-{id:"clovettevictory",chance:100},
-{id:"cliftonvictory",chance:100},
-{id:"dorothyvictory",chance:100},
-{id:"elridgevictory",chance:100},
-{id:"enidvictory",chance:100},
-{id:"laidlawvictory",chance:100},
-{id:"leovictory",chance:100},
-{id:"nevillevictory",chance:100},
-{id:"portervictory",chance:100},
-{id:"reniravictory",chance:100},
-{id:"rosevictory",chance:100},
-{id:"salibavictory",chance:100},
-{id:"sleevictory",chance:100},
-{id:"sylviavictory",chance:100},
-{id:"tristanvictory",chance:100},
-{id:"valcianevictory",chance:100},
-{id:"victorvictory",chance:100},
-{id:"violetvictory",chance:100},
-{id:"ysabetvictory",chance:100},
-{id:"imnotinlove",chance:100}
-],
-warmup:30
-
-},
-{
-id: "auclairvictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqauclair:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec votre bien-aimé Auclair.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "auclairvictory"
-},
-{
-id: "catvictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqcat:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Cat Caro.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "catvictory"
-},
-{
-id: "clovettevictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqclovette:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Clovette.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "clovettevictory"
-},
-{
-id: "cliftonvictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqclifton:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Clifton.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "cliftonvictory"
-},
-{
-id: "dorothyvictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqdorothy:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Dorothy.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "dorothyvictory"
-},
-{
-id: "elridgevictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqelridge:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Elridge.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "elridgevictory"
-},
-{
-id: "enidvictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqenid:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Enid.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "enidvictory"
-},
-{
-id: "laidlawvictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqlaidlaw:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Laidlaw.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "laidlawvictory"
-},
-{
-id: "leovictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqleo:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Leo.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "leovictory"
-},
-{
-id: "nevillevictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqneville:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Neville.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "nevillevictory"
-},
-{
-id: "portervictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqporter:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Porter.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "portervictory"
-},
-{
-id: "reniravictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqrenira:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Renira.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "reniravictory"
-},
-{
-id: "rosevictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqrose:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Rose.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "rosevictory"
-},
-{
-id: "salibavictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqsaliba:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Saliba.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "salibavictory"
-},
-{
-id: "sleevictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqslee:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Slee.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "sleevictory"
-},
-{
-id: "sylviavictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqsylvia:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Sylvia.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "sylviavictory"
-},
-{
-id: "tristanvictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqtristan:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Tristan.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "tristanvictory"
-},
-{
-id: "valcianevictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqvalciane:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Valciane.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "valcianevictory"
-},
-{
-id: "victorvictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqvictor:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Victor.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "victorvictory"
-},
-{
-id: "violetvictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqviolet:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Violet.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "violetvictory"
-},
-{
-id: "ysabetvictory",
-label: "L'Amour ?",
-actionId: "work",
-requirements: {romanticinterest: 1,passion:1,uqysabet:1},
-startdescription: "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Ysabet.]",
-description: ".",
-warmup: 60,
-craftable: false,
-signalEndingFlavour: Grand,
-ending: "ysabetvictory"
-},
-{
-id: "imnotinlove",
-label: "Dévouement",
-startdescription:"Peut-être m'aiment-ils. Peut-être que je les aime. Peut-être que rien de tout cela ne compte.",
-actionId: "work",
-craftable: false,
-alternativerecipes:[{id:"minorlanternvictory",chance:100},
-{id:"minorgrailvictory",chance:100},
-{id:"minorforgevictory",chance:100}
-],
-},
-
-{id:"minorlanternvictory_trigger",
-actionId:"work",
-label: "L'Incursion",
-startdescription: "Il reste peu de cette chair. Je passerai par la Porte Tricuspide et je ne reviendrai pas. Le Gardien m'attend. Sur ses traces, je trouverai la lumière de la Gloire. La compréhension est trop grande pour que mon âme la retienne, et donc mon âme s'ouvrira. Je ne serai pas immortel : Je serai plus que cela. [Tout Adepte utilisé dans le rituel sera consumé. Si vous vous souciez de ceux que vous pourriez laisser derrière vous, faites attention]",
-requirements: {ritual: 1,
-ascensionenlightenmentf:1,
-lantern:36},
-craftable:true,
-comments:"Cleanup pre-recipe; remove any extraneous elements that might confuse final triggers",
-warmup:1,
-effects:{follower:-3,summoned:-3,passion:-3},
-linked:[{id:"minorlanternvictory_overture",chance:100}]		
-
-},
-{
-id: "minorlanternvictory_overture",
-label: "L'Incursion",
-actionId: "work",
-description: ".",
-warmup: 60,
-slots:[{id:"beloved",label:"Bien-aimé",required:{romanticinterest:1},forbidden:{corpse:1,notoriety:1}, greedy:true}],
-signalEndingFlavour: Grand,
-linked:[{chance:100,id:"minorlanternvictorywithrisen"},
-{chance:100,id:"belovedfarewell"},
-{chance:100,id:"minorlanternvictory"}]
-},
-{
-id: "minorlanternvictory",
-label: "L'Incursion",
-requirements:{ascensionenlightenmentf:1},
-ending: "minorlanternvictory",
-actionId: "work",
-},
-
-{
-id: "minorlanternvictorywithrisen",
-requirements:{summoned:1,ascensionenlightenmentf:1},
-label: "L'Incursion",
-ending: "minorlanternvictorywithrisen",
-actionId: "work",
-},
-
-
-
-{id:"ambition",
-requirements: {seasonambitions:1},
-label:"Envie d'exotisme ?",
-actionId: "craving",
-slots: [{id:"Obsessions",label:"Obsessions",description: "Des désirs plus profonds",required: {enlightenmentmarks:3,powermarks:3,sensationmarks:3,remembrancemarks:2,changemarks:1,independent:1,resentment:3,mentor:1}, greedy:true }],
-startdescription: "Quelle faim nous pousse ?",
-description: "",
-effects: {},
-warmup: 10,
-linked: [
-{id:"L_ascension_rival",chance:100},
-{id:"L_independent",chance:100},
-{id:"L_rebellion_activate",chance:70},
-{id:"L_rebellion_noactivation",chance:100},
-{id:"ending.minorcrownedgrowthvictory",chance:100},
-{id:"ambition.apostleforge.emitfuel",chance:100},
-{id:"ambition.apostlegrail.emitfuel",chance:100},
-{id:"ambition.apostlelantern.emitfuel",chance:100},
-{id:"ascensioncravingpower",chance:100},
-{id:"ascensioncravingsensation",chance:100},
-{id:"ascensioncravingenlightenment",chance:100},
-{id:"ascensioncravingremembrance",chance:100},
-{id:"ascensioncravingremembrancenegative",chance:100},
-{id:"ascensioncravingchange_tryascendfromg",chance:100},
-{id:"ascensioncravingchange_tryascendfromf",chance:100},
-{id:"ascensioncravingchange_tryascendfrome",chance:100},
-{id:"ascensioncravingchange_tryascendfromd",chance:100},
-{id:"ascensioncravingchange_tryascendfromc",chance:100},
-{id:"ascensioncravingchange_tryascendfromb",chance:100},
-{id:"ascensioncravingchange_tryascendfroma",chance:100},
-{id:"ascensionnotyet",chance:100}]
-},
-{id:"L_independent",
-label:"Rivalité !",
-requirements:{independent:1},
-actionId:"ambition",
-deckeffect:{schemeevents:1},
-linked:[{id:"L_independent_router",chance:100}]
-
-},
-
-{id:"L_independent_router",
-label:"Rivalité !",
-actionId:"ambition",
-requirements:{independent:1},
-comments:"Cette exigence est strictement inutile, mais laissé ici juste au cas où nous déplacerions à nouveau les connexions de recettes - c'est un filtre important",
-startdescription:"Ce rival s'élèvera avant moi. [Les occultistes indépendants tenteront de monopoliser l'attention des Heures. Ils peuvent aussi mener d'autres projets, que vous le vouliez ou non.]",
-alternativerecipes:[
-{id:"scheme_murderhunter",chance:100, additional:true,expulsion:{limit:1,filter:{independent:1}}},
-{id:"scheme_expedition_grab",chance:100, additional:true,expulsion:{limit:1,filter:{independent:1}}},
-{id:"scheme_activities",chance:100, additional:true,expulsion:{limit:1,filter:{independent:1}}}],
-warmup:30
-},
-
-{id:"L_ascension_rival",
-actionId:"ambition",
-requirements:{rivalmarks:7},
-extantreqs:{long.enemy:-1},
-label:"Un Prétendant Victorieux",
-startdescription:"Les réalisations de mon Rival éclipsent les miennes. Il va maintenant s'élever jusqu'à prendre place dans la Maison du Soleil, tandis qu'ici, dans le monde, je resterai seul avec mes frustrations.",
-ending:"rivalascension",
-signalEndingFlavour: Melancholy,
-warmup:60
-},
-
-{id:"L_ascension_rival_apostle",
-actionId:"ambition",
-requirements:{rivalmarks:7},
-extantreqs:{long.enemy:1},
-label:"Trop d'ennemis",
-startdescription:"Un ennemi immortel est un péril mortel. Deux ennemis immortels, c'est trop. Notre Grand Oeuvre a échoué.",
-ending:"rivalascension",
-signalEndingFlavour: Melancholy,
-warmup:60
-},
-
-
-
-{id:"L_rebellion_activate",
-label:"Rébellion !",
-actionId:"ambition",
-requirements:{resentment:3},
-startdescription:"Trop ou pas assez ? Quoi que j'aie fait, cela a mis quelqu'un en colère au-delà de toute tolérance.",
-description:"Un allié me quitte. Il n'est peut-être pas un ennemi - pas encore - pas exactement - mais il ne me servira plus.",
-aspects:{rebellion:1},
-warmup:30
-},
-{id:"L_rebellion_noactivation",
-label:"Mécontentement",
-actionId:"ambition",
-requirements:{resentment:3},
-startdescription:"Trop ou pas assez ? Quoi que j'aie fait, cela a mis en colère un allié.",
-description:"Celui-ci a passé un certain temps dans une solitude boudeuse. Pour le moment, il va revenir au bercail.",
-mutations:[{filterOnAspectId:follower,mutateAspectId:resentment,mutationLevel:-1,additive:true}],
-warmup:30
-},
-
-{id:"ending.minorcrownedgrowthvictory",
-actionId:"ambition",
-label:"INFECTER ET DEVENIR",
-requirements:{ghoul.hunger:7},
-startdescription:"Mon appétit est devenu une chose qui me dépasse, mais qui ne m'est pas étrangère. Mon abdomen pullule de fécondité. Il est trop tard.",
-ending:"minorcrownedgrowthvictory",
-signalEndingFlavour:"Vile",
-warmup:30},
-
-
-{id:"ascensionnotyet",
-label:"Frustrations de mortels",
-actionId: "craving",
-requirements: {enlightenmentmarks:-1,powermarks:-1,sensationmarks:-1},
-slots: [{id:"Temptations",label:"Tentations",description: "Le feu doit être nourri",required: {desire:1}, greedy:true }],
-startdescription: "Quelle faim me pousse ?",
-effects: {restlessness:1},
-description: "Pour l'instant, je n'ai que les besoins et les désirs de tout autre mortel. Mais qu'est-ce qui m'anime ?",
-alternativerecipes: [
-{id:"ascensionhintpower2",chance:100},
-{id:"ascensionhintenlightenment2",chance:100},
-{id:"ascensionhintsensation2m",chance:100},
-{id:"ascensionhintsensation2f",chance:100},
-
-{id:"ascensionhintpower1",chance:100},
-{id:"ascensionhintenlightenment1",chance:100},
-{id:"ascensionhintsensation1",chance:100},
-{id:"legacydetectiveplotitem_tempt",chance:100}
-],
-warmup:10
-},
-
-
-{id:"ascensionhintpower2",
-label:"Le Rugissement de la Forge",
-actionId:"craving",
-requirements:{ascensionpowerb:1},
-startdescription:"Je n'ai jamais assez chaud, maintenant.",
-description: "J'ai rêvé de la Forge, et j'aspire à la chaleur de ses flammes. Il est presque temps d'exécuter l'Oeuvre et de commencer la transformation - mais je dois avoir assez d'aspect de la Forge. <b>Exploration</b> pourrait en trouver plus.",
-effects:{restlessness:1},
-warmup:10
-},
-{id:"ascensionhintenlightenment2",
-label:"La Lumière du Guetteur",
-actionId:"craving",
-requirements:{ascensionenlightenmentb:1},
-startdescription:"Dès le réveil, j'ai commencé à voir de nouvelles couleurs.",
-description: "Ma curiosité devient un besoin physique. Mes yeux seront des seuils. Il est presque temps d'effectuer le Travail et de commencer la transformation - mais je dois avoir suffisamment d'aspect de la Lanterne. <b>Exploration</b> pourrait en trouver plus.",
-effects:{restlessness:1},
-warmup:10
-},
-{id:"ascensionhintsensation2m",
-label:"Le toucher du Graal",
-actionId:"craving",
-requirements:{ascensionsensationbm:1},
-startdescription:"Mes désirs évoluent.",
-description: "Les merveilleuses marées du Graal se déplacent en moi. Il est presque temps d'exécuter le Travail et de commencer la transformation - mais je dois avoir assez d'Aspect du Graal. <b>Explorer</b> permettrait d'en trouver plus.",
-effects:{restlessness:1},
-warmup:10
-},
-{id:"ascensionhintsensation2f",
-label:"Le toucher du Graal",
-actionId:"craving",
-requirements:{ascensionsensationbf:1},
-startdescription:"Mes désirs évoluent.",
-description: "Le Graal m'a touché de ses doigts merveilleux. Il est presque temps d'exécuter le travail et de commencer la transformation - mais je dois avoir assez d'aspect de Graal. <b>Exploration</b> pourrait en trouver plus.",
-effects:{restlessness:1},
-warmup:10
-},
-
-
-
-{id:"ascensionhintpower1",
-label:"La lueur de la Forge",
-actionId:"craving",
-requirements:{ascensionpowera:1},
-startdescription:"La faim brûle dans mon coeur - la faim du pouvoir que les arts invisibles pourraient apporter.",
-description: "La Forge des Jours attend dans mes rêves. Si j'apprends les croyances de la Forge et que je rêve de cette tentation, je peux avancer dans mon projet. Le besoin me ronge.",
-effects:{restlessness:1},
-warmup:10
-},
-{id:"ascensionhintenlightenment1",
-label:"Les empreintes du Guetteur",
-actionId:"craving",
-requirements:{ascensionenlightenmenta:1},
-startdescription:"La faim brille dans mon cerveau - la faim de la connaissance que les arts invisibles pourraient apporter.",
-description: "Le Guetteur, qui est la Porte-dans-l'Oeil, attend dans mes rêves. Si j'apprends les croyances de la Lanterne, et que je rêve de cette tentation, je peux avancer dans mon projet. Le besoin me ronge.",
-effects:{restlessness:1},
-warmup:10
-},
-{id:"ascensionhintsensation1",
-label:"Les murmures du Graal",
-actionId:"craving",
-requirements:{ascensionsensationa:1},
-startdescription:"La faim rôde dans mon corps - la faim des plaisirs que les arts invisibles pourraient apporter.",
-description: "La coupe rouge, la coupe de la noyade et de la dévoration, m'attend dans mes rêves. Si j'apprends les croyances du Graal, et que je rêve de cette tentation, je pourrais avancer dans mon projet. Le besoin me ronge.",
-effects:{restlessness:1},
-warmup:10
-},
-
-
-
-{id:"ascensioncravingpower",
-label:"La Chaleur qui façonne",
-actionId: "craving",
-requirements: {powermarks:1},
-slots: [{id:"Fuels",label:"Combustibles",description: "Le feu doit être nourri",required: {funds:1}, greedy:true }],
-startdescription: "J'ai besoin de feux toujours plus chauds. Leur combustible est maintenant rare et coûteux. Si je ne peux pas me les offrir, le froid me rattrapera.",
-linked: [{id:"ascensionsuccesscravingpower_descend",chance:100},
-{id:"ascensioncravingpower_ascend",chance:100}],
-warmup:30
-},
-
-{
-id:"ascensionsuccesscravingpower_descend",
-label:"Les Cendres du changement",		
-actionId: "craving",
-requirements: {funds:-1},
-slots: [{id:"Pain",label:"Douleur",description: "Mon besoin me ronge", required: {health:1,vitality:1}, greedy:true}],		
-startdescription: "Je frissonne. Sans le feu, ma chair va s'amincir et s'affaiblir.",
-description: "Ma force est moindre. Mon sang est plus froid. Je pense que même certaines de mes cicatrices guérissent. Je m'affaiblis.",
-aspects: {descend:1,damagehealth:1},
-effects:{vitality:-1},
-warmup:30
-},
-
-{
-id:"ascensioncravingpower_ascend",
-label:"Une autre Marque",
-actionId: "craving",
-startdescription:"",
-description: "Les flammes me désirent autant que je les désire. Leur contact est bien plus que de la douleur. J'ai une autre Marque.",
-effects: {vitality:2,funds:-1},
-aspects: {ascend:1}
-},
-
-
-
-{id:"ascensioncravingsensation",
-label:"Le Besoin Rouge",
-actionId: "craving",
-requirements: {sensationmarks:1},
-slots: [{id:"Sustenance",label:"Nourriture",description: "Ceux qui sont morts récemment, ou ceux qui sont vivants.",required: {corpse:1, lunatic:-1, prisoner:1}, greedy:true }],
-startdescription: "Une soif de sang ? Si seulement c'était aussi simple. Je les drainerai beaucoup plus intensément.",
-linked: [
-{id:"ascensionsuccesscravingsensation_descend",chance:100},
-{id:"ascensioncravingsensation_ascend",chance:100}
-],
-warmup:30
-},
-
-{
-id:"ascensionsuccesscravingsensation_descend",
-label:"Le Désert à l'intérieur",		
-actionId: "craving",
-requirements: {corpse:-1,lunatic:-1,prisoner:-1},
-slots: [{id:"Pain",label:"Douleur",description: "Mon besoin me ronge", required: {passion:1,glimmering:1}, greedy:true}],		
-startdescription: "Sans la vie des autres, ma propre vie se nourrira d'elle-même.",
-description: "Mes fluides se diluent, ma chair se dessèche, mes changements défont, mes passions s'estompent. Je deviens moins que ce que je veux.",
-aspects: {descend:1,fatiguing:1},
-effects:{glimmering:-1},
-warmup:30
-},
-
-
-{
-id:"ascensioncravingsensation_ascend",
-label:"Une autre Marque",
-actionId: "craving",
-effects: {glimmering:2,corpse:-1,lunatic:-1,prisoner:-1},
-startdescription:"",
-description: "Quand j'ai fini, la satisfaction est aussi profonde que la lune dans la mer. Une autre Marque bourgeonne en moi.",
-aspects: {ascend:1}
-},
-
-
-
-{id:"ascensioncravingenlightenment",
-label:"Les curiosités de la Lumière",
-actionId: "craving",
-requirements: {enlightenmentmarks:1},
-slots: [{id:"Conversation",label:"Conversation",description: "Les derniers mots d'un esprit vivant.",required: {prisoner:1}, greedy:true }],
-startdescription: "Du temps seul dans une pièce silencieuse avec un esprit vivant. C'est tout ce dont j'ai besoin.",
-linked: [
-{id:"ascensionsuccesscravingenlightenment_descend",chance:100},
-{id:"ascensioncravingenlightenment_ascend",chance:100}],
-warmup:30
-},
-
-
-{
-id:"ascensionsuccesscravingenlightenment_descend",
-label:"Le Désert à l'intérieur",		
-actionId: "craving",
-requirements: {prisoner:-1},
-slots: [{id:"Pain",label:"Douleur",description: "Mon besoin me ronge", required: {reason:1,erudition:1}, greedy:true}],		
-startdescription: "Si je ne peux pas consumer les pensées d'un esprit vivant, mon besoin se retournera contre moi.",
-description: "La lumière du Mansus s'affaiblit en moi. Je suis moins que ce que j'étais. J'ai besoin de parler. Je dois avoir ces conversations particulières.",
-aspects: {descend:1,fatiguing:1},
-effects:{erudition:-1},
-warmup:30
-},
-
-{
-id:"ascensioncravingenlightenment_ascend",
-label:"Une autre Marque",
-actionId: "craving",
-effects: {erudition:2,prisoner:-1},
-startdescription:"",
-description: "J'ai bu la lumière de leur esprit. Elle me fait vibrer et me remplit. Les Marques s'éclairent en moi.",
-aspects: {ascend:1}
-},
-
-
-{id:"ascensioncravingremembrance",
-label:"La Faim qui grandit dans la Terre Noire",
-actionId: "craving",
-requirements: {remembrancemarks:2, ghoul.hunger:1},
-mutations:[{filter:remembrancemarks,mutate:ghoul.hunger,level:1,additive:true}],
-startdescription: "Le goût - le goût particulier - le goût qui n'est ni juste ni mauvais - il vient encore me troubler la bouche. Ma langue va gonfler, mes lèvres vont noircir. L'élixir a fixé ses spores en moi, et seule la chair morte peut les étouffer.",
-warmup:30
-},
-{id:"ascensioncravingremembrancenegative",
-label:"La Faim qui grandit dans la Terre Noire",
-actionId: "craving",
-requirements: {remembrancemarks:2},
-mutations:[{filter:remembrancemarks,mutate:ghoul.hunger,level:1,additive:false}],
-startdescription: "Le goût - le goût particulier - le goût qui n'est ni juste ni mauvais - il vient encore me troubler la bouche. Ma langue va gonfler, mes lèvres vont noircir. L'élixir a fixé ses spores en moi, et seule la chair morte peut les étouffer.",
-comments: "This is a safety measure for players who managed to allow their hunger to go negative with an old save.",
-warmup:30
-},
-
-
-
-{id:"ascensioncravingchange_tryascendfroma",
-label:"La Tentation du changement",
-actionId: "craving",
-requirements: {ascensionchangea:1},
-slots: [{id:"Lesson",label:"Leçon",description: "Abandonner, pour devenir",required: {ascensionlessonhearta:1,ascensionlessonmotha:1}, greedy:true }],
-startdescription: "J'aspire à être autre chose, mais ai-je appris la leçon dont j'ai besoin devant les témoins que je dois avoir ?",
-linked: [{id:"ascensioncravingchange_heartlessonascendfroma",chance:100},
-{id:"ascensioncravingchange_mothlessonascendfroma",chance:100},
-{id:"ascensioncravingchange_noascension",chance:100}],
-warmup:30
-},
-
-{id:"ascensioncravingchange_heartlessonascendfroma",
-label:"Vêtements, abandonnés",
-actionId: "craving",
-requirements: {ascensionlessonhearta:1},
-description: "Lorsque je renonce aux choix que j'ai faits, lorsque la lune filtrée par les arbres parcourt mes surfaces, je fais pousser la lumière comme une feuille.",
-aspects:{ascend:1},
-effects:{ascensionlessonhearta:-1},
-mutations:[{filterOnAspectId:desire,mutateAspectId:desireheart_track,mutationLevel:1,additive:true}],
-warmup:10
-},
-{id:"ascensioncravingchange_mothlessonascendfroma",
-label:"Vêtements, abandonnés",
-actionId: "craving",
-requirements: {ascensionlessonmotha:1},
-description: "J'écaille mon enveloppe pour qu'elle pousse. Voici la lune et me voici dans son oeil -",
-aspects:{ascend:1},
-effects:{ascensionlessonmotha:-1},
-mutations:[{filterOnAspectId:desire,mutateAspectId:desiremoth_track,mutationLevel:1,additive:true}],
-warmup:10
-},
-
-
-
-{id:"ascensioncravingchange_tryascendfromb",
-label:"Vers la deuxième Transformation",
-actionId: "craving",
-requirements: {ascensionchangeb:1},
-slots: [{id:"Lesson",label:"Leçon",description: "Abandonner, pour devenir",required: {ascensionlessonheartb:1,ascensionlessonmothb:1}, greedy:true }],
-startdescription: "La peau que je porte deviendra trop petite, et je dois donc commencer à l'abandonner. Je devrai envoyer une partie de moi-même pour apprendre.",
-linked: [{id:"ascensioncravingchange_heartlessonascendfromb",chance:100},
-{id:"ascensioncravingchange_mothlessonascendfromb",chance:100},
-{id:"ascensioncravingchange_noascension",chance:100}],
-warmup:30
-},
-
-{id:"ascensioncravingchange_heartlessonascendfromb",
-label:"Téguments, abandonnés",
-actionId: "craving",
-requirements: {ascensionlessonheartb:1},
-description: "Ma peau la plus superficielle se libère en lambeaux et en taches, et moi aussi.",
-aspects:{ascend:1},
-effects:{ascensionlessonheartb:-1},
-mutations:[{filterOnAspectId:desire,mutateAspectId:desireheart_track,mutationLevel:1,additive:true}],
-warmup:10
-},
-{id:"ascensioncravingchange_mothlessonascendfromb",
-label:"Téguments, abandonnés",
-actionId: "craving",
-requirements: {ascensionlessonmothb:1},
-description: "Nous sommes tous des couches
-
-mais pas tant que ça",
-aspects:{ascend:1},
-effects:{ascensionlessonmothb:-1},
-mutations:[{filterOnAspectId:desire,mutateAspectId:desiremoth_track,mutationLevel:1,additive:true}],
-warmup:10
-},
-
-
-{id:"ascensioncravingchange_tryascendfromc",
-label:"Vers la troisième Transformation",
-actionId: "craving",
-requirements: {ascensionchangec:1},
-slots: [{id:"Lesson",label:"Leçon",description: "Abandonner, pour devenir",required: {ascensionlessonheartc:1,ascensionlessonmothc:1}, greedy:true }],
-startdescription: "On révèle, on dissimule, on révèle. Pour continuer, je dois apprendre une leçon de dissimulation.",
-linked: [{id:"ascensioncravingchange_heartlessonascendfromc",chance:100},
-{id:"ascensioncravingchange_mothlessonascendfromc",chance:100},
-{id:"ascensioncravingchange_noascension",chance:100}],
-warmup:30
-},
-
-{id:"ascensioncravingchange_heartlessonascendfromc",
-label:"Mes Pas, abandonnés",
-actionId: "craving",
-requirements: {ascensionlessonheartc:1},
-description: "Sans pas à suivre, qui connaîtra notre destination ? Je souhaite tellement y aller.",
-aspects:{ascend:1},
-effects:{ascensionlessonheartc:-1},
-mutations:[{filterOnAspectId:desire,mutateAspectId:desireheart_track,mutationLevel:1,additive:true}],	
-warmup:10 
-},
-{id:"ascensioncravingchange_mothlessonascendfromc",
-label:"Mes Pas, abandonnés",
-actionId: "craving",
-requirements: {ascensionlessonmothc:1},
-description: "La plus ancienne leçon de Moldywarp : entre musique et silence",
-comments: "absence de point final intentionnel",
-aspects:{ascend:1},
-effects:{ascensionlessonmothc:-1},
-mutations:[{filterOnAspectId:desire,mutateAspectId:desiremoth_track,mutationLevel:1,additive:true}],
-warmup:10
-},
-
-
-{id:"ascensioncravingchange_tryascendfromd",
-label:"Vers la quatrième Transformation",
-actionId: "craving",
-requirements: {ascensionchanged:1},
-slots: [{id:"Lesson",label:"Leçon",description: "Abandonner, pour devenir",required: {ascensionlessonheartd:1,ascensionlessonmothd:1}, greedy:true }],
-startdescription: "Pour le prochain changement, je dois prendre des dispositions pour accueillir les modifications.",
-linked: [{id:"ascensioncravingchange_heartlessonascendfromd",chance:100},
-{id:"ascensioncravingchange_mothlessonascendfromd",chance:100},
-{id:"ascensioncravingchange_noascension",chance:100}],
-warmup:30
-},
-
-{id:"ascensioncravingchange_heartlessonascendfromd",
-label:"Nuances abandonnées",
-actionId: "craving",
-requirements: {ascensionlessonheartd:1},
-description: "Ma chair qui vient de pâlir est riche des sucs de la dissolution.",
-aspects:{ascend:1},
-effects:{ascensionlessonheartd:-1},
-mutations:[{filterOnAspectId:desire,mutateAspectId:desireheart_track,mutationLevel:1,additive:true}],
-warmup:10
-},
-{id:"ascensioncravingchange_mothlessonascendfromd",
-label:"Nuances abandonnées",
-actionId: "craving",
-requirements: {ascensionlessonmothd:1},
-description: "Quand je serai dans la dernière peau, tout ce moi va se dissoudre. Si vite.",
-aspects:{ascend:1},
-effects:{ascensionlessonmothd:-1},
-mutations:[{filterOnAspectId:desire,mutateAspectId:desiremoth_track,mutationLevel:1,additive:true}],
-warmup:10
-},
-
-
-{id:"ascensioncravingchange_tryascendfrome",
-label:"Vers la cinquième Transformation",
-actionId: "craving",
-requirements: {ascensionchangee:1},
-slots: [{id:"Lesson",label:"Leçon",description: "Abandonner, pour devenir",required: {ascensionlessonhearte:1,ascensionlessonmothe:1}, greedy:true }],
-startdescription: "La porte que je vais franchir n'est jamais visible, ni à l'oeil qui se réveille, ni à l'oeil qui est fermé. Je dois abandonner ces yeux à celui qui connaît le chemin, afin de pouvoir voir.",
-linked: [{id:"ascensioncravingchange_heartlessonascendfrome",chance:100},
-{id:"ascensioncravingchange_mothlessonascendfrome",chance:100},
-{id:"ascensioncravingchange_noascension",chance:100}],
-warmup:30
-},
-
-{id:"ascensioncravingchange_heartlessonascendfrome",
-label:"La vue, abandonnée",
-actionId: "craving",
-requirements: {ascensionlessonhearte:1},
-description: "Parfois, les yeux citrins de celui qui a subi cette transformation sont confondus avec les yeux illuminés de celui qui s'approche de l'Incursion. Mais jamais longtemps. ",
-aspects:{ascend:1},
-effects:{ascensionlessonhearte:-1},
-mutations:[{filterOnAspectId:desire,mutateAspectId:desireheart_track,mutationLevel:1,additive:true}],
-warmup:10
-},
-{id:"ascensioncravingchange_mothlessonascendfrome",
-label:"La vue, abandonnée",
-actionId: "craving",
-requirements: {ascensionlessonmothe:1},
-description: "J'entre maintenant dans ma dernière peau.",
-aspects:{ascend:1},
-effects:{ascensionlessonmothe:-1},
-mutations:[{filterOnAspectId:desire,mutateAspectId:desiremoth_track,mutationLevel:1,additive:true}],
-warmup:10
-},
-
-{id:"ascensioncravingchange_tryascendfromg",
-actionId: "craving",
-label:"Le Pouls à l'intérieur",
-requirements: {ascensionchangeg:1},
-slots: [{id:"Lesson",label:"Leçon",description: "Abandonner, pour devenir",required: {ascensionlessonheartf:1,ascensionlessonmothf:1}, greedy:true }],
-startdescription: "Je dois rêver bientôt, avant que mon âme n'éclate.",
-warmup:10
-},
-
-{id:"ascensioncravingchange_tryascendfromf",
-actionId: "craving",
-label:"Vers la sixième Transformation",
-requirements: {ascensionchangef:1},
-slots: [{id:"Lesson",label:"Leçon",description: "Abandonner, pour devenir",required: {ascensionlessonheartf:1,ascensionlessonmothf:1}, greedy:true }],
-startdescription: "Les os sont toujours les derniers. Quand j'aurai appris comment ils changent, je serai prêt.",
-linked: [{id:"ascensioncravingchange_heartlessonascendfromf",chance:100},
-{id:"ascensioncravingchange_mothlessonascendfromf",chance:100},
-{id:"ascensioncravingchange_noascension",chance:100}],
-warmup:30
-},
-
-{id:"ascensioncravingchange_heartlessonascendfromf",
-label:"Os, abandonnés",
-actionId: "craving",
-requirements: {ascensionlessonheartf:1},
-description: "Maintenant que le soleil s'est couché et que les ombres sont éteintes, il est temps de se souvenir, et je me souviendrai avec mes os, comme on me l'a appris. Je suis presque prêt.",
-aspects:{ascend:1},
-effects:{ascensionlessonheartf:-1},
-mutations:[{filterOnAspectId:desire,mutateAspectId:desireheart_track,mutationLevel:1,additive:true}],
-warmup:10
-},
-{id:"ascensioncravingchange_mothlessonascendfromf",
-label:"Os, abandonnés",
-actionId: "craving",
-requirements: {ascensionlessonmothf:1},
-description: "Maintenant que le soleil est tombé et que les ombres sont étalées comme de l'huile, mes os savent ce qui doit arriver à la fin. La fin est très proche.",
-
-aspects:{ascend:1},
-effects:{ascensionlessonmothf:-1},
-mutations:[{filterOnAspectId:desire,mutateAspectId:desiremoth_track,mutationLevel:1,additive:true}],
-warmup:10
-},
-
-{id:"ascensioncravingchange_noascension",
-label:"Le même Moi",
-actionId: "craving",
-description: "Je ne suis pas plus avancé sur la voie du changement. C'est dans les mouvements des Formes secrètes que je dois trouver ma leçon.",
-effects:{restlessness:1},
-warmup:10
-},
-
-
-
-
-
-
-]
+  "recipes": [
+    {
+      "id": "ascensionpower_upgradetoobsession",
+      "label": "La Clé brûlante",
+      "actionId": "work",
+      "requirements": {
+        "ascensionpowerb": 1,
+        "waystag_after": 1,
+        "forge": 6
+      },
+      "effects": {
+        "ascensionpowerb": -1,
+        "ascensionpowerc": 1
+      },
+      "startdescription": "Ce rite est la Clé qui permettra à la Forge des Jours d'entrer en moi. Je serai changé à jamais.",
+      "description": "Le Rite est complet. Les Marques de la Forge sont sur moi. La première marque est ce que j'ai dit, et la seconde est ce que j'ai fait. Si j'inspecte mon corps, je trouverai la troisième. Je suis ébloui par de nouveaux besoins.",
+      "warmup": 60,
+      "craftable": true,
+      "burnimage": "flammarion"
+    },
+    {
+      "comments": "male and female flavour; //TODO implement more elegantly",
+      "id": "ascensionsensation_upgradetoobsessionm",
+      "label": "La Clé des soupirs",
+      "actionId": "work",
+      "requirements": {
+        "ascensionsensationbm": 1,
+        "waystag_after": 1,
+        "grail": 6
+      },
+      "effects": {
+        "ascensionsensationbm": -1,
+        "ascensionsensationc": 1
+      },
+      "startdescription": "Ce Rite est la Clé qui permettra au Graal rouge d'entrer en moi. Je serai changé à jamais.",
+      "description": "Le Rite est complet. Les Marques du Graal sont sur moi. La première marque est ce que j'ai dit, et la seconde est ce que j'ai fait. Si j'inspecte mon corps, je trouverai la troisième. Je frissonne de nouveaux appétits.",
+      "warmup": 60,
+      "craftable": true,
+      "burnimage": "flammarion"
+    },
+    {
+      "comments": "male and female flavour; //TODO implement more elegantly",
+      "id": "ascensionsensation_upgradetoobsessionf",
+      "label": "La Clé des soupirs",
+      "actionId": "work",
+      "requirements": {
+        "ascensionsensationbf": 1,
+        "waystag_after": 1,
+        "grail": 6
+      },
+      "effects": {
+        "ascensionsensationbf": -1,
+        "ascensionsensationc": 1
+      },
+      "startdescription": "Ce Rite est la Clé qui permettra au Graal rouge d'entrer en moi. Je serai changé à jamais.",
+      "description": "Ce Rite est la Clé qui permettra au Graal rouge d'entrer en moi. Je serai changé à jamais.",
+      "warmup": 60,
+      "craftable": true,
+      "burnimage": "flammarion"
+    },
+    {
+      "id": "ascensionsensation_switchpolarity_mtof",
+      "label": "Préférences",
+      "actionId": "dream",
+      "requirements": {
+        "ascensionsensationbm": 1
+      },
+      "effects": {
+        "ascensionsensationbm": -1,
+        "ascensionsensationbf": 1
+      },
+      "startdescription": "Je suis allé aussi loin que je le pouvais dans le rêve. Je dois effectuer le <b>Travail</b>. Mais peut-être, quand je songe à mes désirs, que ce ne sont pas vraiment les hommes qui me viennent à l'esprit...",
+      "description": "Les goûts se modifient, les désirs changent, les pensées se plient à d'autres formes.",
+      "warmup": 3,
+      "craftable": true
+    },
+    {
+      "id": "ascensionsensation_switchpolarity_ftom",
+      "label": "Préférencess",
+      "actionId": "dream",
+      "requirements": {
+        "ascensionsensationbf": 1
+      },
+      "effects": {
+        "ascensionsensationbf": -1,
+        "ascensionsensationbm": 1
+      },
+      "startdescription": "Je suis allé aussi loin que je le pouvais dans le rêve. Je dois effectuer le <b>Travail</b>. Mais peut-être, quand je songe à mes désirs, que ce ne sont pas vraiment les femmes qui me viennent à l'esprit...",
+      "description": "Les goûts se modifient, les désirs changent, les pensées se plient à d'autres formes.",
+      "warmup": 3,
+      "craftable": true
+    },
+    {
+      "id": "ascensionenlightenment_upgradetoobsession",
+      "label": "La Clé de l'Aveuglement",
+      "actionId": "work",
+      "requirements": {
+        "ascensionenlightenmentb": 1,
+        "waystag_after": 1,
+        "lantern": 6
+      },
+      "effects": {
+        "ascensionenlightenmentb": -1,
+        "ascensionenlightenmentc": 1
+      },
+      "startdescription": "Ce rite est la Clé qui permettra au regard du Guetteur d'entrer en moi. Je serai changé à jamais.",
+      "description": "Le Rite est complet. Les Marques du Gardien sont sur moi. La première Marque est ce que j'ai dit, et la seconde est ce que j'ai fait. Si j'inspecte mon corps, je trouverai la troisième. Ma faim a été affinée, maintenant.",
+      "warmup": 60,
+      "craftable": true,
+      "burnimage": "flammarion"
+    },
+    {
+      "id": "majorforgevictory",
+      "label": "L'AUBE SE LÈVE",
+      "actionId": "work",
+      "requirements": {
+        "ritual": 1,
+        "ascensionpowerf": 1,
+        "forge": 50
+      },
+      "effects": {},
+      "startdescription": "[Ce texte est disponible à l'arrivée des héritages avancés.]",
+      "description": "N'oubliez pas que le texte de fin sera chargé.",
+      "warmup": 60,
+      "craftable": false
+    },
+    {
+      "id": "minorforgevictory_trigger",
+      "actionId": "work",
+      "label": "La Conflagration du Coeur",
+      "startdescription": "J'ai été dans la flamme tant de fois. Les plaques de ma chair se déchirent les unes des autres. J'invoque maintenant la chaleur de la Forge, qui va m'arracher ce que j'étais. Je mourrai en passant la Porte des Tricuspides, mais la mort n'est pas la fin. Je serai immortel : un Long, favori de la Forge. [Tout Adepte utilisé dans le rituel sera consumé. Si vous vous souciez de ceux que vous pourriez laisser derrière vous, faites attention.]",
+      "requirements": {
+        "ritual": 1,
+        "ascensionpowerf": 1,
+        "forge": 36
+      },
+      "craftable": true,
+      "comments": "Nettoyer avant la pré-recette ; éliminer tout élément étranger qui pourrait perturber les déclencheurs finaux",
+      "warmup": 1,
+      "effects": {
+        "follower": -3,
+        "summoned": -3,
+        "passion": -3
+      },
+      "linked": [
+        {
+          "id": "minorforgevictory_overture",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "minorforgevictory_overture",
+      "label": "La Conflagration du Coeur",
+      "actionId": "work",
+      "description": "Je suis en train de devenir un nom de feu. N'oubliez pas que le texte de fin sera chargé.",
+      "warmup": 60,
+      "slots": [
+        {
+          "id": "beloved",
+          "label": "Bien-aimé",
+          "required": {
+            "romanticinterest": 1
+          },
+          "forbidden": {
+            "corpse": 1,
+            "notoriety": 1
+          },
+          "greedy": true
+        }
+      ],
+      "signalEndingFlavour": "Grand",
+      "linked": [
+        {
+          "chance": 100,
+          "id": "belovedfarewell"
+        },
+        {
+          "chance": 100,
+          "id": "minorforgevictorywithrisen"
+        },
+        {
+          "chance": 100,
+          "id": "minorforgevictory"
+        }
+      ]
+    },
+    {
+      "id": "minorforgevictory",
+      "label": "La Conflagration du Coeur",
+      "requirements": {
+        "ascensionpowerf": 1
+      },
+      "ending": "minorforgevictory",
+      "actionId": "work"
+    },
+    {
+      "id": "minorforgevictorywithrisen",
+      "requirements": {
+        "summoned": 1,
+        "ascensionpowerf": 1
+      },
+      "label": "La Conflagration du Coeur",
+      "ending": "minorforgevictorywithrisen",
+      "actionId": "work"
+    },
+    {
+      "id": "majorgrailvictory",
+      "label": "LA FÊTE EST IMMINENTE",
+      "actionId": "work",
+      "requirements": {
+        "ritual": 1,
+        "ascensionsensationf": 1,
+        "grail": 50
+      },
+      "effects": {},
+      "startdescription": "[Ce texte est disponible à l'arrivée des héritages avancés.]",
+      "description": "La fête commence. N'oubliez pas que le texte de fin sera chargé.",
+      "warmup": 60,
+      "craftable": false
+    },
+    {
+      "id": "minorgrailvictory_withromanticsacrifice",
+      "label": "La Fête du Souvenir du Coeur",
+      "actionId": "work",
+      "requirements": {
+        "ritual": 1,
+        "ascensionsensationf": 1,
+        "romanticinterest": 1,
+        "grail": 27
+      },
+      "startdescription": "Je suis gonflé de la vie des autres. Les coutures de mon corps commencent à se rompre. J'invoque maintenant le Graal Rouge, qui est la Mère des Montagnes, qui Consomme, qui est la Source. Il y a ici quelqu'un qui m'a aimé et que j'ai peut-être aimé, comme le Graal Rouge a peut-être aimé Thunderskin avant sa fin. Avec ce sacrifice, l'invocation est à la fois plus facile et plus terrible. En Son nom, je me donnerai naissance à moi-même. La Porte des Tricuspides s'ouvre. Je serai immortel : un Long, un favori du Graal, et l'on se souviendra de celui qui m'a aimé aussi longtemps que j'aurai enduré.",
+      "description": ".",
+      "warmup": 60,
+      "craftable": true,
+      "signalEndingFlavour": "Grand",
+      "ending": "minorgrailvictory"
+    },
+    {
+      "id": "minorgrailvictory_trigger",
+      "actionId": "work",
+      "label": "La Fête de la Vraie Naissance",
+      "startdescription": "Je suis gonflé de la vie des autres. Les coutures de mon corps commencent à se rompre. J'invoque maintenant le Graal Rouge, qui est la Mère des Montagnes, qui Consomme, qui est la Source. En Son nom, je vais me donner naissance. La Porte des Tricuspides s'ouvre. Je serai immortel : un Long, un favori du Graal. [Tout Adepte utilisé dans le rituel sera consumé. Si vous vous souciez de ceux que vous pourriez laisser derrière vous, faites attention.]",
+      "requirements": {
+        "ritual": 1,
+        "ascensionsensationf": 1,
+        "grail": 36
+      },
+      "craftable": true,
+      "comments": "Cleanup pre-recipe; remove any extraneous elements that might confuse final triggers",
+      "warmup": 1,
+      "effects": {
+        "follower": -3,
+        "summoned": -3,
+        "passion": -3
+      },
+      "linked": [
+        {
+          "id": "minorgrailvictory_overture",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "minorgrailvictory_overture",
+      "label": "La Fête de la Vraie Naissance",
+      "actionId": "work",
+      "description": ".",
+      "warmup": 60,
+      "signalEndingFlavour": "Grand",
+      "slots": [
+        {
+          "id": "beloved",
+          "label": "Bien-aimé",
+          "required": {
+            "romanticinterest": 1
+          },
+          "forbidden": {
+            "corpse": 1,
+            "notoriety": 1
+          },
+          "greedy": true
+        }
+      ],
+      "linked": [
+        {
+          "chance": 100,
+          "id": "minorgrailvictorywithrisen"
+        },
+        {
+          "chance": 100,
+          "id": "belovedfarewell"
+        },
+        {
+          "chance": 100,
+          "id": "minorgrailvictory"
+        }
+      ]
+    },
+    {
+      "id": "minorgrailvictory",
+      "label": "La Fête de la Vraie Naissance",
+      "requirements": {
+        "ascensionsensationf": 1
+      },
+      "ending": "minorgrailvictory",
+      "actionId": "work"
+    },
+    {
+      "id": "minorgrailvictorywithrisen",
+      "requirements": {
+        "summoned": 1,
+        "ascensionsensationf": 1
+      },
+      "label": "La Fête de la Vraie Naissance",
+      "ending": "minorgrailvictorywithrisen",
+      "actionId": "work"
+    },
+    {
+      "id": "majorlanternvictory",
+      "label": "LA LANTERNE",
+      "actionId": "work",
+      "requirements": {
+        "ritual": 1,
+        "ascensionenlightenmentf": 1,
+        "lantern": 50
+      },
+      "effects": {},
+      "startdescription": "[Ce texte est disponible à l'arrivée des héritages avancés.]",
+      "description": "j'approche de la Gloire. N'oubliez pas que le texte de fin sera chargé.",
+      "warmup": 60,
+      "craftable": false
+    },
+    {
+      "id": "belovedfarewell",
+      "label": "Le choix du Seuil",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "summoned": -1
+      },
+      "startdescription": "L'adieu final. Ils resteront, et je monterai.",
+      "slots": [
+        {
+          "id": "decision",
+          "label": "Décision",
+          "description": "[Ajoutez de la Passion pour vous détourner de votre Ascension... et vivre comme un mortel avec votre bien-aimé. Ne rien faire pour continuer.]",
+          "required": {
+            "passion": 1
+          }
+        }
+      ],
+      "alternativerecipes": [
+        {
+          "id": "auclairvictory",
+          "chance": 100
+        },
+        {
+          "id": "catvictory",
+          "chance": 100
+        },
+        {
+          "id": "clovettevictory",
+          "chance": 100
+        },
+        {
+          "id": "cliftonvictory",
+          "chance": 100
+        },
+        {
+          "id": "dorothyvictory",
+          "chance": 100
+        },
+        {
+          "id": "elridgevictory",
+          "chance": 100
+        },
+        {
+          "id": "enidvictory",
+          "chance": 100
+        },
+        {
+          "id": "laidlawvictory",
+          "chance": 100
+        },
+        {
+          "id": "leovictory",
+          "chance": 100
+        },
+        {
+          "id": "nevillevictory",
+          "chance": 100
+        },
+        {
+          "id": "portervictory",
+          "chance": 100
+        },
+        {
+          "id": "reniravictory",
+          "chance": 100
+        },
+        {
+          "id": "rosevictory",
+          "chance": 100
+        },
+        {
+          "id": "salibavictory",
+          "chance": 100
+        },
+        {
+          "id": "sleevictory",
+          "chance": 100
+        },
+        {
+          "id": "sylviavictory",
+          "chance": 100
+        },
+        {
+          "id": "tristanvictory",
+          "chance": 100
+        },
+        {
+          "id": "valcianevictory",
+          "chance": 100
+        },
+        {
+          "id": "victorvictory",
+          "chance": 100
+        },
+        {
+          "id": "violetvictory",
+          "chance": 100
+        },
+        {
+          "id": "ysabetvictory",
+          "chance": 100
+        },
+        {
+          "id": "imnotinlove",
+          "chance": 100
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "auclairvictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqauclair": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec votre bien-aimé Auclair.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "auclairvictory"
+    },
+    {
+      "id": "catvictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqcat": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Cat Caro.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "catvictory"
+    },
+    {
+      "id": "clovettevictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqclovette": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Clovette.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "clovettevictory"
+    },
+    {
+      "id": "cliftonvictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqclifton": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Clifton.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "cliftonvictory"
+    },
+    {
+      "id": "dorothyvictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqdorothy": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Dorothy.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "dorothyvictory"
+    },
+    {
+      "id": "elridgevictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqelridge": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Elridge.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "elridgevictory"
+    },
+    {
+      "id": "enidvictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqenid": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Enid.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "enidvictory"
+    },
+    {
+      "id": "laidlawvictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqlaidlaw": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Laidlaw.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "laidlawvictory"
+    },
+    {
+      "id": "leovictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqleo": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Leo.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "leovictory"
+    },
+    {
+      "id": "nevillevictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqneville": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Neville.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "nevillevictory"
+    },
+    {
+      "id": "portervictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqporter": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Porter.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "portervictory"
+    },
+    {
+      "id": "reniravictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqrenira": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Renira.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "reniravictory"
+    },
+    {
+      "id": "rosevictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqrose": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Rose.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "rosevictory"
+    },
+    {
+      "id": "salibavictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqsaliba": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Saliba.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "salibavictory"
+    },
+    {
+      "id": "sleevictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqslee": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Slee.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "sleevictory"
+    },
+    {
+      "id": "sylviavictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqsylvia": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Sylvia.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "sylviavictory"
+    },
+    {
+      "id": "tristanvictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqtristan": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Tristan.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "tristanvictory"
+    },
+    {
+      "id": "valcianevictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqvalciane": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Valciane.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "valcianevictory"
+    },
+    {
+      "id": "victorvictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqvictor": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Victor.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "victorvictory"
+    },
+    {
+      "id": "violetvictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqviolet": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Violet.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "violetvictory"
+    },
+    {
+      "id": "ysabetvictory",
+      "label": "L'Amour ?",
+      "actionId": "work",
+      "requirements": {
+        "romanticinterest": 1,
+        "passion": 1,
+        "uqysabet": 1
+      },
+      "startdescription": "J'ai entendu une histoire une fois : celle d'une balance où un bol contenait un coeur et l'autre une plume. C'est le choix que je fais maintenant, bien que la plume soit éternelle. [Ce choix annulera votre Ascension, et fera le choix de vivre comme un mortel avec Ysabet.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "signalEndingFlavour": "Grand",
+      "ending": "ysabetvictory"
+    },
+    {
+      "id": "imnotinlove",
+      "label": "Dévouement",
+      "startdescription": "Peut-être m'aiment-ils. Peut-être que je les aime. Peut-être que rien de tout cela ne compte.",
+      "actionId": "work",
+      "craftable": false,
+      "alternativerecipes": [
+        {
+          "id": "minorlanternvictory",
+          "chance": 100
+        },
+        {
+          "id": "minorgrailvictory",
+          "chance": 100
+        },
+        {
+          "id": "minorforgevictory",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "minorlanternvictory_trigger",
+      "actionId": "work",
+      "label": "L'Incursion",
+      "startdescription": "Il reste peu de cette chair. Je passerai par la Porte Tricuspide et je ne reviendrai pas. Le Gardien m'attend. Sur ses traces, je trouverai la lumière de la Gloire. La compréhension est trop grande pour que mon âme la retienne, et donc mon âme s'ouvrira. Je ne serai pas immortel : Je serai plus que cela. [Tout Adepte utilisé dans le rituel sera consumé. Si vous vous souciez de ceux que vous pourriez laisser derrière vous, faites attention]",
+      "requirements": {
+        "ritual": 1,
+        "ascensionenlightenmentf": 1,
+        "lantern": 36
+      },
+      "craftable": true,
+      "comments": "Cleanup pre-recipe; remove any extraneous elements that might confuse final triggers",
+      "warmup": 1,
+      "effects": {
+        "follower": -3,
+        "summoned": -3,
+        "passion": -3
+      },
+      "linked": [
+        {
+          "id": "minorlanternvictory_overture",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "minorlanternvictory_overture",
+      "label": "L'Incursion",
+      "actionId": "work",
+      "description": ".",
+      "warmup": 60,
+      "slots": [
+        {
+          "id": "beloved",
+          "label": "Bien-aimé",
+          "required": {
+            "romanticinterest": 1
+          },
+          "forbidden": {
+            "corpse": 1,
+            "notoriety": 1
+          },
+          "greedy": true
+        }
+      ],
+      "signalEndingFlavour": "Grand",
+      "linked": [
+        {
+          "chance": 100,
+          "id": "minorlanternvictorywithrisen"
+        },
+        {
+          "chance": 100,
+          "id": "belovedfarewell"
+        },
+        {
+          "chance": 100,
+          "id": "minorlanternvictory"
+        }
+      ]
+    },
+    {
+      "id": "minorlanternvictory",
+      "label": "L'Incursion",
+      "requirements": {
+        "ascensionenlightenmentf": 1
+      },
+      "ending": "minorlanternvictory",
+      "actionId": "work"
+    },
+    {
+      "id": "minorlanternvictorywithrisen",
+      "requirements": {
+        "summoned": 1,
+        "ascensionenlightenmentf": 1
+      },
+      "label": "L'Incursion",
+      "ending": "minorlanternvictorywithrisen",
+      "actionId": "work"
+    },
+    {
+      "id": "ambition",
+      "requirements": {
+        "seasonambitions": 1
+      },
+      "label": "Envie d'exotisme ?",
+      "actionId": "craving",
+      "slots": [
+        {
+          "id": "Obsessions",
+          "label": "Obsessions",
+          "description": "Des désirs plus profonds",
+          "required": {
+            "enlightenmentmarks": 3,
+            "powermarks": 3,
+            "sensationmarks": 3,
+            "remembrancemarks": 2,
+            "changemarks": 1,
+            "independent": 1,
+            "resentment": 3,
+            "mentor": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "Quelle faim nous pousse ?",
+      "description": "",
+      "effects": {},
+      "warmup": 10,
+      "linked": [
+        {
+          "id": "L_ascension_rival",
+          "chance": 100
+        },
+        {
+          "id": "L_independent",
+          "chance": 100
+        },
+        {
+          "id": "L_rebellion_activate",
+          "chance": 70
+        },
+        {
+          "id": "L_rebellion_noactivation",
+          "chance": 100
+        },
+        {
+          "id": "ending.minorcrownedgrowthvictory",
+          "chance": 100
+        },
+        {
+          "id": "ambition.apostleforge.emitfuel",
+          "chance": 100
+        },
+        {
+          "id": "ambition.apostlegrail.emitfuel",
+          "chance": 100
+        },
+        {
+          "id": "ambition.apostlelantern.emitfuel",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingpower",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingsensation",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingenlightenment",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingremembrance",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingremembrancenegative",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_tryascendfromg",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_tryascendfromf",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_tryascendfrome",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_tryascendfromd",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_tryascendfromc",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_tryascendfromb",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_tryascendfroma",
+          "chance": 100
+        },
+        {
+          "id": "ascensionnotyet",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "L_independent",
+      "label": "Rivalité !",
+      "requirements": {
+        "independent": 1
+      },
+      "actionId": "ambition",
+      "deckeffect": {
+        "schemeevents": 1
+      },
+      "linked": [
+        {
+          "id": "L_independent_router",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "L_independent_router",
+      "label": "Rivalité !",
+      "actionId": "ambition",
+      "requirements": {
+        "independent": 1
+      },
+      "comments": "Cette exigence est strictement inutile, mais laissé ici juste au cas où nous déplacerions à nouveau les connexions de recettes - c'est un filtre important",
+      "startdescription": "Ce rival s'élèvera avant moi. [Les occultistes indépendants tenteront de monopoliser l'attention des Heures. Ils peuvent aussi mener d'autres projets, que vous le vouliez ou non.]",
+      "alternativerecipes": [
+        {
+          "id": "scheme_murderhunter",
+          "chance": 100,
+          "additional": true,
+          "expulsion": {
+            "limit": 1,
+            "filter": {
+              "independent": 1
+            }
+          }
+        },
+        {
+          "id": "scheme_expedition_grab",
+          "chance": 100,
+          "additional": true,
+          "expulsion": {
+            "limit": 1,
+            "filter": {
+              "independent": 1
+            }
+          }
+        },
+        {
+          "id": "scheme_activities",
+          "chance": 100,
+          "additional": true,
+          "expulsion": {
+            "limit": 1,
+            "filter": {
+              "independent": 1
+            }
+          }
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "L_ascension_rival",
+      "actionId": "ambition",
+      "requirements": {
+        "rivalmarks": 7
+      },
+      "extantreqs": {
+        "long.enemy": -1
+      },
+      "label": "Un Prétendant Victorieux",
+      "startdescription": "Les réalisations de mon Rival éclipsent les miennes. Il va maintenant s'élever jusqu'à prendre place dans la Maison du Soleil, tandis qu'ici, dans le monde, je resterai seul avec mes frustrations.",
+      "ending": "rivalascension",
+      "signalEndingFlavour": "Melancholy",
+      "warmup": 60
+    },
+    {
+      "id": "L_ascension_rival_apostle",
+      "actionId": "ambition",
+      "requirements": {
+        "rivalmarks": 7
+      },
+      "extantreqs": {
+        "long.enemy": 1
+      },
+      "label": "Trop d'ennemis",
+      "startdescription": "Un ennemi immortel est un péril mortel. Deux ennemis immortels, c'est trop. Notre Grand Oeuvre a échoué.",
+      "ending": "rivalascension",
+      "signalEndingFlavour": "Melancholy",
+      "warmup": 60
+    },
+    {
+      "id": "L_rebellion_activate",
+      "label": "Rébellion !",
+      "actionId": "ambition",
+      "requirements": {
+        "resentment": 3
+      },
+      "startdescription": "Trop ou pas assez ? Quoi que j'aie fait, cela a mis quelqu'un en colère au-delà de toute tolérance.",
+      "description": "Un allié me quitte. Il n'est peut-être pas un ennemi - pas encore - pas exactement - mais il ne me servira plus.",
+      "aspects": {
+        "rebellion": 1
+      },
+      "warmup": 30
+    },
+    {
+      "id": "L_rebellion_noactivation",
+      "label": "Mécontentement",
+      "actionId": "ambition",
+      "requirements": {
+        "resentment": 3
+      },
+      "startdescription": "Trop ou pas assez ? Quoi que j'aie fait, cela a mis en colère un allié.",
+      "description": "Celui-ci a passé un certain temps dans une solitude boudeuse. Pour le moment, il va revenir au bercail.",
+      "mutations": [
+        {
+          "filterOnAspectId": "follower",
+          "mutateAspectId": "resentment",
+          "mutationLevel": -1,
+          "additive": true
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "ending.minorcrownedgrowthvictory",
+      "actionId": "ambition",
+      "label": "INFECTER ET DEVENIR",
+      "requirements": {
+        "ghoul.hunger": 7
+      },
+      "startdescription": "Mon appétit est devenu une chose qui me dépasse, mais qui ne m'est pas étrangère. Mon abdomen pullule de fécondité. Il est trop tard.",
+      "ending": "minorcrownedgrowthvictory",
+      "signalEndingFlavour": "Vile",
+      "warmup": 30
+    },
+    {
+      "id": "ascensionnotyet",
+      "label": "Frustrations de mortels",
+      "actionId": "craving",
+      "requirements": {
+        "enlightenmentmarks": -1,
+        "powermarks": -1,
+        "sensationmarks": -1
+      },
+      "slots": [
+        {
+          "id": "Temptations",
+          "label": "Tentations",
+          "description": "Le feu doit être nourri",
+          "required": {
+            "desire": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "Quelle faim me pousse ?",
+      "effects": {
+        "restlessness": 1
+      },
+      "description": "Pour l'instant, je n'ai que les besoins et les désirs de tout autre mortel. Mais qu'est-ce qui m'anime ?",
+      "alternativerecipes": [
+        {
+          "id": "ascensionhintpower2",
+          "chance": 100
+        },
+        {
+          "id": "ascensionhintenlightenment2",
+          "chance": 100
+        },
+        {
+          "id": "ascensionhintsensation2m",
+          "chance": 100
+        },
+        {
+          "id": "ascensionhintsensation2f",
+          "chance": 100
+        },
+        {
+          "id": "ascensionhintpower1",
+          "chance": 100
+        },
+        {
+          "id": "ascensionhintenlightenment1",
+          "chance": 100
+        },
+        {
+          "id": "ascensionhintsensation1",
+          "chance": 100
+        },
+        {
+          "id": "legacydetectiveplotitem_tempt",
+          "chance": 100
+        }
+      ],
+      "warmup": 10
+    },
+    {
+      "id": "ascensionhintpower2",
+      "label": "Le Rugissement de la Forge",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionpowerb": 1
+      },
+      "startdescription": "Je n'ai jamais assez chaud, maintenant.",
+      "description": "J'ai rêvé de la Forge, et j'aspire à la chaleur de ses flammes. Il est presque temps d'exécuter l'Oeuvre et de commencer la transformation - mais je dois avoir assez d'aspect de la Forge. <b>Exploration</b> pourrait en trouver plus.",
+      "effects": {
+        "restlessness": 1
+      },
+      "warmup": 10
+    },
+    {
+      "id": "ascensionhintenlightenment2",
+      "label": "La Lumière du Guetteur",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionenlightenmentb": 1
+      },
+      "startdescription": "Dès le réveil, j'ai commencé à voir de nouvelles couleurs.",
+      "description": "Ma curiosité devient un besoin physique. Mes yeux seront des seuils. Il est presque temps d'effectuer le Travail et de commencer la transformation - mais je dois avoir suffisamment d'aspect de la Lanterne. <b>Exploration</b> pourrait en trouver plus.",
+      "effects": {
+        "restlessness": 1
+      },
+      "warmup": 10
+    },
+    {
+      "id": "ascensionhintsensation2m",
+      "label": "Le toucher du Graal",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionsensationbm": 1
+      },
+      "startdescription": "Mes désirs évoluent.",
+      "description": "Les merveilleuses marées du Graal se déplacent en moi. Il est presque temps d'exécuter le Travail et de commencer la transformation - mais je dois avoir assez d'Aspect du Graal. <b>Explorer</b> permettrait d'en trouver plus.",
+      "effects": {
+        "restlessness": 1
+      },
+      "warmup": 10
+    },
+    {
+      "id": "ascensionhintsensation2f",
+      "label": "Le toucher du Graal",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionsensationbf": 1
+      },
+      "startdescription": "Mes désirs évoluent.",
+      "description": "Le Graal m'a touché de ses doigts merveilleux. Il est presque temps d'exécuter le travail et de commencer la transformation - mais je dois avoir assez d'aspect de Graal. <b>Exploration</b> pourrait en trouver plus.",
+      "effects": {
+        "restlessness": 1
+      },
+      "warmup": 10
+    },
+    {
+      "id": "ascensionhintpower1",
+      "label": "La lueur de la Forge",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionpowera": 1
+      },
+      "startdescription": "La faim brûle dans mon coeur - la faim du pouvoir que les arts invisibles pourraient apporter.",
+      "description": "La Forge des Jours attend dans mes rêves. Si j'apprends les croyances de la Forge et que je rêve de cette tentation, je peux avancer dans mon projet. Le besoin me ronge.",
+      "effects": {
+        "restlessness": 1
+      },
+      "warmup": 10
+    },
+    {
+      "id": "ascensionhintenlightenment1",
+      "label": "Les empreintes du Guetteur",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionenlightenmenta": 1
+      },
+      "startdescription": "La faim brille dans mon cerveau - la faim de la connaissance que les arts invisibles pourraient apporter.",
+      "description": "Le Guetteur, qui est la Porte-dans-l'Oeil, attend dans mes rêves. Si j'apprends les croyances de la Lanterne, et que je rêve de cette tentation, je peux avancer dans mon projet. Le besoin me ronge.",
+      "effects": {
+        "restlessness": 1
+      },
+      "warmup": 10
+    },
+    {
+      "id": "ascensionhintsensation1",
+      "label": "Les murmures du Graal",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionsensationa": 1
+      },
+      "startdescription": "La faim rôde dans mon corps - la faim des plaisirs que les arts invisibles pourraient apporter.",
+      "description": "La coupe rouge, la coupe de la noyade et de la dévoration, m'attend dans mes rêves. Si j'apprends les croyances du Graal, et que je rêve de cette tentation, je pourrais avancer dans mon projet. Le besoin me ronge.",
+      "effects": {
+        "restlessness": 1
+      },
+      "warmup": 10
+    },
+    {
+      "id": "ascensioncravingpower",
+      "label": "La Chaleur qui façonne",
+      "actionId": "craving",
+      "requirements": {
+        "powermarks": 1
+      },
+      "slots": [
+        {
+          "id": "Fuels",
+          "label": "Combustibles",
+          "description": "Le feu doit être nourri",
+          "required": {
+            "funds": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "J'ai besoin de feux toujours plus chauds. Leur combustible est maintenant rare et coûteux. Si je ne peux pas me les offrir, le froid me rattrapera.",
+      "linked": [
+        {
+          "id": "ascensionsuccesscravingpower_descend",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingpower_ascend",
+          "chance": 100
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "ascensionsuccesscravingpower_descend",
+      "label": "Les Cendres du changement",
+      "actionId": "craving",
+      "requirements": {
+        "funds": -1
+      },
+      "slots": [
+        {
+          "id": "Pain",
+          "label": "Douleur",
+          "description": "Mon besoin me ronge",
+          "required": {
+            "health": 1,
+            "vitality": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "Je frissonne. Sans le feu, ma chair va s'amincir et s'affaiblir.",
+      "description": "Ma force est moindre. Mon sang est plus froid. Je pense que même certaines de mes cicatrices guérissent. Je m'affaiblis.",
+      "aspects": {
+        "descend": 1,
+        "damagehealth": 1
+      },
+      "effects": {
+        "vitality": -1
+      },
+      "warmup": 30
+    },
+    {
+      "id": "ascensioncravingpower_ascend",
+      "label": "Une autre Marque",
+      "actionId": "craving",
+      "startdescription": "",
+      "description": "Les flammes me désirent autant que je les désire. Leur contact est bien plus que de la douleur. J'ai une autre Marque.",
+      "effects": {
+        "vitality": 2,
+        "funds": -1
+      },
+      "aspects": {
+        "ascend": 1
+      }
+    },
+    {
+      "id": "ascensioncravingsensation",
+      "label": "Le Besoin Rouge",
+      "actionId": "craving",
+      "requirements": {
+        "sensationmarks": 1
+      },
+      "slots": [
+        {
+          "id": "Sustenance",
+          "label": "Nourriture",
+          "description": "Ceux qui sont morts récemment, ou ceux qui sont vivants.",
+          "required": {
+            "corpse": 1,
+            "lunatic": -1,
+            "prisoner": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "Une soif de sang ? Si seulement c'était aussi simple. Je les drainerai beaucoup plus intensément.",
+      "linked": [
+        {
+          "id": "ascensionsuccesscravingsensation_descend",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingsensation_ascend",
+          "chance": 100
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "ascensionsuccesscravingsensation_descend",
+      "label": "Le Désert à l'intérieur",
+      "actionId": "craving",
+      "requirements": {
+        "corpse": -1,
+        "lunatic": -1,
+        "prisoner": -1
+      },
+      "slots": [
+        {
+          "id": "Pain",
+          "label": "Douleur",
+          "description": "Mon besoin me ronge",
+          "required": {
+            "passion": 1,
+            "glimmering": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "Sans la vie des autres, ma propre vie se nourrira d'elle-même.",
+      "description": "Mes fluides se diluent, ma chair se dessèche, mes changements défont, mes passions s'estompent. Je deviens moins que ce que je veux.",
+      "aspects": {
+        "descend": 1,
+        "fatiguing": 1
+      },
+      "effects": {
+        "glimmering": -1
+      },
+      "warmup": 30
+    },
+    {
+      "id": "ascensioncravingsensation_ascend",
+      "label": "Une autre Marque",
+      "actionId": "craving",
+      "effects": {
+        "glimmering": 2,
+        "corpse": -1,
+        "lunatic": -1,
+        "prisoner": -1
+      },
+      "startdescription": "",
+      "description": "Quand j'ai fini, la satisfaction est aussi profonde que la lune dans la mer. Une autre Marque bourgeonne en moi.",
+      "aspects": {
+        "ascend": 1
+      }
+    },
+    {
+      "id": "ascensioncravingenlightenment",
+      "label": "Les curiosités de la Lumière",
+      "actionId": "craving",
+      "requirements": {
+        "enlightenmentmarks": 1
+      },
+      "slots": [
+        {
+          "id": "Conversation",
+          "label": "Conversation",
+          "description": "Les derniers mots d'un esprit vivant.",
+          "required": {
+            "prisoner": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "Du temps seul dans une pièce silencieuse avec un esprit vivant. C'est tout ce dont j'ai besoin.",
+      "linked": [
+        {
+          "id": "ascensionsuccesscravingenlightenment_descend",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingenlightenment_ascend",
+          "chance": 100
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "ascensionsuccesscravingenlightenment_descend",
+      "label": "Le Désert à l'intérieur",
+      "actionId": "craving",
+      "requirements": {
+        "prisoner": -1
+      },
+      "slots": [
+        {
+          "id": "Pain",
+          "label": "Douleur",
+          "description": "Mon besoin me ronge",
+          "required": {
+            "reason": 1,
+            "erudition": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "Si je ne peux pas consumer les pensées d'un esprit vivant, mon besoin se retournera contre moi.",
+      "description": "La lumière du Mansus s'affaiblit en moi. Je suis moins que ce que j'étais. J'ai besoin de parler. Je dois avoir ces conversations particulières.",
+      "aspects": {
+        "descend": 1,
+        "fatiguing": 1
+      },
+      "effects": {
+        "erudition": -1
+      },
+      "warmup": 30
+    },
+    {
+      "id": "ascensioncravingenlightenment_ascend",
+      "label": "Une autre Marque",
+      "actionId": "craving",
+      "effects": {
+        "erudition": 2,
+        "prisoner": -1
+      },
+      "startdescription": "",
+      "description": "J'ai bu la lumière de leur esprit. Elle me fait vibrer et me remplit. Les Marques s'éclairent en moi.",
+      "aspects": {
+        "ascend": 1
+      }
+    },
+    {
+      "id": "ascensioncravingremembrance",
+      "label": "La Faim qui grandit dans la Terre Noire",
+      "actionId": "craving",
+      "requirements": {
+        "remembrancemarks": 2,
+        "ghoul.hunger": 1
+      },
+      "mutations": [
+        {
+          "filter": "remembrancemarks",
+          "mutate": "ghoul.hunger",
+          "level": 1,
+          "additive": true
+        }
+      ],
+      "startdescription": "Le goût - le goût particulier - le goût qui n'est ni juste ni mauvais - il vient encore me troubler la bouche. Ma langue va gonfler, mes lèvres vont noircir. L'élixir a fixé ses spores en moi, et seule la chair morte peut les étouffer.",
+      "warmup": 30
+    },
+    {
+      "id": "ascensioncravingremembrancenegative",
+      "label": "La Faim qui grandit dans la Terre Noire",
+      "actionId": "craving",
+      "requirements": {
+        "remembrancemarks": 2
+      },
+      "mutations": [
+        {
+          "filter": "remembrancemarks",
+          "mutate": "ghoul.hunger",
+          "level": 1,
+          "additive": false
+        }
+      ],
+      "startdescription": "Le goût - le goût particulier - le goût qui n'est ni juste ni mauvais - il vient encore me troubler la bouche. Ma langue va gonfler, mes lèvres vont noircir. L'élixir a fixé ses spores en moi, et seule la chair morte peut les étouffer.",
+      "comments": "This is a safety measure for players who managed to allow their hunger to go negative with an old save.",
+      "warmup": 30
+    },
+    {
+      "id": "ascensioncravingchange_tryascendfroma",
+      "label": "La Tentation du changement",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionchangea": 1
+      },
+      "slots": [
+        {
+          "id": "Lesson",
+          "label": "Leçon",
+          "description": "Abandonner, pour devenir",
+          "required": {
+            "ascensionlessonhearta": 1,
+            "ascensionlessonmotha": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "J'aspire à être autre chose, mais ai-je appris la leçon dont j'ai besoin devant les témoins que je dois avoir ?",
+      "linked": [
+        {
+          "id": "ascensioncravingchange_heartlessonascendfroma",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_mothlessonascendfroma",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_noascension",
+          "chance": 100
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "ascensioncravingchange_heartlessonascendfroma",
+      "label": "Vêtements, abandonnés",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionlessonhearta": 1
+      },
+      "description": "Lorsque je renonce aux choix que j'ai faits, lorsque la lune filtrée par les arbres parcourt mes surfaces, je fais pousser la lumière comme une feuille.",
+      "aspects": {
+        "ascend": 1
+      },
+      "effects": {
+        "ascensionlessonhearta": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "desire",
+          "mutateAspectId": "desireheart_track",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10
+    },
+    {
+      "id": "ascensioncravingchange_mothlessonascendfroma",
+      "label": "Vêtements, abandonnés",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionlessonmotha": 1
+      },
+      "description": "J'écaille mon enveloppe pour qu'elle pousse. Voici la lune et me voici dans son oeil -",
+      "aspects": {
+        "ascend": 1
+      },
+      "effects": {
+        "ascensionlessonmotha": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "desire",
+          "mutateAspectId": "desiremoth_track",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10
+    },
+    {
+      "id": "ascensioncravingchange_tryascendfromb",
+      "label": "Vers la deuxième Transformation",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionchangeb": 1
+      },
+      "slots": [
+        {
+          "id": "Lesson",
+          "label": "Leçon",
+          "description": "Abandonner, pour devenir",
+          "required": {
+            "ascensionlessonheartb": 1,
+            "ascensionlessonmothb": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "La peau que je porte deviendra trop petite, et je dois donc commencer à l'abandonner. Je devrai envoyer une partie de moi-même pour apprendre.",
+      "linked": [
+        {
+          "id": "ascensioncravingchange_heartlessonascendfromb",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_mothlessonascendfromb",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_noascension",
+          "chance": 100
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "ascensioncravingchange_heartlessonascendfromb",
+      "label": "Téguments, abandonnés",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionlessonheartb": 1
+      },
+      "description": "Ma peau la plus superficielle se libère en lambeaux et en taches, et moi aussi.",
+      "aspects": {
+        "ascend": 1
+      },
+      "effects": {
+        "ascensionlessonheartb": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "desire",
+          "mutateAspectId": "desireheart_track",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10
+    },
+    {
+      "id": "ascensioncravingchange_mothlessonascendfromb",
+      "label": "Téguments, abandonnés",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionlessonmothb": 1
+      },
+      "description": "Nous sommes tous des couches  mais pas tant que ça",
+      "aspects": {
+        "ascend": 1
+      },
+      "effects": {
+        "ascensionlessonmothb": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "desire",
+          "mutateAspectId": "desiremoth_track",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10
+    },
+    {
+      "id": "ascensioncravingchange_tryascendfromc",
+      "label": "Vers la troisième Transformation",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionchangec": 1
+      },
+      "slots": [
+        {
+          "id": "Lesson",
+          "label": "Leçon",
+          "description": "Abandonner, pour devenir",
+          "required": {
+            "ascensionlessonheartc": 1,
+            "ascensionlessonmothc": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "On révèle, on dissimule, on révèle. Pour continuer, je dois apprendre une leçon de dissimulation.",
+      "linked": [
+        {
+          "id": "ascensioncravingchange_heartlessonascendfromc",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_mothlessonascendfromc",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_noascension",
+          "chance": 100
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "ascensioncravingchange_heartlessonascendfromc",
+      "label": "Mes Pas, abandonnés",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionlessonheartc": 1
+      },
+      "description": "Sans pas à suivre, qui connaîtra notre destination ? Je souhaite tellement y aller.",
+      "aspects": {
+        "ascend": 1
+      },
+      "effects": {
+        "ascensionlessonheartc": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "desire",
+          "mutateAspectId": "desireheart_track",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10
+    },
+    {
+      "id": "ascensioncravingchange_mothlessonascendfromc",
+      "label": "Mes Pas, abandonnés",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionlessonmothc": 1
+      },
+      "description": "La plus ancienne leçon de Moldywarp : entre musique et silence",
+      "comments": "absence de point final intentionnel",
+      "aspects": {
+        "ascend": 1
+      },
+      "effects": {
+        "ascensionlessonmothc": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "desire",
+          "mutateAspectId": "desiremoth_track",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10
+    },
+    {
+      "id": "ascensioncravingchange_tryascendfromd",
+      "label": "Vers la quatrième Transformation",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionchanged": 1
+      },
+      "slots": [
+        {
+          "id": "Lesson",
+          "label": "Leçon",
+          "description": "Abandonner, pour devenir",
+          "required": {
+            "ascensionlessonheartd": 1,
+            "ascensionlessonmothd": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "Pour le prochain changement, je dois prendre des dispositions pour accueillir les modifications.",
+      "linked": [
+        {
+          "id": "ascensioncravingchange_heartlessonascendfromd",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_mothlessonascendfromd",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_noascension",
+          "chance": 100
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "ascensioncravingchange_heartlessonascendfromd",
+      "label": "Nuances abandonnées",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionlessonheartd": 1
+      },
+      "description": "Ma chair qui vient de pâlir est riche des sucs de la dissolution.",
+      "aspects": {
+        "ascend": 1
+      },
+      "effects": {
+        "ascensionlessonheartd": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "desire",
+          "mutateAspectId": "desireheart_track",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10
+    },
+    {
+      "id": "ascensioncravingchange_mothlessonascendfromd",
+      "label": "Nuances abandonnées",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionlessonmothd": 1
+      },
+      "description": "Quand je serai dans la dernière peau, tout ce moi va se dissoudre. Si vite.",
+      "aspects": {
+        "ascend": 1
+      },
+      "effects": {
+        "ascensionlessonmothd": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "desire",
+          "mutateAspectId": "desiremoth_track",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10
+    },
+    {
+      "id": "ascensioncravingchange_tryascendfrome",
+      "label": "Vers la cinquième Transformation",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionchangee": 1
+      },
+      "slots": [
+        {
+          "id": "Lesson",
+          "label": "Leçon",
+          "description": "Abandonner, pour devenir",
+          "required": {
+            "ascensionlessonhearte": 1,
+            "ascensionlessonmothe": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "La porte que je vais franchir n'est jamais visible, ni à l'oeil qui se réveille, ni à l'oeil qui est fermé. Je dois abandonner ces yeux à celui qui connaît le chemin, afin de pouvoir voir.",
+      "linked": [
+        {
+          "id": "ascensioncravingchange_heartlessonascendfrome",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_mothlessonascendfrome",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_noascension",
+          "chance": 100
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "ascensioncravingchange_heartlessonascendfrome",
+      "label": "La vue, abandonnée",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionlessonhearte": 1
+      },
+      "description": "Parfois, les yeux citrins de celui qui a subi cette transformation sont confondus avec les yeux illuminés de celui qui s'approche de l'Incursion. Mais jamais longtemps. ",
+      "aspects": {
+        "ascend": 1
+      },
+      "effects": {
+        "ascensionlessonhearte": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "desire",
+          "mutateAspectId": "desireheart_track",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10
+    },
+    {
+      "id": "ascensioncravingchange_mothlessonascendfrome",
+      "label": "La vue, abandonnée",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionlessonmothe": 1
+      },
+      "description": "J'entre maintenant dans ma dernière peau.",
+      "aspects": {
+        "ascend": 1
+      },
+      "effects": {
+        "ascensionlessonmothe": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "desire",
+          "mutateAspectId": "desiremoth_track",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10
+    },
+    {
+      "id": "ascensioncravingchange_tryascendfromg",
+      "actionId": "craving",
+      "label": "Le Pouls à l'intérieur",
+      "requirements": {
+        "ascensionchangeg": 1
+      },
+      "slots": [
+        {
+          "id": "Lesson",
+          "label": "Leçon",
+          "description": "Abandonner, pour devenir",
+          "required": {
+            "ascensionlessonheartf": 1,
+            "ascensionlessonmothf": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "Je dois rêver bientôt, avant que mon âme n'éclate.",
+      "warmup": 10
+    },
+    {
+      "id": "ascensioncravingchange_tryascendfromf",
+      "actionId": "craving",
+      "label": "Vers la sixième Transformation",
+      "requirements": {
+        "ascensionchangef": 1
+      },
+      "slots": [
+        {
+          "id": "Lesson",
+          "label": "Leçon",
+          "description": "Abandonner, pour devenir",
+          "required": {
+            "ascensionlessonheartf": 1,
+            "ascensionlessonmothf": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "Les os sont toujours les derniers. Quand j'aurai appris comment ils changent, je serai prêt.",
+      "linked": [
+        {
+          "id": "ascensioncravingchange_heartlessonascendfromf",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_mothlessonascendfromf",
+          "chance": 100
+        },
+        {
+          "id": "ascensioncravingchange_noascension",
+          "chance": 100
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "ascensioncravingchange_heartlessonascendfromf",
+      "label": "Os, abandonnés",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionlessonheartf": 1
+      },
+      "description": "Maintenant que le soleil s'est couché et que les ombres sont éteintes, il est temps de se souvenir, et je me souviendrai avec mes os, comme on me l'a appris. Je suis presque prêt.",
+      "aspects": {
+        "ascend": 1
+      },
+      "effects": {
+        "ascensionlessonheartf": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "desire",
+          "mutateAspectId": "desireheart_track",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10
+    },
+    {
+      "id": "ascensioncravingchange_mothlessonascendfromf",
+      "label": "Os, abandonnés",
+      "actionId": "craving",
+      "requirements": {
+        "ascensionlessonmothf": 1
+      },
+      "description": "Maintenant que le soleil est tombé et que les ombres sont étalées comme de l'huile, mes os savent ce qui doit arriver à la fin. La fin est très proche.",
+      "aspects": {
+        "ascend": 1
+      },
+      "effects": {
+        "ascensionlessonmothf": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "desire",
+          "mutateAspectId": "desiremoth_track",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10
+    },
+    {
+      "id": "ascensioncravingchange_noascension",
+      "label": "Le même Moi",
+      "actionId": "craving",
+      "description": "Je ne suis pas plus avancé sur la voie du changement. C'est dans les mouvements des Formes secrètes que je dois trouver ma leçon.",
+      "effects": {
+        "restlessness": 1
+      },
+      "warmup": 10
+    }
+  ]
 }

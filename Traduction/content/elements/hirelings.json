@@ -1,67 +1,133 @@
-{"elements":
-    [
-				 {
-        id: "thugedgeminor",
-            label: "Une brute",
-            aspects:
-            {mortal: 1,hireling:1,follower:1,edge:3},
-              description: "'Je fais le travail'. [Cette recrue peut être utile pour certaines Expéditions, et peut aider contre les Chasseurs et les Gêneurs.]",
-			xtriggers: {hiring: thugedgeminor,killmortal:corpse,derangemortal:lunatic,capturefollower:generic_p},
-			lifetime:120
-        },
-			 {
-        id: "thugmothminor",
-            label: "Une femme sournoise",
-            aspects:
-            {mortal: 1,hireling:1,follower:1,moth:3},
-              description: "'Je fais le travail.' [Cette recrue peut être utile pour certaines Expéditions, et peut aider contre les Chasseurs et les Gêneurs.]",
-			xtriggers: {hiring: thugmothminor,killmortal:corpse,derangemortal:lunatic,capturefollower:generic_p},
-			lifetime:120
-        },
-						 {
-        id: "thugedge",
-            label: "Muscle professionnel",
-            aspects:
-            {mortal: 1,hireling:1,follower:1,edge:5},
-              description: "'Je vais les briser en deux.' [Cette recrue peut être utile pour certaines Expéditions, et peut aider contre les Chasseurs et les Gêneurs.]",
-			xtriggers: {hiring: thugedge,killmortal:corpse,derangemortal:lunatic,capturefollower:generic_p},
-			lifetime:120
-        },
-		 {
-        id: "thugforgeedge",
-            label: "Un fabricant de bombes",
-            aspects:
-            {mortal: 1,hireling:1,follower:1,forge:5,edge:3},
-            description: "'Peut-être ne devrions-nous pas encore parler de politique.' [Cette recrue peut être utile pour certaines Expéditions, et peut aider contre les Chasseurs et les Gêneurs.]",
-			xtriggers: {hiring:thugforgeedge,killmortal:corpse,derangemortal:lunatic,capturefollower:generic_p},
-			lifetime:120
-        },
-				 {
-        id: "thugknock",
-            label: "Un cambrioleur",
-            aspects:
-            {mortal: 1,hireling:1,follower:1,knock:5},
-            description: "'Je suis bon avec les portes. [Cette recrue peut être utile pour certaines Expéditions.]'",
-			xtriggers: {hiring:thugknock,killmortal:corpse,derangemortal:lunatic,capturefollower:generic_p},
-			lifetime:120
-        },
-				 {
-        id: "thuglanternmoth",
-            label: "Une diseuse de bonne aventure",
-            aspects:
-            {mortal: 1,hireling:1,follower:1,lantern:5,moth:3},
-            description: "'Je vois des choses. Je vois que vous êtes différent.' [Cette recrue peut être utile pour certaines Expéditions, et peut aider contre les Chasseurs et les Gêneurs.]",
-			xtriggers: {hiring:thuglanternmoth,killmortal:corpse,derangemortal:lunatic,capturefollower:generic_p},
-			lifetime:120
-        },
-						 {
-        id: "thugmoth",
-            label: "Un escroc expérimenté",
-            aspects:
-            {mortal: 1,hireling:1,follower:1,moth:5,grail:1},
-            description: "'Quel plaisir de travailler avec vous !' [Cette recrue peut être utile pour certaines Expéditions, et peut aider contre les Chasseurs et les Gêneurs.]",
-			xtriggers: {hiring:thugmoth,killmortal:corpse,derangemortal:lunatic,capturefollower:generic_p},
-			lifetime:120
-        },
-		]
-};
+{
+  "elements": [
+    {
+      "id": "thugedgeminor",
+      "label": "Une brute",
+      "aspects": {
+        "mortal": 1,
+        "hireling": 1,
+        "follower": 1,
+        "edge": 3
+      },
+      "description": "'Je fais le travail'. [Cette recrue peut être utile pour certaines Expéditions, et peut aider contre les Chasseurs et les Gêneurs.]",
+      "xtriggers": {
+        "hiring": "thugedgeminor",
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "capturefollower": "generic_p"
+      },
+      "lifetime": 120
+    },
+    {
+      "id": "thugmothminor",
+      "label": "Une femme sournoise",
+      "aspects": {
+        "mortal": 1,
+        "hireling": 1,
+        "follower": 1,
+        "moth": 3
+      },
+      "description": "'Je fais le travail.' [Cette recrue peut être utile pour certaines Expéditions, et peut aider contre les Chasseurs et les Gêneurs.]",
+      "xtriggers": {
+        "hiring": "thugmothminor",
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "capturefollower": "generic_p"
+      },
+      "lifetime": 120
+    },
+    {
+      "id": "thugedge",
+      "label": "Muscle professionnel",
+      "aspects": {
+        "mortal": 1,
+        "hireling": 1,
+        "follower": 1,
+        "edge": 5
+      },
+      "description": "'Je vais les briser en deux.' [Cette recrue peut être utile pour certaines Expéditions, et peut aider contre les Chasseurs et les Gêneurs.]",
+      "xtriggers": {
+        "hiring": "thugedge",
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "capturefollower": "generic_p"
+      },
+      "lifetime": 120
+    },
+    {
+      "id": "thugforgeedge",
+      "label": "Un fabricant de bombes",
+      "aspects": {
+        "mortal": 1,
+        "hireling": 1,
+        "follower": 1,
+        "forge": 5,
+        "edge": 3
+      },
+      "description": "'Peut-être ne devrions-nous pas encore parler de politique.' [Cette recrue peut être utile pour certaines Expéditions, et peut aider contre les Chasseurs et les Gêneurs.]",
+      "xtriggers": {
+        "hiring": "thugforgeedge",
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "capturefollower": "generic_p"
+      },
+      "lifetime": 120
+    },
+    {
+      "id": "thugknock",
+      "label": "Un cambrioleur",
+      "aspects": {
+        "mortal": 1,
+        "hireling": 1,
+        "follower": 1,
+        "knock": 5
+      },
+      "description": "'Je suis bon avec les portes. [Cette recrue peut être utile pour certaines Expéditions.]'",
+      "xtriggers": {
+        "hiring": "thugknock",
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "capturefollower": "generic_p"
+      },
+      "lifetime": 120
+    },
+    {
+      "id": "thuglanternmoth",
+      "label": "Une diseuse de bonne aventure",
+      "aspects": {
+        "mortal": 1,
+        "hireling": 1,
+        "follower": 1,
+        "lantern": 5,
+        "moth": 3
+      },
+      "description": "'Je vois des choses. Je vois que vous êtes différent.' [Cette recrue peut être utile pour certaines Expéditions, et peut aider contre les Chasseurs et les Gêneurs.]",
+      "xtriggers": {
+        "hiring": "thuglanternmoth",
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "capturefollower": "generic_p"
+      },
+      "lifetime": 120
+    },
+    {
+      "id": "thugmoth",
+      "label": "Un escroc expérimenté",
+      "aspects": {
+        "mortal": 1,
+        "hireling": 1,
+        "follower": 1,
+        "moth": 5,
+        "grail": 1
+      },
+      "description": "'Quel plaisir de travailler avec vous !' [Cette recrue peut être utile pour certaines Expéditions, et peut aider contre les Chasseurs et les Gêneurs.]",
+      "xtriggers": {
+        "hiring": "thugmoth",
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "capturefollower": "generic_p"
+      },
+      "lifetime": 120
+    }
+  ]
+}

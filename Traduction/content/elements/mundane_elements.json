@@ -1,74 +1,118 @@
-{"elements":
-    [
-	{id: "rumour",
-	label: "Rumeur particulière",
-	description: "Cela peut me conduire à quelqu'un dont j'ai besoin, ou cela peut signifier autre chose. [Explorez avec une Rumeur pour y donner suite.]",
-	aspects:{ingredient:1, secrethistories:1,moth:1},
-	lifetime: 60
-	},
-		{id: "favour",
-	label: "Une Faveur de l'autorité",
-	description: "J'ai appris quelque chose qui me permettra de gagner une faveur, une seule fois. [Cela vous préservera, vous ou un de vos Adeptes, de l'emprisonnement... mais on ne peut pas s'y fier.] ",
-	aspects:{suspicious:1},
-	lifetime: 300
-	},
-		{id: "mistakenidentity",
-	label: "Un cas d'erreur d'identité",
-	aspects: {mortal:1},
-	description: "Ce n'est pas celui que vous espériez, après tout. Ils ne sont pas d'une importance particulière, et ils finiront par disparaître de votre mémoire. Peut-être n'y a-t-il personne d'autre que vous aimeriez rencontrer.",
-	xtriggers:{rebellion:generic_r},
-	comments:"This xtrigger is here specifically in case someone runs through all the possible rivals as a Detective",
-	lifetime: 10
-	},
-          {
-        id: "funds",
-            label: "Fonds",
-            aspects:
-            {ingredient: 1},
-            description: "Assez pour me soutenir pendant un certain temps dans un confort adéquat.",
-        },
-		          {
-        id: "compensation",
-            label: "Spintria de fer",
-			aspects: {edge:2, secrethistories:1,compensationvalue:2,ingredient:1,auctionable:2},
-            description: "Les initiés du monde caché utilisent des spintriae pour payer leurs services. Les spintriae en fer sont la plus petite coupure, et affichent des scènes de meurtre au revers. [Les spintriae peuvent être vendus pour des sommes plus traditionnelles dans une maison de vente aux enchères.]"
-        },
-		          {
-        id: "compensationb",
-            label: "Spintria de bronze",
-            aspects: {forge:4, secrethistories:1,compensationvalue:4,ingredient:1,auctionable:3},
-			description: "Les initiés du monde caché utilisent des spintriae pour payer leurs services. Les spintriae en bronze présentent généralement l'acte de façonner au revers. [Les spintriae peuvent être vendus pour des fonds plus traditionnels dans une maison de vente aux enchères.]"
-        },
-		{
-        id: "compensationc",
-            label: "Spintria d'argent",
-			aspects: {grail:6, secrethistories:1,compensationvalue:8,ingredient:1,auctionable:4},
-            description: "Les initiés du monde caché utilisent des spintriae pour payer leurs services. Ils peuvent facilement être vendus pour des fonds plus traditionnels. Les spintriae en argent ont plus de valeur et présentent généralement des scènes de débauche au revers. [Les spintriae peuvent être vendus pour des fonds plus traditionnels dans une maison de vente aux enchères.]"
-        },
-				{
-        id: "compensationd",
-            label: "Spintria d'or",
-			aspects: {lantern:8, secrethistories:1,compensationvalue:16,ingredient:1,auctionable:5},
-            description: "Les initiés du monde caché utilisent des spintriae pour payer leurs services. Ils peuvent facilement être vendus pour des fonds plus traditionnels. Les spintriae en or présentent des scènes invisibles pour des mortels au revers. [Les spintriae peuvent être vendus pour des fonds plus traditionnels dans une maison de vente aux enchères.]"
-
-        },
-		{
-        id: "mapbookdealer",
-            label: "En route pour Morland",
-            aspects:{legacyplotitem:1},
-            description: "Des indications cryptiques vers l'adresse obscure d'un certain Morland, un marchand de livres plus rares."
-        },		{
-        id: "jumble",
-            label: "Melting-pot",
-            aspects:{auctionable:1},
-            description: "Vieux vêtements, accessoires presque sans valeur. Il y a peut-être quelques centimes quelque part, mais cela ne m'est pas très utile."
-        },
-		{
-		        id: "snare",
-            label: "Piège",
-            aspects:{snarelevel:1},
-            description: "J'ai préparé une embuscade pour un rival. [Un piège peut être utilisé sur n'importe quel rival, ou pour faire échouer la tentative d'un rival sur n'importe quelle chambre forte.]",
-			lifetime: 300
-        }
-]
-};
+{
+  "elements": [
+    {
+      "id": "rumour",
+      "label": "Rumeur particulière",
+      "description": "Cela peut me conduire à quelqu'un dont j'ai besoin, ou cela peut signifier autre chose. [Explorez avec une Rumeur pour y donner suite.]",
+      "aspects": {
+        "ingredient": 1,
+        "secrethistories": 1,
+        "moth": 1
+      },
+      "lifetime": 60
+    },
+    {
+      "id": "favour",
+      "label": "Une Faveur de l'autorité",
+      "description": "J'ai appris quelque chose qui me permettra de gagner une faveur, une seule fois. [Cela vous préservera, vous ou un de vos Adeptes, de l'emprisonnement... mais on ne peut pas s'y fier.] ",
+      "aspects": {
+        "suspicious": 1
+      },
+      "lifetime": 300
+    },
+    {
+      "id": "mistakenidentity",
+      "label": "Un cas d'erreur d'identité",
+      "aspects": {
+        "mortal": 1
+      },
+      "description": "Ce n'est pas celui que vous espériez, après tout. Ils ne sont pas d'une importance particulière, et ils finiront par disparaître de votre mémoire. Peut-être n'y a-t-il personne d'autre que vous aimeriez rencontrer.",
+      "xtriggers": {
+        "rebellion": "generic_r"
+      },
+      "comments": "This xtrigger is here specifically in case someone runs through all the possible rivals as a Detective",
+      "lifetime": 10
+    },
+    {
+      "id": "funds",
+      "label": "Fonds",
+      "aspects": {
+        "ingredient": 1
+      },
+      "description": "Assez pour me soutenir pendant un certain temps dans un confort adéquat."
+    },
+    {
+      "id": "compensation",
+      "label": "Spintria de fer",
+      "aspects": {
+        "edge": 2,
+        "secrethistories": 1,
+        "compensationvalue": 2,
+        "ingredient": 1,
+        "auctionable": 2
+      },
+      "description": "Les initiés du monde caché utilisent des spintriae pour payer leurs services. Les spintriae en fer sont la plus petite coupure, et affichent des scènes de meurtre au revers. [Les spintriae peuvent être vendus pour des sommes plus traditionnelles dans une maison de vente aux enchères.]"
+    },
+    {
+      "id": "compensationb",
+      "label": "Spintria de bronze",
+      "aspects": {
+        "forge": 4,
+        "secrethistories": 1,
+        "compensationvalue": 4,
+        "ingredient": 1,
+        "auctionable": 3
+      },
+      "description": "Les initiés du monde caché utilisent des spintriae pour payer leurs services. Les spintriae en bronze présentent généralement l'acte de façonner au revers. [Les spintriae peuvent être vendus pour des fonds plus traditionnels dans une maison de vente aux enchères.]"
+    },
+    {
+      "id": "compensationc",
+      "label": "Spintria d'argent",
+      "aspects": {
+        "grail": 6,
+        "secrethistories": 1,
+        "compensationvalue": 8,
+        "ingredient": 1,
+        "auctionable": 4
+      },
+      "description": "Les initiés du monde caché utilisent des spintriae pour payer leurs services. Ils peuvent facilement être vendus pour des fonds plus traditionnels. Les spintriae en argent ont plus de valeur et présentent généralement des scènes de débauche au revers. [Les spintriae peuvent être vendus pour des fonds plus traditionnels dans une maison de vente aux enchères.]"
+    },
+    {
+      "id": "compensationd",
+      "label": "Spintria d'or",
+      "aspects": {
+        "lantern": 8,
+        "secrethistories": 1,
+        "compensationvalue": 16,
+        "ingredient": 1,
+        "auctionable": 5
+      },
+      "description": "Les initiés du monde caché utilisent des spintriae pour payer leurs services. Ils peuvent facilement être vendus pour des fonds plus traditionnels. Les spintriae en or présentent des scènes invisibles pour des mortels au revers. [Les spintriae peuvent être vendus pour des fonds plus traditionnels dans une maison de vente aux enchères.]"
+    },
+    {
+      "id": "mapbookdealer",
+      "label": "En route pour Morland",
+      "aspects": {
+        "legacyplotitem": 1
+      },
+      "description": "Des indications cryptiques vers l'adresse obscure d'un certain Morland, un marchand de livres plus rares."
+    },
+    {
+      "id": "jumble",
+      "label": "Melting-pot",
+      "aspects": {
+        "auctionable": 1
+      },
+      "description": "Vieux vêtements, accessoires presque sans valeur. Il y a peut-être quelques centimes quelque part, mais cela ne m'est pas très utile."
+    },
+    {
+      "id": "snare",
+      "label": "Piège",
+      "aspects": {
+        "snarelevel": 1
+      },
+      "description": "J'ai préparé une embuscade pour un rival. [Un piège peut être utilisé sur n'importe quel rival, ou pour faire échouer la tentative d'un rival sur n'importe quelle chambre forte.]",
+      "lifetime": 300
+    }
+  ]
+}

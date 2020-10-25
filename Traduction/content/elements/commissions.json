@@ -1,346 +1,913 @@
-{"elements":
-    [
-		 {
-        id: "commissionarticlesecrethistory",
-            label: "Commission: Histoires Secrètes",
-            aspects: {},
-			description: "Je dois CHANGER",
-			lifetime:1,
-			decayTo:commissionarticlesecrethistories,
-			noartneeded:true
+{
+  "elements": [
+    {
+      "id": "commissionarticlesecrethistory",
+      "label": "Commission: Histoires Secrètes",
+      "aspects": {},
+      "description": "Je dois CHANGER",
+      "lifetime": 1,
+      "decayTo": "commissionarticlesecrethistories",
+      "noartneeded": true
+    },
+    {
+      "id": "commissionarticlesecrethistoryb",
+      "label": "Commission: Histoires Secrètes",
+      "aspects": {},
+      "description": "Je dois CHANGER",
+      "lifetime": 1,
+      "decayTo": "commissionarticlesecrethistoriesb",
+      "noartneeded": true
+    },
+    {
+      "id": "commissionarticlesecrethistoryc",
+      "label": "Commission: Histoires Secrètes",
+      "aspects": {},
+      "description": "Je dois CHANGER",
+      "lifetime": 1,
+      "decayTo": "commissionarticlesecrethistoriesc",
+      "noartneeded": true
+    },
+    {
+      "id": "commissionarticlesecrethistories",
+      "label": "Commission: Histoires Secrètes",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Le Dr Ibn al-Adim, dit l'Alep, vous a proposé une mission. Il aimerait que vous lui fournissiez toutes les informations que vous pouvez rassembler sur les histoires secrètes du monde. Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-				 {
-        id: "commissionarticlesecrethistoryb",
-            label: "Commission: Histoires Secrètes",
-            aspects: {},
-			description: "Je dois CHANGER",
-			lifetime:1,
-			decayTo:commissionarticlesecrethistoriesb,
-			noartneeded:true
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensation"
+      }
+    },
+    {
+      "id": "commissionarticlesecrethistoriesb",
+      "label": "Commission: Histoires Secrètes (Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Le Dr Ibn al-Adim, dit l'Alep, vous a proposé une mission. Il est à la recherche d'un traité substantiel sur les histoires secrètes du monde. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-				 {
-        id: "commissionarticlesecrethistoryc",
-            label: "Commission: Histoires Secrètes",
-            aspects: {},
-			description: "Je dois CHANGER",
-			lifetime:1,
-			decayTo:commissionarticlesecrethistoriesc,
-			noartneeded:true
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationb"
+      }
+    },
+    {
+      "id": "commissionarticlesecrethistoriesc",
+      "label": "Commission: Histoires Secrètes (Très Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Le Dr Ibn al-Adim, dit l'Alep, vous a proposé une mission. Il est à la recherche d'informations particulièrement obscures sur les histoires secrètes du monde. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-				
-
-				 {
-        id: "commissionarticlesecrethistories",
-            label: "Commission: Histoires Secrètes",
-            aspects: {commission:1,job:1},
-            description: "Le Dr Ibn al-Adim, dit l'Alep, vous a proposé une mission. Il aimerait que vous lui fournissiez toutes les informations que vous pouvez rassembler sur les histoires secrètes du monde. Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour mener à bien cette mission.]",
-	slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-	{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}],
-			xtriggers: {commissionfulfilled: compensation}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
         },
-				 {
-        id: "commissionarticlesecrethistoriesb",
-            label: "Commission: Histoires Secrètes (Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Le Dr Ibn al-Adim, dit l'Alep, vous a proposé une mission. Il est à la recherche d'un traité substantiel sur les histoires secrètes du monde. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour mener à bien cette mission.]",
-			slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-		{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensationb}
+        {
+          "id": "reason2",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationc"
+      }
+    },
+    {
+      "id": "commissionarticlelantern",
+      "label": "Commission: Lanterne",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Le Dr Ibn al-Adim, dit l'Alep, vous a proposé une mission. Il souhaite que vous lui fournissiez toutes les informations que vous pourrez rassembler sur les sombres mystères de la Lanterne. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-				 {
-        id: "commissionarticlesecrethistoriesc",
-            label: "Commission: Histoires Secrètes (Très Substantielle)",
-            aspects: {commission:1,job:1,job:1},
-            description: "Le Dr Ibn al-Adim, dit l'Alep, vous a proposé une mission. Il est à la recherche d'informations particulièrement obscures sur les histoires secrètes du monde. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour mener à bien cette mission.]",
-						slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-		{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"},
-{id:"reason2",label:"Raison", required:{reason:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensationc}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensation"
+      }
+    },
+    {
+      "id": "commissionarticlelanternb",
+      "label": "Commission: Lanterne (Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Le Dr Ibn al-Adim, dit l'Alep, vous a proposé une mission. Il aimerait que vous lui rapportiez une discussion substantielle sur les sombres mystères de la Lanterne. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticlelantern",
-            label: "Commission: Lanterne",
-            aspects: {commission:1,job:1},
-            description: "Le Dr Ibn al-Adim, dit l'Alep, vous a proposé une mission. Il souhaite que vous lui fournissiez toutes les informations que vous pourrez rassembler sur les sombres mystères de la Lanterne. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {aladim:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,lantern:2}}],
-						slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-						{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}],
-			xtriggers: {commissionfulfilled: compensation}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationb"
+      }
+    },
+    {
+      "id": "commissionarticlelanternc",
+      "label": "Commission: Lanterne (Très Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Le Dr Ibn al-Adim, dit l'Alep, vous a proposé une mission. Il aimerait que vous réalisiez une enquête très substantielle sur les sombres mystères de la Lanterne. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticlelanternb",
-            label: "Commission: Lanterne (Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Le Dr Ibn al-Adim, dit l'Alep, vous a proposé une mission. Il aimerait que vous lui rapportiez une discussion substantielle sur les sombres mystères de la Lanterne. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {aladim:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,lantern:4}}],
-						slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-		{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensationb}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticlelanternc",
-            label: "Commission: Lanterne (Très Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Le Dr Ibn al-Adim, dit l'Alep, vous a proposé une mission. Il aimerait que vous réalisiez une enquête très substantielle sur les sombres mystères de la Lanterne. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {aladim:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,lantern:6}}],
-						slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-		{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"},
-{id:"reason2",label:"Raison", required:{reason:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensationc}
+        {
+          "id": "reason2",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationc"
+      }
+    },
+    {
+      "id": "commissionarticleforge",
+      "label": "Commission: Forge",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle aimerait quelque chose qui s'inspire du principe de la Forge. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour répondre à cette commande.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		
-				{
-		
-		        id: "commissionarticleforge",
-            label: "Commission: Forge",
-            aspects: {commission:1,job:1},
-            description: "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle aimerait quelque chose qui s'inspire du principe de la Forge. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour répondre à cette commande.]",
-			slots: [{id:"Patron",actionId:"talk",required: {bechet:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,forge:2}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}	],
-
-			xtriggers: {commissionfulfilled: compensation}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensation"
+      }
+    },
+    {
+      "id": "commissionarticleforgeb",
+      "label": "Commission: Forge (Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle aimerait quelque chose de plus substantiel sur la Forge. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour répondre à cette commande.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticleforgeb",
-            label: "Commission: Forge (Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle aimerait quelque chose de plus substantiel sur la Forge. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour répondre à cette commande.]",
-			slots:[{id:"Patron",actionId:"talk",required: {bechet:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,forge:4}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensationb}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationb"
+      }
+    },
+    {
+      "id": "commissionarticleforgec",
+      "label": "Commission: Forge (Très Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle aimerait quelque chose de très substantiel, voire d'intense, sur le changement et la souffrance que la Forge apporte. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour répondre à cette commande.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticleforgec",
-            label: "Commission: Forge (Très Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle aimerait quelque chose de très substantiel, voire d'intense, sur le changement et la souffrance que la Forge apporte. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour répondre à cette commande.]",
-			slots: [{id:"Patron",actionId:"talk",required: {bechet:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,forge:6}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"},
-{id:"reason2",label:"Raison", required:{reason:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensationc}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
         },
-		
-				{
-		
-		        id: "commissionarticlegrail",
-            label: "Commission: Graal",
-            aspects: {commission:1,job:1},
-            description: "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle aimerait quelque chose de passionnant sur le Graal rouge. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour répondre à cette commande.]",
-			slots: [{id:"Patron",actionId:"talk",required: {bechet:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,grail:2}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}],
-			xtriggers: {commissionfulfilled: compensation}
+        {
+          "id": "reason2",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationc"
+      }
+    },
+    {
+      "id": "commissionarticlegrail",
+      "label": "Commission: Graal",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle aimerait quelque chose de passionnant sur le Graal rouge. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour répondre à cette commande.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticlegrailb",
-            label: "Commission: Graal (Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle est intéressée par une analyse plus substantielle du Graal rouge et de son attrait. Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour répondre à cette commande.]",
-			slots: [{id:"Patron",actionId:"talk",required: {bechet:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,grail:4}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}],
-			xtriggers: {commissionfulfilled: compensationb}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensation"
+      }
+    },
+    {
+      "id": "commissionarticlegrailb",
+      "label": "Commission: Graal (Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle est intéressée par une analyse plus substantielle du Graal rouge et de son attrait. Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour répondre à cette commande.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticlegrailc",
-            label: "Commission: Graal (Très Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle veut quelque chose de très substantiel et 'd'inébranlable' sur le Graal rouge. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour répondre à cette commande.]",
-			slots: [{id:"Patron",actionId:"talk",required: {bechet:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,grail:6}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"},
-{id:"passion1",label:"Passion", required:{passion:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensationc}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationb"
+      }
+    },
+    {
+      "id": "commissionarticlegrailc",
+      "label": "Commission: Graal (Très Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle veut quelque chose de très substantiel et 'd'inébranlable' sur le Graal rouge. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour répondre à cette commande.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		
-				
-				{
-		
-		        id: "commissionarticlemoth",
-            label: "Commission: Phalène",
-            aspects: {commission:1,job:1},
-            description: "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle souhaite en particulier quelque chose d'intriguant sur le principe appelé Phalène. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour répondre à cette commande.]",
-			slots: [{id:"Patron",actionId:"talk",required: {bechet:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,moth:2}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}],
-			xtriggers: {commissionfulfilled: compensation}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticlemothb",
-            label: "Commission: Phalène (Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle veut un article substantiellement énigmatique sur la Phalène. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour répondre à cette commande.]",
-			slots: [{id:"Patron",actionId:"talk",required: {bechet:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,moth:4}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}],
-			xtriggers: {commissionfulfilled: compensationb}
+        {
+          "id": "passion1",
+          "label": "Passion",
+          "required": {
+            "passion": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationc"
+      }
+    },
+    {
+      "id": "commissionarticlemoth",
+      "label": "Commission: Phalène",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle souhaite en particulier quelque chose d'intriguant sur le principe appelé Phalène. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour répondre à cette commande.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticlemothc",
-            label: "Commission: Phalène (Très Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle aimerait une élaboration très substantielle sur la Phalène et ses énigmes. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour répondre à cette commande.]",
-			slots: [{id:"Patron",actionId:"talk",required: {bechet:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,moth:6}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"},
-{id:"passion1",label:"Passion", required:{passion:1},actionId:"work"}],
-			xtriggers: {commissionfulfilled: compensationc}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensation"
+      }
+    },
+    {
+      "id": "commissionarticlemothb",
+      "label": "Commission: Phalène (Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle veut un article substantiellement énigmatique sur la Phalène. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour répondre à cette commande.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		
-				
-				{
-		
-		        id: "commissionarticleheart",
-            label: "Commission: Coeur",
-            aspects: {commission:1,job:1},
-            description: "Le comte paiera pour des informations présentant un intérêt. Cette fois, il aimerait avoir des notes sur les mystères corporels du Coeur. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {jannings:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,heart:2}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}],
-			xtriggers: {commissionfulfilled: compensation}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationb"
+      }
+    },
+    {
+      "id": "commissionarticlemothc",
+      "label": "Commission: Phalène (Très Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Mme Olympe Bechet est à la recherche d'articles appropriés pour le 'Kerisham Review'. Elle aimerait une élaboration très substantielle sur la Phalène et ses énigmes. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour répondre à cette commande.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticleheartb",
-            label: "Commission: Coeur (Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Le comte paiera pour des informations présentant un intérêt. Cette fois, il souhaite une recherche substantielle sur les mystères corporels du Coeur. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {jannings:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,heart:4}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}],
-			xtriggers: {commissionfulfilled: compensationb}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticleheartc",
-            label: "Commission: Coeur (Très Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Le comte paiera pour des informations présentant un intérêt. Cette fois, il aimerait des recherches très substantielles sur les mystères corporels du Coeur. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {jannings:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,heart:6}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"},
-{id:"passion1",label:"Passion", required:{passion:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensationc}
+        {
+          "id": "passion1",
+          "label": "Passion",
+          "required": {
+            "passion": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationc"
+      }
+    },
+    {
+      "id": "commissionarticleheart",
+      "label": "Commission: Coeur",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Le comte paiera pour des informations présentant un intérêt. Cette fois, il aimerait avoir des notes sur les mystères corporels du Coeur. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-						{
-		
-		        id: "commissionarticleedge",
-            label: "Commission: Pointe",
-            aspects: {commission:1,job:1},
-            description: "Le comte paiera pour des informations présentant un intérêt. Cette fois, il aimerait tout ce que vous pouvez rassembler sur les usages de la Pointe. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {jannings:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,edge:2}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}],
-			xtriggers: {commissionfulfilled: compensation}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensation"
+      }
+    },
+    {
+      "id": "commissionarticleheartb",
+      "label": "Commission: Coeur (Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Le comte paiera pour des informations présentant un intérêt. Cette fois, il souhaite une recherche substantielle sur les mystères corporels du Coeur. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticleedgeb",
-            label: "Commission: Pointe (Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Le comte paiera pour des informations présentant un intérêt. Cette fois, il aimerait des notes substantielles sur les usages de la Pointe. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {jannings:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,edge:4}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensationb}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationb"
+      }
+    },
+    {
+      "id": "commissionarticleheartc",
+      "label": "Commission: Coeur (Très Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Le comte paiera pour des informations présentant un intérêt. Cette fois, il aimerait des recherches très substantielles sur les mystères corporels du Coeur. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticleedgec",
-            label: "Commission: Pointe (Très Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Le comte paiera pour des informations présentant un intérêt. Cette fois, il souhaite un travail très substantiel sur les usages de la Pointe. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {jannings:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,edge:6}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"},
-{id:"reason2",label:"Raison", required:{reason:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensationc}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
         },
-		
-						{
-		
-		        id: "commissionarticleknock",
-            label: "Commission: Clé",
-            aspects: {commission:1,job:1},
-            description: "Poppy paiera pour des informations qui l'intéressent. Cette fois, elle aimerait avoir des notes sur les mystères de la Clé. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {poppy:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,knock:2}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensation}
+        {
+          "id": "passion1",
+          "label": "Passion",
+          "required": {
+            "passion": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationc"
+      }
+    },
+    {
+      "id": "commissionarticleedge",
+      "label": "Commission: Pointe",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Le comte paiera pour des informations présentant un intérêt. Cette fois, il aimerait tout ce que vous pouvez rassembler sur les usages de la Pointe. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticleknockb",
-            label: "Commission: Clé (Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Poppy paiera pour des informations qui l'intéressent. Cette fois, elle aimerait faire des recherches substantielles sur les mystères de la Clé. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {poppy:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,knock:4}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensationb}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensation"
+      }
+    },
+    {
+      "id": "commissionarticleedgeb",
+      "label": "Commission: Pointe (Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Le comte paiera pour des informations présentant un intérêt. Cette fois, il aimerait des notes substantielles sur les usages de la Pointe. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticleknockc",
-            label: "Commission: Clé (Très Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Poppy paiera pour des informations qui l'intéressent. Cette fois, elle aimerait faire des recherches très substantielles sur les mystères de la Clé. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {poppy:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,knock:6}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"},
-{id:"reason2",label:"Raison", required:{reason:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensationc}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationb"
+      }
+    },
+    {
+      "id": "commissionarticleedgec",
+      "label": "Commission: Pointe (Très Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Le comte paiera pour des informations présentant un intérêt. Cette fois, il souhaite un travail très substantiel sur les usages de la Pointe. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		
-								{
-		
-		        id: "commissionarticlewinter",
-            label: "Commission: Hiver",
-            aspects: {commission:1,job:1},
-            description: "Poppy paiera pour des informations qui l'intéressent. Cette fois, elle aimerait avoir des notes sur les mystères de l'Hiver Winter. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {poppy:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,winter:2}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}	
-],
-			xtriggers: {commissionfulfilled: compensation}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticlewinterb",
-            label: "Commission: Hiver (Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Poppy paiera pour des informations qui l'intéressent. Cette fois, elle aimerait faire des recherches substantielles sur les mystères de l'Hiver. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {poppy:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,winter:4}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensationb}
+        {
+          "id": "reason2",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationc"
+      }
+    },
+    {
+      "id": "commissionarticleknock",
+      "label": "Commission: Clé",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Poppy paiera pour des informations qui l'intéressent. Cette fois, elle aimerait avoir des notes sur les mystères de la Clé. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-		{
-		
-		        id: "commissionarticlewinterc",
-            label: "Commission: Hiver (Très Substantielle)",
-            aspects: {commission:1,job:1},
-            description: "Poppy paiera pour des informations qui l'intéressent. Cette fois, elle aimerait faire des recherches très substantielles sur les mystères de l'Hiver. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour mener à bien cette mission.]",
-			slots: [{id:"Patron",actionId:"talk",required: {poppy:1}},{id:"Manuscript",label:"Manuscrit",actionId:"talk",required:{article:1,winter:6}}],
-slots:[{id:"lore",label:"Croyance", required:{lore:1},actionId:"work"},
-{id:"reason1",label:"Raison", required:{reason:1},actionId:"work"},
-{id:"reason2",label:"Raison", required:{reason:1},actionId:"work"}	],
-			xtriggers: {commissionfulfilled: compensationc}
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensation"
+      }
+    },
+    {
+      "id": "commissionarticleknockb",
+      "label": "Commission: Clé (Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Poppy paiera pour des informations qui l'intéressent. Cette fois, elle aimerait faire des recherches substantielles sur les mystères de la Clé. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
         },
-						
-		
-		
-]
-};
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationb"
+      }
+    },
+    {
+      "id": "commissionarticleknockc",
+      "label": "Commission: Clé (Très Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Poppy paiera pour des informations qui l'intéressent. Cette fois, elle aimerait faire des recherches très substantielles sur les mystères de la Clé. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
+        },
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        },
+        {
+          "id": "reason2",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationc"
+      }
+    },
+    {
+      "id": "commissionarticlewinter",
+      "label": "Commission: Hiver",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Poppy paiera pour des informations qui l'intéressent. Cette fois, elle aimerait avoir des notes sur les mystères de l'Hiver Winter. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 2 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
+        },
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensation"
+      }
+    },
+    {
+      "id": "commissionarticlewinterb",
+      "label": "Commission: Hiver (Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Poppy paiera pour des informations qui l'intéressent. Cette fois, elle aimerait faire des recherches substantielles sur les mystères de l'Hiver. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 4 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
+        },
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationb"
+      }
+    },
+    {
+      "id": "commissionarticlewinterc",
+      "label": "Commission: Hiver (Très Substantielle)",
+      "aspects": {
+        "commission": 1,
+        "job": 1
+      },
+      "description": "Poppy paiera pour des informations qui l'intéressent. Cette fois, elle aimerait faire des recherches très substantielles sur les mystères de l'Hiver. [Vous aurez besoin d'un fragment de Croyance correspondant d'au moins niveau 6 pour mener à bien cette mission.]",
+      "slots": [
+        {
+          "id": "lore",
+          "label": "Croyance",
+          "required": {
+            "lore": 1
+          },
+          "actionId": "work"
+        },
+        {
+          "id": "reason1",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        },
+        {
+          "id": "reason2",
+          "label": "Raison",
+          "required": {
+            "reason": 1
+          },
+          "actionId": "work"
+        }
+      ],
+      "xtriggers": {
+        "commissionfulfilled": "compensationc"
+      }
+    }
+  ]
+}

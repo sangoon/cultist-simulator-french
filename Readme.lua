@@ -1,5 +1,7 @@
 Traduction française de Cultist Simulator 1.0
 
+Tout le travail de traduction contenu dans ce dépot est le fruit du travail de Sir Burton(ahmfen@gmail.com)
+
 Elle ne concerne que le jeu de base pour le moment et est finalisée à 100%.
 Ceci est le fruit de plus d'une centaine d'heures de travail,
 

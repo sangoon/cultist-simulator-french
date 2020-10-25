@@ -1,65 +1,262 @@
-{"elements":
-    [
-			  
-	{id: "legacydancerjob",
-	label: "Un contrat au Gaieté",
-		description: "J'ai une place dans le choeur du Gaiety. Elle est à moi jusqu'à ce que ma chance ou mon physique faiblisse... ou jusqu'à ce que je trouve quelque chose de mieux.",
-	aspects: {job:1,dance:1,potentialbenefactorm:1,potentialbenefactorf:1,potentialecdysiast:1},
-	lifetime:120,
-	decayTo: legacydancerjob_suspended,
-	xtriggers:{job:legacydancerjob},
-	slots:[	{id:"health",label:"Santé",actionId:"work",required:{health:1}}]
-},
-	{id: "legacydancerjob_suspended",
-	label: "Un contrat au Gaieté: Suspendu",
-		description: "J'ai manqué trop de représentations. Si je plaide de manière suffisamment convaincante, je pourrais retrouver mon emploi.",
-	aspects: {job:1},
-	lifetime:300,
-	xtriggers:{plead:legacydancerjob},
-		slots:[{id:"passion",label:"Passion",actionId:"work",required:{passion:1}}]
-},
-
-{id:"dancerlegacy_plotitem_a",
-label:"Un poème chiffonné",
-description:"Il est adressé à une autre danseuse et signé par une personne nommée #LAST_FOLLOWER#. L'auteur décrit comment il a rencontré la danseuse dans un rêve, dans un bois sombre. Son rêve comportait des battements de tambour, des battements d'ailes, la peau des ombres, le sang de la lune. Pas étonnant que le poème ait été abandonné. Mais je peux déjà voir qu'il y a une signification sous-jacente.",
-slots:[{id:"Approach",label:"Approche",actionId:"study",description:"Le battement du coeur, ou le cri du violon ?",required:{heart:1,moth:1}}],
-aspects:{legacyplotitem:1}},
-
-
-{id: "dancerjobecdysisa",
-	label: "Un contrat au Club Ecdysis",
-	description: "Je me produis au Club Ecdysis, les soirs où il est ouvert.",
-slots:[{id:"location",label:"Le Club Ecdysis",description:"Le Club Ecdysis, où je me dévoile devant témoins",actionId:work,required:{locationcabaret:1}},
-{id:"purpose",label:"Objet",actionId:work,required:{changemarks:1,healthskill:1},description:"Montrer mes Compétences pour avoir accès à des danses plus complexes ; ou utiliser mon Désir de Changement ; ou laisser vide si je veux juste gagner de l'argent."},
-{id:"abilityfirst",label:"Aptitude ou Cicatrice",description:"Que vais-je devenir ?",actionId:work,required:{health:1,passion:1,scar:1}},
-{id:"influence",label:"Influence",description:"Qu'est-ce qui me motive aujourd'hui ?",actionId:work,required:{influence:1},consumes:true},
-
-],
-	aspects: {job:1,dance:1,ecdysijob:1}
-},
-{id: "dancerjobecdysisb",
-	label: "Un contrat avantageux au Club Ecdysis",
-	description: "J'exécute les danses les plus exigeantes au Club Ecdysis.",
-slots:[{id:"location",label:"Le Club Ecdysis",label:"Le Club Ecdysis",description:"Le Club Ecdysis, où je me dévoile devant témoins",actionId:work,required:{locationcabaret:1}},
-	{id:"purpose",label:"Objet",actionId:work,required:{changemarks:1,healthskill:1},description:"Montrer mes Compétences pour avoir accès à des danses plus complexes ; ou utiliser mon Désir de Changement ; ou laisser vide si je veux juste gagner de l'argent."},
-{id:"abilityfirst",label:"Aptitude ou Cicatrice",description:"Que vais-je devenir ?",actionId:work,required:{health:1,passion:1,scar:1}},
-	{id:"abilitysecond",label:"Aptitude ou Cicatrice",description:"Que vais-je devenir ?",actionId:work,required:{health:1,passion:1,scar:1}},
-	{id:"influence",label:"Influence",description:"Qu'est-ce qui me motive aujourd'hui ?",actionId:work,required:{influence:1},consumes:true},
-
-],
-	aspects: {job:1,dance:1,ecdysijob:1}
-},
-{id: "dancerjobecdysisc",
-	label: "Un arrangement particulier avec le Club Ecdysis",
-	description: "Je suis parfois généreusement rémunéré pour exécuter des danses très spécifiques pour des connaisseurs très particuliers.",
-	slots:[{id:"location",label:"Le Club Ecdysis",description:"Le Club Ecdysis, où je me dévoile devant témoins",actionId:work,required:{locationcabaret:1}},
-	{id:"purpose",label:"Objet",actionId:work,required:{changemarks:1,healthskill:1},description:"Utiliser mon Désir de Changement ; ou laisser vide si je ne veux que gagner de l'argent."},
-	{id:"abilityfirst",label:"Aptitude ou Cicatrice",description:"Que vais-je devenir ?",actionId:work,required:{health:1,passion:1,scar:1}},
-	{id:"abilitysecond",label:"Aptitude ou Cicatrice",description:"Que vais-je devenir ?",actionId:work,required:{health:1,passion:1,scar:1}},
-	{id:"abilitythird",label:"Aptitude ou Cicatrice",description:"Que vais-je devenir ?",actionId:work,required:{health:1,passion:1,scar:1}},
-	{id:"influence",label:"Influence",description:"Qu'est-ce qui me motive aujourd'hui ?",actionId:work,required:{influence:1},consumes:true},
-	],
-	aspects: {job:1,dance:1,ecdysijob:1},
-},
-]
-};
+{
+  "elements": [
+    {
+      "id": "legacydancerjob",
+      "label": "Un contrat au Gaieté",
+      "description": "J'ai une place dans le choeur du Gaiety. Elle est à moi jusqu'à ce que ma chance ou mon physique faiblisse... ou jusqu'à ce que je trouve quelque chose de mieux.",
+      "aspects": {
+        "job": 1,
+        "dance": 1,
+        "potentialbenefactorm": 1,
+        "potentialbenefactorf": 1,
+        "potentialecdysiast": 1
+      },
+      "lifetime": 120,
+      "decayTo": "legacydancerjob_suspended",
+      "xtriggers": {
+        "job": "legacydancerjob"
+      },
+      "slots": [
+        {
+          "id": "health",
+          "label": "Santé",
+          "actionId": "work",
+          "required": {
+            "health": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "legacydancerjob_suspended",
+      "label": "Un contrat au Gaieté: Suspendu",
+      "description": "J'ai manqué trop de représentations. Si je plaide de manière suffisamment convaincante, je pourrais retrouver mon emploi.",
+      "aspects": {
+        "job": 1
+      },
+      "lifetime": 300,
+      "xtriggers": {
+        "plead": "legacydancerjob"
+      },
+      "slots": [
+        {
+          "id": "passion",
+          "label": "Passion",
+          "actionId": "work",
+          "required": {
+            "passion": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "dancerlegacy_plotitem_a",
+      "label": "Un poème chiffonné",
+      "description": "Il est adressé à une autre danseuse et signé par une personne nommée #LAST_FOLLOWER#. L'auteur décrit comment il a rencontré la danseuse dans un rêve, dans un bois sombre. Son rêve comportait des battements de tambour, des battements d'ailes, la peau des ombres, le sang de la lune. Pas étonnant que le poème ait été abandonné. Mais je peux déjà voir qu'il y a une signification sous-jacente.",
+      "slots": [
+        {
+          "id": "Approach",
+          "label": "Approche",
+          "actionId": "study",
+          "description": "Le battement du coeur, ou le cri du violon ?",
+          "required": {
+            "heart": 1,
+            "moth": 1
+          }
+        }
+      ],
+      "aspects": {
+        "legacyplotitem": 1
+      }
+    },
+    {
+      "id": "dancerjobecdysisa",
+      "label": "Un contrat au Club Ecdysis",
+      "description": "Je me produis au Club Ecdysis, les soirs où il est ouvert.",
+      "slots": [
+        {
+          "id": "location",
+          "label": "Le Club Ecdysis",
+          "description": "Le Club Ecdysis, où je me dévoile devant témoins",
+          "actionId": "work",
+          "required": {
+            "locationcabaret": 1
+          }
+        },
+        {
+          "id": "purpose",
+          "label": "Objet",
+          "actionId": "work",
+          "required": {
+            "changemarks": 1,
+            "healthskill": 1
+          },
+          "description": "Montrer mes Compétences pour avoir accès à des danses plus complexes ; ou utiliser mon Désir de Changement ; ou laisser vide si je veux juste gagner de l'argent."
+        },
+        {
+          "id": "abilityfirst",
+          "label": "Aptitude ou Cicatrice",
+          "description": "Que vais-je devenir ?",
+          "actionId": "work",
+          "required": {
+            "health": 1,
+            "passion": 1,
+            "scar": 1
+          }
+        },
+        {
+          "id": "influence",
+          "label": "Influence",
+          "description": "Qu'est-ce qui me motive aujourd'hui ?",
+          "actionId": "work",
+          "required": {
+            "influence": 1
+          },
+          "consumes": true
+        }
+      ],
+      "aspects": {
+        "job": 1,
+        "dance": 1,
+        "ecdysijob": 1
+      }
+    },
+    {
+      "id": "dancerjobecdysisb",
+      "label": "Un contrat avantageux au Club Ecdysis",
+      "description": "J'exécute les danses les plus exigeantes au Club Ecdysis.",
+      "slots": [
+        {
+          "id": "location",
+          "label": "Le Club Ecdysis",
+          "description": "Le Club Ecdysis, où je me dévoile devant témoins",
+          "actionId": "work",
+          "required": {
+            "locationcabaret": 1
+          }
+        },
+        {
+          "id": "purpose",
+          "label": "Objet",
+          "actionId": "work",
+          "required": {
+            "changemarks": 1,
+            "healthskill": 1
+          },
+          "description": "Montrer mes Compétences pour avoir accès à des danses plus complexes ; ou utiliser mon Désir de Changement ; ou laisser vide si je veux juste gagner de l'argent."
+        },
+        {
+          "id": "abilityfirst",
+          "label": "Aptitude ou Cicatrice",
+          "description": "Que vais-je devenir ?",
+          "actionId": "work",
+          "required": {
+            "health": 1,
+            "passion": 1,
+            "scar": 1
+          }
+        },
+        {
+          "id": "abilitysecond",
+          "label": "Aptitude ou Cicatrice",
+          "description": "Que vais-je devenir ?",
+          "actionId": "work",
+          "required": {
+            "health": 1,
+            "passion": 1,
+            "scar": 1
+          }
+        },
+        {
+          "id": "influence",
+          "label": "Influence",
+          "description": "Qu'est-ce qui me motive aujourd'hui ?",
+          "actionId": "work",
+          "required": {
+            "influence": 1
+          },
+          "consumes": true
+        }
+      ],
+      "aspects": {
+        "job": 1,
+        "dance": 1,
+        "ecdysijob": 1
+      }
+    },
+    {
+      "id": "dancerjobecdysisc",
+      "label": "Un arrangement particulier avec le Club Ecdysis",
+      "description": "Je suis parfois généreusement rémunéré pour exécuter des danses très spécifiques pour des connaisseurs très particuliers.",
+      "slots": [
+        {
+          "id": "location",
+          "label": "Le Club Ecdysis",
+          "description": "Le Club Ecdysis, où je me dévoile devant témoins",
+          "actionId": "work",
+          "required": {
+            "locationcabaret": 1
+          }
+        },
+        {
+          "id": "purpose",
+          "label": "Objet",
+          "actionId": "work",
+          "required": {
+            "changemarks": 1,
+            "healthskill": 1
+          },
+          "description": "Utiliser mon Désir de Changement ; ou laisser vide si je ne veux que gagner de l'argent."
+        },
+        {
+          "id": "abilityfirst",
+          "label": "Aptitude ou Cicatrice",
+          "description": "Que vais-je devenir ?",
+          "actionId": "work",
+          "required": {
+            "health": 1,
+            "passion": 1,
+            "scar": 1
+          }
+        },
+        {
+          "id": "abilitysecond",
+          "label": "Aptitude ou Cicatrice",
+          "description": "Que vais-je devenir ?",
+          "actionId": "work",
+          "required": {
+            "health": 1,
+            "passion": 1,
+            "scar": 1
+          }
+        },
+        {
+          "id": "abilitythird",
+          "label": "Aptitude ou Cicatrice",
+          "description": "Que vais-je devenir ?",
+          "actionId": "work",
+          "required": {
+            "health": 1,
+            "passion": 1,
+            "scar": 1
+          }
+        },
+        {
+          "id": "influence",
+          "label": "Influence",
+          "description": "Qu'est-ce qui me motive aujourd'hui ?",
+          "actionId": "work",
+          "required": {
+            "influence": 1
+          },
+          "consumes": true
+        }
+      ],
+      "aspects": {
+        "job": 1,
+        "dance": 1,
+        "ecdysijob": 1
+      }
+    }
+  ]
+}

@@ -1,410 +1,821 @@
-{"elements":
-    [
-       
-		     {
-        id: "hunger",
-            label: "Faim",
-            aspects:
-            {illhealth: 1,
-			  grail: 2,
-			  ingredient:1},
-			  slots: [{id:"nourishment",label:"Nourriture",actionId:"dream",description: "Pour récupérer, je dois manger.",required:{funds:1}}],
-            description: "J'ai besoin de repos et de nourriture, si je veux me rétablir. Mais quand ma bouche se vide, quand ma vision se trouble, je vois la coupe rouge ; et de temps en temps elle me parle. [Rêver avec la Faim avant que la carte ne s'efface vous permettra de retrouver la Santé.]",
-			xtriggers: {restorehealth: health,scar_ability:scar_heart},
-			lifetime:60,
-			decayTo:"decrepitude"
-			},
+{
+  "elements": [
+    {
+      "id": "hunger",
+      "label": "Faim",
+      "aspects": {
+        "illhealth": 1,
+        "grail": 2,
+        "ingredient": 1
+      },
+      "slots": [
         {
-            id: "health",
-            label: "Santé",
-            aspects:
-            {
-                heart: 2,
-				ingredient: 1,
-				ability:1
-            },
-            animFrames: 1,
-			xtriggers: {damagehealth: injury,fallsick:affliction,destroyhealth:decrepitude,fatiguing:fatigue,employment:fatigue,job:fatigue,ritual:fatigue,society:fatigue,scar_ability:scar_heart},
-			description: "C'est mon corps. Il y a d'autres corps, mais celui-ci est le mien, et mon esprit en a besoin comme un champignon a besoin de terre. [Avec assez de Vitalité, vous pouvez gagner plus de Santé.]"
-        },
-				 {
-            id: "vitality",
-            label: "Vitalité",
-				  slots: [{id:"morevitality",label:"Plus de Vitalité",actionId:"study",description: "Avec suffisamment de Vitalité - ou parfois quelque chose de plus exotique - je peux améliorer ma Santé.",required:{vitality:1,influenceheart:1}}],
-          aspects:
-            {advancement:1,heart:1,influence:1},
-            description: "L'exercice, ou quelque chose de plus rare, m'a revigoré. [Utilisez avec une autre Vitalité pour améliorer vos capacités. Cela ne dure que trois minutes, s'il n'est pas utilisé.]",
-			xtriggers:{upgradeinfluence:influenceheartc},
-		lifetime: 180
-        },
-						 {
-            id: "vitalityplus",
-            label: "Vitalité: une leçon apprise",
-          aspects:
-            {advancement:1,heart:2,influence:1},
-            description: "Je suis prêt à m'améliorer. [Utilisez ceci avec votre compétence Force pour améliorer la compétence et gagner en Santé. Elle dure jusqu'à cinq minutes avant de se décomposer pour redevenir une Vitalité.]",
-			xtriggers:{upgradeinfluence:influenceheartc},
-		lifetime: 300,
-		decayTo:"vitality"
-        },
-		
-						 {
-            id: "restlessness",
-            label: "Nervosité",
-            aspects:
-            {influence:1, forge:2,heart:2,grail:2,lantern:2,moth:2,memory:1},
-            description: "Un désir ardent m'habite. Je sens que j'ai envie de faire... <i>quelque chose</i>. Quoi, exactement ?",
-		lifetime: 60,
-		decayTo:"dread"
-        },
-				{
-        id: "bloodshed",
-            label: "Effusion de sang",
-			description:"Le sang a été versé.",
-			lifetime:1
-			},
-			
-			{
-        id: "injury",
-            label: "Une blessure",
-            aspects:
-            {illhealth: 1,
-			  knock: 2,
-			  ingredient:1},
-			  			slots: [{id:"medicines",label:"Médicaments, ou...",actionId:"dream",description: "Je pourrais payer pour une visite chez le médecin...",required:{funds:1},actionId:"dream"},
-			{id:"vitality",label:"...Vitalité",description: "...mais j'ai peut-être juste besoin d'un peu de repos.",required:{vitality:1},actionId:"dream"}],
-            description: "J'ai besoin de repos et de nourriture, si je veux me rétablir. Mais la Mère des Fourmis est très attentive aux blessures. [Rêver avec une Blessure avant que la carte ne s'efface vous permettra également de recouvrer la Santé.]",
-			xtriggers: {restorehealth: health,scar_ability:scar_heart},
-			lifetime: 150,
-			decayTo: "decrepitude"
-			},
-									{
-        id: "disillusionment",
-            label: "Passion (Désillusionné)",
-            description: "Je suis allé à l'encontre de mes propres principes, ou de mes propres préférences. [Cette carte ne peut pas être utilisée, mais elle sera récupérée au bout de soixante secondes.]",
-			lifetime: 60,
-			decayTo:"passion",
-			icon:"passion",
-			xtriggers:{scarability:scar_moth,toreason:concentration,damagepassion:fascination},
-			resaturate: true
-			},
-												{
-        id: "passionexhausted",
-            label: "Passion (Épuisé)",
-            description: "Ma Passion brule faiblement. [Cette carte ne peut pas être utilisée, mais elle récupère après soixante secondes.]",
-			lifetime: 60,
-			decayTo:"passion",
-			icon:"passion",
-			xtriggers:{scarability:scar_moth,toreason:concentration,damagepassion:fascination},
-			resaturate: true
-			},
-						{
-        id: "fatigue",
-            label: "Santé (Fatigué)",
-            aspects:
-            {illhealth: 1,heart:1},
-            description: "Cette carte ne peut pas être utilisée, mais elle sera récupérée au bout de soixante secondes. Je peux la récupérer plus rapidement en Rêvant.",
-			xtriggers: {restorehealth: health,damagehealth:injury,destroyhealth:decrepitude,fallsick:affliction,scarability:scar_heart},
-			lifetime: 60,
-			decayTo:"health",
-			icon:"health",
-			resaturate: true
-			},
-			{
-			id: "affliction",
-            label: "Une Affliction",
-            aspects:{illhealth: 1, winter:2,ingredient:1},
-			xtriggers: {restorehealth: health,scarability:scar_heart},
-						slots: [{id: "medicine",label:"Médicaments, ou...",actionId:"dream",description: "Je pourrais payer pour une visite chez le médecin...",required:{funds:1}},
-			{id:"vitality",label:"...Vitalité",actionId:"dream",description: "...mais j'ai peut-être juste besoin d'un peu de repos.",required:{vitality:1}}],
-            description: "La maladie m'a rendu faible. J'ai besoin de repos et de nourriture, si je veux me rétablir. [Rêvez d'une Affliction pour la transformer en Santé, avant que la carte ne se désintègre.]",
-			lifetime: 180,
-			decayTo: "decrepitude"
-			},
+          "id": "nourishment",
+          "label": "Nourriture",
+          "actionId": "dream",
+          "description": "Pour récupérer, je dois manger.",
+          "required": {
+            "funds": 1
+          }
+        }
+      ],
+      "description": "J'ai besoin de repos et de nourriture, si je veux me rétablir. Mais quand ma bouche se vide, quand ma vision se trouble, je vois la coupe rouge ; et de temps en temps elle me parle. [Rêver avec la Faim avant que la carte ne s'efface vous permettra de retrouver la Santé.]",
+      "xtriggers": {
+        "restorehealth": "health",
+        "scar_ability": "scar_heart"
+      },
+      "lifetime": 60,
+      "decayTo": "decrepitude"
+    },
+    {
+      "id": "health",
+      "label": "Santé",
+      "aspects": {
+        "heart": 2,
+        "ingredient": 1,
+        "ability": 1
+      },
+      "animFrames": 1,
+      "xtriggers": {
+        "damagehealth": "injury",
+        "fallsick": "affliction",
+        "destroyhealth": "decrepitude",
+        "fatiguing": "fatigue",
+        "employment": "fatigue",
+        "job": "fatigue",
+        "ritual": "fatigue",
+        "society": "fatigue",
+        "scar_ability": "scar_heart"
+      },
+      "description": "C'est mon corps. Il y a d'autres corps, mais celui-ci est le mien, et mon esprit en a besoin comme un champignon a besoin de terre. [Avec assez de Vitalité, vous pouvez gagner plus de Santé.]"
+    },
+    {
+      "id": "vitality",
+      "label": "Vitalité",
+      "slots": [
         {
-            id: "reason",
-            label: "Raison",
-            aspects:
-            {
-                lantern: 2,
-				ingredient:1,
-				ability:1
-            },
-            animFrames: 1,
-			description: "'Aucun organisme vivant ne peut continuer longtemps à exister de manière saine dans des conditions de réalité absolue.' - Shirley Jackson
-
-[Avec l'Erudition, vous pouvez Étudier pour gagner plus de Raison.]",
-				xtriggers: {damagereason: dread,fatiguing:concentration,employment:concentration,job:concentration,topassion:passion,ritual:concentration,society:concentration,scarability:scar_lantern}
-				
+          "id": "morevitality",
+          "label": "Plus de Vitalité",
+          "actionId": "study",
+          "description": "Avec suffisamment de Vitalité - ou parfois quelque chose de plus exotique - je peux améliorer ma Santé.",
+          "required": {
+            "vitality": 1,
+            "influenceheart": 1
+          }
+        }
+      ],
+      "aspects": {
+        "advancement": 1,
+        "heart": 1,
+        "influence": 1
+      },
+      "description": "L'exercice, ou quelque chose de plus rare, m'a revigoré. [Utilisez avec une autre Vitalité pour améliorer vos capacités. Cela ne dure que trois minutes, s'il n'est pas utilisé.]",
+      "xtriggers": {
+        "upgradeinfluence": "influenceheartc"
+      },
+      "lifetime": 180
+    },
+    {
+      "id": "vitalityplus",
+      "label": "Vitalité: une leçon apprise",
+      "aspects": {
+        "advancement": 1,
+        "heart": 2,
+        "influence": 1
+      },
+      "description": "Je suis prêt à m'améliorer. [Utilisez ceci avec votre compétence Force pour améliorer la compétence et gagner en Santé. Elle dure jusqu'à cinq minutes avant de se décomposer pour redevenir une Vitalité.]",
+      "xtriggers": {
+        "upgradeinfluence": "influenceheartc"
+      },
+      "lifetime": 300,
+      "decayTo": "vitality"
+    },
+    {
+      "id": "restlessness",
+      "label": "Nervosité",
+      "aspects": {
+        "influence": 1,
+        "forge": 2,
+        "heart": 2,
+        "grail": 2,
+        "lantern": 2,
+        "moth": 2,
+        "memory": 1
+      },
+      "description": "Un désir ardent m'habite. Je sens que j'ai envie de faire... <i>quelque chose</i>. Quoi, exactement ?",
+      "lifetime": 60,
+      "decayTo": "dread"
+    },
+    {
+      "id": "bloodshed",
+      "label": "Effusion de sang",
+      "description": "Le sang a été versé.",
+      "lifetime": 1
+    },
+    {
+      "id": "injury",
+      "label": "Une blessure",
+      "aspects": {
+        "illhealth": 1,
+        "knock": 2,
+        "ingredient": 1
+      },
+      "slots": [
+        {
+          "id": "medicines",
+          "label": "Médicaments, ou...",
+          "actionId": "dream",
+          "description": "Je pourrais payer pour une visite chez le médecin...",
+          "required": {
+            "funds": 1
+          }
         },
-		        {
-            id: "concentration",
-            label: "Raison [Diminué]",
-			description: "Mon esprit est fatigué. [Cette carte ne peut pas être utilisée, mais elle récupère après soixante secondes.]",
-			lifetime:60,
-			decayTo:"reason",		
-		icon:"reason",
-			xtriggers:{scarability:scar_lantern,topassion:passionexhausted,damagereason:dread},
-			resaturate: true
+        {
+          "id": "vitality",
+          "label": "...Vitalité",
+          "description": "...mais j'ai peut-être juste besoin d'un peu de repos.",
+          "required": {
+            "vitality": 1
+          },
+          "actionId": "dream"
+        }
+      ],
+      "description": "J'ai besoin de repos et de nourriture, si je veux me rétablir. Mais la Mère des Fourmis est très attentive aux blessures. [Rêver avec une Blessure avant que la carte ne s'efface vous permettra également de recouvrer la Santé.]",
+      "xtriggers": {
+        "restorehealth": "health",
+        "scar_ability": "scar_heart"
+      },
+      "lifetime": 150,
+      "decayTo": "decrepitude"
+    },
+    {
+      "id": "disillusionment",
+      "label": "Passion (Désillusionné)",
+      "description": "Je suis allé à l'encontre de mes propres principes, ou de mes propres préférences. [Cette carte ne peut pas être utilisée, mais elle sera récupérée au bout de soixante secondes.]",
+      "lifetime": 60,
+      "decayTo": "passion",
+      "icon": "passion",
+      "xtriggers": {
+        "scarability": "scar_moth",
+        "toreason": "concentration",
+        "damagepassion": "fascination"
+      },
+      "resaturate": true
+    },
+    {
+      "id": "passionexhausted",
+      "label": "Passion (Épuisé)",
+      "description": "Ma Passion brule faiblement. [Cette carte ne peut pas être utilisée, mais elle récupère après soixante secondes.]",
+      "lifetime": 60,
+      "decayTo": "passion",
+      "icon": "passion",
+      "xtriggers": {
+        "scarability": "scar_moth",
+        "toreason": "concentration",
+        "damagepassion": "fascination"
+      },
+      "resaturate": true
+    },
+    {
+      "id": "fatigue",
+      "label": "Santé (Fatigué)",
+      "aspects": {
+        "illhealth": 1,
+        "heart": 1
+      },
+      "description": "Cette carte ne peut pas être utilisée, mais elle sera récupérée au bout de soixante secondes. Je peux la récupérer plus rapidement en Rêvant.",
+      "xtriggers": {
+        "restorehealth": "health",
+        "damagehealth": "injury",
+        "destroyhealth": "decrepitude",
+        "fallsick": "affliction",
+        "scarability": "scar_heart"
+      },
+      "lifetime": 60,
+      "decayTo": "health",
+      "icon": "health",
+      "resaturate": true
+    },
+    {
+      "id": "affliction",
+      "label": "Une Affliction",
+      "aspects": {
+        "illhealth": 1,
+        "winter": 2,
+        "ingredient": 1
+      },
+      "xtriggers": {
+        "restorehealth": "health",
+        "scarability": "scar_heart"
+      },
+      "slots": [
+        {
+          "id": "medicine",
+          "label": "Médicaments, ou...",
+          "actionId": "dream",
+          "description": "Je pourrais payer pour une visite chez le médecin...",
+          "required": {
+            "funds": 1
+          }
         },
-				 {
-            id: "erudition",
-            label: "Erudition",
-			slots: [{id:"moreerudition",label:"Plus d'Erudition",actionId:"study",description: "Avec suffisamment d'Erudition - ou parfois quelque chose de plus exotique - je peux augmenter ma Raison.",required:{erudition:1,influencelantern:1}}],
-            aspects: {advancement:1,lantern:1,influence:1},
-            description: "J'absorbe le savoir comme une ombre absorbe la lumière. Je suis peut-être sur le point d'être promu. [L'érudition peut être utilisée avec l'Etude pour obtenir de la Raison. Elle ne dure que trois minutes, si elle n'est pas utilisée.]",
-lifetime: 180,
-	xtriggers:{upgradeinfluence:influencelanternc},
+        {
+          "id": "vitality",
+          "label": "...Vitalité",
+          "actionId": "dream",
+          "description": "...mais j'ai peut-être juste besoin d'un peu de repos.",
+          "required": {
+            "vitality": 1
+          }
+        }
+      ],
+      "description": "La maladie m'a rendu faible. J'ai besoin de repos et de nourriture, si je veux me rétablir. [Rêvez d'une Affliction pour la transformer en Santé, avant que la carte ne se désintègre.]",
+      "lifetime": 180,
+      "decayTo": "decrepitude"
+    },
+    {
+      "id": "reason",
+      "label": "Raison",
+      "aspects": {
+        "lantern": 2,
+        "ingredient": 1,
+        "ability": 1
+      },
+      "animFrames": 1,
+      "description": "'Aucun organisme vivant ne peut continuer longtemps à exister de manière saine dans des conditions de réalité absolue.' - Shirley Jackson [Avec l'Erudition, vous pouvez Étudier pour gagner plus de Raison.]",
+      "xtriggers": {
+        "damagereason": "dread",
+        "fatiguing": "concentration",
+        "employment": "concentration",
+        "job": "concentration",
+        "topassion": "passion",
+        "ritual": "concentration",
+        "society": "concentration",
+        "scarability": "scar_lantern"
+      }
+    },
+    {
+      "id": "concentration",
+      "label": "Raison [Diminué]",
+      "description": "Mon esprit est fatigué. [Cette carte ne peut pas être utilisée, mais elle récupère après soixante secondes.]",
+      "lifetime": 60,
+      "decayTo": "reason",
+      "icon": "reason",
+      "xtriggers": {
+        "scarability": "scar_lantern",
+        "topassion": "passionexhausted",
+        "damagereason": "dread"
+      },
+      "resaturate": true
+    },
+    {
+      "id": "erudition",
+      "label": "Erudition",
+      "slots": [
+        {
+          "id": "moreerudition",
+          "label": "Plus d'Erudition",
+          "actionId": "study",
+          "description": "Avec suffisamment d'Erudition - ou parfois quelque chose de plus exotique - je peux augmenter ma Raison.",
+          "required": {
+            "erudition": 1,
+            "influencelantern": 1
+          }
+        }
+      ],
+      "aspects": {
+        "advancement": 1,
+        "lantern": 1,
+        "influence": 1
+      },
+      "description": "J'absorbe le savoir comme une ombre absorbe la lumière. Je suis peut-être sur le point d'être promu. [L'érudition peut être utilisée avec l'Etude pour obtenir de la Raison. Elle ne dure que trois minutes, si elle n'est pas utilisée.]",
+      "lifetime": 180,
+      "xtriggers": {
+        "upgradeinfluence": "influencelanternc"
+      }
+    },
+    {
+      "id": "eruditionplus",
+      "label": "Erudition: Leçon apprise",
+      "aspects": {
+        "advancement": 1,
+        "lantern": 2,
+        "influence": 1
+      },
+      "description": "Je suis prêt à m'améliorer. [Utilisez ceci avec votre compétence d'Erudition pour améliorer la compétence et gagner de la Raison. Cela peut durer jusqu'à cinq minutes avant de se décomposer en une Erudition.]",
+      "lifetime": 300,
+      "xtriggers": {
+        "upgradeinfluence": "influencelanternc"
+      },
+      "decayTo": "erudition"
+    },
+    {
+      "id": "dread",
+      "label": "Peur",
+      "aspects": {
+        "edge": 2,
+        "inducesdespair": 1,
+        "influence": 1,
+        "illhealth": 1,
+        "memory": 1
+      },
+      "slots": [
+        {
+          "id": "reminders",
+          "label": "Souvenirs",
+          "actionId": "dream",
+          "required": {
+            "contentment": 1
+          },
+          "description": "J'ai besoin d'un peu de paix, ou d'un moment de bonheur. [Trop de Peur vous détruira. Le Contentement peut la guérir.]"
         },
-		
-								 {
-            id: "eruditionplus",
-            label: "Erudition: Leçon apprise",
-          aspects:
-            {advancement:1,lantern:2,influence:1},
-            description: "Je suis prêt à m'améliorer. [Utilisez ceci avec votre compétence d'Erudition pour améliorer la compétence et gagner de la Raison. Cela peut durer jusqu'à cinq minutes avant de se décomposer en une Erudition.]",
-		lifetime: 300,
-			xtriggers:{upgradeinfluence:influencelanternc},
-			decayTo:"erudition"
+        {
+          "id": "with",
+          "label": "Avec",
+          "description": "Je peux peut-être utiliser ma Peur pour renforcer une Influence dangereuse.",
+          "required": {
+            "influenceedge": 1,
+            "influencewinter": 1
+          },
+          "actionId": "study"
         },
-			{id: "dread",
-            label: "Peur",
-            aspects:
-            {edge: 2,
-			inducesdespair: 1,
-			influence:1,
-			illhealth:1,
-			memory:1},
-			slots:	[{id:"reminders",label:"Souvenirs",actionId:"dream",required: {contentment:1},description:"J'ai besoin d'un peu de paix, ou d'un moment de bonheur. [Trop de Peur vous détruira. Le Contentement peut la guérir.]"},
-			{id:"with",label:"Avec",description:"Je peux peut-être utiliser ma Peur pour renforcer une Influence dangereuse.",required:{influenceedge:1,influencewinter:1},actionId:"study"},
-			{id:"knowledge",label:"Connaissance",description:"Je dois comprendre les Influences au travail, si je veux les renforcer ou les corrompre. [Vous aurez besoin d'une bonne base dans le domaine concerné.]",required:{fragmentedgec:1,fragmentedged:1,fragmentedgee:1,fragmentedgef:1,fragmentedgeg:1},actionId:"study"}],
-            description: "J'en ai trop vu. Une Peur sans nom ronge mes espoirs de ses dents ; une horreur existentielle.",
-			lifetime: 180,
-			xtriggers:{upgradeinfluence:influenceedgec,glorify:fascination}
-			},
-		        {
-            id: "passion",
-            label: "Passion",
-            aspects:
-            {
-                moth: 2,
-				ingredient:1,
-				ability:1
-            },
-            animFrames: 1,
-			description: "'Les esprits ternes ne sont jamais ni intuitifs ni mathématiques.' - Blaise Pascal
-			
-[Avec assez de Scintillements, vous pouvez Etudier pour gagner plus de Passion.]",
-			xtriggers: {damagepassion:fascination,plead:disillusionment,fatiguing:passionexhausted,employment:passionexhausted,job:passionexhausted,toreason:reason,ritual:passionexhausted,society:passionexhausted}
+        {
+          "id": "knowledge",
+          "label": "Connaissance",
+          "description": "Je dois comprendre les Influences au travail, si je veux les renforcer ou les corrompre. [Vous aurez besoin d'une bonne base dans le domaine concerné.]",
+          "required": {
+            "fragmentedgec": 1,
+            "fragmentedged": 1,
+            "fragmentedgee": 1,
+            "fragmentedgef": 1,
+            "fragmentedgeg": 1
+          },
+          "actionId": "study"
+        }
+      ],
+      "description": "J'en ai trop vu. Une Peur sans nom ronge mes espoirs de ses dents ; une horreur existentielle.",
+      "lifetime": 180,
+      "xtriggers": {
+        "upgradeinfluence": "influenceedgec",
+        "glorify": "fascination"
+      }
+    },
+    {
+      "id": "passion",
+      "label": "Passion",
+      "aspects": {
+        "moth": 2,
+        "ingredient": 1,
+        "ability": 1
+      },
+      "animFrames": 1,
+      "description": "'Les esprits ternes ne sont jamais ni intuitifs ni mathématiques.' - Blaise Pascal [Avec assez de Scintillements, vous pouvez Etudier pour gagner plus de Passion.]",
+      "xtriggers": {
+        "damagepassion": "fascination",
+        "plead": "disillusionment",
+        "fatiguing": "passionexhausted",
+        "employment": "passionexhausted",
+        "job": "passionexhausted",
+        "toreason": "reason",
+        "ritual": "passionexhausted",
+        "society": "passionexhausted"
+      }
+    },
+    {
+      "id": "decrepitude",
+      "label": "Décrépitude",
+      "description": "Certaines blessures ne guérissent jamais tout à fait. [Les Blessures non traitées et la Faim deviennent une Décrépitude, qui ne redevient pas de la Santé. La Décrépitude demeure jusqu'à la mort..]",
+      "aspects": {
+        "ability": 1,
+        "winter": 1,
+        "remnant": 1
+      },
+      "xtriggers": {
+        "tohealth": "health",
+        "alzabo": "memory.honeyed"
+      },
+      "slots": [
+        {
+          "id": "consume",
+          "label": "Consumer",
+          "required": {
+            "ingredient": 1
+          },
+          "forbidden": {
+            "poison": 1
+          },
+          "actionId": "dream"
+        }
+      ]
+    },
+    {
+      "id": "glimmering",
+      "label": "Scintillement",
+      "slots": [
+        {
+          "id": "moreglimmering",
+          "label": "Plus de Scintillement",
+          "actionId": "study",
+          "description": "Avec suffisamment de Scintillements - ou parfois quelque chose de plus exotique - je peux augmenter ma Passion.",
+          "required": {
+            "glimmering": 1,
+            "influencemoth": 1
+          }
+        }
+      ],
+      "aspects": {
+        "advancement": 1,
+        "moth": 1,
+        "influence": 1
+      },
+      "description": "Mes émotions sont plus fortes que d'habitude. Il y a des choses que je ne comprendrai jamais, et ces choses seront toujours précieuses, mais pour l'instant je suis plus proche d'elles. [Le scintillement peut être utilisé avec Étudier pour gagner de la Passion. Il ne dure que trois minutes, s'il n'est pas utilisé..]",
+      "lifetime": 180,
+      "xtriggers": {
+        "upgradeinfluence": "influencemothc"
+      }
+    },
+    {
+      "id": "glimmeringplus",
+      "label": "Scintillement: Leçon Apprise",
+      "aspects": {
+        "advancement": 1,
+        "moth": 2,
+        "influence": 1
+      },
+      "description": "Je suis prêt à m'améliorer. [Utilisez ceci avec votre compétence Imagination pour améliorer la compétence et gagner en Passion. Il peut durer jusqu'à cinq minutes avant de se décomposer en un Scintillement.]",
+      "lifetime": 300,
+      "xtriggers": {
+        "upgradeinfluence": "influencemothc"
+      },
+      "decayTo": "glimmering"
+    },
+    {
+      "id": "fascination",
+      "label": "Fascination",
+      "aspects": {
+        "moth": 2,
+        "illhealth": 1,
+        "influence": 1,
+        "memory": 1
+      },
+      "slots": [
+        {
+          "id": "reminders",
+          "label": "Souvenirs",
+          "required": {
+            "dread": 1,
+            "fleeting": 1
+          },
+          "actionId": "dream",
+          "description": "La réalité grise stabilisera mon âme."
         },
-		
-		
-		        {
-            id: "decrepitude",
-            label: "Décrépitude",
-			description: "Certaines blessures ne guérissent jamais tout à fait. [Les Blessures non traitées et la Faim deviennent une Décrépitude, qui ne redevient pas de la Santé. La Décrépitude demeure jusqu'à la mort..]",
-			aspects: {ability:1,winter:1,remnant:1},
-			xtriggers: {tohealth:health,alzabo:memory.honeyed},
-			slots:[{id:"consume",label:"Consumer",required:{ingredient:1},forbidden:{poison:1}, actionId:"dream"}]
-            },
-		
-					 {
-            id: "glimmering",
-            label: "Scintillement",
-			slots: [{id:"moreglimmering",label:"Plus de Scintillement",actionId:"study",description: "Avec suffisamment de Scintillements - ou parfois quelque chose de plus exotique - je peux augmenter ma Passion.",required:{glimmering:1,influencemoth:1}}],
-            aspects:
-            {advancement:1,moth:1,influence:1},
-            description: "Mes émotions sont plus fortes que d'habitude. Il y a des choses que je ne comprendrai jamais, et ces choses seront toujours précieuses, mais pour l'instant je suis plus proche d'elles. [Le scintillement peut être utilisé avec Étudier pour gagner de la Passion. Il ne dure que trois minutes, s'il n'est pas utilisé..]",
-			lifetime: 180,
-			xtriggers:{upgradeinfluence:influencemothc}
+        {
+          "id": "with",
+          "label": "Avec",
+          "description": "Je peux peut-être utiliser ma Fascination pour renforcer une Influence alléchante.",
+          "required": {
+            "influencemoth": 1,
+            "influencelantern": 1
+          },
+          "actionId": "study"
         },
-		
-										 {
-            id: "glimmeringplus",
-            label: "Scintillement: Leçon Apprise",
-          aspects:
-            {advancement:1,moth:2,influence:1},
-            description: "Je suis prêt à m'améliorer. [Utilisez ceci avec votre compétence Imagination pour améliorer la compétence et gagner en Passion. Il peut durer jusqu'à cinq minutes avant de se décomposer en un Scintillement.]",
-		lifetime: 300,
-			xtriggers:{upgradeinfluence:influencemothc},
-			decayTo:"glimmering"
+        {
+          "id": "knowledge",
+          "label": "Connaissance",
+          "description": "Je dois comprendre les influences au travail, si je veux les renforcer ou les corrompre. [Vous aurez besoin d'une bonne base dans le domaine concerné.]",
+          "required": {
+            "fragmentmothc": 1,
+            "fragmentmothd": 1,
+            "fragmentmothe": 1,
+            "fragmentmothf": 1,
+            "fragmentmothg": 1
+          },
+          "actionId": "study"
+        }
+      ],
+      "description": "La lumière FUIT à travers les FISSURES. Mon esprit est plus LUMINEUX qu'il ne l'a JAMAIS été. PLUS JE M'ÉLÈVE, PLUS JE VOIS.",
+      "lifetime": 180,
+      "xtriggers": {
+        "upgradeinfluence": "influencemothc"
+      }
+    },
+    {
+      "id": "scholarlatin",
+      "label": "Érudit: Latin",
+      "aspects": {
+        "language": 1
+      },
+      "slots": [
+        {
+          "id": "Text",
+          "label": "Texte non traduit",
+          "required": {
+            "textlatin": 1
+          },
+          "actionId": "study"
+        }
+      ],
+      "description": "Une langue morte : morte comme un diamant. [Certains livres doivent être traduits avant de pouvoir être lus.]",
+      "unique": true
+    },
+    {
+      "id": "scholarfucine",
+      "label": "Érudit: Fucine",
+      "aspects": {
+        "language": 1
+      },
+      "slots": [
+        {
+          "id": "Text",
+          "label": "Texte non traduit",
+          "required": {
+            "textfucine": 1
+          },
+          "actionId": "study"
+        }
+      ],
+      "description": "Un peuple vivait à l'est du lac perdu Fucino. Horace a averti que le pays des sorcières était le leur. C'était leur langue, appelée par certains 'la langue sèche' et par d'autres 'la langue des sorcières' [Certains livres doivent être traduits avant de pouvoir être lus.]",
+      "unique": true
+    },
+    {
+      "id": "scholargreek",
+      "label": "Érudit: Grec",
+      "aspects": {
+        "language": 1
+      },
+      "slots": [
+        {
+          "id": "Text",
+          "label": "Texte non traduit",
+          "required": {
+            "textgreek": 1
+          },
+          "actionId": "study"
+        }
+      ],
+      "description": "Vous connaissez sans doute toutes les variétés de grec, de ses origines à Byzance. Mais c'est une bonne chose que vous ayez ces ouvrages de référence. [Certains livres doivent être traduits avant de pouvoir être lus.]",
+      "unique": true
+    },
+    {
+      "id": "scholarphrygian",
+      "label": "Érudit: Phrygien",
+      "slots": [
+        {
+          "id": "Text",
+          "label": "Texte non traduit",
+          "required": {
+            "textphrygian": 1
+          },
+          "actionId": "study"
+        }
+      ],
+      "aspects": {
+        "language": 1
+      },
+      "description": "Les Phrygiens vénéraient la Grande Mère, que nous appelons le Graal. C'est dans leur pays que naquit la Sœur du Nœud, et c'est dans cette langue qu'elle supplia le Thunderskin lors de son ascension. [Certains livres doivent être traduits avant de pouvoir être lus.]",
+      "unique": true
+    },
+    {
+      "id": "scholararamaic",
+      "label": "Érudit: Araméen",
+      "slots": [
+        {
+          "id": "Text",
+          "label": "Texte non traduit",
+          "required": {
+            "textaramaic": 1
+          },
+          "actionId": "study"
+        }
+      ],
+      "aspects": {
+        "language": 1
+      },
+      "description": "La langue d'Aram, et de ses nombreux enfants depuis trois mille ans et plus. [Certains livres doivent être traduits avant de pouvoir être lus.]",
+      "unique": true
+    },
+    {
+      "id": "scholarmandaic",
+      "label": "Érudit: Mandaique profond",
+      "slots": [
+        {
+          "id": "Text",
+          "label": "Texte non traduit",
+          "required": {
+            "textmandaic": 1
+          },
+          "actionId": "study"
+        }
+      ],
+      "aspects": {
+        "language": 1
+      },
+      "description": "Le scénario le plus secret des rites les plus intimes des sectes profondes du désert profond. La langue natale, dit-on, de la Mère des Fourmis elle-même. [Certains livres doivent être traduits avant de pouvoir être lus.]",
+      "unique": true
+    },
+    {
+      "id": "scholarsanskrit",
+      "label": "Érudit: Sanskrit",
+      "slots": [
+        {
+          "id": "Text",
+          "label": "Texte non traduit",
+          "required": {
+            "textsanskrit": 1
+          },
+          "actionId": "study"
+        }
+      ],
+      "aspects": {
+        "language": 1
+      },
+      "description": "La langue sacrée du sous-continent. La porte de quatre mille ans de poésie, de cérémonie et de mystère s'ouvre maintenant devant vous, si vous pouvez vous débattre dans les circonvolutions de lotus de son vocabulaire. [Certains livres doivent être traduits avant de pouvoir être lus.]",
+      "unique": true
+    },
+    {
+      "id": "scholarvak",
+      "label": "Érudit: Vak",
+      "slots": [
+        {
+          "id": "Text",
+          "label": "Texte non traduit",
+          "required": {
+            "textvak": 1
+          },
+          "actionId": "study"
+        }
+      ],
+      "aspects": {
+        "language": 1
+      },
+      "description": "Avant que les dieux ne naissent du sang, avant que le singe ne se tienne debout, c'était la langue entendue dans la Maison du Soleil. [Certains livres doivent être traduits avant de pouvoir être lus.]",
+      "unique": true
+    },
+    {
+      "id": "fleeting",
+      "label": "Souvenir fugace",
+      "description": "Un moment dans le temps. Dans un autre moment, il aura disparu.",
+      "aspects": {
+        "secrethistories": 2,
+        "moth": 2,
+        "influence": 1,
+        "memory": 1
+      },
+      "slots": [
+        {
+          "id": "with",
+          "label": "Avec",
+          "description": "Je peux peut-être trouver quelque chose dans mes souvenirs pour renforcer une Influence éphémère.",
+          "required": {
+            "influencemoth": 1,
+            "influencelantern": 1
+          },
+          "actionId": "study"
         },
-		{id: "fascination",
-            label: "Fascination",
-            aspects:
-            {moth:2,illhealth:1,influence:1,memory:1},
-			              		slots:[{id:"reminders",label:"Souvenirs",required: {dread:1,fleeting:1},actionId:"dream",description:"La réalité grise stabilisera mon âme."},
-			{id:"with",label:"Avec",description:"Je peux peut-être utiliser ma Fascination pour renforcer une Influence alléchante.",required:{influencemoth:1,influencelantern:1},actionId:"study"},
-			{id:"knowledge",label:"Connaissance",description:"Je dois comprendre les influences au travail, si je veux les renforcer ou les corrompre. [Vous aurez besoin d'une bonne base dans le domaine concerné.]",required:{fragmentmothc:1,fragmentmothd:1,fragmentmothe:1,fragmentmothf:1,fragmentmothg:1},actionId:"study"}],
-            description: "La lumière FUIT à travers les FISSURES. Mon esprit est plus LUMINEUX qu'il ne l'a JAMAIS été. PLUS JE M'ÉLÈVE, PLUS JE VOIS.",
-			lifetime: 180,
-						xtriggers:{upgradeinfluence:influencemothc}
-			},
-		{
-		id: "scholarlatin",
-		label: "Érudit: Latin",
-		aspects: {language:1},
-		slots: [{id:"Text",
-		label: "Texte non traduit",
-				required: {textlatin:1},
-				actionId:"study",
-			}],
-		description: "Une langue morte : morte comme un diamant. [Certains livres doivent être traduits avant de pouvoir être lus.]",
-		unique:true
-		},
-					{
-		id: "scholarfucine",
-		label: "Érudit: Fucine",
-		aspects: {language:1},
-				slots: [{id:"Text",
-				label: "Texte non traduit",
-				required: {textfucine:1},
-				actionId:"study",
-			}],
-		description: "Un peuple vivait à l'est du lac perdu Fucino. Horace a averti que le pays des sorcières était le leur. C'était leur langue, appelée par certains 'la langue sèche' et par d'autres 'la langue des sorcières' [Certains livres doivent être traduits avant de pouvoir être lus.]",
-		unique:true
-		},
-				{
-		id: "scholargreek",
-		label: "Érudit: Grec",
-		aspects: {language:1},
-						slots: [{id:"Text",
-						label: "Texte non traduit",
-				required: {textgreek:1},
-				actionId:"study",
-			}],
-		description: "Vous connaissez sans doute toutes les variétés de grec, de ses origines à Byzance. Mais c'est une bonne chose que vous ayez ces ouvrages de référence. [Certains livres doivent être traduits avant de pouvoir être lus.]",
-		unique:true		
-		},
-					{
-		id: "scholarphrygian",
-		label: "Érudit: Phrygien",
-		slots: [{id:"Text",
-		label: "Texte non traduit",
-				required: {textphrygian:1},
-				actionId:"study",
-			}],
-		aspects: {language:1},
-		description: "Les Phrygiens vénéraient la Grande Mère, que nous appelons le Graal. C'est dans leur pays que naquit la Sœur du Nœud, et c'est dans cette langue qu'elle supplia le Thunderskin lors de son ascension. [Certains livres doivent être traduits avant de pouvoir être lus.]",
-		unique:true
-		},
-						{
-		id: "scholararamaic",
-		label: "Érudit: Araméen",
-						slots: [{id:"Text",
-						label: "Texte non traduit",
-				required: {textaramaic:1},
-				actionId:"study",
-			}],
-		aspects: {language:1},
-		description: "La langue d'Aram, et de ses nombreux enfants depuis trois mille ans et plus. [Certains livres doivent être traduits avant de pouvoir être lus.]",
-		unique:true
-		},
-							{
-		id: "scholarmandaic",
-		label: "Érudit: Mandaique profond",
-						slots: [{id:"Text",
-						label: "Texte non traduit",
-				required: {textmandaic:1},
-				actionId:"study",
-			}],
-		aspects: {language:1},
-		description: "Le scénario le plus secret des rites les plus intimes des sectes profondes du désert profond. La langue natale, dit-on, de la Mère des Fourmis elle-même. [Certains livres doivent être traduits avant de pouvoir être lus.]",
-		unique:true
-		},
-									{
-		id: "scholarsanskrit",
-		label: "Érudit: Sanskrit",
-						slots: [{id:"Text",
-						label: "Texte non traduit",
-				required: {textsanskrit:1},
-				actionId:"study",
-			}],
-		aspects: {language:1},
-		description: "La langue sacrée du sous-continent. La porte de quatre mille ans de poésie, de cérémonie et de mystère s'ouvre maintenant devant vous, si vous pouvez vous débattre dans les circonvolutions de lotus de son vocabulaire. [Certains livres doivent être traduits avant de pouvoir être lus.]",
-		unique:true
-		},
-									{
-		id: "scholarvak",
-		label: "Érudit: Vak",
-						slots: [{id:"Text",
-						label: "Texte non traduit",
-				required: {textvak:1},
-				actionId:"study",
-			}],
-		aspects: {language:1},
-		description: "Avant que les dieux ne naissent du sang, avant que le singe ne se tienne debout, c'était la langue entendue dans la Maison du Soleil. [Certains livres doivent être traduits avant de pouvoir être lus.]",
-		unique:true
-		},
-		
-			 {
-            id: "fleeting",
-            label: "Souvenir fugace",
-            description: "Un moment dans le temps. Dans un autre moment, il aura disparu.",
-			aspects: {secrethistories: 2,moth:2,influence:1,memory:1},
-				slots:[{id:"with",label:"Avec",description:"Je peux peut-être trouver quelque chose dans mes souvenirs pour renforcer une Influence éphémère.",required:{influencemoth:1,influencelantern:1},actionId:"study"},
-			{id:"knowledge",label:"Connaissance",description:"Je dois comprendre les influences au travail, si je veux les renforcer ou les corrompre. [Vous aurez besoin d'une bonne base dans le domaine concerné.]",required:{fragmentmothc:1,fragmentmothd:1,fragmentmothe:1,fragmentmothf:1,fragmentmothg:1},actionId:"study"}],
-			lifetime:120,
-			xtriggers:{upgradeinfluence:influencemothc}
+        {
+          "id": "knowledge",
+          "label": "Connaissance",
+          "description": "Je dois comprendre les influences au travail, si je veux les renforcer ou les corrompre. [Vous aurez besoin d'une bonne base dans le domaine concerné.]",
+          "required": {
+            "fragmentmothc": 1,
+            "fragmentmothd": 1,
+            "fragmentmothe": 1,
+            "fragmentmothf": 1,
+            "fragmentmothg": 1
+          },
+          "actionId": "study"
+        }
+      ],
+      "lifetime": 120,
+      "xtriggers": {
+        "upgradeinfluence": "influencemothc"
+      }
+    },
+    {
+      "id": "contentment",
+      "label": "Contentement",
+      "aspects": {
+        "lantern": 2,
+        "heart": 2,
+        "influence": 1
+      },
+      "description": "Je suis heureux, je crois. [Le Contentement protège de la Peur ; mais le Contentement ne dure pas.]",
+      "slots": [
+        {
+          "id": "with",
+          "label": "Avec",
+          "description": "Je peux peut-être utiliser mon Contentement pour renforcer une influence positive.",
+          "required": {
+            "influencelantern": 1,
+            "influenceheart": 1,
+            "influencewinter": 1,
+            "influenceforge": 1
+          },
+          "actionId": "study"
         },
-
-		{id: "contentment",
-		label: "Contentement",
-		aspects: {lantern:2,heart:2,influence:1},
-		description: "Je suis heureux, je crois. [Le Contentement protège de la Peur ; mais le Contentement ne dure pas.]",
-					slots:[{id:"with",label:"Avec",description:"Je peux peut-être utiliser mon Contentement pour renforcer une influence positive.",required:{influencelantern:1,influenceheart:1,influencewinter:1,influenceforge:1},actionId:"study"},
-			{id:"knowledge",label:"Connaissance",description:"Je dois comprendre les influences au travail, si je veux les renforcer ou les corrompre. [Vous aurez besoin d'une bonne base dans le domaine concerné.]",required:{fragmentheartc:1,fragmentheartd:1,fragmenthearte:1,fragmentheartf:1,fragmentheartg:1},actionId:"study"}],
-		lifetime: 60,
-			xtriggers:{upgradeinfluence:influenceheartc}
-		},
-					
-				{id: "scar_edge",
-		label:"Cicatrice: Expérience brutale",
-		description:"FAUST : Je pense que l'enfer est une fable. MEPHISTOPHELES : Ay, pense encore, jusqu'à ce que l'expérience te fasse changer d'avis. [Vous avez fait un sacrifice permanent pour obtenir du pouvoir.]",
-		aspects:{tool:1,edge:4,scar:1}
-		},
-		
-				{id: "scar_knock",
-		label:"Cicatrice: Fistule à moitié cicatrisée",
-		description:"Toutes les portes ne sont pas des blessures, mais toutes les blessures sont des portes. [Vous avez fait un sacrifice permanent pour obtenir du pouvoir.]",
-		aspects:{tool:1,knock:4,scar:1}
-		},
-				{id: "scar_winter",
-		label:"Cicatrice: Vieille blessure",
-		description:"Approchez-vous du coucher de soleil et voyez les premières étoiles de la nuit. [Vous avez fait un sacrifice permanent pour obtenir du pouvoir.]",
-		aspects:{tool:1,winter:4,scar:1}
-		},
-						{id: "scar_heart",
-		label:"Cicatrice: Un coeur perdu",
-		description:"J'ai tellement de vie en moi. Il m'est difficile de ne pas bouger. Quand je suis assis, mes articulations me brûlent. Je sais que si je m'arrête, je pourrais m'arrêter pour toujours. [Vous avez fait un sacrifice permanent pour obtenir du pouvoir. Attention : contrairement à la Santé, cette carte ne satisfera pas la Maladie ou la Famine.]",
-		aspects:{tool:1,heart:4,scar:1},
-		xtriggers:{job:scar_heart_fatigued,employment:scar_heart_fatigued,ritual:scar_heart_fatigued}
-		},
-								{id: "scar_heart_fatigued",
-		label:"Cicatrice: Un coeur perdu (accablé)",
-		description:"Mes artères chantent, mes veines brûlent. Je ne peux pas me pousser plus loin. [Attendez.]",
-	decayTo: scar_heart,
-	lifetime:60,
-			resaturate: true
-		},
-					{id: "scar_moth",
-		label:"Cicatrice: Un caractère souple",
-		description:"J'ai porté tant de signes. À chaque nouvelle apparence, il est plus difficile de se souvenir de mon visage d'origine. Même le cartilage s'assouplit quand j'ai le moral à zéro. [Vous avez fait un sacrifice permanent pour obtenir du pouvoir.]",
-		aspects:{tool:1,moth:4,scar:1},
-		xtriggers:{job:scar_moth_fatigued,employment:scar_moth_fatigued,ritual:scar_moth_fatigued}
-		},
-							{id: "scar_moth_fatigued",
-		label:"Cicatrice: Un caractère souple (accablé)",
-		description:"A chaque nouvelle expression, mes traits ondulent comme l'eau. Si je ne fais pas attention, je me diluerai entièrement. [Attendez.]",
-		decayTo: scar_moth,
-		lifetime:60,
-			resaturate: true
-		},
-		
-						{id: "scar_lantern",
-		label:"Cicatrice: Une transparence",
-	description:"Parfois, je suis désormais beau sous ma peau. Quand je me penche à angle droit - quand mes vêtements tombent de côté - quand l'œil est vif - ma forme est une révélation parfaite. [Vous avez fait un sacrifice permanent pour obtenir du pouvoir.]",
-		aspects:{tool:1,lantern:4,scar:1}
-		},
-]
-};
+        {
+          "id": "knowledge",
+          "label": "Connaissance",
+          "description": "Je dois comprendre les influences au travail, si je veux les renforcer ou les corrompre. [Vous aurez besoin d'une bonne base dans le domaine concerné.]",
+          "required": {
+            "fragmentheartc": 1,
+            "fragmentheartd": 1,
+            "fragmenthearte": 1,
+            "fragmentheartf": 1,
+            "fragmentheartg": 1
+          },
+          "actionId": "study"
+        }
+      ],
+      "lifetime": 60,
+      "xtriggers": {
+        "upgradeinfluence": "influenceheartc"
+      }
+    },
+    {
+      "id": "scar_edge",
+      "label": "Cicatrice: Expérience brutale",
+      "description": "FAUST : Je pense que l'enfer est une fable. MEPHISTOPHELES : Ay, pense encore, jusqu'à ce que l'expérience te fasse changer d'avis. [Vous avez fait un sacrifice permanent pour obtenir du pouvoir.]",
+      "aspects": {
+        "tool": 1,
+        "edge": 4,
+        "scar": 1
+      }
+    },
+    {
+      "id": "scar_knock",
+      "label": "Cicatrice: Fistule à moitié cicatrisée",
+      "description": "Toutes les portes ne sont pas des blessures, mais toutes les blessures sont des portes. [Vous avez fait un sacrifice permanent pour obtenir du pouvoir.]",
+      "aspects": {
+        "tool": 1,
+        "knock": 4,
+        "scar": 1
+      }
+    },
+    {
+      "id": "scar_winter",
+      "label": "Cicatrice: Vieille blessure",
+      "description": "Approchez-vous du coucher de soleil et voyez les premières étoiles de la nuit. [Vous avez fait un sacrifice permanent pour obtenir du pouvoir.]",
+      "aspects": {
+        "tool": 1,
+        "winter": 4,
+        "scar": 1
+      }
+    },
+    {
+      "id": "scar_heart",
+      "label": "Cicatrice: Un coeur perdu",
+      "description": "J'ai tellement de vie en moi. Il m'est difficile de ne pas bouger. Quand je suis assis, mes articulations me brûlent. Je sais que si je m'arrête, je pourrais m'arrêter pour toujours. [Vous avez fait un sacrifice permanent pour obtenir du pouvoir. Attention : contrairement à la Santé, cette carte ne satisfera pas la Maladie ou la Famine.]",
+      "aspects": {
+        "tool": 1,
+        "heart": 4,
+        "scar": 1
+      },
+      "xtriggers": {
+        "job": "scar_heart_fatigued",
+        "employment": "scar_heart_fatigued",
+        "ritual": "scar_heart_fatigued"
+      }
+    },
+    {
+      "id": "scar_heart_fatigued",
+      "label": "Cicatrice: Un coeur perdu (accablé)",
+      "description": "Mes artères chantent, mes veines brûlent. Je ne peux pas me pousser plus loin. [Attendez.]",
+      "decayTo": "scar_heart",
+      "lifetime": 60,
+      "resaturate": true
+    },
+    {
+      "id": "scar_moth",
+      "label": "Cicatrice: Un caractère souple",
+      "description": "J'ai porté tant de signes. À chaque nouvelle apparence, il est plus difficile de se souvenir de mon visage d'origine. Même le cartilage s'assouplit quand j'ai le moral à zéro. [Vous avez fait un sacrifice permanent pour obtenir du pouvoir.]",
+      "aspects": {
+        "tool": 1,
+        "moth": 4,
+        "scar": 1
+      },
+      "xtriggers": {
+        "job": "scar_moth_fatigued",
+        "employment": "scar_moth_fatigued",
+        "ritual": "scar_moth_fatigued"
+      }
+    },
+    {
+      "id": "scar_moth_fatigued",
+      "label": "Cicatrice: Un caractère souple (accablé)",
+      "description": "A chaque nouvelle expression, mes traits ondulent comme l'eau. Si je ne fais pas attention, je me diluerai entièrement. [Attendez.]",
+      "decayTo": "scar_moth",
+      "lifetime": 60,
+      "resaturate": true
+    },
+    {
+      "id": "scar_lantern",
+      "label": "Cicatrice: Une transparence",
+      "description": "Parfois, je suis désormais beau sous ma peau. Quand je me penche à angle droit - quand mes vêtements tombent de côté - quand l'œil est vif - ma forme est une révélation parfaite. [Vous avez fait un sacrifice permanent pour obtenir du pouvoir.]",
+      "aspects": {
+        "tool": 1,
+        "lantern": 4,
+        "scar": 1
+      }
+    }
+  ]
+}
