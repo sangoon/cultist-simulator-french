@@ -15,7 +15,11 @@
     },
     {
       "id": "mansus_wood",
-      "spec": ["influencemoth", "fragmentsecrethistories", "rumour"],
+      "spec": [
+        "influencemoth",
+        "fragmentsecrethistories",
+        "rumour"
+      ],
       "drawmessages": {
         "influencemoth": "'Au milieu du voyage de notre vie, je me suis retrouvé dans un bois sombre sans chemin. Il est difficile d'exprimer à quel point ce bois était sauvage, dur et impénétrable... Je ne me souviens pas exactement de ce qui s'est passé, la nuit dernière, dans le noir battant entre les troncs des arbres, où des choses ailées bougeaient sous mes mains. Mais maintenant, ce matin, mon cerveau s'emballe de fragments : IN GI RUM IMUS NOC TE ET CON SUMI MUR IGNI RUM IMUS NOC TE ET CON SUMI MUR -'",
         "fragmentsecrethistories": "J'ai marché dans le Bois hier soir, les volatiles voletaient au loin, et des choses velues ont empli ma bouche et mes oreilles, et j'ai ressenti l'envie de tomber à quatre pattes tel un loup le nez dans les racines. Mais je me suis rappelé que je marche debout le jour et que je connais le feu, l'acier et les mots, et j'ai enfin trouvé où le Velours avait caché un secret sur l'écorce des arbres, sous la mousse. Je l'ai lu alors du bout des doigts, et je pense maintenant que je pourrais l'écrire en entier.",
@@ -60,7 +64,11 @@
     },
     {
       "id": "mansus_whitedoor",
-      "spec": ["influencewinterc", "fragmentsecrethistoriesb", "restlessness"],
+      "spec": [
+        "influencewinterc",
+        "fragmentsecrethistoriesb",
+        "restlessness"
+      ],
       "drawmessages": {
         "influencewinterc": "La nuit dernière, la Porte blanche était brillante comme un miroir, lumineuse comme la neige fraîche, lumineuse comme la lune glacée. Je me souviens de sa luminosité, mais c'est de son froid que je me souviens le plus. J'ai posé ma joue contre elle. Je sens encore la douleur de son froid dans mon crâne.",
         "fragmentsecrethistoriesb": "Beaucoup de Morts entrent dans le Mansus par la Porte Blanche. Ils errent dans ses couloirs en silence jusqu'à ce qu'ils soient perdus. Certains s'embrassent, d'autres se dévorent, d'autres encore se frayent un chemin dans les rêves des vivants. Quelques-uns gravent leurs souvenirs sur la pierre du Mansus où elle est tendre. Ils la grattent avec leurs ongles, vous voyez. Hier soir, j'ai lu un de ces souvenirs. ",
@@ -124,7 +132,11 @@
     },
     {
       "id": "mansus_stagdoor1",
-      "spec": ["influenceedgee", "influencegrailc", "influencewintere"],
+      "spec": [
+        "influenceedgee",
+        "influencegrailc",
+        "influencewintere"
+      ],
       "drawmessages": {
         "influenceedgee": "De l'endroit où mes rêves m'ont emmené la nuit dernière, ceci a été écrit : 'L'ascension est de verre. Les murs sont des couteaux. Chaque pas est du sang.' Je n'ai pas grimpé loin. La douleur était trop grande. Quand je me suis réveillé, cette douleur est restée avec moi - une douleur que je pourrais utiliser à des fins occultes, si je me dépêche.",
         "influencegrailc": "L'Ascension des Couteaux est appelée l'Escalier Tranchant, et la Mère des Miroirs, et la Fête du Graal. Si l'on regarde sous l'escalier, comme je l'ai fait la nuit dernière dans mes rêves, on comprend ce nom de famille. Il tire une dîme de sang des pieds de ceux qui montent. Les Empousai - certains en forme d'hommes, beaucoup en forme de femmes - attendent sous la vitre de l'escalier pour satisfaire leur faim. Je ne me suis pas approché, je n'ai fait aucun bruit, j'ai seulement observé.",
@@ -135,7 +147,11 @@
     },
     {
       "id": "mansus_stagdoor2",
-      "spec": ["fascination", "fragmentsecrethistoriesd", "eruditionplus"],
+      "spec": [
+        "fascination",
+        "fragmentsecrethistoriesd",
+        "eruditionplus"
+      ],
       "drawmessages": {
         "fascination": "J'ai rêvé du Mansus derrière la Porte Blanche, du grand espace au-dessus du Verger, de l'espace qui domine les Limites, de l'espace où le Vagabond a un jour peint sa Rivière. Des bateaux peints passaient sur la Rivière peinte. J'ai rencontré les yeux peints d'un capitaine peint. Il a salué, et le mouvement était comme le déplacement des nuages. La voile du navire était ambrée et les yeux du capitaine du vert de l'orge et du bleu de l'aigue-marine. Maintenant que je suis éveillé, je vois encore ces couleurs.",
         "fragmentsecrethistoriesd": "Il y a une grande chambre dans le Mansus, dans laquelle coule une rivière peinte. Le Vagabond, dit-on, l'aurait peinte de mémoire dans les années précédant son départ de la Chambre. Il y a certainement des histoires cachées dans sa conception. Je les ai tracées de ma main hier soir. Il y avait des fragments de peinture aigue-marine sous mes ongles, des taches de feuille d'or, quand j'ai eu fini.",
@@ -236,7 +252,11 @@
     },
     {
       "id": "mansus_peacockdoor2",
-      "spec": ["influencewinterg", "fragmentsecrethistoriesf", "dread"],
+      "spec": [
+        "influencewinterg",
+        "fragmentsecrethistoriesf",
+        "dread"
+      ],
       "drawmessages": {
         "influencewinterg": "Hier soir, j'ai visité le Musée du ver, qui se trouve à la fois dans le Mansus (pour la sécurité) et à l'extérieur (pour la sûreté). Les Heures ont chargé le Colonel de sa défense, et même le Lionsmith ne le défie pas ici. L'hiver est l'aspect le plus important de cet endroit. Les vers prospèrent là où les choses se terminent, mais on peut aussi y mettre fin, et il le faut, si l'on veut que le Mansus dure. Ce matin, la froide certitude de la main du colonel repose encore sur mon épaule.",
         "fragmentsecrethistoriesf": "La taille du Mansus est discutable, et c'est ainsi qu'hier soir, au Musée du ver, j'ai vu l'un des vers qui ont pris Vienne, mis en cage à côté d'un ver pris dans l'âme d'un enfant. Dans les rêves, ils sont plus visibles qu'au réveil, lisses et sombres comme des joyaux. Les murs portent des histoires de la première et de la deuxième guerre des vers. La troisième est trop récente pour être contée dans les Histoires.",

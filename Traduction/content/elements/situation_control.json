@@ -1,38 +1,46 @@
-{"elements":
-    [
-		{id: "insight",
-		label: "Compréhension",
-		description: "Un aperçu de ce mystère.",
-		lifetime:1
-		},
-		{id: "bid",
-		label: "Enchère",
-		description: "Une offre placée dans une maison de vente aux enchères.",
-		xtriggers:{restore:funds}
-		},
-		{id:"abductioninprogress",
-		label:"Une cellule surveillée",
-		description:"La pensée, dit-on, est libre, mais la pensée est enchaînée au corps.",
-		lifetime:1,
-		icon: "seal_wardeddoor"
-		},
-				{id:"assassinationinprogress.player",
-		label:"Un assassinat",
-		description:"Cela se terminera par un décès. Ce pourrait être ma mort.",
-		lifetime:1,
-		icon: "dread"
-		},
-						{id:"assassinationinprogress.follower",
-		label:"Un assassinat",
-		description:"Cela se terminera par un décès - le leur ou le nôtre.",
-		lifetime:1,
-		icon: "dread"
-		},
-				{id:"scandalinprogress",
-		label:"Rumeurs sur le mal",
-		description:"Ce qu'ils disent n'est que l'ombre de la vérité, mais c'est par notre ombre que nous sommes découverts.",
-		lifetime:1,
-		icon: "notoriety"
-		}
-]
-};
+{
+  "elements": [
+    {
+      "id": "insight",
+      "label": "Compréhension",
+      "description": "Un aperçu de ce mystère.",
+      "lifetime": 1
+    },
+    {
+      "id": "bid",
+      "label": "Enchère",
+      "description": "Une offre placée dans une maison de vente aux enchères.",
+      "xtriggers": {
+        "restore": "funds"
+      }
+    },
+    {
+      "id": "abductioninprogress",
+      "label": "Une cellule surveillée",
+      "description": "La pensée, dit-on, est libre, mais la pensée est enchaînée au corps.",
+      "lifetime": 1,
+      "icon": "seal_wardeddoor"
+    },
+    {
+      "id": "assassinationinprogress.player",
+      "label": "Un assassinat",
+      "description": "Cela se terminera par un décès. Ce pourrait être ma mort.",
+      "lifetime": 1,
+      "icon": "dread"
+    },
+    {
+      "id": "assassinationinprogress.follower",
+      "label": "Un assassinat",
+      "description": "Cela se terminera par un décès - le leur ou le nôtre.",
+      "lifetime": 1,
+      "icon": "dread"
+    },
+    {
+      "id": "scandalinprogress",
+      "label": "Rumeurs sur le mal",
+      "description": "Ce qu'ils disent n'est que l'ombre de la vérité, mais c'est par notre ombre que nous sommes découverts.",
+      "lifetime": 1,
+      "icon": "notoriety"
+    }
+  ]
+}

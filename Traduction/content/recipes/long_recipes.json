@@ -1,616 +1,1581 @@
 {
-"recipes": [
-
-{id: "long.spawn.forge",
-label: "Quelqu'un est arrivé",
-actionId: "long",
-startdescription: "Dans les flammes des bougies, dans les feux de foyer, dans le balancement suspendu de la fumée, les présages sont certains. Un grand ennemi de notre Façonneur est arrivé dans la ville - quelqu'un qui empêcherait notre Oeuvre.",
-deckeffect: {forgelong:1},
-warmup:60,
-craftable: false,
-linked:[{id:"long.cycle",chance:100}]},
-
-{id: "long.spawn.grail",
-label: "Quelqu'un est arrivé",
-actionId: "long",
-startdescription: "Nous sommes avertis par l'altération des saveurs, par la chute des gouttes de sang, par les naissances prodigieuses signalées dans les quartiers des docks. Un grand ennemi de notre Délice est arrivé dans la ville - quelqu'un qui empêcherait notre Oeuvre.",
-deckeffect: {graillong:1},
-warmup:60,
-craftable: false,
-linked:[{id:"long.cycle",chance:100}]},
-
-{id: "long.spawn.lantern",
-label: "Quelqu'un est arrivé",
-actionId: "long",
-startdescription: "Nous sommes avertis par les couleurs du soleil, par l'occultation de la lune, par la fracture de la lentille. Un grand ennemi de notre Illuminé est arrivé dans la ville - quelqu'un qui empêcherait notre Oeuvre.",
-deckeffect: {lanternlong:1},
-warmup:60,
-craftable: false,
-linked:[{id:"long.cycle",chance:100}]},
-
-{id: "long.cycle",
-label: "Quelqu'un observe",
-actionId: "long",
-effects: {intention.assault:-9,intention.intrigue:-9,intention.dreams:-9,intention.downtime:-9,strategy.prep:-9,strategy.prep.delayed:-9},
-startdescription: "L'immortel dans l'ombre réfléchit à son prochain mouvement.",
-warmup:60,
-slots:[{id:"longlesson",label:"Leçons",description:"À mesure que nous provoquons notre ennemi et qu'il apprend de nous, ses attaques deviendront de plus en plus meurtrières.",required:{long.lesson:1},greedy:true}],
-craftable: false,
-alternativerecipes:[{id:"long.upgrade.might",chance:100},
-{id:"long.upgrade.connections",chance:100},
-{id:"long.upgrade.dreamwork",chance:100},
-{id:"expelspy",chance:100,additional:true,expulsion:{limit:1,filter:{follower:1}}}],
-linked:[{id:"long.selectstrategy",chance:100}]
-},
-
-
-{id:"expelspy",
-actionId:"expelspy",
-label:"Dans la nuit",
-requirements:{follower:1},
-startdescription:"Notre espion nous est revenu.",
-warmup:10},
-
-{id:"long.upgrade.might",
-actionId:"long",
-label:"Un plus grand pouvoir",
-startdescription:"Le pouvoir du Long s'accroît.",
-requirements:{long.lesson.might:1},
-effects:{long.lesson.might:-1},
-mutations:[{filterOnAspectId:long.enemy,mutateAspectId:long.might,mutationLevel:1,additive:true}],
-warmup:10,
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-
-{id:"long.upgrade.connections",
-actionId:"long",
-label:"Des liens plus étroits",
-startdescription:"Ce Long développe son réseau de relations.",
-requirements:{long.lesson.connections:1},
-effects:{long.lesson.connections:-1},
-mutations:[{filterOnAspectId:long.enemy,mutateAspectId:long.connections,mutationLevel:1,additive:true}],
-warmup:10,
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-{id:"long.upgrade.dreamwork",
-actionId:"long",
-label:"La lumière des étoiles, en plein essor",
-startdescription:"Ce Long a trouvé son chemin plus profondément dans mes rêves.",
-requirements:{long.lesson.dreamwork:1},
-effects:{long.lesson.dreamwork:-1},
-mutations:[{filterOnAspectId:long.enemy,mutateAspectId:long.dreamwork,mutationLevel:1,additive:true}],
-warmup:10,
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-{id:"long.selectstrategy",
-actionId:"long",
-label:"Une décision",
-startdescription:"Notre ennemi immortel a décidé d'une ligne de conduite.",
-requirements:{},
-deckeffect:{long.strategies:1},
-warmup:5,
-craftable:false,
-alternativerecipes:[{id:"long.preparestrategy.preference.assault"},
-{id:"long.preparestrategy.preference.intrigue"},
-{id:"long.preparestrategy.preference.dreamwork"}],
-linked:[{id:"long.preparestrategy",chance:100}]
-},
-
-{id:"long.preparestrategy.preference.assault",
-label:"Une décision",
-actionId:"long",
-requirements:{long.preference.assault:1},
-deckeffect:{long.strategies.preference.assault:1},
-linked:[{id:"long.preparestrategy",chance:100}]},
-
-{id:"long.preparestrategy.preference.intrigue",
-label:"Une décision",
-actionId:"long",
-requirements:{long.preference.intrigue:1},
-deckeffect:{long.strategies.preference.intrigue:1},
-linked:[{id:"long.preparestrategy",chance:100}]},
-
-{id:"long.preparestrategy.preference.dreamwork",
-label:"Une décision",
-actionId:"long",
-requirements:{long.preference.dreamwork:1},
-deckeffect:{long.strategies.preference.dreamwork:1},
-linked:[{id:"long.preparestrategy",chance:100}]},
-
-
-
-{id:"long.preparestrategy",
-actionId:"long",
-label:"Préparation d'une action",
-startdescription:"Notre ennemi immortel prépare sa prochaine action.
-
-[Ajouter un Adepte fort en <sprite name=knock> <sprite name=lantern> pour essayer de découvrir la stratégie du Long.
-Ajouter un Adepte fort en
-<sprite name=edge> <sprite name=forge> pour tenter de retarder les assauts,
-<sprite name=grail> <sprite name=heart> pour Intrigues, 
-<sprite name=moth> <sprite name=winter> pour les attaques de la lumière des étoiles.]",
-slots:[{id:"spy",label:"Espionner",description:"Les espions peuvent prendre connaissance des plans du Long. Si vous connaissez ou devinez la nature de ces plans, les bons espions peuvent les retarder.", required:{follower:1}}],
-alt:[{id:"expelallspies",chance:100,additional:true,expulsion:{limit:9,filter:{follower:1}}},
-{id:"expelallspies_beforeconfrontation.might",chance:100,additional:true,expulsion:{limit:9,filter:{follower:1}}},
-{id:"expelallspies_beforeconfrontation.connections",chance:100,additional:true,expulsion:{limit:9,filter:{follower:1}}},
-{id:"expelallspies_beforeconfrontation.dreamwork",chance:100,additional:true,expulsion:{limit:9,filter:{follower:1}}}],
-effects:{strategy.prep:1},
-warmup:60,
-craftable:false,
-linked:[
-{id:"long.refinestrategy.dreams.learndreams.followup",chance:70},
-{id:"long.assault.confrontation",chance:70},
-{id:"long.intrigue.confrontation",chance:70},
-{id:"long.dreams.confrontation",chance:70},
-{id:"long.refinestrategy.assault.assassination",chance:70},
-{id:"long.refinestrategy.assault.abduct.follower",chance:70},
-{id:"long.refinestrategy.assault.forge.greatwork",chance:70},
-{id:"long.refinestrategy.assault.setambush.expedition",chance:70},
-{id:"long.refinestrategy.assault.destroyhealth",chance:70},
-{id:"long.refinestrategy.assault.injurefollower",chance:70},
-{id:"long.refinestrategy.assault.injurehealth",chance:70},
-{id:"long.refinestrategy.assault.rob",chance:70},
-{id:"long.refinestrategy.assault.intimidate",chance:100},
-{id:"long.refinestrategy.intrigue.scandal",chance:70},
-{id:"long.refinestrategy.intrigue.follower.seduce",chance:70},
-{id:"long.refinestrategy.intrigue.grail.greatwork",chance:70},
-{id:"long.refinestrategy.intrigue.poison.follower.resentment",chance:70},
-{id:"long.refinestrategy.intrigue.detective.assist",chance:70},
-{id:"long.refinestrategy.intrigue.adversary.assist",chance:70},
-{id:"long.refinestrategy.intrigue.poison.follower.notoriety",chance:70},
-{id:"long.refinestrategy.intrigue.fraud",chance:70},
-{id:"long.refinestrategy.intrigue.mystiquetonotoriety",chance:70},
-{id:"long.refinestrategy.intrigue.createmystique",chance:100},
-{id:"long.refinestrategy.dreams.drysoul",chance:70},
-{id:"long.refinestrategy.dreams.fiftheye",chance:70},
-{id:"long.refinestrategy.dreams.poisonway",chance:70},
-{id:"long.refinestrategy.dreams.lantern.greatwork",chance:70},
-{id:"long.refinestrategy.dreams.poisonpassionwithdread",chance:30},
-{id:"long.refinestrategy.dreams.poisonreasonwithfascination",chance:70},
-{id:"long.refinestrategy.dreams.createfascination.poisoned",chance:70},
-{id:"long.refinestrategy.dreams.dreadtofascination.poisoned",chance:70},
-{id:"long.refinestrategy.dreams.learndreams",chance:70},
-{id:"long.refinestrategy.dreams.createfascination",chance:100},
-{id:"long.refinestrategy.downtime.learn.winter",chance:90},
-{id:"long.refinestrategy.downtime.learn",chance:50},
-{id:"long.refinestrategy.downtime.rest",chance:100},
-{id:"long.spyonstrategy.success",challenges:{knock:base,lantern:base}},
-{id:"long.delayaction.success.assault",challenges:{edge:base,forge:base}},
-{id:"long.delayaction.success.intrigue",challenges:{grail:base,heart:base}},
-{id:"long.delayaction.success.dreams",challenges:{moth:base,winter:base}},
-{id:"long.preparestrategy",chance:100}]
-},
-
-{id:"expelallspies",
-actionId:"expelallspies",
-label:"Parce que nous sommes trop nombreux",
-requirements:{follower:3},
-startdescription:"Notre ennemi est vigilant. Nous avons envoyé trop d'observateurs - si nous en envoyons plus de deux, tous échoueront.",
-warmup:10},
-
-{id:"expelallspies_beforeconfrontation.might",
-actionId:"expelallspies",
-label:"Avant la tempête",
-requirements:{long.might:10,follower:1},
-startdescription:"Notre ennemi est presque prêt à nous attaquer de manière directe. Nous avons rappelé nos espions.",
-warmup:10},
-
-{id:"expelallspies_beforeconfrontation.connections",
-actionId:"expelallspies",
-label:"Avant la tempête",
-requirements:{long.connections:10,follower:1},
-startdescription:"Notre ennemi est presque prêt à nous attaquer de manière directe. Nous avons rappelé nos espions.",
-warmup:10},
-
-
-
-{id:"expelallspies_beforeconfrontation.dreamwork",
-actionId:"expelallspies",
-label:"Avant la tempête",
-requirements:{long.dreamwork:10,follower:1},
-startdescription:"Notre ennemi est presque prêt à nous attaquer de manière directe. Nous avons rappelé nos espions.",
-warmup:10},
-
-
-
-
-
-
-{id:"long.spyonstrategy.success",
-actionId:"long",
-label:"Un rapport de notre espion",
-alt:[{id:"long.revealidentity.success.might"},
-{id:"long.revealidentity.success.connections"},
-{id:"long.revealidentity.success.dreamwork"}],
-requirements:{follower:1,strategy.revealed:-1},
-startdescription:"Les contours de la stratégie du Long commencent à se préciser.",
-aspects:{revealstrategy:1},
-warmup:10,
-linked:[{id:"long.preparestrategy",chance:100}]
-},
-
-
-{id:"long.revealidentity.success.might",
-actionId:"long",
-label:"L'identité de notre ennemi",
-requirements:{follower:1,julian:-1,welland:-1,tryphon:-1,diarist:-1,long.might:3},
-linked:[{id:"long.revealidentity.success"}]
-},
-
-{id:"long.revealidentity.success.connections",
-actionId:"long",
-label:"L'identité de notre ennemi",
-requirements:{follower:1,julian:-1,welland:-1,tryphon:-1,diarist:-1,long.connections:3},
-linked:[{id:"long.revealidentity.success"}]
-},
-
-
-{id:"long.revealidentity.success.dreamwork",
-actionId:"long",
-label:"L'identité de notre ennemi",
-requirements:{follower:1,julian:-1,welland:-1,tryphon:-1,diarist:-1,long.dreamwork:3},
-linked:[{id:"long.revealidentity.success"}]
-},
-
-
-
-{id:"long.revealidentity.success",
-actionId:"long",
-label:"L'identité de notre ennemi",
-startdescription:"@#welland_unknown|Notre ennemi est un certain capitaine Welland, un Long de la Forge qui a combattu sous de nombreux noms dans de nombreuses guerres. Il a fait preuve d'allégeance à la fois au Lionsmith et à la Forge des Jours. Il a une préférence pour l'attaque directe, mais ce n'est pas un simple soldat.
-@#tryphon_unknown|Notre ennemi est une certaine Lady Tryphon, une Long du Graal qui a laissé une traînée d'âmes brisées à travers les meilleurs hôtels du continent. Elle est la bien-aimée du Graal et du Fleuriste. Elle est enclin à l'intrigue, mais elle n'est pas étrangère à la violence.
-#diarist_unknown|Notre ennemi est le Long de la Lanterne appelé le Diariste, qui comme tous ses semblables a abandonné sa forme physique pour le Mansus. Il a connu la faveur du Colonel et du Meniscate. Il préférera nous frapper par le biais des rêves, mais il ne fait aucun doute qu'il a aussi des alliés dans le monde éveillé.
-#julian_unknown|Notre ennemi est un Long de l'Hiver identifié par les initiales 'J.C'. Ses motivations sont obscures: il a toujours professé l'alignement sur les Oubliés et leurs successeurs, qui n'ont rien à voir avec les guerres des Heures. Mais le voici, pour nous gâcher la journée.@",
-aspects:{revealidentity:1},
-warmup:10,
-linked:[{id:"long.spyonstrategy.success",chance:100}]
-},
-
-
-{id:"long.delayaction.success.assault",
-actionId:"long",
-label:"Un assaut retardé",
-startdescription:"Nous avons deviné que le Long avait l'intention de lancer un assaut; nous l'avons un peu retardé. [Cela n'est possible qu'une fois par action.]",
-requirements:{follower:1,strategy.prep:1,strategy.prep.delayed:-1,intention.assault:1},
-effects:{strategy.prep.delayed:1,strategy.prep:-1},
-aspects:{revealstrategy:1},
-warmup:30,
-linked:[{id:"long.preparestrategy",chance:100}]
-},
-
-{id:"long.delayaction.success.intrigue",
-actionId:"long",
-label:"Une intrigue repoussée !",
-startdescription:"Nous avons deviné que le Long avait l'intention de lancer une intrigue; nous l'avons un peu retardée. [Cela n'est possible qu'une fois par action.]",
-requirements:{follower:1,strategy.prep:1,strategy.prep.delayed:-1,intention.intrigue:1},
-effects:{strategy.prep.delayed:1,strategy.prep:-1},
-aspects:{revealstrategy:1},
-warmup:30,
-linked:[{id:"long.preparestrategy",chance:100}]
-},
-
-{id:"long.delayaction.success.dreams",
-actionId:"long",
-label:"La Lune, Occultée",
-startdescription:"Nous avons deviné que le Long avait l'intention de nous atteindre par le biais de nos rêves; nous avons un peu retardé cela. [Cela n'est possible qu'une fois par action.]",
-requirements:{follower:1,strategy.prep:1,strategy.prep.delayed:-1,intention.dreams:1},
-effects:{strategy.prep.delayed:1,strategy.prep:-1},
-aspects:{revealstrategy:1},
-warmup:30,
-linked:[{id:"long.preparestrategy",chance:100}]
-},
-
-
-{id:"long.delayaction.success",
-actionId:"long",
-label:"Notre espion a retardé notre ennemi",
-comments:"This generic recipe is included only for backwards compatibility with beta folks",
-startdescription:"Ils peuvent ralentir l'action du Long, mais pas l'empêcher. [Cela n'est possible qu'une fois par action.]",
-requirements:{follower:1,strategy.prep:1,strategy.prep.delayed:-1},
-effects:{strategy.prep.delayed:1,strategy.prep:-1},
-warmup:10,
-linked:[{id:"long.preparestrategy",chance:100}]
-},
-
-{id:"long.refinestrategy.assault.assassination",
-actionId:"long",
-extantreqs: {assassinationinprogress.player:-1,assassinationinprogress.follower:-1},
-requirements:{intention.assault:1,strategy.prep:3,long.might:8},
-alternativerecipes:[{id:"long.executestrategy.assassination.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.assault.forge.greatwork",
-actionId:"long",
-extantreqs:{greatwork:1,apostleforge.mentor:1},
-requirements:{intention.assault:1,strategy.prep:3,long.might:6},
-alternativerecipes:[{id:"long.executestrategy.assault.forge.greatwork.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-{id:"long.refinestrategy.assault.destroyhealth",
-actionId:"long",
-requirements:{intention.assault:1,strategy.prep:3,long.might:6},
-tablereqs:{follower:1},
-alternativerecipes:[{id:"long.executestrategy.assault.destroyhealth.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-{id:"long.refinestrategy.assault.abduct.follower",
-actionId:"long",
-extantreqs:{abductioninprogress:-1},
-requirements:{intention.assault:1,strategy.prep:3,long.might:4},
-alternativerecipes:[{id:"long.executestrategy.assault.abduct.follower.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-
-{id:"long.refinestrategy.assault.setambush.expedition",
-actionId:"long",
-requirements:{intention.assault:1,strategy.prep:3,long.might:4},
-tablereqs:{vault:1},
-alternativerecipes:[{id:"long.executestrategy.assault.setambush.expedition.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.assault.injurefollower",
-actionId:"long",
-requirements:{intention.assault:1,strategy.prep:3,long.might:2},
-tablereqs:{follower:1},
-alternativerecipes:[{id:"long.executestrategy.assault.injurefollower.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.assault.injurehealth",
-actionId:"long",
-requirements:{intention.assault:1,strategy.prep:3,long.might:2},
-alternativerecipes:[{id:"long.executestrategy.assault.injurehealth.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.assault.rob",
-actionId:"long",
-requirements:{intention.assault:1,strategy.prep:3},
-alternativerecipes:[{id:"long.executestrategy.assault.rob.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.assault.intimidate",
-actionId:"long",
-requirements:{intention.assault:1,strategy.prep:3},
-alternativerecipes:[{id:"long.executestrategy.assault.intimidate.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-
-{id:"long.refinestrategy.intrigue.scandal",
-actionId:"long",
-extantreqs:{scandalinprogress:-1},
-requirements:{intention.intrigue:1,strategy.prep:3,long.connections:8},
-alternativerecipes:[{id:"long.executestrategy.intrigue.scandal.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-{id:"long.refinestrategy.intrigue.follower.seduce",
-actionId:"long",
-tablereqs:{resentment:1},
-requirements:{intention.intrigue:1,strategy.prep:3,long.connections:8},
-alternativerecipes:[{id:"long.executestrategy.intrigue.follower.seduce.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-
-{id:"long.refinestrategy.intrigue.grail.greatwork",
-actionId:"long",
-tablereqs:{uqvitulation:1},
-requirements:{intention.intrigue:1,strategy.prep:3,long.connections:6},
-alternativerecipes:[{id:"long.executestrategy.intrigue.grail.greatwork.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.intrigue.poison.follower.resentment",
-actionId:"long",
-tablereqs:{follower:1},
-requirements:{intention.intrigue:1,strategy.prep:3,long.connections:6},
-alternativerecipes:[{id:"long.executestrategy.intrigue.poison.follower.resentment.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-{id:"long.refinestrategy.intrigue.detective.assist",
-actionId:"long",
-tablereqs:{hunter:1},
-requirements:{intention.intrigue:1,strategy.prep:3,long.connections:4},
-alternativerecipes:[{id:"long.executestrategy.intrigue.detective.assist.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.intrigue.adversary.assist",
-actionId:"long",
-requirements:{intention.intrigue:1,strategy.prep:3,long.connections:4},
-tablereqs:{independent:1},
-
-alternativerecipes:[{id:"long.executestrategy.intrigue.adversary.assist.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-{id:"long.refinestrategy.intrigue.poison.follower.notoriety",
-actionId:"long",
-tablereqs:{follower:1},
-requirements:{intention.intrigue:1,strategy.prep:3,long.connections:2},
-alternativerecipes:[{id:"long.executestrategy.intrigue.poison.follower.notoriety.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-
-
-{id:"long.refinestrategy.intrigue.mystiquetonotoriety",
-actionId:"long",
-tablereqs:{mystique:1},
-requirements:{intention.intrigue:1,strategy.prep:3,long.connections:2},
-alternativerecipes:[{id:"long.executestrategy.intrigue.mystiquetonotoriety.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-
-{id:"long.refinestrategy.intrigue.fraud",
-actionId:"long",
-tablereqs:{funds:2},
-requirements:{intention.intrigue:1,strategy.prep:3},
-alternativerecipes:[{id:"long.executestrategy.intrigue.fraud.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.intrigue.createmystique",
-actionId:"long",
-requirements:{intention.intrigue:1,strategy.prep:3},
-alternativerecipes:[{id:"long.executestrategy.intrigue.createmystique.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-{id:"long.refinestrategy.dreams.drysoul",
-actionId:"long",
-requirements:{intention.dreams:1,strategy.prep:3,long.dreamwork:8},
-alternativerecipes:[{id:"long.executestrategy.dreams.drysoul.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.dreams.fiftheye",
-actionId:"long",
-requirements:{intention.dreams:1,strategy.prep:3,long.dreamwork:8},
-alternativerecipes:[{id:"long.executestrategy.dreams.fiftheye.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.dreams.poisonway",
-actionId:"long",
-requirements:{intention.dreams:1,strategy.prep:3,long.dreamwork:6},
-tablereqs:{way:1},
-alternativerecipes:[{id:"long.executestrategy.dreams.poisonway.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.dreams.lantern.greatwork",
-actionId:"long",
-requirements:{intention.dreams:1,strategy.prep:3,long.dreamwork:6},
-tablereqs:{uqthirdwaywitnesses:1},
-alternativerecipes:[{id:"long.executestrategy.dreams.lantern.greatwork.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-
-{id:"long.refinestrategy.dreams.poisonpassionwithdread",
-actionId:"long",
-requirements:{intention.dreams:1,strategy.prep:3,long.dreamwork:4},
-tablereqs:{passion:1},
-alternativerecipes:[{id:"long.executestrategy.dreams.poisonpassionwithdread.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.dreams.poisonreasonwithfascination",
-actionId:"long",
-requirements:{intention.dreams:1,strategy.prep:3,long.dreamwork:4},
-tablereqs:{reason:1},
-alternativerecipes:[{id:"long.executestrategy.dreams.poisonreasonwithfascination.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-
-{id:"long.refinestrategy.dreams.createfascination.poisoned",
-actionId:"long",
-requirements:{intention.dreams:1,strategy.prep:3,long.dreamwork:2},
-alternativerecipes:[{id:"long.executestrategy.dreams.createfascination.poisoned.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.dreams.dreadtofascination.poisoned",
-actionId:"long",
-requirements:{intention.dreams:1,strategy.prep:3,long.dreamwork:2},
-tablereqs:{dread:1},
-alternativerecipes:[{id:"long.executestrategy.dreams.dreadtofascination.poisoned.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-{id:"long.refinestrategy.dreams.createfascination",
-actionId:"long",
-requirements:{intention.dreams:1,strategy.prep:3},
-alternativerecipes:[{id:"long.executestrategy.dreams.createfascination.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.dreams.learndreams.followup",
-actionId:"long",
-requirements:{intention.dreams:1,strategy.prep:3},
-tablereqs:{fascination:1},
-alternativerecipes:[{id:"long.executestrategy.dreams.learndreams.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-{id:"long.refinestrategy.dreams.learnfears.followup",
-actionId:"long",
-requirements:{intention.dreams:1,strategy.prep:3},
-tablereqs:{dread:1},
-alternativerecipes:[{id:"long.executestrategy.dreams.learnfears.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.dreams.learndreams",
-actionId:"long",
-requirements:{intention.dreams:1,strategy.prep:3},
-alternativerecipes:[{id:"long.executestrategy.dreams.learndreams.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.downtime.learn.winter",
-actionId:"long",
-requirements:{intention.downtime:1,strategy.prep:3,long.preference.winter:1},
-alternativerecipes:[{id:"long.executestrategy.downtime.learn.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-{id:"long.refinestrategy.downtime.learn",
-actionId:"long",
-requirements:{intention.downtime:1,strategy.prep:3,long.preference.winter:-1},
-alternativerecipes:[{id:"long.executestrategy.downtime.learn.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-{id:"long.refinestrategy.downtime.rest",
-actionId:"long",
-requirements:{intention.downtime:1,strategy.prep:3},
-alternativerecipes:[{id:"long.executestrategy.downtime.rest.begin",chance:100,additional:true}],
-linked:[{id:"long.cycle",chance:100}]
-},
-
-
-
-
-
-
-
-
-
-
-
-
-]
+  "recipes": [
+    {
+      "id": "long.spawn.forge",
+      "label": "Quelqu'un est arrivé",
+      "actionId": "long",
+      "startdescription": "Dans les flammes des bougies, dans les feux de foyer, dans le balancement suspendu de la fumée, les présages sont certains. Un grand ennemi de notre Façonneur est arrivé dans la ville - quelqu'un qui empêcherait notre Oeuvre.",
+      "deckeffect": {
+        "forgelong": 1
+      },
+      "warmup": 60,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.spawn.grail",
+      "label": "Quelqu'un est arrivé",
+      "actionId": "long",
+      "startdescription": "Nous sommes avertis par l'altération des saveurs, par la chute des gouttes de sang, par les naissances prodigieuses signalées dans les quartiers des docks. Un grand ennemi de notre Délice est arrivé dans la ville - quelqu'un qui empêcherait notre Oeuvre.",
+      "deckeffect": {
+        "graillong": 1
+      },
+      "warmup": 60,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.spawn.lantern",
+      "label": "Quelqu'un est arrivé",
+      "actionId": "long",
+      "startdescription": "Nous sommes avertis par les couleurs du soleil, par l'occultation de la lune, par la fracture de la lentille. Un grand ennemi de notre Illuminé est arrivé dans la ville - quelqu'un qui empêcherait notre Oeuvre.",
+      "deckeffect": {
+        "lanternlong": 1
+      },
+      "warmup": 60,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.cycle",
+      "label": "Quelqu'un observe",
+      "actionId": "long",
+      "effects": {
+        "intention.assault": -9,
+        "intention.intrigue": -9,
+        "intention.dreams": -9,
+        "intention.downtime": -9,
+        "strategy.prep": -9,
+        "strategy.prep.delayed": -9
+      },
+      "startdescription": "L'immortel dans l'ombre réfléchit à son prochain mouvement.",
+      "warmup": 60,
+      "slots": [
+        {
+          "id": "longlesson",
+          "label": "Leçons",
+          "description": "À mesure que nous provoquons notre ennemi et qu'il apprend de nous, ses attaques deviendront de plus en plus meurtrières.",
+          "required": {
+            "long.lesson": 1
+          },
+          "greedy": true
+        }
+      ],
+      "craftable": false,
+      "alternativerecipes": [
+        {
+          "id": "long.upgrade.might",
+          "chance": 100
+        },
+        {
+          "id": "long.upgrade.connections",
+          "chance": 100
+        },
+        {
+          "id": "long.upgrade.dreamwork",
+          "chance": 100
+        },
+        {
+          "id": "expelspy",
+          "chance": 100,
+          "additional": true,
+          "expulsion": {
+            "limit": 1,
+            "filter": {
+              "follower": 1
+            }
+          }
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.selectstrategy",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "expelspy",
+      "actionId": "expelspy",
+      "label": "Dans la nuit",
+      "requirements": {
+        "follower": 1
+      },
+      "startdescription": "Notre espion nous est revenu.",
+      "warmup": 10
+    },
+    {
+      "id": "long.upgrade.might",
+      "actionId": "long",
+      "label": "Un plus grand pouvoir",
+      "startdescription": "Le pouvoir du Long s'accroît.",
+      "requirements": {
+        "long.lesson.might": 1
+      },
+      "effects": {
+        "long.lesson.might": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "long.enemy",
+          "mutateAspectId": "long.might",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10,
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.upgrade.connections",
+      "actionId": "long",
+      "label": "Des liens plus étroits",
+      "startdescription": "Ce Long développe son réseau de relations.",
+      "requirements": {
+        "long.lesson.connections": 1
+      },
+      "effects": {
+        "long.lesson.connections": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "long.enemy",
+          "mutateAspectId": "long.connections",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10,
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.upgrade.dreamwork",
+      "actionId": "long",
+      "label": "La lumière des étoiles, en plein essor",
+      "startdescription": "Ce Long a trouvé son chemin plus profondément dans mes rêves.",
+      "requirements": {
+        "long.lesson.dreamwork": 1
+      },
+      "effects": {
+        "long.lesson.dreamwork": -1
+      },
+      "mutations": [
+        {
+          "filterOnAspectId": "long.enemy",
+          "mutateAspectId": "long.dreamwork",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ],
+      "warmup": 10,
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.selectstrategy",
+      "actionId": "long",
+      "label": "Une décision",
+      "startdescription": "Notre ennemi immortel a décidé d'une ligne de conduite.",
+      "requirements": {},
+      "deckeffect": {
+        "long.strategies": 1
+      },
+      "warmup": 5,
+      "craftable": false,
+      "alternativerecipes": [
+        {
+          "id": "long.preparestrategy.preference.assault"
+        },
+        {
+          "id": "long.preparestrategy.preference.intrigue"
+        },
+        {
+          "id": "long.preparestrategy.preference.dreamwork"
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.preparestrategy",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.preparestrategy.preference.assault",
+      "label": "Une décision",
+      "actionId": "long",
+      "requirements": {
+        "long.preference.assault": 1
+      },
+      "deckeffect": {
+        "long.strategies.preference.assault": 1
+      },
+      "linked": [
+        {
+          "id": "long.preparestrategy",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.preparestrategy.preference.intrigue",
+      "label": "Une décision",
+      "actionId": "long",
+      "requirements": {
+        "long.preference.intrigue": 1
+      },
+      "deckeffect": {
+        "long.strategies.preference.intrigue": 1
+      },
+      "linked": [
+        {
+          "id": "long.preparestrategy",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.preparestrategy.preference.dreamwork",
+      "label": "Une décision",
+      "actionId": "long",
+      "requirements": {
+        "long.preference.dreamwork": 1
+      },
+      "deckeffect": {
+        "long.strategies.preference.dreamwork": 1
+      },
+      "linked": [
+        {
+          "id": "long.preparestrategy",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.preparestrategy",
+      "actionId": "long",
+      "label": "Préparation d'une action",
+      "startdescription": "Notre ennemi immortel prépare sa prochaine action.  [Ajouter un Adepte fort en <sprite name=knock> <sprite name=lantern> pour essayer de découvrir la stratégie du Long. Ajouter un Adepte fort en <sprite name=edge> <sprite name=forge> pour tenter de retarder les assauts, <sprite name=grail> <sprite name=heart> pour Intrigues,  <sprite name=moth> <sprite name=winter> pour les attaques de la lumière des étoiles.]",
+      "slots": [
+        {
+          "id": "spy",
+          "label": "Espionner",
+          "description": "Les espions peuvent prendre connaissance des plans du Long. Si vous connaissez ou devinez la nature de ces plans, les bons espions peuvent les retarder.",
+          "required": {
+            "follower": 1
+          }
+        }
+      ],
+      "alt": [
+        {
+          "id": "expelallspies",
+          "chance": 100,
+          "additional": true,
+          "expulsion": {
+            "limit": 9,
+            "filter": {
+              "follower": 1
+            }
+          }
+        },
+        {
+          "id": "expelallspies_beforeconfrontation.might",
+          "chance": 100,
+          "additional": true,
+          "expulsion": {
+            "limit": 9,
+            "filter": {
+              "follower": 1
+            }
+          }
+        },
+        {
+          "id": "expelallspies_beforeconfrontation.connections",
+          "chance": 100,
+          "additional": true,
+          "expulsion": {
+            "limit": 9,
+            "filter": {
+              "follower": 1
+            }
+          }
+        },
+        {
+          "id": "expelallspies_beforeconfrontation.dreamwork",
+          "chance": 100,
+          "additional": true,
+          "expulsion": {
+            "limit": 9,
+            "filter": {
+              "follower": 1
+            }
+          }
+        }
+      ],
+      "effects": {
+        "strategy.prep": 1
+      },
+      "warmup": 60,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "long.refinestrategy.dreams.learndreams.followup",
+          "chance": 70
+        },
+        {
+          "id": "long.assault.confrontation",
+          "chance": 70
+        },
+        {
+          "id": "long.intrigue.confrontation",
+          "chance": 70
+        },
+        {
+          "id": "long.dreams.confrontation",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.assault.assassination",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.assault.abduct.follower",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.assault.forge.greatwork",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.assault.setambush.expedition",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.assault.destroyhealth",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.assault.injurefollower",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.assault.injurehealth",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.assault.rob",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.assault.intimidate",
+          "chance": 100
+        },
+        {
+          "id": "long.refinestrategy.intrigue.scandal",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.intrigue.follower.seduce",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.intrigue.grail.greatwork",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.intrigue.poison.follower.resentment",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.intrigue.detective.assist",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.intrigue.adversary.assist",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.intrigue.poison.follower.notoriety",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.intrigue.fraud",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.intrigue.mystiquetonotoriety",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.intrigue.createmystique",
+          "chance": 100
+        },
+        {
+          "id": "long.refinestrategy.dreams.drysoul",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.dreams.fiftheye",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.dreams.poisonway",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.dreams.lantern.greatwork",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.dreams.poisonpassionwithdread",
+          "chance": 30
+        },
+        {
+          "id": "long.refinestrategy.dreams.poisonreasonwithfascination",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.dreams.createfascination.poisoned",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.dreams.dreadtofascination.poisoned",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.dreams.learndreams",
+          "chance": 70
+        },
+        {
+          "id": "long.refinestrategy.dreams.createfascination",
+          "chance": 100
+        },
+        {
+          "id": "long.refinestrategy.downtime.learn.winter",
+          "chance": 90
+        },
+        {
+          "id": "long.refinestrategy.downtime.learn",
+          "chance": 50
+        },
+        {
+          "id": "long.refinestrategy.downtime.rest",
+          "chance": 100
+        },
+        {
+          "id": "long.spyonstrategy.success",
+          "challenges": {
+            "knock": "base",
+            "lantern": "base"
+          }
+        },
+        {
+          "id": "long.delayaction.success.assault",
+          "challenges": {
+            "edge": "base",
+            "forge": "base"
+          }
+        },
+        {
+          "id": "long.delayaction.success.intrigue",
+          "challenges": {
+            "grail": "base",
+            "heart": "base"
+          }
+        },
+        {
+          "id": "long.delayaction.success.dreams",
+          "challenges": {
+            "moth": "base",
+            "winter": "base"
+          }
+        },
+        {
+          "id": "long.preparestrategy",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "expelallspies",
+      "actionId": "expelallspies",
+      "label": "Parce que nous sommes trop nombreux",
+      "requirements": {
+        "follower": 3
+      },
+      "startdescription": "Notre ennemi est vigilant. Nous avons envoyé trop d'observateurs - si nous en envoyons plus de deux, tous échoueront.",
+      "warmup": 10
+    },
+    {
+      "id": "expelallspies_beforeconfrontation.might",
+      "actionId": "expelallspies",
+      "label": "Avant la tempête",
+      "requirements": {
+        "long.might": 10,
+        "follower": 1
+      },
+      "startdescription": "Notre ennemi est presque prêt à nous attaquer de manière directe. Nous avons rappelé nos espions.",
+      "warmup": 10
+    },
+    {
+      "id": "expelallspies_beforeconfrontation.connections",
+      "actionId": "expelallspies",
+      "label": "Avant la tempête",
+      "requirements": {
+        "long.connections": 10,
+        "follower": 1
+      },
+      "startdescription": "Notre ennemi est presque prêt à nous attaquer de manière directe. Nous avons rappelé nos espions.",
+      "warmup": 10
+    },
+    {
+      "id": "expelallspies_beforeconfrontation.dreamwork",
+      "actionId": "expelallspies",
+      "label": "Avant la tempête",
+      "requirements": {
+        "long.dreamwork": 10,
+        "follower": 1
+      },
+      "startdescription": "Notre ennemi est presque prêt à nous attaquer de manière directe. Nous avons rappelé nos espions.",
+      "warmup": 10
+    },
+    {
+      "id": "long.spyonstrategy.success",
+      "actionId": "long",
+      "label": "Un rapport de notre espion",
+      "alt": [
+        {
+          "id": "long.revealidentity.success.might"
+        },
+        {
+          "id": "long.revealidentity.success.connections"
+        },
+        {
+          "id": "long.revealidentity.success.dreamwork"
+        }
+      ],
+      "requirements": {
+        "follower": 1,
+        "strategy.revealed": -1
+      },
+      "startdescription": "Les contours de la stratégie du Long commencent à se préciser.",
+      "aspects": {
+        "revealstrategy": 1
+      },
+      "warmup": 10,
+      "linked": [
+        {
+          "id": "long.preparestrategy",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.revealidentity.success.might",
+      "actionId": "long",
+      "label": "L'identité de notre ennemi",
+      "requirements": {
+        "follower": 1,
+        "julian": -1,
+        "welland": -1,
+        "tryphon": -1,
+        "diarist": -1,
+        "long.might": 3
+      },
+      "linked": [
+        {
+          "id": "long.revealidentity.success"
+        }
+      ]
+    },
+    {
+      "id": "long.revealidentity.success.connections",
+      "actionId": "long",
+      "label": "L'identité de notre ennemi",
+      "requirements": {
+        "follower": 1,
+        "julian": -1,
+        "welland": -1,
+        "tryphon": -1,
+        "diarist": -1,
+        "long.connections": 3
+      },
+      "linked": [
+        {
+          "id": "long.revealidentity.success"
+        }
+      ]
+    },
+    {
+      "id": "long.revealidentity.success.dreamwork",
+      "actionId": "long",
+      "label": "L'identité de notre ennemi",
+      "requirements": {
+        "follower": 1,
+        "julian": -1,
+        "welland": -1,
+        "tryphon": -1,
+        "diarist": -1,
+        "long.dreamwork": 3
+      },
+      "linked": [
+        {
+          "id": "long.revealidentity.success"
+        }
+      ]
+    },
+    {
+      "id": "long.revealidentity.success",
+      "actionId": "long",
+      "label": "L'identité de notre ennemi",
+      "startdescription": "@#welland_unknown|Notre ennemi est un certain capitaine Welland, un Long de la Forge qui a combattu sous de nombreux noms dans de nombreuses guerres. Il a fait preuve d'allégeance à la fois au Lionsmith et à la Forge des Jours. Il a une préférence pour l'attaque directe, mais ce n'est pas un simple soldat. @#tryphon_unknown|Notre ennemi est une certaine Lady Tryphon, une Long du Graal qui a laissé une traînée d'âmes brisées à travers les meilleurs hôtels du continent. Elle est la bien-aimée du Graal et du Fleuriste. Elle est enclin à l'intrigue, mais elle n'est pas étrangère à la violence. #diarist_unknown|Notre ennemi est le Long de la Lanterne appelé le Diariste, qui comme tous ses semblables a abandonné sa forme physique pour le Mansus. Il a connu la faveur du Colonel et du Meniscate. Il préférera nous frapper par le biais des rêves, mais il ne fait aucun doute qu'il a aussi des alliés dans le monde éveillé. #julian_unknown|Notre ennemi est un Long de l'Hiver identifié par les initiales 'J.C'. Ses motivations sont obscures: il a toujours professé l'alignement sur les Oubliés et leurs successeurs, qui n'ont rien à voir avec les guerres des Heures. Mais le voici, pour nous gâcher la journée.@",
+      "aspects": {
+        "revealidentity": 1
+      },
+      "warmup": 10,
+      "linked": [
+        {
+          "id": "long.spyonstrategy.success",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.delayaction.success.assault",
+      "actionId": "long",
+      "label": "Un assaut retardé",
+      "startdescription": "Nous avons deviné que le Long avait l'intention de lancer un assaut; nous l'avons un peu retardé. [Cela n'est possible qu'une fois par action.]",
+      "requirements": {
+        "follower": 1,
+        "strategy.prep": 1,
+        "strategy.prep.delayed": -1,
+        "intention.assault": 1
+      },
+      "effects": {
+        "strategy.prep.delayed": 1,
+        "strategy.prep": -1
+      },
+      "aspects": {
+        "revealstrategy": 1
+      },
+      "warmup": 30,
+      "linked": [
+        {
+          "id": "long.preparestrategy",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.delayaction.success.intrigue",
+      "actionId": "long",
+      "label": "Une intrigue repoussée !",
+      "startdescription": "Nous avons deviné que le Long avait l'intention de lancer une intrigue; nous l'avons un peu retardée. [Cela n'est possible qu'une fois par action.]",
+      "requirements": {
+        "follower": 1,
+        "strategy.prep": 1,
+        "strategy.prep.delayed": -1,
+        "intention.intrigue": 1
+      },
+      "effects": {
+        "strategy.prep.delayed": 1,
+        "strategy.prep": -1
+      },
+      "aspects": {
+        "revealstrategy": 1
+      },
+      "warmup": 30,
+      "linked": [
+        {
+          "id": "long.preparestrategy",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.delayaction.success.dreams",
+      "actionId": "long",
+      "label": "La Lune, Occultée",
+      "startdescription": "Nous avons deviné que le Long avait l'intention de nous atteindre par le biais de nos rêves; nous avons un peu retardé cela. [Cela n'est possible qu'une fois par action.]",
+      "requirements": {
+        "follower": 1,
+        "strategy.prep": 1,
+        "strategy.prep.delayed": -1,
+        "intention.dreams": 1
+      },
+      "effects": {
+        "strategy.prep.delayed": 1,
+        "strategy.prep": -1
+      },
+      "aspects": {
+        "revealstrategy": 1
+      },
+      "warmup": 30,
+      "linked": [
+        {
+          "id": "long.preparestrategy",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.delayaction.success",
+      "actionId": "long",
+      "label": "Notre espion a retardé notre ennemi",
+      "comments": "This generic recipe is included only for backwards compatibility with beta folks",
+      "startdescription": "Ils peuvent ralentir l'action du Long, mais pas l'empêcher. [Cela n'est possible qu'une fois par action.]",
+      "requirements": {
+        "follower": 1,
+        "strategy.prep": 1,
+        "strategy.prep.delayed": -1
+      },
+      "effects": {
+        "strategy.prep.delayed": 1,
+        "strategy.prep": -1
+      },
+      "warmup": 10,
+      "linked": [
+        {
+          "id": "long.preparestrategy",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.assault.assassination",
+      "actionId": "long",
+      "extantreqs": {
+        "assassinationinprogress.player": -1,
+        "assassinationinprogress.follower": -1
+      },
+      "requirements": {
+        "intention.assault": 1,
+        "strategy.prep": 3,
+        "long.might": 8
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.assassination.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.assault.forge.greatwork",
+      "actionId": "long",
+      "extantreqs": {
+        "greatwork": 1,
+        "apostleforge.mentor": 1
+      },
+      "requirements": {
+        "intention.assault": 1,
+        "strategy.prep": 3,
+        "long.might": 6
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.assault.forge.greatwork.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.assault.destroyhealth",
+      "actionId": "long",
+      "requirements": {
+        "intention.assault": 1,
+        "strategy.prep": 3,
+        "long.might": 6
+      },
+      "tablereqs": {
+        "follower": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.assault.destroyhealth.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.assault.abduct.follower",
+      "actionId": "long",
+      "extantreqs": {
+        "abductioninprogress": -1
+      },
+      "requirements": {
+        "intention.assault": 1,
+        "strategy.prep": 3,
+        "long.might": 4
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.assault.abduct.follower.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.assault.setambush.expedition",
+      "actionId": "long",
+      "requirements": {
+        "intention.assault": 1,
+        "strategy.prep": 3,
+        "long.might": 4
+      },
+      "tablereqs": {
+        "vault": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.assault.setambush.expedition.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.assault.injurefollower",
+      "actionId": "long",
+      "requirements": {
+        "intention.assault": 1,
+        "strategy.prep": 3,
+        "long.might": 2
+      },
+      "tablereqs": {
+        "follower": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.assault.injurefollower.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.assault.injurehealth",
+      "actionId": "long",
+      "requirements": {
+        "intention.assault": 1,
+        "strategy.prep": 3,
+        "long.might": 2
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.assault.injurehealth.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.assault.rob",
+      "actionId": "long",
+      "requirements": {
+        "intention.assault": 1,
+        "strategy.prep": 3
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.assault.rob.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.assault.intimidate",
+      "actionId": "long",
+      "requirements": {
+        "intention.assault": 1,
+        "strategy.prep": 3
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.assault.intimidate.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.intrigue.scandal",
+      "actionId": "long",
+      "extantreqs": {
+        "scandalinprogress": -1
+      },
+      "requirements": {
+        "intention.intrigue": 1,
+        "strategy.prep": 3,
+        "long.connections": 8
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.intrigue.scandal.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.intrigue.follower.seduce",
+      "actionId": "long",
+      "tablereqs": {
+        "resentment": 1
+      },
+      "requirements": {
+        "intention.intrigue": 1,
+        "strategy.prep": 3,
+        "long.connections": 8
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.intrigue.follower.seduce.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.intrigue.grail.greatwork",
+      "actionId": "long",
+      "tablereqs": {
+        "uqvitulation": 1
+      },
+      "requirements": {
+        "intention.intrigue": 1,
+        "strategy.prep": 3,
+        "long.connections": 6
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.intrigue.grail.greatwork.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.intrigue.poison.follower.resentment",
+      "actionId": "long",
+      "tablereqs": {
+        "follower": 1
+      },
+      "requirements": {
+        "intention.intrigue": 1,
+        "strategy.prep": 3,
+        "long.connections": 6
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.intrigue.poison.follower.resentment.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.intrigue.detective.assist",
+      "actionId": "long",
+      "tablereqs": {
+        "hunter": 1
+      },
+      "requirements": {
+        "intention.intrigue": 1,
+        "strategy.prep": 3,
+        "long.connections": 4
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.intrigue.detective.assist.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.intrigue.adversary.assist",
+      "actionId": "long",
+      "requirements": {
+        "intention.intrigue": 1,
+        "strategy.prep": 3,
+        "long.connections": 4
+      },
+      "tablereqs": {
+        "independent": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.intrigue.adversary.assist.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.intrigue.poison.follower.notoriety",
+      "actionId": "long",
+      "tablereqs": {
+        "follower": 1
+      },
+      "requirements": {
+        "intention.intrigue": 1,
+        "strategy.prep": 3,
+        "long.connections": 2
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.intrigue.poison.follower.notoriety.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.intrigue.mystiquetonotoriety",
+      "actionId": "long",
+      "tablereqs": {
+        "mystique": 1
+      },
+      "requirements": {
+        "intention.intrigue": 1,
+        "strategy.prep": 3,
+        "long.connections": 2
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.intrigue.mystiquetonotoriety.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.intrigue.fraud",
+      "actionId": "long",
+      "tablereqs": {
+        "funds": 2
+      },
+      "requirements": {
+        "intention.intrigue": 1,
+        "strategy.prep": 3
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.intrigue.fraud.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.intrigue.createmystique",
+      "actionId": "long",
+      "requirements": {
+        "intention.intrigue": 1,
+        "strategy.prep": 3
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.intrigue.createmystique.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.dreams.drysoul",
+      "actionId": "long",
+      "requirements": {
+        "intention.dreams": 1,
+        "strategy.prep": 3,
+        "long.dreamwork": 8
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.dreams.drysoul.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.dreams.fiftheye",
+      "actionId": "long",
+      "requirements": {
+        "intention.dreams": 1,
+        "strategy.prep": 3,
+        "long.dreamwork": 8
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.dreams.fiftheye.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.dreams.poisonway",
+      "actionId": "long",
+      "requirements": {
+        "intention.dreams": 1,
+        "strategy.prep": 3,
+        "long.dreamwork": 6
+      },
+      "tablereqs": {
+        "way": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.dreams.poisonway.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.dreams.lantern.greatwork",
+      "actionId": "long",
+      "requirements": {
+        "intention.dreams": 1,
+        "strategy.prep": 3,
+        "long.dreamwork": 6
+      },
+      "tablereqs": {
+        "uqthirdwaywitnesses": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.dreams.lantern.greatwork.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.dreams.poisonpassionwithdread",
+      "actionId": "long",
+      "requirements": {
+        "intention.dreams": 1,
+        "strategy.prep": 3,
+        "long.dreamwork": 4
+      },
+      "tablereqs": {
+        "passion": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.dreams.poisonpassionwithdread.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.dreams.poisonreasonwithfascination",
+      "actionId": "long",
+      "requirements": {
+        "intention.dreams": 1,
+        "strategy.prep": 3,
+        "long.dreamwork": 4
+      },
+      "tablereqs": {
+        "reason": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.dreams.poisonreasonwithfascination.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.dreams.createfascination.poisoned",
+      "actionId": "long",
+      "requirements": {
+        "intention.dreams": 1,
+        "strategy.prep": 3,
+        "long.dreamwork": 2
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.dreams.createfascination.poisoned.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.dreams.dreadtofascination.poisoned",
+      "actionId": "long",
+      "requirements": {
+        "intention.dreams": 1,
+        "strategy.prep": 3,
+        "long.dreamwork": 2
+      },
+      "tablereqs": {
+        "dread": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.dreams.dreadtofascination.poisoned.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.dreams.createfascination",
+      "actionId": "long",
+      "requirements": {
+        "intention.dreams": 1,
+        "strategy.prep": 3
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.dreams.createfascination.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.dreams.learndreams.followup",
+      "actionId": "long",
+      "requirements": {
+        "intention.dreams": 1,
+        "strategy.prep": 3
+      },
+      "tablereqs": {
+        "fascination": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.dreams.learndreams.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.dreams.learnfears.followup",
+      "actionId": "long",
+      "requirements": {
+        "intention.dreams": 1,
+        "strategy.prep": 3
+      },
+      "tablereqs": {
+        "dread": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.dreams.learnfears.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.dreams.learndreams",
+      "actionId": "long",
+      "requirements": {
+        "intention.dreams": 1,
+        "strategy.prep": 3
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.dreams.learndreams.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.downtime.learn.winter",
+      "actionId": "long",
+      "requirements": {
+        "intention.downtime": 1,
+        "strategy.prep": 3,
+        "long.preference.winter": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.downtime.learn.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.downtime.learn",
+      "actionId": "long",
+      "requirements": {
+        "intention.downtime": 1,
+        "strategy.prep": 3,
+        "long.preference.winter": -1
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.downtime.learn.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "long.refinestrategy.downtime.rest",
+      "actionId": "long",
+      "requirements": {
+        "intention.downtime": 1,
+        "strategy.prep": 3
+      },
+      "alternativerecipes": [
+        {
+          "id": "long.executestrategy.downtime.rest.begin",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "linked": [
+        {
+          "id": "long.cycle",
+          "chance": 100
+        }
+      ]
+    }
+  ]
 }

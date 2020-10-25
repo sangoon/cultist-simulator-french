@@ -1,20 +1,31 @@
-{"elements":
-    [
-			  
-	{id: "legacybytjob",
-	description: "On s'adonne à l'écriture et à la peinture, mais on vit avant tout dans la certitude de son argent de poche.",
-	label: "Ceci et cela",
-	aspects: {benign:1,job:1}
-},
-{id: "legacybytjobmatured",
-	description: "On s'adonne à l'écriture et à la peinture, mais on vit surtout dans la quasi-certitude de son allocation.",
-	label: "Ceci et cela",
-	aspects: {benign:1,job:1},
-	comments: "Existe pour permettre le passage à un cycle plus long immédiatement après la première utilisation."
-},
-{id: "legacydiarylastcharacter",
-aspects:{legacyplotitem:1},
-label: "Un journal chiffré",
-description: "Ceci détaille une obsession croissante pour un individu du nom de #PREVIOUSCHARACTERNAME#."}
-]
-};
+{
+  "elements": [
+    {
+      "id": "legacybytjob",
+      "description": "On s'adonne à l'écriture et à la peinture, mais on vit avant tout dans la certitude de son argent de poche.",
+      "label": "Ceci et cela",
+      "aspects": {
+        "benign": 1,
+        "job": 1
+      }
+    },
+    {
+      "id": "legacybytjobmatured",
+      "description": "On s'adonne à l'écriture et à la peinture, mais on vit surtout dans la quasi-certitude de son allocation.",
+      "label": "Ceci et cela",
+      "aspects": {
+        "benign": 1,
+        "job": 1
+      },
+      "comments": "Existe pour permettre le passage à un cycle plus long immédiatement après la première utilisation."
+    },
+    {
+      "id": "legacydiarylastcharacter",
+      "aspects": {
+        "legacyplotitem": 1
+      },
+      "label": "Un journal chiffré",
+      "description": "Ceci détaille une obsession croissante pour un individu du nom de #PREVIOUSCHARACTERNAME#."
+    }
+  ]
+}

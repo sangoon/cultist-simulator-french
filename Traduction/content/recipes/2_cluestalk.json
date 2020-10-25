@@ -1,246 +1,301 @@
- {"recipes":
- [	  
-  	  	{
-        id: "recruitindependentresentmenthint",
-        label: "Recruter un indépendant ?",
-        actionId: "talk",
-        requirements: {independent:1, mortal:1,resentment:1},
-
-        startdescription: "Non. Celui-ci n'a pas oublié ce qui s'est passé entre nous. Peut-être qu'un jour, si je ne leur fais plus de mal, leurs sentiments pourraient changer.",
-    
-        craftable: false,
-		hintonly:true
+{
+  "recipes": [
+    {
+      "id": "recruitindependentresentmenthint",
+      "label": "Recruter un indépendant ?",
+      "actionId": "talk",
+      "requirements": {
+        "independent": 1,
+        "mortal": 1,
+        "resentment": 1
+      },
+      "startdescription": "Non. Celui-ci n'a pas oublié ce qui s'est passé entre nous. Peut-être qu'un jour, si je ne leur fais plus de mal, leurs sentiments pourraient changer.",
+      "craftable": false,
+      "hintonly": true
     },
- {
-        id: "recruitindependenthint",
-        label: "Recruter un indépendant ?",
-        actionId: "talk",
-        requirements: {independent:1, mortal:1,resentment:-1},
-
-        startdescription: "Celui-ci pourrait se joindre à moi... si je peux rassembler l'aspect de notre culte, au vingt-et-unième degré. [Vous pouvez recruter un Franc-tireur, même d'une autre confession, si vous pouvez fournir suffisamment de puissance - mais vous devez inclure au moins un Outil comme cadeau aux indépendants.].",
-    
-        craftable: false,
-		hintonly:true
+    {
+      "id": "recruitindependenthint",
+      "label": "Recruter un indépendant ?",
+      "actionId": "talk",
+      "requirements": {
+        "independent": 1,
+        "mortal": 1,
+        "resentment": -1
+      },
+      "startdescription": "Celui-ci pourrait se joindre à moi... si je peux rassembler l'aspect de notre culte, au vingt-et-unième degré. [Vous pouvez recruter un Franc-tireur, même d'une autre confession, si vous pouvez fournir suffisamment de puissance - mais vous devez inclure au moins un Outil comme cadeau aux indépendants.].",
+      "craftable": false,
+      "hintonly": true
     },
-	{
-        id: "promoteto_d_edgehint",
-        label: "Exalter un Disciple ?",
-        actionId: "talk",
-        requirements: {cultedge_1:1,follower:1, disciple:1},
-
-        startdescription: "Pour exalter un disciple à devenir un assassin, j'aurai besoin de Pointe au moins à la vingt-et-unième intensité. Dans tous les cas, seul le plus sauvage conviendra.",
-
-        hintonly:true,
-        craftable: true
+    {
+      "id": "promoteto_d_edgehint",
+      "label": "Exalter un Disciple ?",
+      "actionId": "talk",
+      "requirements": {
+        "cultedge_1": 1,
+        "follower": 1,
+        "disciple": 1
+      },
+      "startdescription": "Pour exalter un disciple à devenir un assassin, j'aurai besoin de Pointe au moins à la vingt-et-unième intensité. Dans tous les cas, seul le plus sauvage conviendra.",
+      "hintonly": true,
+      "craftable": true
     },
-		  	{
-        id: "promoteto_d_forgehint",
-        label: "Exalter un Disciple ?",
-        actionId: "talk",
-        requirements: {cultforge_1:1,follower:1, disciple:1},
-
-        startdescription: "Pour exalter un disciple à devenir un contorsionniste, j'aurai besoin de Forge au moins à la vingt-et-unième intensité. Dans tous les cas, seules les plus ingénieuses et les plus efficaces conviendront.",
-        hintonly:true,
-        craftable: true
+    {
+      "id": "promoteto_d_forgehint",
+      "label": "Exalter un Disciple ?",
+      "actionId": "talk",
+      "requirements": {
+        "cultforge_1": 1,
+        "follower": 1,
+        "disciple": 1
+      },
+      "startdescription": "Pour exalter un disciple à devenir un contorsionniste, j'aurai besoin de Forge au moins à la vingt-et-unième intensité. Dans tous les cas, seules les plus ingénieuses et les plus efficaces conviendront.",
+      "hintonly": true,
+      "craftable": true
     },
-		  	{
-        id: "promoteto_d_grailhint",
-        label: "Exalter un Disciple ?",
-        actionId: "talk",
-        requirements: {cultgrail_1:1,follower:1, disciple:1},
-        startdescription: "Pour exalter un disciple à devenir un hédoniste, j'aurai besoin de Graal au moins à la vingt-et-unième intensité. En tout cas, seuls ceux qui ont les appétits les plus inconsolables conviendront.",
-
-        hintonly:true,
-        craftable: true
+    {
+      "id": "promoteto_d_grailhint",
+      "label": "Exalter un Disciple ?",
+      "actionId": "talk",
+      "requirements": {
+        "cultgrail_1": 1,
+        "follower": 1,
+        "disciple": 1
+      },
+      "startdescription": "Pour exalter un disciple à devenir un hédoniste, j'aurai besoin de Graal au moins à la vingt-et-unième intensité. En tout cas, seuls ceux qui ont les appétits les plus inconsolables conviendront.",
+      "hintonly": true,
+      "craftable": true
     },
-			  	{
-        id: "promoteto_d_hearthint",
-        label: "Exalter un Disciple ?",
-        actionId: "talk",
-        requirements: {cultheart_1: 1,follower:1, disciple:1},
- 
-		
-        startdescription: "Pour exalter un disciple à devenir un tarentelliste, j'aurai besoin de Coeur au moins à la vingt-et-unième intensité. Dans tous les cas, seul le plus fougueux conviendra.",
-        hintonly:true,
-        craftable: true
+    {
+      "id": "promoteto_d_hearthint",
+      "label": "Exalter un Disciple ?",
+      "actionId": "talk",
+      "requirements": {
+        "cultheart_1": 1,
+        "follower": 1,
+        "disciple": 1
+      },
+      "startdescription": "Pour exalter un disciple à devenir un tarentelliste, j'aurai besoin de Coeur au moins à la vingt-et-unième intensité. Dans tous les cas, seul le plus fougueux conviendra.",
+      "hintonly": true,
+      "craftable": true
     },
-				  	{
-        id: "promoteto_d_knockhint",
-        label: "Exalter un Disciple ?",
-        actionId: "talk",
-        requirements: {cultknock_1: 1,follower:1, disciple:1},
- 
-             startdescription: "Pour exalter un disciple à devenir une lé, j'ai besoin de Clé au moins à la vingt-et-unième intensité.  Dans tous les cas, seuls les plus doués conviendront.",
-        hintonly:true,
-        craftable: true
+    {
+      "id": "promoteto_d_knockhint",
+      "label": "Exalter un Disciple ?",
+      "actionId": "talk",
+      "requirements": {
+        "cultknock_1": 1,
+        "follower": 1,
+        "disciple": 1
+      },
+      "startdescription": "Pour exalter un disciple à devenir une lé, j'ai besoin de Clé au moins à la vingt-et-unième intensité.  Dans tous les cas, seuls les plus doués conviendront.",
+      "hintonly": true,
+      "craftable": true
     },
-					  	{
-        id: "promoteto_d_lanternhint",
-        label: "Exalter un Disciple ?",
-        actionId: "talk",
-        requirements: {cultlantern_1: 1,follower:1, disciple:1},
- 
-		
-               startdescription: "Pour exalter un disciple à devenir un voyant, j'aurai besoin de lanterne au moins à la vingt-et-unième intensité.  Dans tous les cas, seuls les plus clairvoyants conviendront.",
-
-        hintonly:true,
-        craftable: true
+    {
+      "id": "promoteto_d_lanternhint",
+      "label": "Exalter un Disciple ?",
+      "actionId": "talk",
+      "requirements": {
+        "cultlantern_1": 1,
+        "follower": 1,
+        "disciple": 1
+      },
+      "startdescription": "Pour exalter un disciple à devenir un voyant, j'aurai besoin de lanterne au moins à la vingt-et-unième intensité.  Dans tous les cas, seuls les plus clairvoyants conviendront.",
+      "hintonly": true,
+      "craftable": true
     },
-						  	{
-        id: "promoteto_d_mothhint",
-        label: "Exalter un Disciple ?",
-        actionId: "talk",
-        requirements: {cultmoth_1: 1,follower:1, disciple:1},
- 
-		
-             startdescription: "Pour exalter un disciple à devenir un changeur de peau, j'aurai besoin de Phalène au moins à la vingt-et-unième intensité.  En tout cas, seuls de très rares individus conviendront.",
-        hintonly:true,
-        craftable: true
+    {
+      "id": "promoteto_d_mothhint",
+      "label": "Exalter un Disciple ?",
+      "actionId": "talk",
+      "requirements": {
+        "cultmoth_1": 1,
+        "follower": 1,
+        "disciple": 1
+      },
+      "startdescription": "Pour exalter un disciple à devenir un changeur de peau, j'aurai besoin de Phalène au moins à la vingt-et-unième intensité.  En tout cas, seuls de très rares individus conviendront.",
+      "hintonly": true,
+      "craftable": true
     },
-	
-	
-							  	{
-        id: "promoteto_d_winterhint",
-        label: "Exalter un Disciple ?",
-        actionId: "talk",
-        requirements: {venerationwinter: 1,venerationedge:-1,venerationforge:-1,venerationgrail:-1,venerationheart:-1,venerationlantern:-1,venerationknock:-1,venerationmoth:-1,follower:1, disciple:1},
- 
-		
-        startdescription: "Pour exalter un disciple à un degré qui n'a pas de nom, j'aurai besoin d'Hiver au moins à la vingt-et-unième intensité.  En tout cas, seules les âmes les plus sombres conviendront.",
-        hintonly:true,
-        craftable: true
+    {
+      "id": "promoteto_d_winterhint",
+      "label": "Exalter un Disciple ?",
+      "actionId": "talk",
+      "requirements": {
+        "venerationwinter": 1,
+        "venerationedge": -1,
+        "venerationforge": -1,
+        "venerationgrail": -1,
+        "venerationheart": -1,
+        "venerationlantern": -1,
+        "venerationknock": -1,
+        "venerationmoth": -1,
+        "follower": 1,
+        "disciple": 1
+      },
+      "startdescription": "Pour exalter un disciple à un degré qui n'a pas de nom, j'aurai besoin d'Hiver au moins à la vingt-et-unième intensité.  En tout cas, seules les âmes les plus sombres conviendront.",
+      "hintonly": true,
+      "craftable": true
     },
-	
-								  	{
-        id: "promotetodisciplehint",
-        label: "Promouvoir un Adepte ?",
-        actionId: "talk",
-        requirements: {society:1,follower:1,disciple:-1,summoned:-11},
- 
-		
-        startdescription: "Pour promouvoir un Adepte comme Disciple, je devrai fournir un aspect approprié pour la secte, au moins à la septième intensité.",
-        hintonly:true,
-        craftable: true
+    {
+      "id": "promotetodisciplehint",
+      "label": "Promouvoir un Adepte ?",
+      "actionId": "talk",
+      "requirements": {
+        "society": 1,
+        "follower": 1,
+        "disciple": -1,
+        "summoned": -11
+      },
+      "startdescription": "Pour promouvoir un Adepte comme Disciple, je devrai fournir un aspect approprié pour la secte, au moins à la septième intensité.",
+      "hintonly": true,
+      "craftable": true
     },
-		  	{
-        id: "talktobenefactorhint",
-        label: "Mon bienfaiteur insiste sur la discrétion",
-        actionId: "talk",
-        requirements: {benefactor:1},
-        startdescription: "'Nous ne pouvons pas parler ici, ma chère. Soyons discrets.'",
-        craftable: false,
-		hintonly: true
+    {
+      "id": "talktobenefactorhint",
+      "label": "Mon bienfaiteur insiste sur la discrétion",
+      "actionId": "talk",
+      "requirements": {
+        "benefactor": 1
+      },
+      "startdescription": "'Nous ne pouvons pas parler ici, ma chère. Soyons discrets.'",
+      "craftable": false,
+      "hintonly": true
     },
-		  	{
-        id: "recruitacquaintancenoculthint",
-        label: "Recruter un nouveau fidèle ?",
-        actionId: "talk",
-        requirements: {society: -1,acquaintance:1},
-        startdescription: "[Une fois que vous avez créé une secte, utilisez <b>PARLER</b> avec la secte pour recruter une Connaissance dans les rangs de votre secte.]",
-        craftable: false,
-		hintonly: true
+    {
+      "id": "recruitacquaintancenoculthint",
+      "label": "Recruter un nouveau fidèle ?",
+      "actionId": "talk",
+      "requirements": {
+        "society": -1,
+        "acquaintance": 1
+      },
+      "startdescription": "[Une fois que vous avez créé une secte, utilisez <b>PARLER</b> avec la secte pour recruter une Connaissance dans les rangs de votre secte.]",
+      "craftable": false,
+      "hintonly": true
     },
-	  	{
-        id: "recruitacquaintancehint",
-        label: "Recruter un nouveau fidèle ?",
-        actionId: "talk",
-        requirements: {society: 1,acquaintance:1},
-        startdescription: "Pour recruter un Adepte, il me faudra un peu de la puissance que nous vénérons. Je pourrais le tirer d'une influence, d'un outil, d'un ingrédient, ou simplement de la croyance.",
-        craftable: false,
-		hintonly: true
+    {
+      "id": "recruitacquaintancehint",
+      "label": "Recruter un nouveau fidèle ?",
+      "actionId": "talk",
+      "requirements": {
+        "society": 1,
+        "acquaintance": 1
+      },
+      "startdescription": "Pour recruter un Adepte, il me faudra un peu de la puissance que nous vénérons. Je pourrais le tirer d'une influence, d'un outil, d'un ingrédient, ou simplement de la croyance.",
+      "craftable": false,
+      "hintonly": true
     },
-	
-		  	{
-        id: "talk_aladim_wantscommission",
-        label: "Une Commission ?",
-        actionId: "talk",
-        requirements: {aladim:1},
-        startdescription: "'Comment se présente cette mission ? J'attends avec impatience vos réflexions.'",
-        hintonly:true,
-        craftable: true
+    {
+      "id": "talk_aladim_wantscommission",
+      "label": "Une Commission ?",
+      "actionId": "talk",
+      "requirements": {
+        "aladim": 1
+      },
+      "startdescription": "'Comment se présente cette mission ? J'attends avec impatience vos réflexions.'",
+      "hintonly": true,
+      "craftable": true
     },
-			  	{
-        id: "talk_bechet_wantscommission",
-        label: "Une Commission ?",
-        actionId: "talk",
-        requirements: {bechet:1},
-        startdescription: "'Hello. Tu as quelque chose pour moi ? La mission ?'",
-        hintonly:true,
-        craftable: true
+    {
+      "id": "talk_bechet_wantscommission",
+      "label": "Une Commission ?",
+      "actionId": "talk",
+      "requirements": {
+        "bechet": 1
+      },
+      "startdescription": "'Hello. Tu as quelque chose pour moi ? La mission ?'",
+      "hintonly": true,
+      "craftable": true
     },
-			  	{
-        id: "talk_jannings_wantscommission",
-        label: "Une Commission ?",
-        actionId: "talk",
-        requirements: {jannings:1},
-        startdescription: "'S'il vous plaît, allez-vous conclure la mission ? Mes collègues ont un besoin urgent d'informations.'",
-        hintonly:true,
-        craftable: true
+    {
+      "id": "talk_jannings_wantscommission",
+      "label": "Une Commission ?",
+      "actionId": "talk",
+      "requirements": {
+        "jannings": 1
+      },
+      "startdescription": "'S'il vous plaît, allez-vous conclure la mission ? Mes collègues ont un besoin urgent d'informations.'",
+      "hintonly": true,
+      "craftable": true
     },
-			  	{
-        id: "talk_poppy_wantscommission",
-        label: "Une Commission ?",
-        actionId: "talk",
-        requirements: {poppycommission:1},
-        startdescription: "'Oh, dépêchez-vous avec cette mission ! J'ai hâte.'",
-        hintonly:true,
-        craftable: true
+    {
+      "id": "talk_poppy_wantscommission",
+      "label": "Une Commission ?",
+      "actionId": "talk",
+      "requirements": {
+        "poppycommission": 1
+      },
+      "startdescription": "'Oh, dépêchez-vous avec cette mission ! J'ai hâte.'",
+      "hintonly": true,
+      "craftable": true
     },
-	
-	{id: "fulfilcommission_aladimhint",
-label:"Réaliser une mission pour le médecin ?",
-actionId: "talk",
-requirements: {commission: 1,aladim:1,article:1},
-startdescription: "'Mm. J'espérais plus' [Vérifiez les détails de la mission.]",
-warmup: 10,
-craftable: false,
-hintonly:true
-
-},
-
-{id: "fulfilcommission_bechethint",
-label:"Réaliser une mission pour Mme Bechet?",
-actionId: "talk",
-requirements: {commission: 1,bechet:1,article:1},
-startdescription: "'Désolé, pas tout à fait. Je voulais quelque chose d'un peu différent' [Vérifiez les détails de la mission.]",
-warmup: 10,
-craftable: false,
-hintonly:true
-
-},
-
-
-{id: "fulfilcommission_janningshint",
-label:"Réaliser une mission pour le comte ?",
-actionId: "talk",
-requirements: {commission: 1,jannings:1,article:1},
-startdescription: "'Non, non, non. Cela ne fera pas l'affaire. Mes instructions étaient très précises' [Vérifiez les détails de la mission.]",
-warmup: 10,
-craftable: false,
-hintonly:true
-
-},
-
-{id: "fulfilcommission_poppyhint",
-label:"Réaliser une mission pour Poppy?",
-actionId: "talk",
-requirements: {commission: 1,poppycommission:1,article:1},
-startdescription: "'Oh, mon Dieu. Je suis désolé. J'ai besoin de plus... d'aperçu.' [Vérifiez les détails de la mission.]",
-warmup: 10,
-craftable: false,
-hintonly:true
-
-},
-
-	  	{
-        id: "talk_nointeraction_mortal",
-        label: "Rien à dire ?",
-        actionId: "talk",
-        requirements: {mortal:1},
-        startdescription: "'Je crois que nous n'avons rien à nous dire.'",
-        craftable: false,
-		hintonly: true
+    {
+      "id": "fulfilcommission_aladimhint",
+      "label": "Réaliser une mission pour le médecin ?",
+      "actionId": "talk",
+      "requirements": {
+        "commission": 1,
+        "aladim": 1,
+        "article": 1
+      },
+      "startdescription": "'Mm. J'espérais plus' [Vérifiez les détails de la mission.]",
+      "warmup": 10,
+      "craftable": false,
+      "hintonly": true
     },
-	
-]
+    {
+      "id": "fulfilcommission_bechethint",
+      "label": "Réaliser une mission pour Mme Bechet?",
+      "actionId": "talk",
+      "requirements": {
+        "commission": 1,
+        "bechet": 1,
+        "article": 1
+      },
+      "startdescription": "'Désolé, pas tout à fait. Je voulais quelque chose d'un peu différent' [Vérifiez les détails de la mission.]",
+      "warmup": 10,
+      "craftable": false,
+      "hintonly": true
+    },
+    {
+      "id": "fulfilcommission_janningshint",
+      "label": "Réaliser une mission pour le comte ?",
+      "actionId": "talk",
+      "requirements": {
+        "commission": 1,
+        "jannings": 1,
+        "article": 1
+      },
+      "startdescription": "'Non, non, non. Cela ne fera pas l'affaire. Mes instructions étaient très précises' [Vérifiez les détails de la mission.]",
+      "warmup": 10,
+      "craftable": false,
+      "hintonly": true
+    },
+    {
+      "id": "fulfilcommission_poppyhint",
+      "label": "Réaliser une mission pour Poppy?",
+      "actionId": "talk",
+      "requirements": {
+        "commission": 1,
+        "poppycommission": 1,
+        "article": 1
+      },
+      "startdescription": "'Oh, mon Dieu. Je suis désolé. J'ai besoin de plus... d'aperçu.' [Vérifiez les détails de la mission.]",
+      "warmup": 10,
+      "craftable": false,
+      "hintonly": true
+    },
+    {
+      "id": "talk_nointeraction_mortal",
+      "label": "Rien à dire ?",
+      "actionId": "talk",
+      "requirements": {
+        "mortal": 1
+      },
+      "startdescription": "'Je crois que nous n'avons rien à nous dire.'",
+      "craftable": false,
+      "hintonly": true
+    }
+  ]
 }

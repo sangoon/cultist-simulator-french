@@ -1,94 +1,147 @@
 {
-"recipes": [
-{id: "workintrojob",
-label: "Nouveau travail à l'hôpital",
-actionId: "work",
-requirements: {introjob:1},
-effects: {introjob: -1, health: 1, funds: 2},
-alternativerecipes: [{id:introdream,chance:100,additional:true}],
-startdescription: "Autre travail: nettoyer les couloirs obscurcis, livrer le courrier aux invalides aux yeux vides, transporter les cadavres sur des brancards au sous-sol.",
-description: "A la moitié de votre quart de travail, le chef de service vous fait signe de vous écarter. Nous n'aurons plus besoin de vos services', dit-il. Tenez: votre dernier salaire. Nous vous avons payé jusqu'à la fin du mois.'\n
-J'ai perdu mon emploi. Au moins, j'ai maintenant un peu de temps pour me reposer, et améliorer ma Santé.\n
-[<b>Rêver</b> est déverrouillé.]",
-warmup:10,
-craftable: true
-	},
-	{
-id: "introdream",
-label: "Se souvenir de mes rêves",
-actionId: "dream",
-requirements: {},
-effects: {passion:1,contentment:1},
-alternativerecipes: [{id:bequestcountdown,chance:100,additional:true}],
-startdescription: "Une fois de plus, je rêve d'une lueur sous la peau crasseuse du monde. La lumière à travers le bois noir. La porte pâle. Le vieil homme - ",
-description: "Tout a commencé quand j'ai parlé au vieil homme à l'hôpital. Il connaissait mon nom. Mais il est mort maintenant. La pneumonie. Pourquoi est-ce que je rêve encore de lui ? Quelle est cette lumière de cobalt dans mes rêves ?\n
-[Le <b>Temps<b> passe maintenant.]",
-warmup: 30,
-craftable: false,
-comments: "Ceci est déclenché par la recette de travail d'intro uniquement."
+  "recipes": [
+    {
+      "id": "workintrojob",
+      "label": "Nouveau travail à l'hôpital",
+      "actionId": "work",
+      "requirements": {
+        "introjob": 1
+      },
+      "effects": {
+        "introjob": -1,
+        "health": 1,
+        "funds": 2
+      },
+      "alternativerecipes": [
+        {
+          "id": "introdream",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "startdescription": "Autre travail: nettoyer les couloirs obscurcis, livrer le courrier aux invalides aux yeux vides, transporter les cadavres sur des brancards au sous-sol.",
+      "description": "A la moitié de votre quart de travail, le chef de service vous fait signe de vous écarter. Nous n'aurons plus besoin de vos services', dit-il. Tenez: votre dernier salaire. Nous vous avons payé jusqu'à la fin du mois.'\n J'ai perdu mon emploi. Au moins, j'ai maintenant un peu de temps pour me reposer, et améliorer ma Santé.\n [<b>Rêver</b> est déverrouillé.]",
+      "warmup": 10,
+      "craftable": true
     },
-
-	 { id: "bequestcountdown",
-        label: "Un changement dans l'air",
-        actionId: "study",
-        requirements: {},
-        startdescription: "J'ai besoin de Fonds pour vivre. Mais peut-être que ce récent bouleversement dans ma situation est une bénédiction. Mes rêves ont-ils un sens ? Il y a un changement dans l'air.",
-        description: ".",
-        warmup: 60,
-        craftable: false,
-        linked:	[{id: "bequestarrives", chance:100}],
+    {
+      "id": "introdream",
+      "label": "Se souvenir de mes rêves",
+      "actionId": "dream",
+      "requirements": {},
+      "effects": {
+        "passion": 1,
+        "contentment": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "bequestcountdown",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "startdescription": "Une fois de plus, je rêve d'une lueur sous la peau crasseuse du monde. La lumière à travers le bois noir. La porte pâle. Le vieil homme - ",
+      "description": "Tout a commencé quand j'ai parlé au vieil homme à l'hôpital. Il connaissait mon nom. Mais il est mort maintenant. La pneumonie. Pourquoi est-ce que je rêve encore de lui ? Quelle est cette lumière de cobalt dans mes rêves ?\n [Le <b>Temps<b> passe maintenant.]",
+      "warmup": 30,
+      "craftable": false,
+      "comments": "Ceci est déclenché par la recette de travail d'intro uniquement."
     },
-		 {
-id: "bequestarrives",
-label: "Un legs se présente",
-actionId: "study",
-requirements: {},
-effects: {reason: 1,funds: 9,bequestintro:1},
-startdescription: "Une lettre d'un avocat. Le vieil homme à l'hôpital - celui dont je rêve - m'a nommé dans son testament. J'en saurai plus bientôt.",
-description: "Le vieil homme m'a légué une somme d'argent, et un paquet de papiers particuliers - poésie, énigmes, spéculations métaphysiques. Pour la première fois depuis des mois, voici de quoi alimenter ma Raison.\n
-[<b>Étudier</b> a été débloqué.]",
-warmup: 30,
-craftable: false,
-maxexecutions: 1,
-comments: "L'action 'Étude' est ainsi disponible et n'est déclenchée qu'à partir de l'introduction."
+    {
+      "id": "bequestcountdown",
+      "label": "Un changement dans l'air",
+      "actionId": "study",
+      "requirements": {},
+      "startdescription": "J'ai besoin de Fonds pour vivre. Mais peut-être que ce récent bouleversement dans ma situation est une bénédiction. Mes rêves ont-ils un sens ? Il y a un changement dans l'air.",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "bequestarrives",
+          "chance": 100
+        }
+      ]
     },
-{
-id: "studybequestreason",
-label: "Examiner le legs, en employant la Raison",
-actionId: "study",
-requirements: {bequestintro:1,reason:1},
-effects: {bequestintro: -1,ascensionenlightenmenta: 1, mapbookdealer: 1,fragmentlantern:1,contactintro:1},
-startdescription: "Je vais examiner chaque élément avec un soin méticuleux. ",
-description: "Mon correspondant décrit exactement mes rêves ! Il utilise des noms qui me sont immédiatement familiers - la Maison, le Bois, les Heures, la Gloire. Il connaissait des secrets sous le temps et la peau du monde. <b>Une curiosité nouvelle brûle en moi</b>.\n
-Il y a une note ici - Des indications pour se rendre dans une librairie qui ne fait aucune publicité pour ses ouvrages -\n",
-warmup: 30,
-craftable: true
-},
-	{
-id: "studybequestpassion",
-label: "Examiner mon legs, en faisant appel à la Passion",
-actionId: "study",
-requirements: {bequestintro:1,passion:1},
-effects: {bequestintro: -1,ascensionpowera: 1, mapbookdealer:1,fragmentforge:1,contactintro:1},
-startdescription: "Je lis, je théorise, j'avance, je dessine, je me gratte les cheveux avec émerveillement, je me réjouis, je m'écroule de désespoir.",
-description: "Mon correspondant décrit exactement mes rêves ! Il utilise des noms qui me sont immédiatement familiers - la Maison, le Bois, les Heures, la Gloire. Je sens ici une puissance que les généraux et les rois envieraient. <b>Un désir nouveau brûle en moi.</b>\n
-Il y a une note ici - Des indications pour se rendre dans une librairie qui ne fait aucune publicité pour ses ouvrages -\n",
-warmup: 30,
-craftable: true
+    {
+      "id": "bequestarrives",
+      "label": "Un legs se présente",
+      "actionId": "study",
+      "requirements": {},
+      "effects": {
+        "reason": 1,
+        "funds": 9,
+        "bequestintro": 1
+      },
+      "startdescription": "Une lettre d'un avocat. Le vieil homme à l'hôpital - celui dont je rêve - m'a nommé dans son testament. J'en saurai plus bientôt.",
+      "description": "Le vieil homme m'a légué une somme d'argent, et un paquet de papiers particuliers - poésie, énigmes, spéculations métaphysiques. Pour la première fois depuis des mois, voici de quoi alimenter ma Raison.\n [<b>Étudier</b> a été débloqué.]",
+      "warmup": 30,
+      "craftable": false,
+      "maxexecutions": 1,
+      "comments": "L'action 'Étude' est ainsi disponible et n'est déclenchée qu'à partir de l'introduction."
     },
-
-			{
-        id: "studycontactintro",
-        label: "Trouver un collaborateur potentiel",
-        actionId: "study",
-        requirements: {contactintro:1},
-		effects: {contactintro:-1,mystique:1},
-		alternativerecipes:	[{id: "findacquaintanceopentalk",chance:100, additional: true}],
-        startdescription: "J'ai un nom, une description, quelques détails alléchants... mais il y a des milliers de visages dans cette ville.",
-        description: "Et maintenant, j'ai une adresse ! Je vais envoyer une lettre et proposer une rencontre. [<b>Parler</b> est déverrouillé].",
-        warmup: 30,
-        craftable: true,
-		comments: "This is one way the Talk verb may be opened."
+    {
+      "id": "studybequestreason",
+      "label": "Examiner le legs, en employant la Raison",
+      "actionId": "study",
+      "requirements": {
+        "bequestintro": 1,
+        "reason": 1
+      },
+      "effects": {
+        "bequestintro": -1,
+        "ascensionenlightenmenta": 1,
+        "mapbookdealer": 1,
+        "fragmentlantern": 1,
+        "contactintro": 1
+      },
+      "startdescription": "Je vais examiner chaque élément avec un soin méticuleux. ",
+      "description": "Mon correspondant décrit exactement mes rêves ! Il utilise des noms qui me sont immédiatement familiers - la Maison, le Bois, les Heures, la Gloire. Il connaissait des secrets sous le temps et la peau du monde. <b>Une curiosité nouvelle brûle en moi</b>.\n Il y a une note ici - Des indications pour se rendre dans une librairie qui ne fait aucune publicité pour ses ouvrages -\n",
+      "warmup": 30,
+      "craftable": true
+    },
+    {
+      "id": "studybequestpassion",
+      "label": "Examiner mon legs, en faisant appel à la Passion",
+      "actionId": "study",
+      "requirements": {
+        "bequestintro": 1,
+        "passion": 1
+      },
+      "effects": {
+        "bequestintro": -1,
+        "ascensionpowera": 1,
+        "mapbookdealer": 1,
+        "fragmentforge": 1,
+        "contactintro": 1
+      },
+      "startdescription": "Je lis, je théorise, j'avance, je dessine, je me gratte les cheveux avec émerveillement, je me réjouis, je m'écroule de désespoir.",
+      "description": "Mon correspondant décrit exactement mes rêves ! Il utilise des noms qui me sont immédiatement familiers - la Maison, le Bois, les Heures, la Gloire. Je sens ici une puissance que les généraux et les rois envieraient. <b>Un désir nouveau brûle en moi.</b>\n Il y a une note ici - Des indications pour se rendre dans une librairie qui ne fait aucune publicité pour ses ouvrages -\n",
+      "warmup": 30,
+      "craftable": true
+    },
+    {
+      "id": "studycontactintro",
+      "label": "Trouver un collaborateur potentiel",
+      "actionId": "study",
+      "requirements": {
+        "contactintro": 1
+      },
+      "effects": {
+        "contactintro": -1,
+        "mystique": 1
+      },
+      "alternativerecipes": [
+        {
+          "id": "findacquaintanceopentalk",
+          "chance": 100,
+          "additional": true
+        }
+      ],
+      "startdescription": "J'ai un nom, une description, quelques détails alléchants... mais il y a des milliers de visages dans cette ville.",
+      "description": "Et maintenant, j'ai une adresse ! Je vais envoyer une lettre et proposer une rencontre. [<b>Parler</b> est déverrouillé].",
+      "warmup": 30,
+      "craftable": true,
+      "comments": "This is one way the Talk verb may be opened."
     }
-]
+  ]
 }

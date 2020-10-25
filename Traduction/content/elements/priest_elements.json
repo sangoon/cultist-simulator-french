@@ -1,201 +1,378 @@
-{"elements":
-    [
-		     {
-        id:"fervour",
-            label: "Ferveur",
-            aspects:
-            {influence:1,heart:2},
-            description: "Les passions de ma congrégation sont fortes, voire profondes. [Gardez votre congrégation satisfaite. La ferveur, si elle n'est pas utilisée, se décomposera en Peur.]",
-			lifetime:180,
-			decayTo: dread
-			},
-
-
-{id:"lockscaredge",
-label:"Cicatrice fermée de la Pointe",
-description:"Quand je suis le Seuil, cette cicatrice s'ouvre au contact d'une lame.",
-aspects:{tool:1,knock:2,lockscar:1,edge:2},
-xtriggers:{unlockscar:openedlockscaredge}
-},
-{id:"lockscarforge",
-label:"Cicatrice fermée de la Forge",
-description:"Quand je suis le Seuil, cette cicatrice s'ouvre au contact fer chaud.",
-aspects:{tool:1,knock:2,lockscar:1,forge:2},
-xtriggers:{unlockscar:openedlockscarforge}
-},
-{id:"lockscargrail",
-label:"Cicatrice fermée du Graal",
-description:"Quand je suis le Seuil, cette cicatrice s'ouvre d'un baiser fervent.",
-aspects:{tool:1,knock:2,lockscar:1,grail:2},
-xtriggers:{unlockscar:openedlockscargrail}
-},
-{id:"lockscarheart",
-label:"Cicatrice fermée du Coeur",
-description:"Quand je suis le Seuil, cette cicatrice s'ouvre au battement du tambour.",
-aspects:{tool:1,knock:2,lockscar:1,heart:2},
-xtriggers:{unlockscar:openedlockscarheart}
-},
-{id:"lockscarlantern",
-label:"Cicatrice fermée de la Lanterne",
-description:"Quand je suis le Seuil, cette cicatrice s'ouvre à l'aube.",
-aspects:{tool:1,knock:2,lockscar:1,lantern:2},
-xtriggers:{unlockscar:openedlockscarlantern}
-},
-{id:"lockscarmoth",
-label:"Cicatrice fermée de la Phalène",
-description:"Quand je suis le Seuil, cette cicatrice répondra aux ciseaux.",
-aspects:{tool:1,knock:2,lockscar:1,moth:2},
-xtriggers:{unlockscar:openedlockscarmoth}
-},
-{id:"lockscarwinter",
-label:"Cicatrice fermée de l'Hiver",
-description:"Quand je suis le Seuil, cette cicatrice s'ouvrira en dernier.",
-aspects:{tool:1,knock:2,lockscar:1,winter:2},
-xtriggers:{unlockscar:openedlockscarwinter}
-},
-
-
-
-{id:"openedlockscaredge",
-label:"Cicatrice fermée de la Pointe",
-description:"Quand je suis le Seuil, cette cicatrice s'ouvrira au contact d'une lame.",
-aspects:{tool:1,knock:2,openedlockscar:1,edge:2},
-lifetime:1,
-decayTo:lockscaredge,
-icon:"lockscaredge"
-},
-{id:"openedlockscarforge",
-label:"Cicatrice fermée de la Forge",
-description:"Quand je suis le Seuil, cette cicatrice s'ouvrira au contact du fer chaud.",
-aspects:{tool:1,knock:2,openedlockscar:1,forge:2},
-lifetime:1,
-decayTo:lockscarforge,
-icon:"lockscarforge"
-},
-{id:"openedlockscargrail",
-label:"Cicatrice fermée du Graal",
-description:"Quand je suis le Seuil, cette cicatrice s'ouvrira d'un baiser fervent.",
-aspects:{tool:1,knock:2,openedlockscar:1,grail:2},
-lifetime:1,
-decayTo:lockscargrail,
-icon:"lockscargrail"
-},
-{id:"openedlockscarheart",
-label:"Cicatrice fermée du Coeur",
-description:"Quand je suis le Seuil, cette cicatrice s'ouvrira au rythme du tambour.",
-aspects:{tool:1,knock:2,openedlockscar:1,heart:2},
-lifetime:1,
-decayTo:lockscarheart,
-icon:"lockscarheart",
-},
-{id:"openedlockscarlantern",
-label:"Cicatrice fermée de la Lanterne",
-description:"Quand je suis le Seuil, cette cicatrice s'ouvrira à l'aube.",
-aspects:{tool:1,knock:2,openedlockscar:1,lantern:2},
-lifetime:1,
-decayTo:lockscarlantern,
-icon:"lockscarlantern"
-},
-{id:"openedlockscarmoth",
-label:"Cicatrice fermée de la Phalène",
-description:"Quand je suis le Seuil, cette cicatrice répondra aux ciseaux.",
-aspects:{tool:1,knock:2,openedlockscar:1,moth:2},
-lifetime:1,
-decayTo:lockscarmoth,
-icon:"lockscarmoth"
-},
-{id:"openedlockscarwinter",
-label:"Cicatrice fermée de l'Hiver",
-description:"Quand je suis le Seuil, cette cicatrice s'ouvrira en dernier.",
-aspects:{tool:1,knock:2,openedlockscar:1,winter:2},
-lifetime:1,
-decayTo:lockscarwinter,
-icon:"lockscarwinter"
-},
-
-											 {
-        id: "devotee_edge",
-            label: "Un adorateur robuste",
-            aspects:
-            {mortal:1, follower:1,devotee:1,edge:2},
-            animFrames: 1,
-			description: "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
-			xtriggers: {killmortal:corpse,derangemortal:lunatic,rebellion:generic_r,capturefollower:generic_p,refiring:devotee_edge},
-			lifetime:180
-        },
-										 {
-        id: "devotee_forge",
-            label: "Un adorateur efficace",
-            aspects:
-            {mortal:1, follower:1,devotee:1,edge:1,forge:2},
-            animFrames: 1,
-			description: "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
-			xtriggers: {killmortal:corpse,derangemortal:lunatic,rebellion:generic_r,capturefollower:generic_p,refiring:devotee_forge},
-			lifetime:180
-        },
-										 {
-        id: "devotee_grail",
-            label: "Un adorateur avide",
-            aspects:
-            {mortal:1, follower:1,devotee:1,edge:1,grail:2},
-            animFrames: 1,
-			description: "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
-			xtriggers: {killmortal:corpse,derangemortal:lunatic,rebellion:generic_r,capturefollower:generic_p,refiring:devotee_grail},
-			lifetime:180
-        },
-										 {
-        id: "devotee_heart",
-            label: "Un adorateur dynamique",
-            aspects:
-            {mortal:1, follower:1,devotee:1,edge:1,heart:2},
-            animFrames: 1,
-			description: "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
-			xtriggers: {killmortal:corpse,derangemortal:lunatic,rebellion:generic_r,capturefollower:generic_p,refiring:devotee_heart},
-			lifetime:180
-        },
-								 {
-        id: "devotee_knock",
-            label: "Un adorateur habile",
-            aspects:
-            {mortal:1, follower:1,devotee:1,edge:1,knock:2},
-            animFrames: 1,
-			description: "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
-			xtriggers: {killmortal:corpse,derangemortal:lunatic,rebellion:generic_r,capturefollower:generic_p,refiring:devotee_knock},
-			lifetime:180
-        },
-
-										 {
-        id: "devotee_lantern",
-            label: "Un adorateur perspicace",
-            aspects:
-            {mortal:1, follower:1,devotee:1,edge:1,lantern:2},
-            animFrames: 1,
-					description: "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
-			xtriggers: {killmortal:corpse,derangemortal:lunatic,rebellion:generic_r,capturefollower:generic_p,refiring:devotee_lantern},
-			lifetime:180
-        },
-												 {
-        id: "devotee_moth",
-            label: "Un adorateur erratique",
-            aspects:
-            {mortal:1, follower:1,devotee:1,edge:1,moth:2},
-            animFrames: 1,
-			description: "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
-			xtriggers: {killmortal:corpse,derangemortal:lunatic,rebellion:generic_r,capturefollower:generic_p,refiring:devotee_moth},
-			lifetime:180
-        },
-														 {
-        id: "devotee_winter",
-            label: "Un adorateur silencieux",
-            aspects:
-            {mortal:1, follower:1,devotee:1,edge:1,winter:2},
-            animFrames: 1,
-			description: "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
-			xtriggers: {killmortal:corpse,derangemortal:lunatic,rebellion:generic_r,capturefollower:generic_p,refiring:devotee_winter},
-			lifetime:180
-        },
-
-
-
-]
-};
+{
+  "elements": [
+    {
+      "id": "fervour",
+      "label": "Ferveur",
+      "aspects": {
+        "influence": 1,
+        "heart": 2
+      },
+      "description": "Les passions de ma congrégation sont fortes, voire profondes. [Gardez votre congrégation satisfaite. La ferveur, si elle n'est pas utilisée, se décomposera en Peur.]",
+      "lifetime": 180,
+      "decayTo": "dread"
+    },
+    {
+      "id": "lockscaredge",
+      "label": "Cicatrice fermée de la Pointe",
+      "description": "Quand je suis le Seuil, cette cicatrice s'ouvre au contact d'une lame.",
+      "aspects": {
+        "tool": 1,
+        "knock": 2,
+        "lockscar": 1,
+        "edge": 2
+      },
+      "xtriggers": {
+        "unlockscar": "openedlockscaredge"
+      }
+    },
+    {
+      "id": "lockscarforge",
+      "label": "Cicatrice fermée de la Forge",
+      "description": "Quand je suis le Seuil, cette cicatrice s'ouvre au contact fer chaud.",
+      "aspects": {
+        "tool": 1,
+        "knock": 2,
+        "lockscar": 1,
+        "forge": 2
+      },
+      "xtriggers": {
+        "unlockscar": "openedlockscarforge"
+      }
+    },
+    {
+      "id": "lockscargrail",
+      "label": "Cicatrice fermée du Graal",
+      "description": "Quand je suis le Seuil, cette cicatrice s'ouvre d'un baiser fervent.",
+      "aspects": {
+        "tool": 1,
+        "knock": 2,
+        "lockscar": 1,
+        "grail": 2
+      },
+      "xtriggers": {
+        "unlockscar": "openedlockscargrail"
+      }
+    },
+    {
+      "id": "lockscarheart",
+      "label": "Cicatrice fermée du Coeur",
+      "description": "Quand je suis le Seuil, cette cicatrice s'ouvre au battement du tambour.",
+      "aspects": {
+        "tool": 1,
+        "knock": 2,
+        "lockscar": 1,
+        "heart": 2
+      },
+      "xtriggers": {
+        "unlockscar": "openedlockscarheart"
+      }
+    },
+    {
+      "id": "lockscarlantern",
+      "label": "Cicatrice fermée de la Lanterne",
+      "description": "Quand je suis le Seuil, cette cicatrice s'ouvre à l'aube.",
+      "aspects": {
+        "tool": 1,
+        "knock": 2,
+        "lockscar": 1,
+        "lantern": 2
+      },
+      "xtriggers": {
+        "unlockscar": "openedlockscarlantern"
+      }
+    },
+    {
+      "id": "lockscarmoth",
+      "label": "Cicatrice fermée de la Phalène",
+      "description": "Quand je suis le Seuil, cette cicatrice répondra aux ciseaux.",
+      "aspects": {
+        "tool": 1,
+        "knock": 2,
+        "lockscar": 1,
+        "moth": 2
+      },
+      "xtriggers": {
+        "unlockscar": "openedlockscarmoth"
+      }
+    },
+    {
+      "id": "lockscarwinter",
+      "label": "Cicatrice fermée de l'Hiver",
+      "description": "Quand je suis le Seuil, cette cicatrice s'ouvrira en dernier.",
+      "aspects": {
+        "tool": 1,
+        "knock": 2,
+        "lockscar": 1,
+        "winter": 2
+      },
+      "xtriggers": {
+        "unlockscar": "openedlockscarwinter"
+      }
+    },
+    {
+      "id": "openedlockscaredge",
+      "label": "Cicatrice fermée de la Pointe",
+      "description": "Quand je suis le Seuil, cette cicatrice s'ouvrira au contact d'une lame.",
+      "aspects": {
+        "tool": 1,
+        "knock": 2,
+        "openedlockscar": 1,
+        "edge": 2
+      },
+      "lifetime": 1,
+      "decayTo": "lockscaredge",
+      "icon": "lockscaredge"
+    },
+    {
+      "id": "openedlockscarforge",
+      "label": "Cicatrice fermée de la Forge",
+      "description": "Quand je suis le Seuil, cette cicatrice s'ouvrira au contact du fer chaud.",
+      "aspects": {
+        "tool": 1,
+        "knock": 2,
+        "openedlockscar": 1,
+        "forge": 2
+      },
+      "lifetime": 1,
+      "decayTo": "lockscarforge",
+      "icon": "lockscarforge"
+    },
+    {
+      "id": "openedlockscargrail",
+      "label": "Cicatrice fermée du Graal",
+      "description": "Quand je suis le Seuil, cette cicatrice s'ouvrira d'un baiser fervent.",
+      "aspects": {
+        "tool": 1,
+        "knock": 2,
+        "openedlockscar": 1,
+        "grail": 2
+      },
+      "lifetime": 1,
+      "decayTo": "lockscargrail",
+      "icon": "lockscargrail"
+    },
+    {
+      "id": "openedlockscarheart",
+      "label": "Cicatrice fermée du Coeur",
+      "description": "Quand je suis le Seuil, cette cicatrice s'ouvrira au rythme du tambour.",
+      "aspects": {
+        "tool": 1,
+        "knock": 2,
+        "openedlockscar": 1,
+        "heart": 2
+      },
+      "lifetime": 1,
+      "decayTo": "lockscarheart",
+      "icon": "lockscarheart"
+    },
+    {
+      "id": "openedlockscarlantern",
+      "label": "Cicatrice fermée de la Lanterne",
+      "description": "Quand je suis le Seuil, cette cicatrice s'ouvrira à l'aube.",
+      "aspects": {
+        "tool": 1,
+        "knock": 2,
+        "openedlockscar": 1,
+        "lantern": 2
+      },
+      "lifetime": 1,
+      "decayTo": "lockscarlantern",
+      "icon": "lockscarlantern"
+    },
+    {
+      "id": "openedlockscarmoth",
+      "label": "Cicatrice fermée de la Phalène",
+      "description": "Quand je suis le Seuil, cette cicatrice répondra aux ciseaux.",
+      "aspects": {
+        "tool": 1,
+        "knock": 2,
+        "openedlockscar": 1,
+        "moth": 2
+      },
+      "lifetime": 1,
+      "decayTo": "lockscarmoth",
+      "icon": "lockscarmoth"
+    },
+    {
+      "id": "openedlockscarwinter",
+      "label": "Cicatrice fermée de l'Hiver",
+      "description": "Quand je suis le Seuil, cette cicatrice s'ouvrira en dernier.",
+      "aspects": {
+        "tool": 1,
+        "knock": 2,
+        "openedlockscar": 1,
+        "winter": 2
+      },
+      "lifetime": 1,
+      "decayTo": "lockscarwinter",
+      "icon": "lockscarwinter"
+    },
+    {
+      "id": "devotee_edge",
+      "label": "Un adorateur robuste",
+      "aspects": {
+        "mortal": 1,
+        "follower": 1,
+        "devotee": 1,
+        "edge": 2
+      },
+      "animFrames": 1,
+      "description": "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
+      "xtriggers": {
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "rebellion": "generic_r",
+        "capturefollower": "generic_p",
+        "refiring": "devotee_edge"
+      },
+      "lifetime": 180
+    },
+    {
+      "id": "devotee_forge",
+      "label": "Un adorateur efficace",
+      "aspects": {
+        "mortal": 1,
+        "follower": 1,
+        "devotee": 1,
+        "edge": 1,
+        "forge": 2
+      },
+      "animFrames": 1,
+      "description": "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
+      "xtriggers": {
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "rebellion": "generic_r",
+        "capturefollower": "generic_p",
+        "refiring": "devotee_forge"
+      },
+      "lifetime": 180
+    },
+    {
+      "id": "devotee_grail",
+      "label": "Un adorateur avide",
+      "aspects": {
+        "mortal": 1,
+        "follower": 1,
+        "devotee": 1,
+        "edge": 1,
+        "grail": 2
+      },
+      "animFrames": 1,
+      "description": "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
+      "xtriggers": {
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "rebellion": "generic_r",
+        "capturefollower": "generic_p",
+        "refiring": "devotee_grail"
+      },
+      "lifetime": 180
+    },
+    {
+      "id": "devotee_heart",
+      "label": "Un adorateur dynamique",
+      "aspects": {
+        "mortal": 1,
+        "follower": 1,
+        "devotee": 1,
+        "edge": 1,
+        "heart": 2
+      },
+      "animFrames": 1,
+      "description": "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
+      "xtriggers": {
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "rebellion": "generic_r",
+        "capturefollower": "generic_p",
+        "refiring": "devotee_heart"
+      },
+      "lifetime": 180
+    },
+    {
+      "id": "devotee_knock",
+      "label": "Un adorateur habile",
+      "aspects": {
+        "mortal": 1,
+        "follower": 1,
+        "devotee": 1,
+        "edge": 1,
+        "knock": 2
+      },
+      "animFrames": 1,
+      "description": "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
+      "xtriggers": {
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "rebellion": "generic_r",
+        "capturefollower": "generic_p",
+        "refiring": "devotee_knock"
+      },
+      "lifetime": 180
+    },
+    {
+      "id": "devotee_lantern",
+      "label": "Un adorateur perspicace",
+      "aspects": {
+        "mortal": 1,
+        "follower": 1,
+        "devotee": 1,
+        "edge": 1,
+        "lantern": 2
+      },
+      "animFrames": 1,
+      "description": "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
+      "xtriggers": {
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "rebellion": "generic_r",
+        "capturefollower": "generic_p",
+        "refiring": "devotee_lantern"
+      },
+      "lifetime": 180
+    },
+    {
+      "id": "devotee_moth",
+      "label": "Un adorateur erratique",
+      "aspects": {
+        "mortal": 1,
+        "follower": 1,
+        "devotee": 1,
+        "edge": 1,
+        "moth": 2
+      },
+      "animFrames": 1,
+      "description": "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
+      "xtriggers": {
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "rebellion": "generic_r",
+        "capturefollower": "generic_p",
+        "refiring": "devotee_moth"
+      },
+      "lifetime": 180
+    },
+    {
+      "id": "devotee_winter",
+      "label": "Un adorateur silencieux",
+      "aspects": {
+        "mortal": 1,
+        "follower": 1,
+        "devotee": 1,
+        "edge": 1,
+        "winter": 2
+      },
+      "animFrames": 1,
+      "description": "Parfois, la ferveur pousse les laïcs à se consacrer à des tâches plus inhabituelles. [Lorsque l'enthousiasme de celui-ci s'estompe, il retourne à la congrégation.]",
+      "xtriggers": {
+        "killmortal": "corpse",
+        "derangemortal": "lunatic",
+        "rebellion": "generic_r",
+        "capturefollower": "generic_p",
+        "refiring": "devotee_winter"
+      },
+      "lifetime": 180
+    }
+  ]
+}

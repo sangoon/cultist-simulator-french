@@ -1,206 +1,418 @@
- {"recipes": [
 {
-	id: "explorevaultseal_hiddendoor_encounter",
-	actionId:"explore",
-	label: "Un passage caché",
-	startdescription: "Il doit y avoir une porte ici. Mais sans de la Lanterne ou de la Clé, nous ne pouvons pas la découvrir.",
-	requirements: {seal_hiddendoor:1},
-	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
-	alternativerecipes: [
-	{id: "explorevaultseal_hiddendoor_highlantern",chance:100},
-	{id: "explorevaultseal_hiddendoor_highknock",chance:100},
-	{id: "explorevaultseal_hiddendoor_midlantern",chance:100},
-	{id: "explorevaultseal_hiddendoor_midknock",chance:100},
-	{id: "explorevaultseal_hiddendoor_lowlantern",chance:100},	
-	{id: "explorevaultseal_hiddendoor_lowknock",chance:100}],
-	warmup:30,
-	craftable: false,
-	linked: [{id:"explorevaultseal_hiddendoor_failure",chance:100}]
-	},
-	
-	{id:"explorevaultseal_hiddendoor_highlantern",
-	actionId: "explore",
-	requirements:{lantern:10},
-	label:"Nous faisons appel au Guetteur, qui illumine",
-	startdescription:"Nous trouverons presque certainement cette Porte Cachée.",
-		  description:".",
-	linked: [{id:"explorevaultseal_hiddendoor_success",chance:90},
-	{id:"explorevaultseal_hiddendoor_failure",chance:100}]	  
-		  },
-		{id:"explorevaultseal_hiddendoor_midlantern",
-	actionId: "explore",
-	requirements:{lantern:5},
-	label:"Nous faisons appel au Guetteur, qui navigue",
-	startdescription:"Nos sens sont aiguisés. Nous devrions trouver cette Porte Cachée.",
-		  description:".",
-	linked: [{id:"explorevaultseal_hiddendoor_success",chance:70},
-	{id:"explorevaultseal_hiddendoor_failure",chance:100}]	  
-		  },
-		  	{id:"explorevaultseal_hiddendoor_lowlantern",
-	actionId: "explore",
-	requirements:{lantern:1},
-	label:"Nous faisons appel au Guetteur, qui n'est pas compatissant",
-	startdescription:"Nous portons la lumière. Nous pourrions trouver cette Porte Cachée. Ce sera difficile.",
-		  description:".",
-	linked: [{id:"explorevaultseal_hiddendoor_success",chance:30},
-	{id:"explorevaultseal_hiddendoor_failure",chance:100}]	  
-		  },
-		  
-		  	{id:"explorevaultseal_hiddendoor_highknock",
-	actionId: "explore",
-	requirements:{knock:10},
-	label:"Nous faisons appel au Corbeau-de-Plage, qui voit ce qui est perdu",
-	startdescription:"Nous avons une certaine capacité en matière d'ouverture. Nous trouverons sûrement cette Porte Cachée.",
-		  description:".",
-	linked: [{id:"explorevaultseal_hiddendoor_success",chance:90},
-	{id:"explorevaultseal_hiddendoor_failure",chance:100}]	  
-		  },
-		  
-		  	{id:"explorevaultseal_hiddendoor_midknock",
-	actionId: "explore",
-	requirements:{knock:5},
-	label:"Nous faisons appel au Corbeau-de-Plage, qui ouvre la terre",
-	startdescription:"Nous sommes habiles à découvrir des chemins dissimulés. Nous trouverons probablement cette Porte Cachée.",
-		  description:".",
-	linked: [{id:"explorevaultseal_hiddendoor_success",chance:70},
-	{id:"explorevaultseal_hiddendoor_failure",chance:100}]	  
-		  },
-		  
-		  	{id:"explorevaultseal_hiddendoor_lowknock",
-	actionId: "explore",
-	requirements:{knock:1},
-	label:"Nous faisons appel au Corbeau-de-Plage, à qui appartient ce qui n'est pas possédé",
-	startdescription:"Nous avons une certaine capacité en matière d'ouverture. Nous pourrions trouver cette Porte Cachée. Ce sera difficile.",
-		  description:".",
-	linked: [{id:"explorevaultseal_hiddendoor_success",chance:30},
-	{id:"explorevaultseal_hiddendoor_failure",chance:100}]	  
-		  },
-	
-			{
-	id: "explorevaultseal_hiddendoor_success",
-	actionId:"explore",
-	label: "Un chemin à travers la porte cachée",
-	startdescription: "De faibles lignes dans la pierre; une surface qui cède à la pression. Nous l'avons trouvé ! La Porte Cachée bouge, avec un frisson grinçant et une pluie de poussière.",
-	description: ".",
-	effects: {seal_hiddendoor:-1},
-	craftable: false,
-		linked: [{id:"explorevaulttick",chance:100}],
-		warmup:30
-	},
-	
-				{
-	id: "explorevaultseal_hiddendoor_failure",
-	actionId:"explore",
-	label: "Une recherche infructueuse",
-	startdescription: "Où se trouve-t-elle ? Nous pourrions utiliser plus de Clé, ou Lanterne.",
-	description: ".",
-	craftable: false,
-		linked: [{id:"explorevaulttick",chance:100}],
-		warmup:30
-	},
-	
-	
-	
-	{
-	id: "explorevaultseal_wardeddoor_encounter",
-	actionId:"explore",
-	label: "Une porte surveillée",
-	startdescription: "Cette porte a tenu bon pendant longtemps. À moins que nous n'amenions de la Forge ou de la Clé, elle tiendra bon encore longtemps.",
-	requirements: {seal_wardeddoor:1},
-	slots:[{id:"Assistance",label:"Assistance", description: "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",required: {follower:1,funds:1}}],
-	alternativerecipes: [
-	{id: "explorevaultseal_wardeddoor_highforge",chance:100},
-	{id: "explorevaultseal_wardeddoor_highknock",chance:100},
-	{id: "explorevaultseal_wardeddoor_midforge",chance:100},
-	{id: "explorevaultseal_wardeddoor_midknock",chance:100},
-	{id: "explorevaultseal_wardeddoor_lowforge",chance:100},
-	{id: "explorevaultseal_wardeddoor_lowknock",chance:100}],
-	warmup:30,
-	craftable: false,
-	linked: [{id:"explorevaultseal_wardeddoor_failure",chance:100}]
-	},
-	
-	{id:"explorevaultseal_wardeddoor_highforge",
-	actionId: "explore",
-	requirements:{forge:10},
-	label:"Nous faisons appel à la Forge des Jours, qui terminera toutes les nuits",
-	startdescription:"Nous allons sûrement briser cette porte blindé.",
-		  description:".",
-	linked: [{id:"explorevaultseal_wardeddoor_success",chance:90},
-	{id:"explorevaultseal_wardeddoor_failure",chance:100}]	  
-		  },
-		{id:"explorevaultseal_wardeddoor_midforge",
-	actionId: "explore",
-	requirements:{forge:5},
-	label:"Nous faisons appel à la Forge des Jours, qui met fin à ce qui ne changera pas",
-	startdescription:"Nos outils sont prêts. Nous devrions être en mesure de pénétrer cette porte blindée.",
-		  description:".",
-	linked: [{id:"explorevaultseal_wardeddoor_success",chance:70},
-	{id:"explorevaultseal_wardeddoor_failure",chance:100}]	  
-		  },
-		  	{id:"explorevaultseal_wardeddoor_lowforge",
-	actionId: "explore",
-	requirements:{forge:1},
-	label:"Nous faisons appel à la Forge des Jours, qui refait avec le feu",
-	startdescription:"Nous sommes prêts avec le feu de la Forge. Nous pourrions être capables de pénétrer cette porte blindée. Ce sera difficile.",
-		  description:".",
-	linked: [{id:"explorevaultseal_wardeddoor_success",chance:30},
-	{id:"explorevaultseal_wardeddoor_failure",chance:100}]	  
-		  },
-		  
-		  	{id:"explorevaultseal_wardeddoor_highknock",
-	actionId: "explore",
-	requirements:{knock:10},
-	label:"Nous faisons appel à la Hache Cornue, qui attend au seuil",
-	startdescription:"Nous avons une certaine capacité en matière d'ouverture. Nous allons sûrement briser cette porte blindée.",
-		  description:".",
-	linked: [{id:"explorevaultseal_wardeddoor_success",chance:90},
-	{id:"explorevaultseal_wardeddoor_failure",chance:100}]	  
-		  },
-		  
-		  	{id:"explorevaultseal_wardeddoor_midknock",
-	actionId: "explore",
-	requirements:{knock:5},
-	label:"Nous faisons appel à la Hache Cornue, qui autorise le passage lorsque le passage doit être autorisé",
-	startdescription:"We are skilled in uncovering warded ways. We'll probably penetrate this Warded Door.",
-		  description:".",
-	linked: [{id:"explorevaultseal_wardeddoor_success",chance:70},
-	{id:"explorevaultseal_wardeddoor_failure",chance:100}]	  
-		  },
-		  
-		  	{id:"explorevaultseal_wardeddoor_lowknock",
-	actionId: "explore",
-	requirements:{knock:1},
-	label:"Nous faisons appel à la Hache Cornue, qui porte deux lames",
-	startdescription:"We have some ability in the matter of opening. We might be able to penetrate this Warded Door. It'll be a struggle.",
-		  description:".",
-	linked: [{id:"explorevaultseal_wardeddoor_success",chance:30},
-	{id:"explorevaultseal_wardeddoor_failure",chance:100}]	  
-		  },
-	
-			{
-	id: "explorevaultseal_wardeddoor_success",
-	actionId:"explore",
-	label: "La Mort d'une Porte",
-	startdescription: "Toutes les portes doivent s'ouvrir, comme toutes les vies doivent prendre fin. Cette porte a trouvé sa fin, ici, aujourd'hui.",
-	description: ".",
-	effects: {seal_wardeddoor:-1},
-	craftable: false,
-		linked: [{id:"explorevaulttick",chance:100}],
-		warmup:30
-	},
-	
-				{
-	id: "explorevaultseal_wardeddoor_failure",
-	actionId:"explore",
-	label: "Les Finalités des Portes",
-	startdescription: "Doors have two purposes: to open, and to remain closed. Today, this door remains true to its second purpose.",
-	description: ".",
-	craftable: false,
-		linked: [{id:"explorevaulttick",chance:100}],
-		warmup:30
-	},
-	
-]
+  "recipes": [
+    {
+      "id": "explorevaultseal_hiddendoor_encounter",
+      "actionId": "explore",
+      "label": "Un passage caché",
+      "startdescription": "Il doit y avoir une porte ici. Mais sans de la Lanterne ou de la Clé, nous ne pouvons pas la découvrir.",
+      "requirements": {
+        "seal_hiddendoor": 1
+      },
+      "slots": [
+        {
+          "id": "Assistance",
+          "label": "Assistance",
+          "description": "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",
+          "required": {
+            "follower": 1,
+            "funds": 1
+          }
+        }
+      ],
+      "alternativerecipes": [
+        {
+          "id": "explorevaultseal_hiddendoor_highlantern",
+          "chance": 100
+        },
+        {
+          "id": "explorevaultseal_hiddendoor_highknock",
+          "chance": 100
+        },
+        {
+          "id": "explorevaultseal_hiddendoor_midlantern",
+          "chance": 100
+        },
+        {
+          "id": "explorevaultseal_hiddendoor_midknock",
+          "chance": 100
+        },
+        {
+          "id": "explorevaultseal_hiddendoor_lowlantern",
+          "chance": 100
+        },
+        {
+          "id": "explorevaultseal_hiddendoor_lowknock",
+          "chance": 100
+        }
+      ],
+      "warmup": 30,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "explorevaultseal_hiddendoor_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "explorevaultseal_hiddendoor_highlantern",
+      "actionId": "explore",
+      "requirements": {
+        "lantern": 10
+      },
+      "label": "Nous faisons appel au Guetteur, qui illumine",
+      "startdescription": "Nous trouverons presque certainement cette Porte Cachée.",
+      "description": ".",
+      "linked": [
+        {
+          "id": "explorevaultseal_hiddendoor_success",
+          "chance": 90
+        },
+        {
+          "id": "explorevaultseal_hiddendoor_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "explorevaultseal_hiddendoor_midlantern",
+      "actionId": "explore",
+      "requirements": {
+        "lantern": 5
+      },
+      "label": "Nous faisons appel au Guetteur, qui navigue",
+      "startdescription": "Nos sens sont aiguisés. Nous devrions trouver cette Porte Cachée.",
+      "description": ".",
+      "linked": [
+        {
+          "id": "explorevaultseal_hiddendoor_success",
+          "chance": 70
+        },
+        {
+          "id": "explorevaultseal_hiddendoor_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "explorevaultseal_hiddendoor_lowlantern",
+      "actionId": "explore",
+      "requirements": {
+        "lantern": 1
+      },
+      "label": "Nous faisons appel au Guetteur, qui n'est pas compatissant",
+      "startdescription": "Nous portons la lumière. Nous pourrions trouver cette Porte Cachée. Ce sera difficile.",
+      "description": ".",
+      "linked": [
+        {
+          "id": "explorevaultseal_hiddendoor_success",
+          "chance": 30
+        },
+        {
+          "id": "explorevaultseal_hiddendoor_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "explorevaultseal_hiddendoor_highknock",
+      "actionId": "explore",
+      "requirements": {
+        "knock": 10
+      },
+      "label": "Nous faisons appel au Corbeau-de-Plage, qui voit ce qui est perdu",
+      "startdescription": "Nous avons une certaine capacité en matière d'ouverture. Nous trouverons sûrement cette Porte Cachée.",
+      "description": ".",
+      "linked": [
+        {
+          "id": "explorevaultseal_hiddendoor_success",
+          "chance": 90
+        },
+        {
+          "id": "explorevaultseal_hiddendoor_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "explorevaultseal_hiddendoor_midknock",
+      "actionId": "explore",
+      "requirements": {
+        "knock": 5
+      },
+      "label": "Nous faisons appel au Corbeau-de-Plage, qui ouvre la terre",
+      "startdescription": "Nous sommes habiles à découvrir des chemins dissimulés. Nous trouverons probablement cette Porte Cachée.",
+      "description": ".",
+      "linked": [
+        {
+          "id": "explorevaultseal_hiddendoor_success",
+          "chance": 70
+        },
+        {
+          "id": "explorevaultseal_hiddendoor_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "explorevaultseal_hiddendoor_lowknock",
+      "actionId": "explore",
+      "requirements": {
+        "knock": 1
+      },
+      "label": "Nous faisons appel au Corbeau-de-Plage, à qui appartient ce qui n'est pas possédé",
+      "startdescription": "Nous avons une certaine capacité en matière d'ouverture. Nous pourrions trouver cette Porte Cachée. Ce sera difficile.",
+      "description": ".",
+      "linked": [
+        {
+          "id": "explorevaultseal_hiddendoor_success",
+          "chance": 30
+        },
+        {
+          "id": "explorevaultseal_hiddendoor_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "explorevaultseal_hiddendoor_success",
+      "actionId": "explore",
+      "label": "Un chemin à travers la porte cachée",
+      "startdescription": "De faibles lignes dans la pierre; une surface qui cède à la pression. Nous l'avons trouvé ! La Porte Cachée bouge, avec un frisson grinçant et une pluie de poussière.",
+      "description": ".",
+      "effects": {
+        "seal_hiddendoor": -1
+      },
+      "craftable": false,
+      "linked": [
+        {
+          "id": "explorevaulttick",
+          "chance": 100
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "explorevaultseal_hiddendoor_failure",
+      "actionId": "explore",
+      "label": "Une recherche infructueuse",
+      "startdescription": "Où se trouve-t-elle ? Nous pourrions utiliser plus de Clé, ou Lanterne.",
+      "description": ".",
+      "craftable": false,
+      "linked": [
+        {
+          "id": "explorevaulttick",
+          "chance": 100
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "explorevaultseal_wardeddoor_encounter",
+      "actionId": "explore",
+      "label": "Une porte surveillée",
+      "startdescription": "Cette porte a tenu bon pendant longtemps. À moins que nous n'amenions de la Forge ou de la Clé, elle tiendra bon encore longtemps.",
+      "requirements": {
+        "seal_wardeddoor": 1
+      },
+      "slots": [
+        {
+          "id": "Assistance",
+          "label": "Assistance",
+          "description": "Les Fonds sont essentiels pour les expéditions. Les Adeptes me permettront de franchir des obstacles.",
+          "required": {
+            "follower": 1,
+            "funds": 1
+          }
+        }
+      ],
+      "alternativerecipes": [
+        {
+          "id": "explorevaultseal_wardeddoor_highforge",
+          "chance": 100
+        },
+        {
+          "id": "explorevaultseal_wardeddoor_highknock",
+          "chance": 100
+        },
+        {
+          "id": "explorevaultseal_wardeddoor_midforge",
+          "chance": 100
+        },
+        {
+          "id": "explorevaultseal_wardeddoor_midknock",
+          "chance": 100
+        },
+        {
+          "id": "explorevaultseal_wardeddoor_lowforge",
+          "chance": 100
+        },
+        {
+          "id": "explorevaultseal_wardeddoor_lowknock",
+          "chance": 100
+        }
+      ],
+      "warmup": 30,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "explorevaultseal_wardeddoor_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "explorevaultseal_wardeddoor_highforge",
+      "actionId": "explore",
+      "requirements": {
+        "forge": 10
+      },
+      "label": "Nous faisons appel à la Forge des Jours, qui terminera toutes les nuits",
+      "startdescription": "Nous allons sûrement briser cette porte blindé.",
+      "description": ".",
+      "linked": [
+        {
+          "id": "explorevaultseal_wardeddoor_success",
+          "chance": 90
+        },
+        {
+          "id": "explorevaultseal_wardeddoor_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "explorevaultseal_wardeddoor_midforge",
+      "actionId": "explore",
+      "requirements": {
+        "forge": 5
+      },
+      "label": "Nous faisons appel à la Forge des Jours, qui met fin à ce qui ne changera pas",
+      "startdescription": "Nos outils sont prêts. Nous devrions être en mesure de pénétrer cette porte blindée.",
+      "description": ".",
+      "linked": [
+        {
+          "id": "explorevaultseal_wardeddoor_success",
+          "chance": 70
+        },
+        {
+          "id": "explorevaultseal_wardeddoor_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "explorevaultseal_wardeddoor_lowforge",
+      "actionId": "explore",
+      "requirements": {
+        "forge": 1
+      },
+      "label": "Nous faisons appel à la Forge des Jours, qui refait avec le feu",
+      "startdescription": "Nous sommes prêts avec le feu de la Forge. Nous pourrions être capables de pénétrer cette porte blindée. Ce sera difficile.",
+      "description": ".",
+      "linked": [
+        {
+          "id": "explorevaultseal_wardeddoor_success",
+          "chance": 30
+        },
+        {
+          "id": "explorevaultseal_wardeddoor_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "explorevaultseal_wardeddoor_highknock",
+      "actionId": "explore",
+      "requirements": {
+        "knock": 10
+      },
+      "label": "Nous faisons appel à la Hache Cornue, qui attend au seuil",
+      "startdescription": "Nous avons une certaine capacité en matière d'ouverture. Nous allons sûrement briser cette porte blindée.",
+      "description": ".",
+      "linked": [
+        {
+          "id": "explorevaultseal_wardeddoor_success",
+          "chance": 90
+        },
+        {
+          "id": "explorevaultseal_wardeddoor_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "explorevaultseal_wardeddoor_midknock",
+      "actionId": "explore",
+      "requirements": {
+        "knock": 5
+      },
+      "label": "Nous faisons appel à la Hache Cornue, qui autorise le passage lorsque le passage doit être autorisé",
+      "startdescription": "We are skilled in uncovering warded ways. We'll probably penetrate this Warded Door.",
+      "description": ".",
+      "linked": [
+        {
+          "id": "explorevaultseal_wardeddoor_success",
+          "chance": 70
+        },
+        {
+          "id": "explorevaultseal_wardeddoor_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "explorevaultseal_wardeddoor_lowknock",
+      "actionId": "explore",
+      "requirements": {
+        "knock": 1
+      },
+      "label": "Nous faisons appel à la Hache Cornue, qui porte deux lames",
+      "startdescription": "We have some ability in the matter of opening. We might be able to penetrate this Warded Door. It'll be a struggle.",
+      "description": ".",
+      "linked": [
+        {
+          "id": "explorevaultseal_wardeddoor_success",
+          "chance": 30
+        },
+        {
+          "id": "explorevaultseal_wardeddoor_failure",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "explorevaultseal_wardeddoor_success",
+      "actionId": "explore",
+      "label": "La Mort d'une Porte",
+      "startdescription": "Toutes les portes doivent s'ouvrir, comme toutes les vies doivent prendre fin. Cette porte a trouvé sa fin, ici, aujourd'hui.",
+      "description": ".",
+      "effects": {
+        "seal_wardeddoor": -1
+      },
+      "craftable": false,
+      "linked": [
+        {
+          "id": "explorevaulttick",
+          "chance": 100
+        }
+      ],
+      "warmup": 30
+    },
+    {
+      "id": "explorevaultseal_wardeddoor_failure",
+      "actionId": "explore",
+      "label": "Les Finalités des Portes",
+      "startdescription": "Doors have two purposes: to open, and to remain closed. Today, this door remains true to its second purpose.",
+      "description": ".",
+      "craftable": false,
+      "linked": [
+        {
+          "id": "explorevaulttick",
+          "chance": 100
+        }
+      ],
+      "warmup": 30
+    }
+  ]
 }
-

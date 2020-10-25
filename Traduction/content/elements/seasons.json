@@ -1,99 +1,143 @@
-{"elements":
-    [
-		{id: "dayacquaintances",
-	label: "Une journée pour les nouvelles rencontres",
-	description: "Je pourrais trouver une âme soeur.",
-	aspects: {season:1},
-	lifetime:1
-	},	
-	
-			{id: "daypatrons",
-	label: "Une journée pour les nouveaux mécènes",
-	description: "Je pourrais trouver quelqu'un qui pourrait m'aider.",
-	aspects: {season:1},
-	lifetime:1
-	},	
-				{id: "daycriminals",
-	label: "Une journée pour les connexions douteuses",
-	description: "Je pourrais trouver quelqu'un prêt à se salir les mains.",
-	aspects: {season:1},
-	lifetime:1
-	},	
-				{id: "dayplaces",
-	label: "Une journée pour les cartographes",
-	description: "Je pourrais tomber sur un endroit intéressant.",
-	aspects: {season:1},
-	lifetime:1
-	},	
-	
-	{id: "seasonsickness",
-	label: "Une saison de maladie",
-	description: "Des influences malveillantes entachent l'air de la nuit. [Ma santé pourrait bientôt en souffrir. Les adeptes blessés peuvent mourir.]",
-	aspects: {season:1},
-	lifetime:1
-	},	
-	{id: "seasonserenities",
-	label: "Une saison de sérénité",
-	description: "Demain sera peut-être un jour meilleur.",
-	comments: "currently unused",
-	aspects: {season:1},
-	lifetime:1
-	},
-		{id: "seasonsuspicion",
-	label: "Une saison de suspicion",
-	description: "Suis-je surveillé ?",
-	aspects: {season:1},
-	lifetime:1
-	},
-			{id: "seasondespair",
-	label: "Une saison de désespoir",
-	description: "La nuit m'attend.",
-	aspects: {season:1},
-	lifetime:1
-	},
-{id: "seasonvisions",
-	label: "Une saison de visions",
-	description: "De telles vues.",
-	aspects: {season:1},
-	lifetime:1
-	},
-	{id: "seasonambitions",
-	label: "Une saison d'ambitions",
-	description: "C'est la saison où les vents du Bois s'inversent : un temps où les appétits et les mortels se lèvent tous les deux.",
-	aspects: {season:1},
-	lifetime:1
-	},	
-		{id: "seasonsilence",
-	label: "Une saison de silence",
-	description: "Ce sont les jours de l'anticipation.",
-	aspects: {season:1},
-	lifetime:1
-	},
-			{id: "seasonardours",
-	label: "Une saison d'ardeurs",
-	description: "Nous sommes tous à la fois un singe et un ange.",
-	aspects: {season:1},
-	lifetime:1
-	},
-	{id:"schememurder",
-	label:"Un projet meurtrier",
-	aspects:{season:1},
-	description:"Traces laissées par la décision d'un rival de se déplacer contre un ennemi.",
-	lifetime:1,
-	icon:"skillhealthd_strength"},
-	
-	{id:"schemeexpedition",
-	label:"Un projet audacieux",
-	aspects:{season:1},
-	description:"Traces laissées par la décision d'un rival d'agir avec audace.",
-	lifetime:1,
-	icon:"vaultrendingmountainsdefault"},
-	{id:"schemeactivities",
-	label:"Un projet prudent",
-	aspects:{season:1},
-	lifetime:1,
-	description:"Traces laissées par la décision d'un rival d'agir avec prudence.",
-	icon:"contentment"},
-	
-	]
-};
+{
+  "elements": [
+    {
+      "id": "dayacquaintances",
+      "label": "Une journée pour les nouvelles rencontres",
+      "description": "Je pourrais trouver une âme soeur.",
+      "aspects": {
+        "season": 1
+      },
+      "lifetime": 1
+    },
+    {
+      "id": "daypatrons",
+      "label": "Une journée pour les nouveaux mécènes",
+      "description": "Je pourrais trouver quelqu'un qui pourrait m'aider.",
+      "aspects": {
+        "season": 1
+      },
+      "lifetime": 1
+    },
+    {
+      "id": "daycriminals",
+      "label": "Une journée pour les connexions douteuses",
+      "description": "Je pourrais trouver quelqu'un prêt à se salir les mains.",
+      "aspects": {
+        "season": 1
+      },
+      "lifetime": 1
+    },
+    {
+      "id": "dayplaces",
+      "label": "Une journée pour les cartographes",
+      "description": "Je pourrais tomber sur un endroit intéressant.",
+      "aspects": {
+        "season": 1
+      },
+      "lifetime": 1
+    },
+    {
+      "id": "seasonsickness",
+      "label": "Une saison de maladie",
+      "description": "Des influences malveillantes entachent l'air de la nuit. [Ma santé pourrait bientôt en souffrir. Les adeptes blessés peuvent mourir.]",
+      "aspects": {
+        "season": 1
+      },
+      "lifetime": 1
+    },
+    {
+      "id": "seasonserenities",
+      "label": "Une saison de sérénité",
+      "description": "Demain sera peut-être un jour meilleur.",
+      "comments": "currently unused",
+      "aspects": {
+        "season": 1
+      },
+      "lifetime": 1
+    },
+    {
+      "id": "seasonsuspicion",
+      "label": "Une saison de suspicion",
+      "description": "Suis-je surveillé ?",
+      "aspects": {
+        "season": 1
+      },
+      "lifetime": 1
+    },
+    {
+      "id": "seasondespair",
+      "label": "Une saison de désespoir",
+      "description": "La nuit m'attend.",
+      "aspects": {
+        "season": 1
+      },
+      "lifetime": 1
+    },
+    {
+      "id": "seasonvisions",
+      "label": "Une saison de visions",
+      "description": "De telles vues.",
+      "aspects": {
+        "season": 1
+      },
+      "lifetime": 1
+    },
+    {
+      "id": "seasonambitions",
+      "label": "Une saison d'ambitions",
+      "description": "C'est la saison où les vents du Bois s'inversent : un temps où les appétits et les mortels se lèvent tous les deux.",
+      "aspects": {
+        "season": 1
+      },
+      "lifetime": 1
+    },
+    {
+      "id": "seasonsilence",
+      "label": "Une saison de silence",
+      "description": "Ce sont les jours de l'anticipation.",
+      "aspects": {
+        "season": 1
+      },
+      "lifetime": 1
+    },
+    {
+      "id": "seasonardours",
+      "label": "Une saison d'ardeurs",
+      "description": "Nous sommes tous à la fois un singe et un ange.",
+      "aspects": {
+        "season": 1
+      },
+      "lifetime": 1
+    },
+    {
+      "id": "schememurder",
+      "label": "Un projet meurtrier",
+      "aspects": {
+        "season": 1
+      },
+      "description": "Traces laissées par la décision d'un rival de se déplacer contre un ennemi.",
+      "lifetime": 1,
+      "icon": "skillhealthd_strength"
+    },
+    {
+      "id": "schemeexpedition",
+      "label": "Un projet audacieux",
+      "aspects": {
+        "season": 1
+      },
+      "description": "Traces laissées par la décision d'un rival d'agir avec audace.",
+      "lifetime": 1,
+      "icon": "vaultrendingmountainsdefault"
+    },
+    {
+      "id": "schemeactivities",
+      "label": "Un projet prudent",
+      "aspects": {
+        "season": 1
+      },
+      "lifetime": 1,
+      "description": "Traces laissées par la décision d'un rival d'agir avec prudence.",
+      "icon": "contentment"
+    }
+  ]
+}

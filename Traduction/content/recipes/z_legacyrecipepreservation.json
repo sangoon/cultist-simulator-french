@@ -1,41 +1,44 @@
- {"recipes":
- [
-
-     {id:"translatevakh1int",comments:"here to prevent possible legacy save issues only - orig hint misnamed",actionId:"z",
-	 requirements:{textvak:1},
-	  hintonly:true,
- craftable:false},
- 
- 				{
-        id: "studyincreasehealthskillc",
-comments:"Compatibilité à posteriori uniquement",
-        actionId: "study",
-		description:"Mes efforts ont été vains.",
-		effects:{health:1},
-		craftable:false
-
+{
+  "recipes": [
+    {
+      "id": "translatevakh1int",
+      "comments": "here to prevent possible legacy save issues only - orig hint misnamed",
+      "actionId": "z",
+      "requirements": {
+        "textvak": 1
+      },
+      "hintonly": true,
+      "craftable": false
     },
-	
-					{
-        id: "studyincreasereasonskillc",
-comments:"Compatibilité à posteriori uniquement",
-        actionId: "study",
-		description:"Mes efforts ont été vains.",
-		effects:{reason:1},
-		craftable:false
-
+    {
+      "id": "studyincreasehealthskillc",
+      "comments": "Compatibilité à posteriori uniquement",
+      "actionId": "study",
+      "description": "Mes efforts ont été vains.",
+      "effects": {
+        "health": 1
+      },
+      "craftable": false
     },
-	
-					{
-        id: "studyincreasepassionskillc",
-comments:"Compatibilité à posteriori uniquement",
-        actionId: "study",
-		description:"Mes efforts ont été vains.",
-		effects:{passion:1},
-		craftable:false
-
+    {
+      "id": "studyincreasereasonskillc",
+      "comments": "Compatibilité à posteriori uniquement",
+      "actionId": "study",
+      "description": "Mes efforts ont été vains.",
+      "effects": {
+        "reason": 1
+      },
+      "craftable": false
     },
-
-	
-]
+    {
+      "id": "studyincreasepassionskillc",
+      "comments": "Compatibilité à posteriori uniquement",
+      "actionId": "study",
+      "description": "Mes efforts ont été vains.",
+      "effects": {
+        "passion": 1
+      },
+      "craftable": false
+    }
+  ]
 }

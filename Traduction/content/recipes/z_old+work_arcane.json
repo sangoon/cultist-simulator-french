@@ -1,83 +1,118 @@
 {
-"recipes": [
-	   {
-        id: "conjurationpower",
-        label: "La Clé de mon Coeur",
-        actionId: "work",
-        requirements: {ritual: 1, knock: 2, follower:1,ascensionpowera:1},
-        effects: {},
-        startdescription: "Je peux utiliser ce rite pour offrir mon corps à une Heure ? Le pouvoir vient avec eux comme un parfum. Bien sûr... Je ne sais pas quelle Heure pourrait venir.",
-        description: "Le rituel est terminé. La Porte s'ouvre.",
-        warmup: 30,
-        craftable: false,
-		comments: "legacy",
-		burnimage: "flammarion"
+  "recipes": [
+    {
+      "id": "conjurationpower",
+      "label": "La Clé de mon Coeur",
+      "actionId": "work",
+      "requirements": {
+        "ritual": 1,
+        "knock": 2,
+        "follower": 1,
+        "ascensionpowera": 1
+      },
+      "effects": {},
+      "startdescription": "Je peux utiliser ce rite pour offrir mon corps à une Heure ? Le pouvoir vient avec eux comme un parfum. Bien sûr... Je ne sais pas quelle Heure pourrait venir.",
+      "description": "Le rituel est terminé. La Porte s'ouvre.",
+      "warmup": 30,
+      "craftable": false,
+      "comments": "legacy",
+      "burnimage": "flammarion"
     },
-	  {
-        id: "conjurationpowerclue",
-        label: "La Clé de mon Coeur ?",
-        actionId: "work",
-        requirements: {ritual: 1,ascensionpowera:1},
-        effects: {mystique: 1},
-        startdescription: "Puis-je utiliser ce rite pour offrir mon corps à une Heure ? Le pouvoir vient avec eux comme un parfum.",
-        description: "Cela n'a pas fonctionné. J'ai besoin d'une autre invocation également - quelque chose pour ouvrir la voie. Et cela exige un sacrifice volontaire.",
-        warmup: 30,
-        craftable: false,
-		comments: "legacy",
-		burnimage: "flammarion"
+    {
+      "id": "conjurationpowerclue",
+      "label": "La Clé de mon Coeur ?",
+      "actionId": "work",
+      "requirements": {
+        "ritual": 1,
+        "ascensionpowera": 1
+      },
+      "effects": {
+        "mystique": 1
+      },
+      "startdescription": "Puis-je utiliser ce rite pour offrir mon corps à une Heure ? Le pouvoir vient avec eux comme un parfum.",
+      "description": "Cela n'a pas fonctionné. J'ai besoin d'une autre invocation également - quelque chose pour ouvrir la voie. Et cela exige un sacrifice volontaire.",
+      "warmup": 30,
+      "craftable": false,
+      "comments": "legacy",
+      "burnimage": "flammarion"
     },
-	{
-        id: "conjurationenlightenment",
-        label: "La Porte dans mes Rêves",
-        actionId: "work",
-        requirements: {ritual: 1, knock: 2, funds:1,ascensionenlightenmenta:1},
-        effects: {},
-        startdescription: "Je peux utiliser ce rite pour suivre les traces du Guetteur, et découvrir la Maison sans Murs.",
-        description: "Le rituel est terminé. La Porte s'ouvre.",
-        warmup: 30,
-        craftable: false,
-		comments: "legacy",
-		burnimage: "flammarion"
+    {
+      "id": "conjurationenlightenment",
+      "label": "La Porte dans mes Rêves",
+      "actionId": "work",
+      "requirements": {
+        "ritual": 1,
+        "knock": 2,
+        "funds": 1,
+        "ascensionenlightenmenta": 1
+      },
+      "effects": {},
+      "startdescription": "Je peux utiliser ce rite pour suivre les traces du Guetteur, et découvrir la Maison sans Murs.",
+      "description": "Le rituel est terminé. La Porte s'ouvre.",
+      "warmup": 30,
+      "craftable": false,
+      "comments": "legacy",
+      "burnimage": "flammarion"
     },
-		{
-        id: "conjurationenlightenmentclue",
-        label: "La Porte dans mes Rêves ?",
-        actionId: "work",
-        requirements: {ritual: 1,ascensionenlightenmenta:1},
-        startdescription: "Puis-je utiliser ce rite pour suivre les traces du Guetteur et découvrir la maison sans murs ?",
-        description: "Cela n'a pas fonctionné. Je dois également faire appel à un autre pouvoir, un pouvoir d'ouverture. Et j'aurai besoin de Fonds, pour acheter les bougies en cire rare qui éclaireront le chemin du Guetteur.",
-        warmup: 30,
-       craftable: false,
-		comments: "legacy",
-		burnimage: "flammarion"
+    {
+      "id": "conjurationenlightenmentclue",
+      "label": "La Porte dans mes Rêves ?",
+      "actionId": "work",
+      "requirements": {
+        "ritual": 1,
+        "ascensionenlightenmenta": 1
+      },
+      "startdescription": "Puis-je utiliser ce rite pour suivre les traces du Guetteur et découvrir la maison sans murs ?",
+      "description": "Cela n'a pas fonctionné. Je dois également faire appel à un autre pouvoir, un pouvoir d'ouverture. Et j'aurai besoin de Fonds, pour acheter les bougies en cire rare qui éclaireront le chemin du Guetteur.",
+      "warmup": 30,
+      "craftable": false,
+      "comments": "legacy",
+      "burnimage": "flammarion"
     },
-	{
-        id: "ascensionpowerapromotion",
-        label: "LE GRAAL ROUGE ARRIVE",
-        actionId: "grailminorpromotion",
-        requirements: {},
-		slots: [{id:"Dedication",label:"Dévouement",required: {passion:1}}],
-         startdescription: "Mon coeur se gonfle, mon sang brûle. Je suis très proche. Je dois me dévouer avec plus de ferveur.",
-        description: "Le rite a échoué ! J'étais proche - aussi proche que la flamme d'une bougie, que le sang d'un coeur. Je dois essayer à nouveau.",
-        warmup: 60,
-       craftable: false,
-		comments: "legacy",
-		burnimage: "flammarion"
+    {
+      "id": "ascensionpowerapromotion",
+      "label": "LE GRAAL ROUGE ARRIVE",
+      "actionId": "grailminorpromotion",
+      "requirements": {},
+      "slots": [
+        {
+          "id": "Dedication",
+          "label": "Dévouement",
+          "required": {
+            "passion": 1
+          }
+        }
+      ],
+      "startdescription": "Mon coeur se gonfle, mon sang brûle. Je suis très proche. Je dois me dévouer avec plus de ferveur.",
+      "description": "Le rite a échoué ! J'étais proche - aussi proche que la flamme d'une bougie, que le sang d'un coeur. Je dois essayer à nouveau.",
+      "warmup": 60,
+      "craftable": false,
+      "comments": "legacy",
+      "burnimage": "flammarion"
     },
-		{
-        id: "ascensionenlightenmentapromotion",
-        label: "J'ENTENDS LES PAS DU GUETTEUR",
-        actionId: "watchmanminorpromotion",
-        requirements: {},
-        effects: {mystique: 1},
-		slots: [{id:"Dedication",label:"Dévouement",required: {reason:1}}],
-        startdescription: "Les murs du monde tremblent comme de la soie. Je suis très proche. Toutes mes pensées doivent converger.",
-        description: "Je l'ai touché du bout des doigts, la compréhension que je recherche. Si proche. Je dois essayer à nouveau.",
-        warmup: 60,
-        craftable: false,
-		comments: "legacy",
-		burnimage: "flammarion"
-    },
-	
-]
+    {
+      "id": "ascensionenlightenmentapromotion",
+      "label": "J'ENTENDS LES PAS DU GUETTEUR",
+      "actionId": "watchmanminorpromotion",
+      "requirements": {},
+      "effects": {
+        "mystique": 1
+      },
+      "slots": [
+        {
+          "id": "Dedication",
+          "label": "Dévouement",
+          "required": {
+            "reason": 1
+          }
+        }
+      ],
+      "startdescription": "Les murs du monde tremblent comme de la soie. Je suis très proche. Toutes mes pensées doivent converger.",
+      "description": "Je l'ai touché du bout des doigts, la compréhension que je recherche. Si proche. Je dois essayer à nouveau.",
+      "warmup": 60,
+      "craftable": false,
+      "comments": "legacy",
+      "burnimage": "flammarion"
+    }
+  ]
 }

@@ -1,375 +1,697 @@
 {
-"recipes": [
-{id: "getcommissionaladim",
-label:"Obtenir une commande du Dr al-Adim",
-actionId: "talk",
-requirements: {aladimready: 1},
-startdescription: "Le médecin aimerait que je l'aide dans ses recherches.",
-description: "Ce qu'il lui faut.",
-warmup: 10,
-deckeffect: {"aladimcommissions":1},
-aspects: {commissiongiven:1},
-craftable: true
-
-},
-
-{id: "getcommissionbechet",
-label:"Obtenir une commande de Mme Bechet",
-actionId: "talk",
-requirements: {bechetready: 1},
-startdescription: "Elle cherche des articles pour le célèbre 'Kerisham Review'.",
-description: "Ce qu'il lui faut.",
-warmup: 10,
-deckeffect: {"bechetcommissions":1},
-aspects: {commissiongiven:1},
-craftable: true
-
-},
-
-{id: "getcommissionjannings",
-label:"Obtenir une commande du Comte Jannings",
-actionId: "talk",
-requirements: {janningsready: 1},
-startdescription: "La confrérie du bon Comte en Europe demande une recherche particulière.",
-description: "Ce qu'il lui faut.",
-warmup: 10,
-deckeffect: {"janningscommissions":1},
-aspects: {commissiongiven:1},
-craftable: true
-
-},
-{id: "getcommissionpoppy",
-label:"Obtenir une commande de Poppy Lascelles",
-actionId: "talk",
-requirements: {poppycommissionready: 1},
-startdescription: "'Je suis,' dit Poppy avec un rire de fille, 'curieuse sur, oh vous savez, les arts du sang et de la glace. C'est idiot, mais permettez à une vieille femme ses lubies. M'aiderez-vous ?'",
-description: "Ce qu'il lui faut.",
-warmup: 10,
-deckeffect: {"poppycommissions":1},
-aspects: {commissiongiven:1},
-craftable: true
-
-},
-
-{id: "fulfilcommissionaladimsecrethistoriesc",
-label:"Réaliser une mission pour le Dr al-Adim",
-actionId: "talk",
-requirements: {commissionarticlesecrethistoriesc: 1,aladim:1,article:1,secrethistories:6},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce que le médecin a demandé.",
-description: "j'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-
-{id: "fulfilcommissionaladimsecrethistoriesb",
-label:"Réaliser une mission pour le Dr al-Adim",
-actionId: "talk",
-requirements: {commissionarticlesecrethistoriesb: 1,aladim:1,article:1,secrethistories:4},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce que le médecin a demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-{id: "fulfilcommissionaladimsecrethistories",
-label:"Réaliser une mission pour le Dr al-Adim",
-actionId: "talk",
-requirements: {commissionarticlesecrethistories: 1,aladim:1,article:1,secrethistories:2},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce que le médecin a demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-
-
-{id: "fulfilcommissionaladimlanternc",
-label:"Réaliser une mission pour le Dr al-Adim",
-actionId: "talk",
-requirements: {commissionarticlelanternc: 1,aladim:1,article:1,lantern:6},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce que le médecin a demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-
-{id: "fulfilcommissionaladimlanternb",
-label:"Réaliser une mission pour le Dr al-Adim",
-actionId: "talk",
-requirements: {commissionarticlelanternb: 1,aladim:1,article:1,lantern:4},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce que le médecin a demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-{id: "fulfilcommissionaladimlantern",
-label:"Réaliser une mission pour le Dr al-Adim",
-actionId: "talk",
-requirements: {commissionarticlelantern: 1,aladim:1,article:1,lantern:2},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce que le médecin a demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-
-
-{id: "fulfilcommissionbechetforgec",
-label:"Réaliser une mission pour Mme Bechet",
-actionId: "talk",
-requirements: {commissionarticleforgec: 1,bechet:1,article:1,forge:6},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-{id: "fulfilcommissionbechetforgeb",
-label:"Réaliser une mission pour Mme Bechet",
-actionId: "talk",
-requirements: {commissionarticleforgeb: 1,bechet:1,article:1,forge:4},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-{id: "fulfilcommissionbechetforge",
-label:"Réaliser une mission pour Mme Bechet",
-actionId: "talk",
-requirements: {commissionarticleforge: 1,bechet:1,article:1,forge:2},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-
-
-{id: "fulfilcommissionbechetgrailc",
-label:"Réaliser une mission pour Mme Bechet",
-actionId: "talk",
-requirements: {commissionarticlegrailc: 1,bechet:1,article:1,grail:6},
-effects: {mystique:1,article:-1,glimmering:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-{id: "fulfilcommissionbechetgrailb",
-label:"Réaliser une mission pour Mme Bechet",
-actionId: "talk",
-requirements: {commissionarticlegrailb: 1,bechet:1,article:1,grail:4},
-effects: {mystique:1,article:-1,glimmering:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-{id: "fulfilcommissionbechetgrail",
-label:"Réaliser une mission pour Mme Bechet",
-actionId: "talk",
-requirements: {commissionarticlegrail: 1,bechet:1,article:1,grail:2},
-effects: {mystique:1,article:-1,glimmering:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-
-
-{id: "fulfilcommissionbechetmothc",
-label:"Réaliser une mission pour Mme Bechet",
-actionId: "talk",
-requirements: {commissionarticlemothc: 1,bechet:1,article:1,moth:6},
-effects: {mystique:1,article:-1,glimmering:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-{id: "fulfilcommissionbechetmothb",
-label:"Réaliser une mission pour Mme Bechet",
-actionId: "talk",
-requirements: {commissionarticlemothb: 1,bechet:1,article:1,moth:4},
-effects: {mystique:1,article:-1,glimmering:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-{id: "fulfilcommissionbechetmoth",
-label:"Réaliser une mission pour Mme Bechet",
-actionId: "talk",
-requirements: {commissionarticlemoth: 1,bechet:1,article:1,moth:2},
-effects: {mystique:1,article:-1,glimmering:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-
-
-{id: "fulfilcommissionjanningsheartc",
-label:"Réaliser une mission pour le Comte Jannings",
-actionId: "talk",
-requirements: {commissionarticleheartc: 1,jannings:1,article:1,heart:6},
-effects: {mystique:1,article:-1,glimmering:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-{id: "fulfilcommissionjanningsheartb",
-label:"Réaliser une mission pour le Comte Jannings",
-actionId: "talk",
-requirements: {commissionarticleheartb: 1,jannings:1,article:1,heart:4},
-effects: {mystique:1,article:-1,glimmering:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-{id: "fulfilcommissionjanningsheart",
-label:"Réaliser une mission pour le Comte Jannings",
-actionId: "talk",
-requirements: {commissionarticleheart: 1,jannings:1,article:1,heart:2},
-effects: {mystique:1,article:-1,glimmering:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-
-
-
-{id: "fulfilcommissionjanningsedgec",
-label:"Réaliser une mission pour le Comte Jannings",
-actionId: "talk",
-requirements: {commissionarticleedgec: 1,jannings:1,article:1,edge:6},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-{id: "fulfilcommissionjanningsedgeb",
-label:"Réaliser une mission pour le Comte Jannings",
-actionId: "talk",
-requirements: {commissionarticleedgeb: 1,jannings:1,article:1,edge:4},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-{id: "fulfilcommissionjanningsedge",
-label:"Réaliser une mission pour le Comte Jannings",
-actionId: "talk",
-requirements: {commissionarticleedge: 1,jannings:1,article:1,edge:2},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce qui a été demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-
-
-{id: "fulfilcommissionpoppycommissionwinterc",
-label:"Réaliser une mission pour Poppy Lascelles",
-actionId: "talk",
-requirements: {commissionarticlewinterc: 1,poppycommission:1,article:1,winter:6},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce que Poppy a demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-
-{id: "fulfilcommissionpoppycommissionwinterb",
-label:"Réaliser une mission pour Poppy Lascelles",
-actionId: "talk",
-requirements: {commissionarticlewinterb: 1,poppycommission:1,article:1,winter:4},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce que Poppy a demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-{id: "fulfilcommissionpoppycommissionwinter",
-label:"Réaliser une mission pour Poppy Lascelles",
-actionId: "talk",
-requirements: {commissionarticlewinter: 1,poppycommission:1,article:1,winter:2},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce que Poppy a demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-
-
-{id: "fulfilcommissionpoppycommissionknockc",
-label:"Réaliser une mission pour Poppy Lascelles",
-actionId: "talk",
-requirements: {commissionarticleknockc: 1,poppycommission:1,article:1,knock:6},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce que Poppy a demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-
-{id: "fulfilcommissionpoppycommissionknockb",
-label:"Réaliser une mission pour Poppy Lascelles",
-actionId: "talk",
-requirements: {commissionarticleknockb: 1,poppycommission:1,article:1,knock:4},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce que Poppy a demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-{id: "fulfilcommissionpoppycommissionknock",
-label:"Réaliser une mission pour Poppy Lascelles",
-actionId: "talk",
-requirements: {commissionarticleknock: 1,poppycommission:1,article:1,knock:2},
-effects: {mystique:1,article:-1,erudition:1},
-startdescription: "J'ai ce que Poppy a demandé.",
-description: "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
-warmup: 10,
-craftable: true,
-aspects: {commissionfulfilled:1}
-},
-
-
-]
+  "recipes": [
+    {
+      "id": "getcommissionaladim",
+      "label": "Obtenir une commande du Dr al-Adim",
+      "actionId": "talk",
+      "requirements": {
+        "aladimready": 1
+      },
+      "startdescription": "Le médecin aimerait que je l'aide dans ses recherches.",
+      "description": "Ce qu'il lui faut.",
+      "warmup": 10,
+      "deckeffect": {
+        "aladimcommissions": 1
+      },
+      "aspects": {
+        "commissiongiven": 1
+      },
+      "craftable": true
+    },
+    {
+      "id": "getcommissionbechet",
+      "label": "Obtenir une commande de Mme Bechet",
+      "actionId": "talk",
+      "requirements": {
+        "bechetready": 1
+      },
+      "startdescription": "Elle cherche des articles pour le célèbre 'Kerisham Review'.",
+      "description": "Ce qu'il lui faut.",
+      "warmup": 10,
+      "deckeffect": {
+        "bechetcommissions": 1
+      },
+      "aspects": {
+        "commissiongiven": 1
+      },
+      "craftable": true
+    },
+    {
+      "id": "getcommissionjannings",
+      "label": "Obtenir une commande du Comte Jannings",
+      "actionId": "talk",
+      "requirements": {
+        "janningsready": 1
+      },
+      "startdescription": "La confrérie du bon Comte en Europe demande une recherche particulière.",
+      "description": "Ce qu'il lui faut.",
+      "warmup": 10,
+      "deckeffect": {
+        "janningscommissions": 1
+      },
+      "aspects": {
+        "commissiongiven": 1
+      },
+      "craftable": true
+    },
+    {
+      "id": "getcommissionpoppy",
+      "label": "Obtenir une commande de Poppy Lascelles",
+      "actionId": "talk",
+      "requirements": {
+        "poppycommissionready": 1
+      },
+      "startdescription": "'Je suis,' dit Poppy avec un rire de fille, 'curieuse sur, oh vous savez, les arts du sang et de la glace. C'est idiot, mais permettez à une vieille femme ses lubies. M'aiderez-vous ?'",
+      "description": "Ce qu'il lui faut.",
+      "warmup": 10,
+      "deckeffect": {
+        "poppycommissions": 1
+      },
+      "aspects": {
+        "commissiongiven": 1
+      },
+      "craftable": true
+    },
+    {
+      "id": "fulfilcommissionaladimsecrethistoriesc",
+      "label": "Réaliser une mission pour le Dr al-Adim",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlesecrethistoriesc": 1,
+        "aladim": 1,
+        "article": 1,
+        "secrethistories": 6
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce que le médecin a demandé.",
+      "description": "j'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionaladimsecrethistoriesb",
+      "label": "Réaliser une mission pour le Dr al-Adim",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlesecrethistoriesb": 1,
+        "aladim": 1,
+        "article": 1,
+        "secrethistories": 4
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce que le médecin a demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionaladimsecrethistories",
+      "label": "Réaliser une mission pour le Dr al-Adim",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlesecrethistories": 1,
+        "aladim": 1,
+        "article": 1,
+        "secrethistories": 2
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce que le médecin a demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionaladimlanternc",
+      "label": "Réaliser une mission pour le Dr al-Adim",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlelanternc": 1,
+        "aladim": 1,
+        "article": 1,
+        "lantern": 6
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce que le médecin a demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionaladimlanternb",
+      "label": "Réaliser une mission pour le Dr al-Adim",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlelanternb": 1,
+        "aladim": 1,
+        "article": 1,
+        "lantern": 4
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce que le médecin a demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionaladimlantern",
+      "label": "Réaliser une mission pour le Dr al-Adim",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlelantern": 1,
+        "aladim": 1,
+        "article": 1,
+        "lantern": 2
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce que le médecin a demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionbechetforgec",
+      "label": "Réaliser une mission pour Mme Bechet",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticleforgec": 1,
+        "bechet": 1,
+        "article": 1,
+        "forge": 6
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionbechetforgeb",
+      "label": "Réaliser une mission pour Mme Bechet",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticleforgeb": 1,
+        "bechet": 1,
+        "article": 1,
+        "forge": 4
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionbechetforge",
+      "label": "Réaliser une mission pour Mme Bechet",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticleforge": 1,
+        "bechet": 1,
+        "article": 1,
+        "forge": 2
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionbechetgrailc",
+      "label": "Réaliser une mission pour Mme Bechet",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlegrailc": 1,
+        "bechet": 1,
+        "article": 1,
+        "grail": 6
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "glimmering": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionbechetgrailb",
+      "label": "Réaliser une mission pour Mme Bechet",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlegrailb": 1,
+        "bechet": 1,
+        "article": 1,
+        "grail": 4
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "glimmering": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionbechetgrail",
+      "label": "Réaliser une mission pour Mme Bechet",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlegrail": 1,
+        "bechet": 1,
+        "article": 1,
+        "grail": 2
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "glimmering": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionbechetmothc",
+      "label": "Réaliser une mission pour Mme Bechet",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlemothc": 1,
+        "bechet": 1,
+        "article": 1,
+        "moth": 6
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "glimmering": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionbechetmothb",
+      "label": "Réaliser une mission pour Mme Bechet",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlemothb": 1,
+        "bechet": 1,
+        "article": 1,
+        "moth": 4
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "glimmering": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionbechetmoth",
+      "label": "Réaliser une mission pour Mme Bechet",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlemoth": 1,
+        "bechet": 1,
+        "article": 1,
+        "moth": 2
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "glimmering": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionjanningsheartc",
+      "label": "Réaliser une mission pour le Comte Jannings",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticleheartc": 1,
+        "jannings": 1,
+        "article": 1,
+        "heart": 6
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "glimmering": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionjanningsheartb",
+      "label": "Réaliser une mission pour le Comte Jannings",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticleheartb": 1,
+        "jannings": 1,
+        "article": 1,
+        "heart": 4
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "glimmering": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionjanningsheart",
+      "label": "Réaliser une mission pour le Comte Jannings",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticleheart": 1,
+        "jannings": 1,
+        "article": 1,
+        "heart": 2
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "glimmering": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionjanningsedgec",
+      "label": "Réaliser une mission pour le Comte Jannings",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticleedgec": 1,
+        "jannings": 1,
+        "article": 1,
+        "edge": 6
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionjanningsedgeb",
+      "label": "Réaliser une mission pour le Comte Jannings",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticleedgeb": 1,
+        "jannings": 1,
+        "article": 1,
+        "edge": 4
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionjanningsedge",
+      "label": "Réaliser une mission pour le Comte Jannings",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticleedge": 1,
+        "jannings": 1,
+        "article": 1,
+        "edge": 2
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce qui a été demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionpoppycommissionwinterc",
+      "label": "Réaliser une mission pour Poppy Lascelles",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlewinterc": 1,
+        "poppycommission": 1,
+        "article": 1,
+        "winter": 6
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce que Poppy a demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionpoppycommissionwinterb",
+      "label": "Réaliser une mission pour Poppy Lascelles",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlewinterb": 1,
+        "poppycommission": 1,
+        "article": 1,
+        "winter": 4
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce que Poppy a demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionpoppycommissionwinter",
+      "label": "Réaliser une mission pour Poppy Lascelles",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticlewinter": 1,
+        "poppycommission": 1,
+        "article": 1,
+        "winter": 2
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce que Poppy a demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionpoppycommissionknockc",
+      "label": "Réaliser une mission pour Poppy Lascelles",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticleknockc": 1,
+        "poppycommission": 1,
+        "article": 1,
+        "knock": 6
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce que Poppy a demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionpoppycommissionknockb",
+      "label": "Réaliser une mission pour Poppy Lascelles",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticleknockb": 1,
+        "poppycommission": 1,
+        "article": 1,
+        "knock": 4
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce que Poppy a demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    },
+    {
+      "id": "fulfilcommissionpoppycommissionknock",
+      "label": "Réaliser une mission pour Poppy Lascelles",
+      "actionId": "talk",
+      "requirements": {
+        "commissionarticleknock": 1,
+        "poppycommission": 1,
+        "article": 1,
+        "knock": 2
+      },
+      "effects": {
+        "mystique": 1,
+        "article": -1,
+        "erudition": 1
+      },
+      "startdescription": "J'ai ce que Poppy a demandé.",
+      "description": "J'ai reçu la monnaie du monde secret, et mon mécène a laissé échapper des informations alléchantes.",
+      "warmup": 10,
+      "craftable": true,
+      "aspects": {
+        "commissionfulfilled": 1
+      }
+    }
+  ]
 }

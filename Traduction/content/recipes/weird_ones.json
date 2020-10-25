@@ -1,52 +1,59 @@
 {
-"recipes": [
-
-
-{id: "health_expel_to_scar",
-label:"Santé: Cicatrices",
-actionId:"scar_ability",
-startdescription:"Mon corps est en train de changer...",
-description:"Certains mouvements laissent une marque plus profonde que d'autres. [La Santé est devenue une Cicatrice permanente. Faites attention : La maladie et la famine ne sont pas satisfaites par les cicatrices.]",
-requirements:{health:1},
-aspects:{scarability:1},
-warmup:10,
-},
-
-{id: "passion_expel_to_scar",
-label:"Passion: Meurtrie",
-actionId:"scar_ability",
-startdescription:"Mes sentiments me changent...",
-description:"Mes pensées lient ma chair et mon esprit plus étroitement qu'il n'est sûr. [La Passion s'est transformée en Cicatrice de façon permanente.]",
-requirements:{passion:1},
-aspects:{scarability:1},
-warmup:10,
-},
-
-{id: "expel_independent",
-label:"En toute sécurité",
-actionId:"expel_independent",
-startdescription:"Mon rival ne peut pas savoir ce qui l'attend.",
-warmup:1
-},
-
-{id: "expel_corpses",
-label:"Une ombre frêle",
-actionId:"expel_corpse",
-requirements:{corpse:1},
-startdescription:"C'est là que ça se passe.",
-warmup:1
-},
-
-
-{id: "expel_injury",
-label:"Une traînée de sang",
-actionId:"expel_injury",
-requirements:{injury:1},
-startdescription:"La douleur est le dernier cadeau.",
-warmup:1
-},
-
- 
-
-]
+  "recipes": [
+    {
+      "id": "health_expel_to_scar",
+      "label": "Santé: Cicatrices",
+      "actionId": "scar_ability",
+      "startdescription": "Mon corps est en train de changer...",
+      "description": "Certains mouvements laissent une marque plus profonde que d'autres. [La Santé est devenue une Cicatrice permanente. Faites attention : La maladie et la famine ne sont pas satisfaites par les cicatrices.]",
+      "requirements": {
+        "health": 1
+      },
+      "aspects": {
+        "scarability": 1
+      },
+      "warmup": 10
+    },
+    {
+      "id": "passion_expel_to_scar",
+      "label": "Passion: Meurtrie",
+      "actionId": "scar_ability",
+      "startdescription": "Mes sentiments me changent...",
+      "description": "Mes pensées lient ma chair et mon esprit plus étroitement qu'il n'est sûr. [La Passion s'est transformée en Cicatrice de façon permanente.]",
+      "requirements": {
+        "passion": 1
+      },
+      "aspects": {
+        "scarability": 1
+      },
+      "warmup": 10
+    },
+    {
+      "id": "expel_independent",
+      "label": "En toute sécurité",
+      "actionId": "expel_independent",
+      "startdescription": "Mon rival ne peut pas savoir ce qui l'attend.",
+      "warmup": 1
+    },
+    {
+      "id": "expel_corpses",
+      "label": "Une ombre frêle",
+      "actionId": "expel_corpse",
+      "requirements": {
+        "corpse": 1
+      },
+      "startdescription": "C'est là que ça se passe.",
+      "warmup": 1
+    },
+    {
+      "id": "expel_injury",
+      "label": "Une traînée de sang",
+      "actionId": "expel_injury",
+      "requirements": {
+        "injury": 1
+      },
+      "startdescription": "La douleur est le dernier cadeau.",
+      "warmup": 1
+    }
+  ]
 }

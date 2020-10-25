@@ -1,43 +1,52 @@
 {
-"recipes": [
-   {
-        id: "deathofthebody",
-        label: "Non la santé, c'est du passé",
-        actionId: "healthend",
-        requirements: {health: -1,fatigue:-1},
-        effects: {},
-        startdescription: "Ma vie m'échappe -",
-        description: "Où me trouveront-ils ? Je ne suis pas ici.",
-        warmup: 0,
-        craftable: false,
-		ending: "deathofthebody",
-		signalEndingFlavour: Melancholy
+  "recipes": [
+    {
+      "id": "deathofthebody",
+      "label": "Non la santé, c'est du passé",
+      "actionId": "healthend",
+      "requirements": {
+        "health": -1,
+        "fatigue": -1
+      },
+      "effects": {},
+      "startdescription": "Ma vie m'échappe -",
+      "description": "Où me trouveront-ils ? Je ne suis pas ici.",
+      "warmup": 0,
+      "craftable": false,
+      "ending": "deathofthebody",
+      "signalEndingFlavour": "Melancholy"
     },
-	   {
-        id: "forlornblooddeathofthebody",
-        label: "Non La santé, c'est du passé",
-        actionId: "healthend",
-        requirements: {health: -1,fatigue:-1,apostlegrail.pillar2:-1},
-        effects: {},
-        startdescription: "Le malaise dans mes os m'a vaincu. A moins que je ne puisse rassembler mes forces ou goûter au sang de notre Délice, c'est fini.",
-        description: "Où me trouveront-ils ? Je ne suis pas ici.",
-        warmup: 0,
-        craftable: false,
-		ending: "deathofthebody",
-		signalEndingFlavour: Melancholy
+    {
+      "id": "forlornblooddeathofthebody",
+      "label": "Non La santé, c'est du passé",
+      "actionId": "healthend",
+      "requirements": {
+        "health": -1,
+        "fatigue": -1,
+        "apostlegrail.pillar2": -1
+      },
+      "effects": {},
+      "startdescription": "Le malaise dans mes os m'a vaincu. A moins que je ne puisse rassembler mes forces ou goûter au sang de notre Délice, c'est fini.",
+      "description": "Où me trouveront-ils ? Je ne suis pas ici.",
+      "warmup": 0,
+      "craftable": false,
+      "ending": "deathofthebody",
+      "signalEndingFlavour": "Melancholy"
     },
-		{
-        id: "workvictory",
-        label: "Je vais m'installer dans une existence confortable",
-        actionId: "workwin",
-        requirements: {passion:1},
-        effects: {},
-        startdescription: "J'ai renoncé à mes rêves, je vivrai assez bien.",
-        description: "C'est terminé",
-        warmup: 0,
-        craftable: false,
-		ending: "workvictory",
-		burnimage: "retirement"
+    {
+      "id": "workvictory",
+      "label": "Je vais m'installer dans une existence confortable",
+      "actionId": "workwin",
+      "requirements": {
+        "passion": 1
+      },
+      "effects": {},
+      "startdescription": "J'ai renoncé à mes rêves, je vivrai assez bien.",
+      "description": "C'est terminé",
+      "warmup": 0,
+      "craftable": false,
+      "ending": "workvictory",
+      "burnimage": "retirement"
     }
-]
+  ]
 }

@@ -218,7 +218,12 @@
       "id": "exploreevents",
       "label": "Explorer la Capitale",
       "description": "En cherchant dans la ville, on peut trouver...",
-      "spec": ["daycriminals", "dayplaces", "daycriminals", "dayplaces"],
+      "spec": [
+        "daycriminals",
+        "dayplaces",
+        "daycriminals",
+        "dayplaces"
+      ],
       "resetonexhaustion": true
     },
     {
@@ -304,21 +309,33 @@
       "id": "forgelong",
       "label": "Un ennemi au travail",
       "description": "Notre ennemi choisira une approche générale, que nous pourrons peut-être deviner - mais nous ne connaîtrons jamais les détails de leur plan tant qu'ils ne l'auront pas exécuté.",
-      "spec": ["julian_unknown", "welland_unknown", "welland_unknown"],
+      "spec": [
+        "julian_unknown",
+        "welland_unknown",
+        "welland_unknown"
+      ],
       "defaultcard": "julian_unknown"
     },
     {
       "id": "graillong",
       "label": "Un ennemi au travail",
       "description": "Notre ennemi choisira une approche générale, que nous pourrons peut-être deviner - mais nous ne connaîtrons jamais les détails de leur plan tant qu'ils ne l'auront pas exécuté.",
-      "spec": ["tryphon_unknown", "tryphon_unknown", "julian_unknown"],
+      "spec": [
+        "tryphon_unknown",
+        "tryphon_unknown",
+        "julian_unknown"
+      ],
       "defaultcard": "julian_unknown"
     },
     {
       "id": "lanternlong",
       "label": "Un ennemi au travail",
       "description": "Notre ennemi choisira une approche générale, que nous pourrons peut-être deviner - mais nous ne connaîtrons jamais les détails de leur plan tant qu'ils ne l'auront pas exécuté.",
-      "spec": ["julian_unknown", "diarist_unknown", "diarist_unknown"],
+      "spec": [
+        "julian_unknown",
+        "diarist_unknown",
+        "diarist_unknown"
+      ],
       "defaultcard": "julian_unknown"
     },
     {

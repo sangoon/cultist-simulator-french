@@ -1,47 +1,77 @@
-{"elements":
-    [
-						{id: "corpse",
-	label: "Un cadavre humain",
-	description: "L'esprit est parti. A terme, l'odeur sera si mauvaise qu'il faudra se débarrasser du corps. Cela peut attirer l'attention mais il faut faire avec pour le moment; Le corps peut être utilisée pour ébranler les personnes impressionnables. [Même après la disparition du cadavre, la notoriété restera.]",
-	aspects: {winter:3,grail:3,ingredient:1,reputation:2,remnant:1},
-	xtriggers: {raiseburgeoning:spirit_wintera_moth,raiseshattered:spirit_wintera_edge},
-	lifetime:60,
-	decayTo:"notoriety"
-	},
-	
-	{id: "corpse.furious",
-	label: "Fragment d'os cicatrisé",
-	aspects:{remnant:1},
-	xtriggers:{alzabo:memory.furious},
-	description: "Dans ce fragment se trouvent des souvenirs d'une Heure plus ancienne.",	
-	},
-		{id: "corpse.luxurious",
-	label: "Restes de cuir",
-		aspects:{remnant:1},
-		xtriggers:{alzabo:memory.luxurious},
-	description: "Souvenirs et nostalgies, les secrets du noeud, dans un vieux morceau de soi peu prometteur.",	
-	},
-	
-			{id: "corpse.liminal",
-	label: "Flocon de Long",
-		aspects:{remnant:1},
-		xtriggers:{alzabo:memory.liminal},
-	description: "Il n'en reste que très peu, mais le goût... - le goût inavoué - ",	
-	},
-	
-			{id: "corpse.horizon",
-	label: "Segment sans ombre",
-		aspects:{remnant:1},
-		xtriggers:{alzabo:memory.horizon},
-	description: "Les Rois ont-ils jamais connu la vraie Gloire ?",	
-	},
-	
-			{id: "corpse.splendid",
-	label: "Tête de loup",
-		aspects:{remnant:1},
-		xtriggers:{alzabo:memory.splendid},
-	description: "Connaissait-elle le Soleil tel qu'il était ?",	
-	},
-
-]
-};
+{
+  "elements": [
+    {
+      "id": "corpse",
+      "label": "Un cadavre humain",
+      "description": "L'esprit est parti. A terme, l'odeur sera si mauvaise qu'il faudra se débarrasser du corps. Cela peut attirer l'attention mais il faut faire avec pour le moment; Le corps peut être utilisée pour ébranler les personnes impressionnables. [Même après la disparition du cadavre, la notoriété restera.]",
+      "aspects": {
+        "winter": 3,
+        "grail": 3,
+        "ingredient": 1,
+        "reputation": 2,
+        "remnant": 1
+      },
+      "xtriggers": {
+        "raiseburgeoning": "spirit_wintera_moth",
+        "raiseshattered": "spirit_wintera_edge"
+      },
+      "lifetime": 60,
+      "decayTo": "notoriety"
+    },
+    {
+      "id": "corpse.furious",
+      "label": "Fragment d'os cicatrisé",
+      "aspects": {
+        "remnant": 1
+      },
+      "xtriggers": {
+        "alzabo": "memory.furious"
+      },
+      "description": "Dans ce fragment se trouvent des souvenirs d'une Heure plus ancienne."
+    },
+    {
+      "id": "corpse.luxurious",
+      "label": "Restes de cuir",
+      "aspects": {
+        "remnant": 1
+      },
+      "xtriggers": {
+        "alzabo": "memory.luxurious"
+      },
+      "description": "Souvenirs et nostalgies, les secrets du noeud, dans un vieux morceau de soi peu prometteur."
+    },
+    {
+      "id": "corpse.liminal",
+      "label": "Flocon de Long",
+      "aspects": {
+        "remnant": 1
+      },
+      "xtriggers": {
+        "alzabo": "memory.liminal"
+      },
+      "description": "Il n'en reste que très peu, mais le goût... - le goût inavoué - "
+    },
+    {
+      "id": "corpse.horizon",
+      "label": "Segment sans ombre",
+      "aspects": {
+        "remnant": 1
+      },
+      "xtriggers": {
+        "alzabo": "memory.horizon"
+      },
+      "description": "Les Rois ont-ils jamais connu la vraie Gloire ?"
+    },
+    {
+      "id": "corpse.splendid",
+      "label": "Tête de loup",
+      "aspects": {
+        "remnant": 1
+      },
+      "xtriggers": {
+        "alzabo": "memory.splendid"
+      },
+      "description": "Connaissait-elle le Soleil tel qu'il était ?"
+    }
+  ]
+}

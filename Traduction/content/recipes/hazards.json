@@ -1,336 +1,746 @@
-{"recipes": [
-
-	    {
-        id: "despairrisk",
-        label: "Sombres pensées",
-        actionId: "despair",
-        requirements: {},
-        effects: {},
-		slots: [{id:"Shadows",label:"Ombres",required: {inducesdespair:1}, greedy: true}],
-        startdescription: "Des jours sombres. Je dois faire attention à ne pas laisser le doute s'installer. [La Peur peut provoquer un Désespoir complet.]",
-        description: ".",
-        warmup: 60,
-        craftable: false,
-		linked:[{id:"despairactive",chance:100},
-		{id:"despairdefeated",chance:100}]
+{
+  "recipes": [
+    {
+      "id": "despairrisk",
+      "label": "Sombres pensées",
+      "actionId": "despair",
+      "requirements": {},
+      "effects": {},
+      "slots": [
+        {
+          "id": "Shadows",
+          "label": "Ombres",
+          "required": {
+            "inducesdespair": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "Des jours sombres. Je dois faire attention à ne pas laisser le doute s'installer. [La Peur peut provoquer un Désespoir complet.]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "despairactive",
+          "chance": 100
+        },
+        {
+          "id": "despairdefeated",
+          "chance": 100
+        }
+      ]
     },
-	{  id: "despairactive",
-        label: "DÉSESPOIR",
-        actionId: "despair",
-		requirements: {inducesdespair: 1},
-		startdescription: "Le Désespoir est le loup qui dévore la pensée. Vous pouvez vaincre le Désespoir en le nourrissant de Contentement; sinon, il vous détruira lorsqu'il atteindra 3 Peur.]",
-		description: ".",
-		warmup: 60,
-		slots: [{id:"Thoughts",label:"Réflexions",required: {contentment: 1,inducesdespair:1},greedy:true,noanim:true}],
-        craftable: false,
-		alternativerecipes:[{id:"despairwarning",chance:100}],
-		linked:[{id:"despairabate",chance:100},
-		{id:"despairdeath",chance:100},
-		{id:"despairactive",chance:100}]
-	},
-	
-				{  id: "despairwarning",
-        label: "DÉSESPOIR",
-        actionId: "despair",
-		requirements: {dread: 2,contentment:-1},
-		startdescription: "Le Désespoir ne me lâche pas. Le monde est privé de lumière. Vous pouvez vaincre le Désespoir en le nourrissant de Contentement; sinon, il vous détruira lorsqu'il atteindra 3 Peur.]",
-		description: ".",
-		comments: "This exists specifically for the burn image at 2 Dread.",
-		burnimage: "despair",
-		linked:[{id:"despairabate",chance:100},
-		{id:"despairdeath",chance:100},
-		{id:"despairactive",chance:100}]
-		},
-
-	{  id: "despairabate",
-        label: "Le désespoir s'atténue",
-        actionId: "despair",
-		requirements: {contentment:1},
-		effects: {inducesdespair: -1,contentment:-1},
-		startdescription: "Les souvenirs des temps meilleurs éloignent le loup de la porte. [Chaque Contentement détruit une Peur.]",
-		description: ".",
-		warmup: 10,
-        craftable: false,
-		linked:[{id:"despairactive",chance:100},
-		{id:"despairdefeated",chance:100}]
-	},
-		   {
-        id: "despairdeath",
-        label: "LE DÉSESPOIR ME SUBMERGE",
-        actionId: "despair",
-        requirements: {inducesdespair: 3},
-		slots: [{id:"Thoughts",label:"Réflexions",required: {contentment: 1},greedy:true}],
-        effects: {},
-        startdescription: "C'est presque la fin - [Trouvez du Contentement maintenant, ou c'est fini.]",
-        description: "Où me trouveront-ils ? Je ne suis pas ici.",
-        warmup: 60,
-        craftable: false,
-		alternativerecipes: [{id:"despairabate",chance:100}],
-		ending:"despairending",
-				signalEndingFlavour:Melancholy,
-		comments:"Consider (1) allowing the threshold to grab Dread too. (2) allowing the active step to have a low-risk possibility of increasing Dread (3) providing a reward when Despair is defeated."
-	
+    {
+      "id": "despairactive",
+      "label": "DÉSESPOIR",
+      "actionId": "despair",
+      "requirements": {
+        "inducesdespair": 1
+      },
+      "startdescription": "Le Désespoir est le loup qui dévore la pensée. Vous pouvez vaincre le Désespoir en le nourrissant de Contentement; sinon, il vous détruira lorsqu'il atteindra 3 Peur.]",
+      "description": ".",
+      "warmup": 60,
+      "slots": [
+        {
+          "id": "Thoughts",
+          "label": "Réflexions",
+          "required": {
+            "contentment": 1,
+            "inducesdespair": 1
+          },
+          "greedy": true,
+          "noanim": true
+        }
+      ],
+      "craftable": false,
+      "alternativerecipes": [
+        {
+          "id": "despairwarning",
+          "chance": 100
+        }
+      ],
+      "linked": [
+        {
+          "id": "despairabate",
+          "chance": 100
+        },
+        {
+          "id": "despairdeath",
+          "chance": 100
+        },
+        {
+          "id": "despairactive",
+          "chance": 100
+        }
+      ]
     },
-	{  id: "despairdefeated",
-        label: "Les nuages se dissipent",
-        actionId: "despair",
-		effects: {fleeting:1},
-		startdescription: ".",
-		description: "Le loup rôde ailleurs. [Aucune Peur n'alimente ce Désespoir. C'est fini, pour l'instant.]",
-        craftable: false
-	},
-
-		    {
-        id: "visionsrisk",
-        label: "Un tremblement dans l'air",
-        actionId: "visions",
-        requirements: {},
-		slots: [{id:"Shadows",label:"Réflexions",required: {fascination:1}, greedy: true}],
-        startdescription: "Le soleil scintille comme une ombre. Les rêves ondulent derrière la surface des miroirs. Je dois faire attention à ne pas dériver du monde éveillé. [La Fascination peut provoquer des Visions]",
-        description: ".",
-        warmup: 60,
-        craftable: false,
-		linked:[{id:"visionsactive",chance:100},
-		{id:"visionsdefeated",chance:100}]
+    {
+      "id": "despairwarning",
+      "label": "DÉSESPOIR",
+      "actionId": "despair",
+      "requirements": {
+        "dread": 2,
+        "contentment": -1
+      },
+      "startdescription": "Le Désespoir ne me lâche pas. Le monde est privé de lumière. Vous pouvez vaincre le Désespoir en le nourrissant de Contentement; sinon, il vous détruira lorsqu'il atteindra 3 Peur.]",
+      "description": ".",
+      "comments": "This exists specifically for the burn image at 2 Dread.",
+      "burnimage": "despair",
+      "linked": [
+        {
+          "id": "despairabate",
+          "chance": 100
+        },
+        {
+          "id": "despairdeath",
+          "chance": 100
+        },
+        {
+          "id": "despairactive",
+          "chance": 100
+        }
+      ]
     },
-	{  id: "visionsactive",
-        label: "Je vois des choses",
-        actionId: "visions",
-		requirements: {fascination: 1},
-		startdescription: "Les peintures murmurent. Les fenêtres clignotent. Je sais que ces choses ne sont pas vraies, mais comment puis-je en être certain ? [Vous pouvez vaincre les Visions avec de la Peur ou par un Souvenir Fugace; autrement, vous vous perdrez complètement à la troisième Fascination.]",
-		description: ".",
-		warmup: 60,
-		slots: [{id:"Thoughts",label:"Réflexions",required: {dread: 1,fascination:1,fleeting:1},greedy:true,noanim:true}],
-        craftable: false,
-		alternativerecipes:[{id:"visionswarning",chance:100}],
-		linked:[{id:"visionsabate",chance:100},
-		{id:"visionsabatefleeting",chance:100},
-		{id:"visionsdeath",chance:100},
-		{id:"visionsactive",chance:100}		
-		]
-	},
-	
-			{  id: "visionswarning",
-        label: "Je vois des choses !",
-        actionId: "visions",
-		requirements: {fascination: 2,dread:-1,fleeting:-1},
-		startdescription: "Le monde est dangereusement lumineux. [Vous pouvez vaincre les Visions avec de la Peur ou par un Souvenir Fugace; autrement, vous vous perdrez complètement à la troisième Fascination.]",
-		description: ".",
-		comments: "Cela existe spécifiquement pour l'image de la brûlure à 2 Fascination.",
-		burnimage: "visions",
-		linked:[{id:"visionsabate",chance:100},
-		{id:"visionsabatefleeting",chance:100},
-		{id:"visionsdeath",chance:100},
-		{id:"visionsactive",chance:100}		
-		]
-		},
-	
-	   {
-        id: "visionsdeath",
-        label: "Aidez-moi !",
-        actionId: "visions",
-        requirements: {fascination: 3},
-		slots: [{id:"Thoughts",label:"Réflexions",required: {dread: 1,fleeting:1},greedy:true}],
-        effects: {},
-        startdescription: "Quelle est la lumière qui éclaire la surface de toute chose ? La Gloire arrive, mais je ne peux pas être là pour la voir - [Si vous ne trouvez pas de la Peur ou un Souvenir Fugace maintenant, c'est fini.]",
-        description: "Où me trouveront-ils ? Je ne suis pas ici.",
-        warmup: 60,
-        craftable: false,
-		alternativerecipes: [{id:"visionsabate",chance:100},
-		{id:"visionsabatefleeting",chance:100},],
-				signalEndingFlavour:Melancholy,
-		ending:"visionsending"
-	
+    {
+      "id": "despairabate",
+      "label": "Le désespoir s'atténue",
+      "actionId": "despair",
+      "requirements": {
+        "contentment": 1
+      },
+      "effects": {
+        "inducesdespair": -1,
+        "contentment": -1
+      },
+      "startdescription": "Les souvenirs des temps meilleurs éloignent le loup de la porte. [Chaque Contentement détruit une Peur.]",
+      "description": ".",
+      "warmup": 10,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "despairactive",
+          "chance": 100
+        },
+        {
+          "id": "despairdefeated",
+          "chance": 100
+        }
+      ]
     },
-	{  id: "visionsabate",
-        label: "Les visions s'atténuent",
-        actionId: "visions",
-		requirements: {dread:1},
-		effects: {fascination: -1,dread:-1},
-		startdescription: "Les ombres sont à l'abri de la lumière. Le désespoir est un fardeau. Même la misère a son utilité. [Chaque Peur réprime une Fascination.]",
-		description: ".",
-		warmup: 10,
-        craftable: false,
-		linked:[{id:"visionsactive",chance:100},
-		{id:"visionsdefeated",chance:100}]
-	},
-		{  id: "visionsabatefleeting",
-        label: "Les visions s'atténuent",
-        actionId: "visions",
-		requirements: {fleeting:1},
-		effects: {fascination: -1,fleeting:-1},
-		startdescription: "La solidité du quotidien bannit les fantômes. Je m'attache au quotidien. [Chaque Souvenir Fugace répare une Fascination.]",
-		description: ".",
-		warmup: 10,
-        craftable: false,
-		linked:[{id:"visionsactive",chance:100},
-		{id:"visionsdefeated",chance:100}]
-	},
-	{  id: "visionsdefeated",
-        label: "Le monde tel qu'il est",
-        actionId: "visions",
-		effects: {fleeting:1},
-		startdescription: ".",
-		description: "Les miroirs sont calmes. Le soleil est stable. La Gloire recule. Je suis sain d'esprit, si cela signifie quelque chose. [Aucune Fascination ne commande vos Visions. C'est fini, pour l'instant.]",
-        craftable: false
-	},
-	{id: "curse_dread_dormant",
-	label:"Malédiction de l'âme desséchée en sommeil",
-	actionId: "curse_dread",
-	startdescription: "La Malédiction de l'âme desséchée n'a pas encore pris effet.",
-	alternativerecipes: [{id: "curse_dread_active",chance:30}],
-	linked: [{id: "curse_dread_dormant",chance:100}],
-	warmup:60,
-	craftable: false},
-	
-	{id: "curse_dread_active",
-	label:"Malédiction de l'âme desséchée",
-	requirements: {reason:-1},
-	actionId: "curse_dread",
-	startdescription: "La Malédiction de l'âme sèche s'installe doucement, comme une main flétrie sur l'épaule.",
-	slots: [{id:"Reason",label:"Raison",greedy:true,required:{reason:1}}],
-	linked: [{id: "curse_dread_active",chance:100},
-	{id: "curse_dread_attempt_mitigation",chance:100}],
-	warmup:60
-	},
-	
-		{id:"curse_dread_attempt_mitigation",
-	label:"Malédiction de l'âme desséchée: Une Dernière Chance",
-	actionId:"curse_dread",
-	slots: [{id:"Protection",label:"Protection",required:{influencehearte:1,influenceheartg:1}}],
-	alternativerecipes:[{id:"curse_dread_mitigation_successful",chance:100}],
-	startdescription: "La Malédiction s'est installée. Maintenant, le tunnel se resserre autour de tout ce que je vois. [Ce n'est que si vous avez suffisamment d'Influence du Coeur qu'il sera possible d'écarter la Malédiction.]",
-	description:"Mon crâne craque. La lumière devient grise.",
-	aspects: {damagereason:1},
-	warmup:60
-	},
-		{id:"curse_dread_mitigation_successful",
-	label:"La Faveur de Thunderskin",
-	actionId:"curse_dread",
-	requirements:{influence:1},
-	effects:{influence:-1},
-	startdescription:"Tapez sur le tambour et prononcez les mots. Gardez l'espoir jusqu'à ce que le chant soit terminé.",
-	description: "Mon âme se remplit à nouveau. La malédiction est passée. Au loin, à l'horizon, la tempête se déplace comme un animal vigilant.",
-	},
-		{id: "curse_visions_dormant",
-	label:"La Malédiction du Cinquième Oeil en sommeil",
-	actionId: "curse_visions",
-	startdescription: "La Malédiction du Cinquième Oeil n'a pas encore pris effet.",
-	alternativerecipes: [{id: "curse_visions_active",chance:30}],
-	linked: [{id: "curse_visions_dormant",chance:100}],
-	warmup:60,
-	craftable: false},
-	
-	{id: "curse_visions_active",
-	label:"La Malédiction du Cinquième Oeil",
-	actionId: "curse_visions",
-	requirements: {passion:-1},
-	startdescription: "Le Troisième Oeil est un mythe, ou la glande pinéale. Le Quatrième Oeil est une marque dans certains processus d'ascension. Le Cinquième Oeil s'ouvre maintenant devant moi.",
-	
-	slots: [{id:"Passion",label:"Passion",greedy:true,required:{passion:1}}],
-	linked: [{id: "curse_visions_active",chance:100},
-	{id: "curse_visions_attempt_mitigation",chance:100},],
-	warmup:60
-	},
-	
-		{id:"curse_visions_attempt_mitigation",
-	label:"La Malédiction du Cinquième Oeil: Une dernière Chance",
-	actionId:"curse_visions",
-	slots: [{id:"Protection",label:"Protection",required:{influencehearte:1,influenceheartg:1}}],
-	alternativerecipes:[{id:"curse_visions_mitigation_successful",chance:100}],
-	startdescription: "La Malédiction s'est installée. Maintenant, le monde, qui pourrit, laisse échapper la lumière. [Avec suffisamment d'Influence du Coeur, il sera possible d'écarter la Malédiction.]",
-	description:"Je ne peux pas m'empêcher de voir. Si je regarde assez longtemps, je ne le souhaite pas.",
-	aspects: {damagepassion:1},
-	warmup:60
-	},
-		{id:"curse_visions_mitigation_successful",
-	label:"La Faveur de Thunderskin",
-	actionId:"curse_visions",
-	requirements:{influence:1},
-	effects:{influence:-1},
-	startdescription:"Tapez sur le tambour et prononcez les mots. Je fermerai tous mes yeux jusqu'à ce que le chant soit terminé.",
-	description: "Mes yeux sont clairs. La malédiction est passée. Au loin, à l'horizon, la tempête se déplace comme une créature vigilante.",
-	},
-			{id: "curse_affliction_dormant",
-	label:"La Malédiction du Souffle Rampant en sommeil",
-	actionId: "curse_affliction",
-	startdescription: "La Malédiction du Souffle Rampant n'est pas encore arrivée à son terme.",
-	alternativerecipes: [{id: "curse_affliction_active",chance:30}],
-	linked: [{id: "curse_affliction_dormant",chance:100}],
-	warmup:60,
-	craftable: false},
-	
-	{id: "curse_affliction_active",
-	label:"La Malédiction du Souffle Rampant",
-	actionId: "curse_affliction",
-	requirements: {health:-1},
-	startdescription:"La Malédiction du Souffle Rampant commence par une toux - une toux qui s'attarde dans la gorge comme un créancier.",
-
-	slots: [{id:"Health",label:"Santé",greedy:true,required:{health:1}}],
-	linked: [{id: "curse_affliction_active",chance:100},
-	{id: "curse_affliction_attempt_mitigation",chance:100}],
-	warmup:60
-	},
-	
-	{id:"curse_affliction_attempt_mitigation",
-	label:"La Malédiction du Souffle Rampant: Une Dernière Chance",
-	actionId:"curse_affliction",
-	slots: [{id:"Protection",label:"Protection",required:{influencehearte:1,influenceheartg:1}}],
-	alternativerecipes:[{id:"curse_affliction_mitigation_successful",chance:100}],
-	startdescription: "La Malédiction s'est installée. Maintenant, la pulsion vitale ralentit. [La Malédiction n'est pas une maladie ordinaire, mais avec suffisamment d'Influence du Coeur, il sera possible de l'écarter.]",
-	description:"Chaque souffle que nous prenons dans cette vie est plus faible que le dernier, jusqu'à ce que nous arrivions au dernier souffle de tous. Le processus est si lent qu'il est imperceptible... jusqu'à ce que l'on soit touché par la Malédiction du Souffle Rampant.",
-	aspects: {destroyhealth:1},
-	warmup:60
-	},
-		{id:"curse_affliction_mitigation_successful",
-	label:"La Faveur de Thunderskin",
-	actionId:"curse_affliction",
-	requirements:{influence:1},
-	effects:{influence:-1},
-	startdescription:"Tapez sur le tambour et prononcez les mots. Supprimez la toux jusqu'à ce que le chant soit terminé.",
-	description: "Mes poumons sont clairs. La malédiction est passée. Au loin, à l'horizon, la tempête se déplace comme un animal vigilant.",
-	},
-	
-	
-	{id: "curse_nowhere_dormant",
-	label:"Quelque chose est revenu avec nous",
-	actionId: "curse_nowhere",
-	startdescription: "J'entrevois des mouvements subtils dans le monde - du coin de l'oeil, mais ils sont trompeurs. Parfois aussi, je les entends.",
-	alternativerecipes: [{id: "curse_nowhere_active",chance:30}],
-	linked: [{id: "curse_nowhere_dormant",chance:100}],
-	warmup:60,
-	craftable: false},
-	
-	{id: "curse_nowhere_active",
-	label:"Les Vers dans ce monde",
-	actionId: "curse_nowhere",
-	requirements: {mortal:-1},
-	startdescription: "Il y a des Vers dans la ville. On ne voit pas les Vers, mais on ne les oublie pas non plus. Ils vont chercher jusqu'à ce qu'ils trouvent quelqu'un qu'ils peuvent pénétrer par les interstices de la peau, puis ils font ce que les Vers font.",
-	slots: [{id:"Someone",label:"Quelqu'un",greedy:true,required:{mortal:1}}],
-	linked: [{id: "curse_nowhere_active",chance:100},
-	{id: "curse_nowhere_attempt_mitigation",chance:100},
-	],
-	warmup:60
-	},
-	
-		{id:"curse_nowhere_attempt_mitigation",
-	label:"Les Vers dans ce monde: Une Dernière Chance",
-	actionId:"curse_nowhere",
-	slots: [{id:"Protection",label:"Protection",required:{influenceheartg:1}}],
-	alternativerecipes:[{id:"curse_nowhere_mitigation_successful",chance:100}],
-	startdescription: "Les Vers ont trouvé leur chemin sous la peau. C'est la fin. [Il n'est possible de sauver celui-ci que si vous disposez d'un énorme pouvoir d'Influence du Coeur.]",
-	description:"Lorsque les Vers prennent racine, il n'y a rien à faire, sauf détruire ce qui reste - brûler et tamiser avec le plus grand soin.",
-	effects:{mortal:-1,notoriety:1,dread:1},
-	warmup:60
-	},
-		{id:"curse_nowhere_mitigation_successful",
-	label:"La Faveur de Thunderskin",
-	actionId:"curse_nowhere",
-	requirements:{influence:1},
-	effects:{influence:-1},
-	startdescription:"Implore la foudre. Seul le souffle de l'orage peut sauver celui-ci maintenant.",
-	description: "L'absence des Vers est comme un rideau qui s'ouvre. L'air est parfumé d'odeur de pluie et d'ozone. Nos doigts tapent encore aux rythmes de Thunderskin.",
-	},
-
-]
+    {
+      "id": "despairdeath",
+      "label": "LE DÉSESPOIR ME SUBMERGE",
+      "actionId": "despair",
+      "requirements": {
+        "inducesdespair": 3
+      },
+      "slots": [
+        {
+          "id": "Thoughts",
+          "label": "Réflexions",
+          "required": {
+            "contentment": 1
+          },
+          "greedy": true
+        }
+      ],
+      "effects": {},
+      "startdescription": "C'est presque la fin - [Trouvez du Contentement maintenant, ou c'est fini.]",
+      "description": "Où me trouveront-ils ? Je ne suis pas ici.",
+      "warmup": 60,
+      "craftable": false,
+      "alternativerecipes": [
+        {
+          "id": "despairabate",
+          "chance": 100
+        }
+      ],
+      "ending": "despairending",
+      "signalEndingFlavour": "Melancholy",
+      "comments": "Consider (1) allowing the threshold to grab Dread too. (2) allowing the active step to have a low-risk possibility of increasing Dread (3) providing a reward when Despair is defeated."
+    },
+    {
+      "id": "despairdefeated",
+      "label": "Les nuages se dissipent",
+      "actionId": "despair",
+      "effects": {
+        "fleeting": 1
+      },
+      "startdescription": ".",
+      "description": "Le loup rôde ailleurs. [Aucune Peur n'alimente ce Désespoir. C'est fini, pour l'instant.]",
+      "craftable": false
+    },
+    {
+      "id": "visionsrisk",
+      "label": "Un tremblement dans l'air",
+      "actionId": "visions",
+      "requirements": {},
+      "slots": [
+        {
+          "id": "Shadows",
+          "label": "Réflexions",
+          "required": {
+            "fascination": 1
+          },
+          "greedy": true
+        }
+      ],
+      "startdescription": "Le soleil scintille comme une ombre. Les rêves ondulent derrière la surface des miroirs. Je dois faire attention à ne pas dériver du monde éveillé. [La Fascination peut provoquer des Visions]",
+      "description": ".",
+      "warmup": 60,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "visionsactive",
+          "chance": 100
+        },
+        {
+          "id": "visionsdefeated",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "visionsactive",
+      "label": "Je vois des choses",
+      "actionId": "visions",
+      "requirements": {
+        "fascination": 1
+      },
+      "startdescription": "Les peintures murmurent. Les fenêtres clignotent. Je sais que ces choses ne sont pas vraies, mais comment puis-je en être certain ? [Vous pouvez vaincre les Visions avec de la Peur ou par un Souvenir Fugace; autrement, vous vous perdrez complètement à la troisième Fascination.]",
+      "description": ".",
+      "warmup": 60,
+      "slots": [
+        {
+          "id": "Thoughts",
+          "label": "Réflexions",
+          "required": {
+            "dread": 1,
+            "fascination": 1,
+            "fleeting": 1
+          },
+          "greedy": true,
+          "noanim": true
+        }
+      ],
+      "craftable": false,
+      "alternativerecipes": [
+        {
+          "id": "visionswarning",
+          "chance": 100
+        }
+      ],
+      "linked": [
+        {
+          "id": "visionsabate",
+          "chance": 100
+        },
+        {
+          "id": "visionsabatefleeting",
+          "chance": 100
+        },
+        {
+          "id": "visionsdeath",
+          "chance": 100
+        },
+        {
+          "id": "visionsactive",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "visionswarning",
+      "label": "Je vois des choses !",
+      "actionId": "visions",
+      "requirements": {
+        "fascination": 2,
+        "dread": -1,
+        "fleeting": -1
+      },
+      "startdescription": "Le monde est dangereusement lumineux. [Vous pouvez vaincre les Visions avec de la Peur ou par un Souvenir Fugace; autrement, vous vous perdrez complètement à la troisième Fascination.]",
+      "description": ".",
+      "comments": "Cela existe spécifiquement pour l'image de la brûlure à 2 Fascination.",
+      "burnimage": "visions",
+      "linked": [
+        {
+          "id": "visionsabate",
+          "chance": 100
+        },
+        {
+          "id": "visionsabatefleeting",
+          "chance": 100
+        },
+        {
+          "id": "visionsdeath",
+          "chance": 100
+        },
+        {
+          "id": "visionsactive",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "visionsdeath",
+      "label": "Aidez-moi !",
+      "actionId": "visions",
+      "requirements": {
+        "fascination": 3
+      },
+      "slots": [
+        {
+          "id": "Thoughts",
+          "label": "Réflexions",
+          "required": {
+            "dread": 1,
+            "fleeting": 1
+          },
+          "greedy": true
+        }
+      ],
+      "effects": {},
+      "startdescription": "Quelle est la lumière qui éclaire la surface de toute chose ? La Gloire arrive, mais je ne peux pas être là pour la voir - [Si vous ne trouvez pas de la Peur ou un Souvenir Fugace maintenant, c'est fini.]",
+      "description": "Où me trouveront-ils ? Je ne suis pas ici.",
+      "warmup": 60,
+      "craftable": false,
+      "alternativerecipes": [
+        {
+          "id": "visionsabate",
+          "chance": 100
+        },
+        {
+          "id": "visionsabatefleeting",
+          "chance": 100
+        }
+      ],
+      "signalEndingFlavour": "Melancholy",
+      "ending": "visionsending"
+    },
+    {
+      "id": "visionsabate",
+      "label": "Les visions s'atténuent",
+      "actionId": "visions",
+      "requirements": {
+        "dread": 1
+      },
+      "effects": {
+        "fascination": -1,
+        "dread": -1
+      },
+      "startdescription": "Les ombres sont à l'abri de la lumière. Le désespoir est un fardeau. Même la misère a son utilité. [Chaque Peur réprime une Fascination.]",
+      "description": ".",
+      "warmup": 10,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "visionsactive",
+          "chance": 100
+        },
+        {
+          "id": "visionsdefeated",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "visionsabatefleeting",
+      "label": "Les visions s'atténuent",
+      "actionId": "visions",
+      "requirements": {
+        "fleeting": 1
+      },
+      "effects": {
+        "fascination": -1,
+        "fleeting": -1
+      },
+      "startdescription": "La solidité du quotidien bannit les fantômes. Je m'attache au quotidien. [Chaque Souvenir Fugace répare une Fascination.]",
+      "description": ".",
+      "warmup": 10,
+      "craftable": false,
+      "linked": [
+        {
+          "id": "visionsactive",
+          "chance": 100
+        },
+        {
+          "id": "visionsdefeated",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "id": "visionsdefeated",
+      "label": "Le monde tel qu'il est",
+      "actionId": "visions",
+      "effects": {
+        "fleeting": 1
+      },
+      "startdescription": ".",
+      "description": "Les miroirs sont calmes. Le soleil est stable. La Gloire recule. Je suis sain d'esprit, si cela signifie quelque chose. [Aucune Fascination ne commande vos Visions. C'est fini, pour l'instant.]",
+      "craftable": false
+    },
+    {
+      "id": "curse_dread_dormant",
+      "label": "Malédiction de l'âme desséchée en sommeil",
+      "actionId": "curse_dread",
+      "startdescription": "La Malédiction de l'âme desséchée n'a pas encore pris effet.",
+      "alternativerecipes": [
+        {
+          "id": "curse_dread_active",
+          "chance": 30
+        }
+      ],
+      "linked": [
+        {
+          "id": "curse_dread_dormant",
+          "chance": 100
+        }
+      ],
+      "warmup": 60,
+      "craftable": false
+    },
+    {
+      "id": "curse_dread_active",
+      "label": "Malédiction de l'âme desséchée",
+      "requirements": {
+        "reason": -1
+      },
+      "actionId": "curse_dread",
+      "startdescription": "La Malédiction de l'âme sèche s'installe doucement, comme une main flétrie sur l'épaule.",
+      "slots": [
+        {
+          "id": "Reason",
+          "label": "Raison",
+          "greedy": true,
+          "required": {
+            "reason": 1
+          }
+        }
+      ],
+      "linked": [
+        {
+          "id": "curse_dread_active",
+          "chance": 100
+        },
+        {
+          "id": "curse_dread_attempt_mitigation",
+          "chance": 100
+        }
+      ],
+      "warmup": 60
+    },
+    {
+      "id": "curse_dread_attempt_mitigation",
+      "label": "Malédiction de l'âme desséchée: Une Dernière Chance",
+      "actionId": "curse_dread",
+      "slots": [
+        {
+          "id": "Protection",
+          "label": "Protection",
+          "required": {
+            "influencehearte": 1,
+            "influenceheartg": 1
+          }
+        }
+      ],
+      "alternativerecipes": [
+        {
+          "id": "curse_dread_mitigation_successful",
+          "chance": 100
+        }
+      ],
+      "startdescription": "La Malédiction s'est installée. Maintenant, le tunnel se resserre autour de tout ce que je vois. [Ce n'est que si vous avez suffisamment d'Influence du Coeur qu'il sera possible d'écarter la Malédiction.]",
+      "description": "Mon crâne craque. La lumière devient grise.",
+      "aspects": {
+        "damagereason": 1
+      },
+      "warmup": 60
+    },
+    {
+      "id": "curse_dread_mitigation_successful",
+      "label": "La Faveur de Thunderskin",
+      "actionId": "curse_dread",
+      "requirements": {
+        "influence": 1
+      },
+      "effects": {
+        "influence": -1
+      },
+      "startdescription": "Tapez sur le tambour et prononcez les mots. Gardez l'espoir jusqu'à ce que le chant soit terminé.",
+      "description": "Mon âme se remplit à nouveau. La malédiction est passée. Au loin, à l'horizon, la tempête se déplace comme un animal vigilant."
+    },
+    {
+      "id": "curse_visions_dormant",
+      "label": "La Malédiction du Cinquième Oeil en sommeil",
+      "actionId": "curse_visions",
+      "startdescription": "La Malédiction du Cinquième Oeil n'a pas encore pris effet.",
+      "alternativerecipes": [
+        {
+          "id": "curse_visions_active",
+          "chance": 30
+        }
+      ],
+      "linked": [
+        {
+          "id": "curse_visions_dormant",
+          "chance": 100
+        }
+      ],
+      "warmup": 60,
+      "craftable": false
+    },
+    {
+      "id": "curse_visions_active",
+      "label": "La Malédiction du Cinquième Oeil",
+      "actionId": "curse_visions",
+      "requirements": {
+        "passion": -1
+      },
+      "startdescription": "Le Troisième Oeil est un mythe, ou la glande pinéale. Le Quatrième Oeil est une marque dans certains processus d'ascension. Le Cinquième Oeil s'ouvre maintenant devant moi.",
+      "slots": [
+        {
+          "id": "Passion",
+          "label": "Passion",
+          "greedy": true,
+          "required": {
+            "passion": 1
+          }
+        }
+      ],
+      "linked": [
+        {
+          "id": "curse_visions_active",
+          "chance": 100
+        },
+        {
+          "id": "curse_visions_attempt_mitigation",
+          "chance": 100
+        }
+      ],
+      "warmup": 60
+    },
+    {
+      "id": "curse_visions_attempt_mitigation",
+      "label": "La Malédiction du Cinquième Oeil: Une dernière Chance",
+      "actionId": "curse_visions",
+      "slots": [
+        {
+          "id": "Protection",
+          "label": "Protection",
+          "required": {
+            "influencehearte": 1,
+            "influenceheartg": 1
+          }
+        }
+      ],
+      "alternativerecipes": [
+        {
+          "id": "curse_visions_mitigation_successful",
+          "chance": 100
+        }
+      ],
+      "startdescription": "La Malédiction s'est installée. Maintenant, le monde, qui pourrit, laisse échapper la lumière. [Avec suffisamment d'Influence du Coeur, il sera possible d'écarter la Malédiction.]",
+      "description": "Je ne peux pas m'empêcher de voir. Si je regarde assez longtemps, je ne le souhaite pas.",
+      "aspects": {
+        "damagepassion": 1
+      },
+      "warmup": 60
+    },
+    {
+      "id": "curse_visions_mitigation_successful",
+      "label": "La Faveur de Thunderskin",
+      "actionId": "curse_visions",
+      "requirements": {
+        "influence": 1
+      },
+      "effects": {
+        "influence": -1
+      },
+      "startdescription": "Tapez sur le tambour et prononcez les mots. Je fermerai tous mes yeux jusqu'à ce que le chant soit terminé.",
+      "description": "Mes yeux sont clairs. La malédiction est passée. Au loin, à l'horizon, la tempête se déplace comme une créature vigilante."
+    },
+    {
+      "id": "curse_affliction_dormant",
+      "label": "La Malédiction du Souffle Rampant en sommeil",
+      "actionId": "curse_affliction",
+      "startdescription": "La Malédiction du Souffle Rampant n'est pas encore arrivée à son terme.",
+      "alternativerecipes": [
+        {
+          "id": "curse_affliction_active",
+          "chance": 30
+        }
+      ],
+      "linked": [
+        {
+          "id": "curse_affliction_dormant",
+          "chance": 100
+        }
+      ],
+      "warmup": 60,
+      "craftable": false
+    },
+    {
+      "id": "curse_affliction_active",
+      "label": "La Malédiction du Souffle Rampant",
+      "actionId": "curse_affliction",
+      "requirements": {
+        "health": -1
+      },
+      "startdescription": "La Malédiction du Souffle Rampant commence par une toux - une toux qui s'attarde dans la gorge comme un créancier.",
+      "slots": [
+        {
+          "id": "Health",
+          "label": "Santé",
+          "greedy": true,
+          "required": {
+            "health": 1
+          }
+        }
+      ],
+      "linked": [
+        {
+          "id": "curse_affliction_active",
+          "chance": 100
+        },
+        {
+          "id": "curse_affliction_attempt_mitigation",
+          "chance": 100
+        }
+      ],
+      "warmup": 60
+    },
+    {
+      "id": "curse_affliction_attempt_mitigation",
+      "label": "La Malédiction du Souffle Rampant: Une Dernière Chance",
+      "actionId": "curse_affliction",
+      "slots": [
+        {
+          "id": "Protection",
+          "label": "Protection",
+          "required": {
+            "influencehearte": 1,
+            "influenceheartg": 1
+          }
+        }
+      ],
+      "alternativerecipes": [
+        {
+          "id": "curse_affliction_mitigation_successful",
+          "chance": 100
+        }
+      ],
+      "startdescription": "La Malédiction s'est installée. Maintenant, la pulsion vitale ralentit. [La Malédiction n'est pas une maladie ordinaire, mais avec suffisamment d'Influence du Coeur, il sera possible de l'écarter.]",
+      "description": "Chaque souffle que nous prenons dans cette vie est plus faible que le dernier, jusqu'à ce que nous arrivions au dernier souffle de tous. Le processus est si lent qu'il est imperceptible... jusqu'à ce que l'on soit touché par la Malédiction du Souffle Rampant.",
+      "aspects": {
+        "destroyhealth": 1
+      },
+      "warmup": 60
+    },
+    {
+      "id": "curse_affliction_mitigation_successful",
+      "label": "La Faveur de Thunderskin",
+      "actionId": "curse_affliction",
+      "requirements": {
+        "influence": 1
+      },
+      "effects": {
+        "influence": -1
+      },
+      "startdescription": "Tapez sur le tambour et prononcez les mots. Supprimez la toux jusqu'à ce que le chant soit terminé.",
+      "description": "Mes poumons sont clairs. La malédiction est passée. Au loin, à l'horizon, la tempête se déplace comme un animal vigilant."
+    },
+    {
+      "id": "curse_nowhere_dormant",
+      "label": "Quelque chose est revenu avec nous",
+      "actionId": "curse_nowhere",
+      "startdescription": "J'entrevois des mouvements subtils dans le monde - du coin de l'oeil, mais ils sont trompeurs. Parfois aussi, je les entends.",
+      "alternativerecipes": [
+        {
+          "id": "curse_nowhere_active",
+          "chance": 30
+        }
+      ],
+      "linked": [
+        {
+          "id": "curse_nowhere_dormant",
+          "chance": 100
+        }
+      ],
+      "warmup": 60,
+      "craftable": false
+    },
+    {
+      "id": "curse_nowhere_active",
+      "label": "Les Vers dans ce monde",
+      "actionId": "curse_nowhere",
+      "requirements": {
+        "mortal": -1
+      },
+      "startdescription": "Il y a des Vers dans la ville. On ne voit pas les Vers, mais on ne les oublie pas non plus. Ils vont chercher jusqu'à ce qu'ils trouvent quelqu'un qu'ils peuvent pénétrer par les interstices de la peau, puis ils font ce que les Vers font.",
+      "slots": [
+        {
+          "id": "Someone",
+          "label": "Quelqu'un",
+          "greedy": true,
+          "required": {
+            "mortal": 1
+          }
+        }
+      ],
+      "linked": [
+        {
+          "id": "curse_nowhere_active",
+          "chance": 100
+        },
+        {
+          "id": "curse_nowhere_attempt_mitigation",
+          "chance": 100
+        }
+      ],
+      "warmup": 60
+    },
+    {
+      "id": "curse_nowhere_attempt_mitigation",
+      "label": "Les Vers dans ce monde: Une Dernière Chance",
+      "actionId": "curse_nowhere",
+      "slots": [
+        {
+          "id": "Protection",
+          "label": "Protection",
+          "required": {
+            "influenceheartg": 1
+          }
+        }
+      ],
+      "alternativerecipes": [
+        {
+          "id": "curse_nowhere_mitigation_successful",
+          "chance": 100
+        }
+      ],
+      "startdescription": "Les Vers ont trouvé leur chemin sous la peau. C'est la fin. [Il n'est possible de sauver celui-ci que si vous disposez d'un énorme pouvoir d'Influence du Coeur.]",
+      "description": "Lorsque les Vers prennent racine, il n'y a rien à faire, sauf détruire ce qui reste - brûler et tamiser avec le plus grand soin.",
+      "effects": {
+        "mortal": -1,
+        "notoriety": 1,
+        "dread": 1
+      },
+      "warmup": 60
+    },
+    {
+      "id": "curse_nowhere_mitigation_successful",
+      "label": "La Faveur de Thunderskin",
+      "actionId": "curse_nowhere",
+      "requirements": {
+        "influence": 1
+      },
+      "effects": {
+        "influence": -1
+      },
+      "startdescription": "Implore la foudre. Seul le souffle de l'orage peut sauver celui-ci maintenant.",
+      "description": "L'absence des Vers est comme un rideau qui s'ouvre. L'air est parfumé d'odeur de pluie et d'ozone. Nos doigts tapent encore aux rythmes de Thunderskin."
+    }
+  ]
 }
