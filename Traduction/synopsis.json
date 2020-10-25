@@ -4,5 +4,7 @@
     "version": "1.0",
 
     "description": "french traduction",
-    "description_long": ""
+    "description_long": "",
+    "synopsis": "french translation"
+  
 }
